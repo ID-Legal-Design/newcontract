@@ -1,6 +1,7 @@
 :root {
     --colorbright: #4472CA;
     --white: #ffffff;
+    --counterart: 0;
 }
 
 body {
@@ -12,19 +13,19 @@ body {
     display: none;
     width: 40%;
     height: 100%;
-    border-style: dashed;
     position: fixed;
     margin-left: 60%;
-    padding: 25px 25px 25px 25px;
+    padding: 50px 50px 50px 50px;
     box-sizing: border-box;
+    border-left-width: 0.2px;
+    border-left-style: solid;
 }
 
 .contentContainer {
     width: 60%;
     margin: auto;
     text-align: left;
-    border-style: dashed;
-    padding: 25px 25px 25px 25px;
+    padding: 50px 50px 50px 50px;
     box-sizing: border-box;
 }
 
@@ -55,9 +56,8 @@ body {
     margin-top: 1em;
     color: white;
     position: absolute;
-    right: 5%;
-    bottom: 10%;
 }
+
 
 button.link {
     background: none;
@@ -91,35 +91,35 @@ h1 {
 }
 
 /* legal list style */
-#legal-list {
-    counter-reset: section;
+.legal-list {
+    counter-reset: section var(--counterart);
 }
 
-#legal-list h1:before {
+.legal-list h1:before {
     counter-increment: section;
     content: "Artikel " counter(section) " ";
     margin: 0 0.5em 0 0;
 }
 
-#legal-list ol {
+.legal-list ol {
     counter-reset: clause;
     list-style: none outside none;
     text-indent: -2em;
 }
 
-#legal-list ol li {
+.legal-list ol li {
     counter-increment: clause;
 }
 
-#legal-list ol li:before {
+.legal-list ol li:before {
     content: counter(section) "." counters(clause, ".") " ";
     margin: 0 0.5em 0 0;
 }
 
-#legal-list ol li ol li {
+.legal-list ol li ol li {
     list-style: none;
 }
 
-#legal-list ol li ol li:before {
+.legal-list ol li ol li:before {
     content: " - "
 }
