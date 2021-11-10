@@ -6,18 +6,26 @@
 body {
     font-family: 'Nunito', sans-serif;
     font-size: 11px;
-    margin-top: 75px;
-}
-.content {
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
 }
 
-.contentcontainer {
-    max-width: 650px;
+.sideviewContainer {
+    display: none;
+    width: 40%;
+    height: 100%;
+    border-style: dashed;
+    position: fixed;
+    margin-left: 60%;
+    padding: 25px 25px 25px 25px;
+    box-sizing: border-box;
+}
+
+.contentContainer {
+    width: 60%;
     margin: auto;
     text-align: left;
+    border-style: dashed;
+    padding: 25px 25px 25px 25px;
+    box-sizing: border-box;
 }
 
 .button {
@@ -34,9 +42,26 @@ body {
     color: white;
 }
 
+.buttonN {
+    background-color: #606060;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: white;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
 button.link {
-    background:none;
-    border:none;
+    background: none;
+    border: none;
     font-family: 'Nunito', sans-serif;
     font-size: 11px;
 }
