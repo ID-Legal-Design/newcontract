@@ -1,2 +1,2 @@
-# newcontract
-Repository for the new contract version of the design
+# new contract
+Repository for the new version of the contract

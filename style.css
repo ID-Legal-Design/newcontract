@@ -1,28 +1,100 @@
-body {
-    font-family: 'Nunito', sans-serif;font-size: 22px;
+:root {
+    --colorbright: #4472CA;
+    --white: #ffffff;
 }
-.button {
-  background-color: #606060;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    margin-top: 75px;
 }
 .content {
-  max-width: 500px;
-  margin: auto;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.contentcontainer {
+    max-width: 650px;
+    margin: auto;
+    text-align: left;
+}
+
+.button {
+    background-color: #606060;
+    border: none;
+    padding: 15px 15px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: white;
+}
+
+button.link {
+    background:none;
+    border:none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+}
+
+h0 {
+    display: block;
+    margin-top: 1em;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+h1 {
+    display: block;
+    margin-top: 1em;
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--colorbright);
 }
 
 .header {
-  padding: 60px;
-  text-align: center;
-  background: #ffffff;
-  color: #000000;
-  font-size: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    background-color: var(--colorbright);
+    color: white;
+    padding: 25px 25px 25px 25px;
+}
+
+/* legal list style */
+#legal-list {
+    counter-reset: section;
+}
+
+#legal-list h1:before {
+    counter-increment: section;
+    content: "Artikel " counter(section) " ";
+    margin: 0 0.5em 0 0;
+}
+
+#legal-list ol {
+    counter-reset: clause;
+    list-style: none outside none;
+    text-indent: -2em;
+}
+
+#legal-list ol li {
+    counter-increment: clause;
+}
+
+#legal-list ol li:before {
+    content: counter(section) "." counters(clause, ".") " ";
+    margin: 0 0.5em 0 0;
+}
+
+#legal-list ol li ol li {
+    list-style: none;
+}
+
+#legal-list ol li ol li:before {
+    content: " - "
 }
