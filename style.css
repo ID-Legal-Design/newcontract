@@ -58,6 +58,20 @@ body {
     position: absolute;
 }
 
+.UIbutton {
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: white;
+    position: absolute;
+}
+
 
 button.link {
     background: none;
@@ -90,13 +104,17 @@ h1 {
     padding: 25px 25px 25px 25px;
 }
 
+highlight {
+    background-color: #4472CA;
+    color: white;
+}
+
 /* legal list style */
 .legal-list {
     counter-reset: section var(--counterart);
 }
 
 .legal-list h1:before {
-    counter-increment: section;
     content: "Artikel " counter(section) " ";
     margin: 0 0.5em 0 0;
 }
