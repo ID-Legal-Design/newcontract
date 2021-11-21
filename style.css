@@ -90,6 +90,11 @@ h1 {
     padding: 25px 25px 25px 25px;
 }
 
+highlight {
+    background-color: yellow;
+    color: black;
+}
+
 /* legal list style */
 .legal-list {
     counter-reset: section var(--counterart);
