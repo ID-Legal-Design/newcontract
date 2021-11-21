@@ -4,12 +4,11 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Hotjar Tracking Code for https://id-legal-design.github.io/traditionalcontract/ -->
 
 </head>
 <body>
-
 
 <div id="sideview" class="sideviewContainer">
     <p id="articles-show"></p>
@@ -19,11 +18,10 @@
     <!-- The content can be changed to whatever you want.
     However for the ID make sure it is always xxx_1 etc. (so 4 characters and than the number).
     It is always the first three letter of the filtername - so consument filter would be con_1, con_13 etc.
-    Furthermore you make sure all the ID in the arrays in the javascript. 
     -->
 
     <!-- general list without colourcoding -->
-    <div class=" legal-list">
+    <div id=all_articles class=" legal-list">
         <div id="art_1" style="display:none">
             <h1>Waarvoor zijn deze voorwaarden?</h1>
             <ol>
@@ -253,7 +251,7 @@
     </div>
 
     <!--  overeenkomst legal list with colourcoding -->
-    <div class=" legal-list">
+    <div id=ove_articles class=" legal-list">
         <div id="ove_2" style="display:none">
             <h1>Onze overeenkomst</h1>
             <ol>
@@ -383,7 +381,7 @@
     </div>
 
     <!--  toestemming legal list with colourcoding -->
-    <div class=" legal-list">
+    <div id=toe_articles class=" legal-list">
         <div id="toe_1" style="display:none">
             <h1>Waarvoor zijn deze voorwaarden?</h1>
             <ol>
@@ -487,7 +485,7 @@
     </div>
 
     <!--  consument legal list with colourcoding -->
-    <div class=" legal-list">
+    <div id=con_articles class=" legal-list">
         <div id="con_1" style="display:none">
             <h1>Waarvoor zijn deze voorwaarden?</h1>
             <ol>
@@ -645,13 +643,14 @@
     var sideOpen = 0;
     var previousButton = null;
 
-    //articles
-    const articles = ["art_1", "art_5", "art_3", "art_4", "art_5", "art_6"];
-    const toestemmingArt = ["toe_1", "toe_3", "toe_5"];
-    const overeenkomstArt = ["ove_2", "ove_4", "ove_6"];
-    const consumentArt = ["toe_1", "toe_3", "toe_5"];
-    const energieleverancierArt = ["ove_2", "ove_4", "ove_6"];
-    const netbeheerderArt = ["ove_2", "ove_4", "ove_6"];
+    //articles, these need to be initialized, do not know why
+    let articles = new Array();
+    let toestemmingArt = new Array();
+    let overeenkomstArt = new Array();
+    let consumentArt = new Array();
+    let energieleverancierArt = new Array();
+    let netbeheerderArt = new Array();
+    window.onload = fillArticleLists(); //update all arrays above with their content
     let article_list = articles;
 
     var i = 0;
@@ -729,7 +728,7 @@
             article_list = toestemmingArt;
         }
         if (currentButton == 'consument') {
-            article_list = articles;
+            article_list = consumentArt;
         }
         if (currentButton == 'energieleverancier') {
             article_list = articles;
@@ -737,6 +736,26 @@
         if (currentButton == 'netbeheerder') {
             article_list = articles;
         }
+    }
+
+    function fillArticleLists() {
+        articles = getDivIdArryFromHtmlCollectionId('all_articles');
+        toestemmingArt = getDivIdArryFromHtmlCollectionId('toe_articles');
+        overeenkomstArt = getDivIdArryFromHtmlCollectionId('ove_articles');
+        consumentArt = getDivIdArryFromHtmlCollectionId('con_articles');
+        energieleverancierArt = getDivIdArryFromHtmlCollectionId('all_articles');
+        netbeheerderArt = getDivIdArryFromHtmlCollectionId('all_articles');
+        console.log(netbeheerderArt);
+    }
+
+    function getDivIdArryFromHtmlCollectionId(CollectionId) {
+        htmlobject_titles = document.getElementById(CollectionId).getElementsByTagName('div')
+        array_div_titles = Array.from(htmlobject_titles);
+        array_titles = array_div_titles.map(function (e) {
+            return e.id;
+        });
+        console.log(array_titles)
+        return array_titles;
     }
 
     function readArticleNumber(an) {
