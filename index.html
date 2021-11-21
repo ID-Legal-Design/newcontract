@@ -11,14 +11,14 @@
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
-    <p id="articles-show"></p>
+    <p id="articles_shown"></p>
     <h2> Je bekijkt nu de artikelen relevant voor het filter</h2>
     <h2 id="current_filter" style="background-color: #bec9de;"></h2>
 
     <!-- The UI button elements for close, next article, previous article-->
     <a class="buttonN" onclick="nextArticle();" style="right: 5%;bottom: 10%;">next article</a>
     <a class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
-    <a class="buttonN" onclick="closeSidepanel();" style="right: 80%;bottom: 10%;">close</a>
+    <img class="UIbutton" src="assets/close.png" alt="next article" onclick="closeSidepanel();" width=40px height=40px style="right: 80%;bottom: 10%;">
 
     <!-- Below is all text that can be shown for a filter.
     The text has a parent div ID (e.g all_articles, ove_articles) which is seperated per filter and used later.
@@ -26,7 +26,7 @@
     and than the original article number. For example: article 5 for consumer is [con_5].
     -->
 
-    <!-- general list without colourcoding -->
+    <!-- list of articles without colourcoding -->
     <div id=articles_list class=" legal-list">
         <div id="art_1" style="display:none">
             <h1>Waarvoor zijn deze voorwaarden?</h1>
@@ -195,8 +195,7 @@
                     wij uw afgenomen elektriciteit met de door u teruggeleverde elektriciteit.
                 </li>
                 <li> Wekt u zelf meer elektriciteit op dan u heeft verbruikt, dan ontvangt u hiervoor van ons de
-                    afgesproken
-                    terugleververgoeding.
+                    afgesproken terugleververgoeding.
                 </li>
                 <li> Wekt u voor het eerst elektriciteit op, dan moet u ook bij uw netbeheerder melden dat u
                     elektriciteit
@@ -260,36 +259,44 @@
         <div id="ove_2" style="display:none">
             <h1>Onze overeenkomst</h1>
             <ol>
-                <li>Wij hebben met elkaar een
-                    <highlight>overeenkomst</highlight>
+                <li>
+                    <highlight> Wij hebben met elkaar een
+                        overeenkomst
+                    </highlight>
                     als:
                     <ol>
                         <li>u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag accepteren, of</li>
                         <li>wij u een aanbieding doen voor elektriciteit en/of gas en u onze aanbieding accepteert.</li>
                     </ol>
-                    Wij leggen deze
-                    <highlight>overeenkomst</highlight>
-                    schriftelijk of digitaal vast en bevestigen u deze schriftelijk of
-                    digitaal.
+                    <highlight>Wij leggen deze
+                        overeenkomst
+                        schriftelijk of digitaal vast en bevestigen u deze schriftelijk of
+                        digitaal.
+                    </highlight>
                 </li>
-                <li>Nadat wij deze
-                    <highlight> overeenkomst</highlight>
-                    aan u hebben bevestigd, mag u de overeenkomst binnen veertien
-                    kalenderdagen
-                    ongedaan maken. U hoeft ons niet uit te leggen waarom.
+                <li>
+                    <highlight> Nadat wij deze
+                        overeenkomst
+                        aan u hebben bevestigd, mag u de overeenkomst binnen veertien
+                        kalenderdagen
+                        ongedaan maken.
+                    </highlight>
+                    U hoeft ons niet uit te leggen waarom.
                 </li>
                 <li>In deze periode van veertien kalenderdagen zullen wij uw oude energieleverancier nog niet vragen de
                     overeenkomst met u te beëindigen. Ook zullen wij de netbeheerder nog niet doorgeven dat u overstapt
                     naar ons. Wilt u tijdens deze periode wel al geleverd krijgen, dan moet u dat schriftelijk of
-                    digitaal
-                    bij ons
-                    aanvragen. Wij zullen dan direct de overeenkomst met uw oude energieleverancier opzeggen en aan de
+                    digitaal bij ons aanvragen. Wij zullen dan direct de overeenkomst met uw oude energieleverancier
+                    opzeggen en aan de
                     netbeheerder door-geven dat u naar ons overstapt.
                 </li>
-                <li> Maakt u de overeenkomst ongedaan binnen veertien kalenderdagen en hebben wij u op uw verzoek in
-                    deze periode al wel elektriciteit en/of gas geleverd? Dan moet u ons de afgesproken kosten betalen
-                    voor
-                    de levering voor de periode totdat u – op eigen initiatief – weer van leverancier wisselt.
+                <li>
+                    <highlight> Maakt u de overeenkomst ongedaan binnen veertien kalenderdagen en hebben wij u op uw
+                        verzoek in
+                        deze periode al wel elektriciteit en/of gas geleverd?
+                    </highlight>
+                    Dan moet u ons de afgesproken kosten betalen
+                    voor de levering voor de periode totdat u – op eigen initiatief – weer van leverancier wisselt.
                 </li>
                 <li> Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een overeenkomst
                     niet
@@ -357,84 +364,7 @@
                 </li>
             </ol>
         </div>
-        <div id="ove_4" style="display:none">
-            <h1>Wekt u ook zelf elektriciteit op?</h1>
-            <ol>
-                <li>Wekt u op uw adres zelf (duurzame) elektriciteit op, bijvoorbeeld met zonnepanelen, dan verminderen
-                    wij uw afgenomen elektriciteit met de door u teruggeleverde elektriciteit.
-                </li>
-                <li> Wekt u zelf meer elektriciteit op dan u heeft verbruikt, dan ontvangt u hiervoor van ons de
-                    afgesproken
-                    terugleververgoeding.
-                </li>
-                <li> Wekt u voor het eerst elektriciteit op, dan moet u ook bij uw netbeheerder melden dat u
-                    elektriciteit
-                    gaat
-                    opwekken (dit kan via www.energieleveren.nl).
-                </li>
-            </ol>
-        </div>
-        <div id="ove_6" style="display:none">
-            <h1>Wat doen wij als er een storing is op het elektriciteitsnet of gasnet?</h1>
-            <ol>
-                <li>Het transport van elektriciteit en/of gas is de verantwoordelijkheid van de netbeheerder. Bij een
-                    storing
-                    kunnen wij u minder of geen elektriciteit en/of gas leveren en kunt u minder of geen elektriciteit
-                    terugleveren.
-                    Dit heeft geen gevolgen voor de geldigheid en de duur van de overeenkomst die wij met u hebben.
-                </li>
-                <li> Heeft u hierdoor schade? Dan zijn we daar niet aansprakelijk voor en betalen die schade niet. U
-                    kunt
-                    hiervoor contact opnemen met uw netbeheerder.
-                </li>
-            </ol>
-        </div>
-    </div>
-    <div id=toestemming_list class=" legal-list">
-        <div id="toe_1" style="display:none">
-            <h1>Waarvoor zijn deze voorwaarden?</h1>
-            <ol>
-                <li>Dit zijn de voorwaarden van Essent Retail Energie B.V. In deze voorwaarden staan de afspraken die
-                    wij
-                    hebben gemaakt en waar u en wij ons aan moeten houden als u van ons elektriciteit en/of gas geleverd
-                    krijgt. De voorwaarden gelden als:
-                    <ol>
-                        <li>wij u een aanbieding doen voor de levering van elektriciteit en/of gas,</li>
-                        <li>u ons vraagt elektriciteit en/of gas te leveren,</li>
-                        <li>u en wij een overeenkomst met elkaar hebben.</li>
-                    </ol>
-                </li>
-                <li>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.
-                </li>
-                <li>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden die gelden en
-                    hoe
-                    u hiervan kennis kan nemen. Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
-                    wanneer
-                    wij de overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden
-                    op
-                    onze
-                    website.
-                </li>
-                <li>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze is te vinden op
-                    de
-                    website van de Autoriteit Consument en Markt.
-                </li>
-                <li>
-                    Wij mogen ook andere afspraken met u maken. Die afspraken gelden als:
-                    <ol>
-                        <li>we die afspraken volgens de wet of regelgeving mogen maken,</li>
-                        <li>we die afspraken volgens deze voorwaarden mogen maken, en</li>
-                        <li>we deze afspraken schriftelijk of digitaal vastleggen, en u aangeeft dat u het daar mee eens
-                            bent.
-                        </li>
-                    </ol>
-                    Zijn er situaties waarover niets staat in deze voorwaarden? Dan maken we daarover afspraken die voor
-                    u
-                    en ons redelijk zijn.
-                </li>
-            </ol>
-        </div>
-        <div id="toe_3" style="display:none">
+        <div id="ove_3" style="display:none">
             <h1>U heeft een aansluiting op het elektriciteitsnet en/of het gasnet</h1>
             <ol>
                 <li>U kunt alleen elektriciteit en/of gas van ons geleverd krijgen als u in uw huis, of ander gebouw of
@@ -453,17 +383,22 @@
                     aan ons en niet aan de netbeheerder. Wij betalen deze netbeheerkosten aan de netbeheerder
                 </li>
                 <li> Beëindigt de netbeheerder de aansluit- en transportovereenkomst? Dan mogen we het leveren van
-                    elektriciteit en/of gas beëindigen. We mogen dan onze overeenkomst beëindigen of opschorten.
+                    elektriciteit en/of gas beëindigen.
+                    <highlight> We mogen dan onze overeenkomst beëindigen of opschorten.</highlight>
                 </li>
             </ol>
         </div>
+    </div>
+    <div id=toestemming_list class=" legal-list">
         <div id="toe_5" style="display:none">
             <h1>Wat doen wij als wij met u een overeenkomst hebben?</h1>
             <ol>
                 <li>Als wij een overeenkomst met u hebben, willen wij u op de afgesproken startdatum elektriciteit en/of
                     gas
-                    gaan leveren. Om op tijd te leveren, geeft u ons toestemming om onder andere de volgende dingen te
-                    doen.
+                    gaan leveren.
+                    <highlight> Om op tijd te leveren, geeft u ons toestemming om onder andere de volgende dingen te
+                        doen.
+                    </highlight>
                     <ol>
                         <li>Wij beëindigen uw overeenkomst met uw oude energieleverancier.</li>
                         <li> Verhuist u? Dan melden wij u aan bij de netbeheerder voor een nieuwe aansluit- en
@@ -473,8 +408,11 @@
                         </li>
                     </ol>
                 </li>
-                <li> Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het aan u
-                    kunnen
+                <li>
+                    <highlight>Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het
+                        aan u
+                        kunnen
+                    </highlight>
                     leveren van elektriciteit en/of gas dan, <br>
                     (a) geeft u ons toestemming om bij uw netbeheerder het volgende op te vragen:
                     <ol>
@@ -493,135 +431,26 @@
         </div>
     </div>
     <div id=tarieven_list class=" legal-list">
-        <div id="tar_2" style="display:none">
-            <h1>Onze overeenkomst</h1>
+        <div id="tar_3" style="display:none">
+            <h1>U heeft een aansluiting op het elektriciteitsnet en/of het gasnet</h1>
             <ol>
-                <li>Wij hebben met elkaar een
-                    <highlight>overeenkomst</highlight>
-                    als:
-                    <ol>
-                        <li>u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag accepteren, of</li>
-                        <li>wij u een aanbieding doen voor elektriciteit en/of gas en u onze aanbieding accepteert.</li>
-                    </ol>
-                    Wij leggen deze
-                    <highlight>overeenkomst</highlight>
-                    schriftelijk of digitaal vast en bevestigen u deze schriftelijk of
-                    digitaal.
+                <li>U kunt alleen elektriciteit en/of gas van ons geleverd krijgen als u in uw huis, of ander gebouw of
+                    object zoals een kantoor of garagebox, gebruik kunt maken van een aansluiting op het
+                    elektriciteitsnet
+                    en/of het gasnet.
                 </li>
-                <li>Nadat wij deze
-                    <highlight> overeenkomst</highlight>
-                    aan u hebben bevestigd, mag u de overeenkomst binnen veertien
-                    kalenderdagen
-                    ongedaan maken. U hoeft ons niet uit te leggen waarom.
+                <li> Voor die aansluiting moet een overeenkomst zijn gesloten met de netbeheerder. Dit is de aansluit-
+                    en
+                    transportovereenkomst. Indien nodig melden wij u hiervoor aan bij de netbeheerder. U hoeft niets te
+                    doen.
+                    <highlight> In de aansluit- en transportovereenkomst staat dat u netbeheerkosten moet betalen.
+                    </highlight>
+                    U betaalt deze
+                    kosten
+                    aan ons en niet aan de netbeheerder. Wij betalen deze netbeheerkosten aan de netbeheerder
                 </li>
-                <li>In deze periode van veertien kalenderdagen zullen wij uw oude energieleverancier nog niet vragen de
-                    overeenkomst met u te beëindigen. Ook zullen wij de netbeheerder nog niet doorgeven dat u overstapt
-                    naar ons. Wilt u tijdens deze periode wel al geleverd krijgen, dan moet u dat schriftelijk of
-                    digitaal
-                    bij ons
-                    aanvragen. Wij zullen dan direct de overeenkomst met uw oude energieleverancier opzeggen en aan de
-                    netbeheerder door-geven dat u naar ons overstapt.
-                </li>
-                <li> Maakt u de overeenkomst ongedaan binnen veertien kalenderdagen en hebben wij u op uw verzoek in
-                    deze periode al wel elektriciteit en/of gas geleverd? Dan moet u ons de afgesproken kosten betalen
-                    voor
-                    de levering voor de periode totdat u – op eigen initiatief – weer van leverancier wisselt.
-                </li>
-                <li> Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een overeenkomst
-                    niet
-                    weigeren. Wel mogen wij uw betalingsgedrag onderzoeken. Ook mogen wij u zekerheden vragen, lees
-                    hiervoor artikel 15 van deze voorwaarden. Beiden mogen wij doen tot het moment dat wij elektriciteit
-                    en/of gas gaan leveren. Wij mogen in deze periode besluiten dat wij u geen andere overeenkomst
-                    aanbieden.
-                </li>
-                <li>Ook bieden wij u geen overeenkomst aan of mogen wij de overeenkomst in deze periode beëindigen in de
-                    volgende situaties:
-                    <ol>
-                        <li>u geeft ons niet de informatie waar wij om vragen;</li>
-                        <li>u moet ons nog een rekening betalen en u doet dat niet;</li>
-                        <li>wij hebben u om zekerheden gevraagd, maar die geeft u ons niet;</li>
-                        <li> u houdt zich niet aan de regels van onze overeenkomst, deze voorwaarden, de wet of andere
-                            regels van
-                            de overheid, waardoor het niet redelijk is dat wij u elektriciteit en/of gas gaan leveren.
-                        </li>
-                    </ol>
-                </li>
-                <li>Bieden wij u geen overeenkomst aan? Of beëindigen wij de overeenkomst? Dan informeren we u
-                    schriftelijk
-                    of digitaal zo snel mogelijk daarover. Daarin melden wij u waarom wij u geen overeenkomst aanbieden
-                    of
-                    waarom we de overeenkomst beëindigen.
-                </li>
-                <li>Gaat u de overeenkomst samen met iemand anders aan? Dan moet u zich allebei aan de overeenkomst
-                    Algemene voorwaarden voor de levering van elektriciteit en gas aan kleinverbruikers 2017 4
-                    houden. Als één van u niet meer kan betalen, of volgens de wet niet meer hoeft te betalen, dan moet
-                    de
-                    ander de rekening toch helemaal betalen.
-                </li>
-                <li>U mag de rechten en plichten van de overeenkomst die u met ons heeft niet aan een ander overdragen.
-                    Dat mag alleen als u daarvoor van ons schriftelijk toestemming krijgt. Wij bevestigen dit dan
-                    schriftelijk of
-                    digitaal aan u. Wij kunnen op dat moment nieuwe afspraken maken.
-                </li>
-                <li>Wij mogen de rechten en plichten van de overeenkomst die wij met u hebben in twee situaties wel aan
-                    een
-                    andere energieleverancier overdragen. U geeft ons hiervoor nu al toestemming en onze afspraken
-                    blijven
-                    gelden. Als wij dit doen, melden wij u dit schriftelijk of digitaal. Wij mogen dat in deze twee
-                    situaties:
-                    <ol>
-                        <li>ons bedrijf wordt overgenomen door een ander bedrijf;</li>
-                        <li> wij geven de rechten en plichten van de overeenkomst die wij met u hebben aan een ander
-                            bedrijf, maar
-                            wij blijven ervoor verantwoordelijk dat het andere bedrijf deze rechten en plichten nakomt.
-                        </li>
-                    </ol>
-                    Net zoals hierboven blijven onze afspraken ook gelden bij een fusie of een splitsing van ons
-                    bedrijf. In
-                    andere
-                    situaties kunt u binnen dertig kalenderdagen nadat u van ons hierover bericht heeft gekregen de
-                    overeenkomst
-                    zonder bijkomende kosten beëindigen volgens de afspraken die wij hebben gemaakt.
-                </li>
-                <li>Onze overeenkomst eindigt als de overheid onze leveringsvergunning(en) intrekt. De overheid heeft
-                    geregeld
-                    dat andere partijen de levering overnemen.
-                </li>
-                <li> Onze overeenkomst wordt in het Nederlands geschreven, tenzij we daarover andere afspraken maken.
-                    Het
-                    Nederlands recht geldt voor deze overeenkomst.
-                </li>
-            </ol>
-        </div>
-        <div id="tar_4" style="display:none">
-            <h1>Wekt u ook zelf elektriciteit op?</h1>
-            <ol>
-                <li>Wekt u op uw adres zelf (duurzame) elektriciteit op, bijvoorbeeld met zonnepanelen, dan verminderen
-                    wij uw afgenomen elektriciteit met de door u teruggeleverde elektriciteit.
-                </li>
-                <li> Wekt u zelf meer elektriciteit op dan u heeft verbruikt, dan ontvangt u hiervoor van ons de
-                    afgesproken
-                    terugleververgoeding.
-                </li>
-                <li> Wekt u voor het eerst elektriciteit op, dan moet u ook bij uw netbeheerder melden dat u
-                    elektriciteit
-                    gaat
-                    opwekken (dit kan via www.energieleveren.nl).
-                </li>
-            </ol>
-        </div>
-        <div id="tar_6" style="display:none">
-            <h1>Wat doen wij als er een storing is op het elektriciteitsnet of gasnet?</h1>
-            <ol>
-                <li>Het transport van elektriciteit en/of gas is de verantwoordelijkheid van de netbeheerder. Bij een
-                    storing
-                    kunnen wij u minder of geen elektriciteit en/of gas leveren en kunt u minder of geen elektriciteit
-                    terugleveren.
-                    Dit heeft geen gevolgen voor de geldigheid en de duur van de overeenkomst die wij met u hebben.
-                </li>
-                <li> Heeft u hierdoor schade? Dan zijn we daar niet aansprakelijk voor en betalen die schade niet. U
-                    kunt
-                    hiervoor contact opnemen met uw netbeheerder.
+                <li> Beëindigt de netbeheerder de aansluit- en transportovereenkomst? Dan mogen we het leveren van
+                    elektriciteit en/of gas beëindigen. We mogen dan onze overeenkomst beëindigen of opschorten.
                 </li>
             </ol>
         </div>
@@ -651,9 +480,9 @@
                     onze
                     website.
                 </li>
-                <li>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze is te vinden op
+                <li>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat.<highlight> Deze is te vinden op
                     de
-                    website van de Autoriteit Consument en Markt.
+                    website van de Autoriteit Consument en Markt. </highlight>
                 </li>
                 <li>
                     Wij mogen ook andere afspraken met u maken. Die afspraken gelden als:
@@ -728,14 +557,13 @@
             </ol>
         </div>
     </div>
-    <div id=netbeheerder_list class=" legal-list">
-        <div id="net_1" style="display:none">
+    <div id=energieleverancier_list class=" legal-list">
+        <div id="ene_1" style="display:none">
             <h1>Waarvoor zijn deze voorwaarden?</h1>
             <ol>
-                <li>Dit zijn de voorwaarden van Essent Retail Energie B.V. In deze voorwaarden staan de afspraken die
-                    wij
-                    hebben gemaakt en waar u en wij ons aan moeten houden als u van ons elektriciteit en/of gas geleverd
-                    krijgt. De voorwaarden gelden als:
+                <li><highlight> Dit zijn de voorwaarden van  Essent Retail Energie B.V. </highlight> In deze voorwaarden staan de afspraken die
+                    wij hebben gemaakt en waar u en wij ons aan moeten houden als u van ons elektriciteit en/of gas
+                    geleverd krijgt. De voorwaarden gelden als:
                     <ol>
                         <li>wij u een aanbieding doen voor de levering van elektriciteit en/of gas,</li>
                         <li>u ons vraagt elektriciteit en/of gas te leveren,</li>
@@ -747,8 +575,7 @@
                 <li>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden die gelden en
                     hoe
                     u hiervan kennis kan nemen. Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
-                    wanneer
-                    wij de overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden
+                    wanneer wij de overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden
                     op
                     onze
                     website.
@@ -773,47 +600,32 @@
             </ol>
         </div>
     </div>
-    <div id=energieleverancier_list class=" legal-list">
-        <div id="ene_1" style="display:none">
-            <h1>Waarvoor zijn deze voorwaarden?</h1>
+    <div id=netbeheerder_list class=" legal-list">
+        <div id="net_3" style="display:none">
+            <h1>U heeft een aansluiting op het elektriciteitsnet en/of het gasnet</h1>
             <ol>
-                <li>Dit zijn de voorwaarden van Essent Retail Energie B.V. In deze voorwaarden staan de afspraken die
-                    wij
-                    hebben gemaakt en waar u en wij ons aan moeten houden als u van ons elektriciteit en/of gas geleverd
-                    krijgt. De voorwaarden gelden als:
-                    <ol>
-                        <li>wij u een aanbieding doen voor de levering van elektriciteit en/of gas,</li>
-                        <li>u ons vraagt elektriciteit en/of gas te leveren,</li>
-                        <li>u en wij een overeenkomst met elkaar hebben.</li>
-                    </ol>
-                </li>
-                <li>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.
-                </li>
-                <li>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden die gelden en
-                    hoe
-                    u hiervan kennis kan nemen. Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
-                    wanneer
-                    wij de overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden
-                    op
-                    onze
-                    website.
-                </li>
-                <li>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze is te vinden op
-                    de
-                    website van de Autoriteit Consument en Markt.
+                <li>U kunt alleen elektriciteit en/of gas van ons geleverd krijgen als u in uw huis, of ander gebouw of
+                    object
+                    zoals een kantoor of garagebox, gebruik kunt maken van een aansluiting op het elektriciteitsnet
+                    en/of
+                    het
+                    gasnet.
                 </li>
                 <li>
-                    Wij mogen ook andere afspraken met u maken. Die afspraken gelden als:
-                    <ol>
-                        <li>we die afspraken volgens de wet of regelgeving mogen maken,</li>
-                        <li>we die afspraken volgens deze voorwaarden mogen maken, en</li>
-                        <li>we deze afspraken schriftelijk of digitaal vastleggen, en u aangeeft dat u het daar mee eens
-                            bent.
-                        </li>
-                    </ol>
-                    Zijn er situaties waarover niets staat in deze voorwaarden? Dan maken we daarover afspraken die voor
-                    u
-                    en ons redelijk zijn.
+                    <highlight> Voor die aansluiting moet een overeenkomst zijn gesloten met de netbeheerder.
+                    </highlight>
+                    Dit is de aansluit-
+                    en
+                    transportovereenkomst. Indien nodig melden wij u hiervoor aan bij de netbeheerder. U hoeft niets te
+                    doen.
+                    In de aansluit- en transportovereenkomst staat dat u netbeheerkosten moet betalen. U betaalt deze
+                    kosten
+                    aan ons en niet aan de netbeheerder. Wij betalen deze netbeheerkosten aan de netbeheerder
+                </li>
+                <li>
+                    <highlight> Beëindigt de netbeheerder de aansluit- en transportovereenkomst?</highlight>
+                    Dan mogen we het leveren van
+                    elektriciteit en/of gas beëindigen. We mogen dan onze overeenkomst beëindigen of opschorten.
                 </li>
             </ol>
         </div>
@@ -939,6 +751,7 @@
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").innerHTML = currentButton;
+        document.getElementById("articles_shown").innerHTML = current_list.length;
     }
 
     function nextArticle() {
@@ -983,14 +796,15 @@
     }
 
     //for each filter an array is filled with the available content automatically
+    //note how tarieven, consument, energieleverancier and netbeheerder are not yet correctly linked
     function assignContentToList() {
         articlesList = getDivIdArryFromHtmlCollectionId('articles_list');
-        toestemmingList = getDivIdArryFromHtmlCollectionId('articles_list');
+        toestemmingList = getDivIdArryFromHtmlCollectionId('toestemming_list');
         overeenkomstList = getDivIdArryFromHtmlCollectionId('overeenkomst_list');
-        tarievenList = getDivIdArryFromHtmlCollectionId('articles_list');
-        consumentList = getDivIdArryFromHtmlCollectionId('articles_list');
-        energieleverancierList = getDivIdArryFromHtmlCollectionId('articles_list');
-        netbeheerderList = getDivIdArryFromHtmlCollectionId('articles_list');
+        tarievenList = getDivIdArryFromHtmlCollectionId('tarieven_list');
+        consumentList = getDivIdArryFromHtmlCollectionId('consument_list');
+        energieleverancierList = getDivIdArryFromHtmlCollectionId('energieleverancier_list');
+        netbeheerderList = getDivIdArryFromHtmlCollectionId('netbeheerder_list');
     }
 
     //overcomplicated method for getting the div ID from an htmlcollection element in an array
