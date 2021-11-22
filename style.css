@@ -45,7 +45,7 @@ body {
 .timeline__component--bg {
   padding: 1.5em;
   background: #bec9de;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
   border-radius: 10px;
 }
 
@@ -116,6 +116,7 @@ body {
     margin-top: 1em;
     color: white;
     text-shadow: 0px 2px 4px rgba(0,0,0,.4);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.10);
 }
 
 .homepageButton:hover{
