@@ -99,6 +99,29 @@ body {
 			cursor: pointer;
 			text-decoration: none;
 		}
+
+/* new button */
+.homepageButton {
+    background-color: #4472CA;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: white;
+}
+
+.homepageButton:hover{
+    background-color: #bec9de;
+    color: white;
+}
+
 .button {
     background-color: #606060;
     border: none;
