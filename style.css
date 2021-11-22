@@ -190,12 +190,18 @@ h1 {
 }
 
 .header {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     display: block;
     background-color: var(--colorbright);
     color: white;
     padding: 25px 25px 25px 25px;
+    text-align: center;
+    border-radius: 0 0 85% 85% / 30%;
+}
+.logo {
+    text-align: right;
+    display: inline-block;
 }
 
 highlight {
