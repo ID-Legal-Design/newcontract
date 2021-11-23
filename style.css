@@ -122,7 +122,7 @@ highlight {
 .legal-list ol {
     counter-reset: clause;
     list-style: none outside none;
-    text-indent: -2em;
+    text-indent: -2.2em;
 }
 
 .legal-list ol li {
