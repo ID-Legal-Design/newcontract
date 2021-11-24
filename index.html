@@ -1230,16 +1230,16 @@
     <!-- buttons -->
     <div>
         <h4>Belangrijke Termen</h4>
-        <a id="overeenkomst" class="button" onclick="updateFilter(this);">overeenkomst</a>
-        <a id="toestemming" class="button" onclick="updateFilter(this);">toestemming</a>
-        <a id="tarieven" class="button" onclick="updateFilter(this);">tarieven</a>
+        <a id="overeenkomst" class="homepageButton" onclick="updateFilter(this);">overeenkomst</a>
+        <a id="toestemming" class="homepageButton" onclick="updateFilter(this);">toestemming</a>
+        <a id="tarieven" class="homepageButton" onclick="updateFilter(this);">tarieven</a>
     </div>
 
     <div>
         <h4>Betrokken Partijen</h4>
-        <a id="consument" class="button" onclick="updateFilter(this);">consument</a>
-        <a id="energieleverancier" class="button" onclick="updateFilter(this);">energieleverancier</a>
-        <a id="netbeheerder" class="button" onclick="updateFilter(this);">netbeheerder</a>
+        <a id="consument" class="homepageButton" onclick="updateFilter(this);">consument</a>
+        <a id="energieleverancier" class="homepageButton" onclick="updateFilter(this);">energieleverancier</a>
+        <a id="netbeheerder" class="homepageButton" onclick="updateFilter(this);">netbeheerder</a>
     </div>
 
        <!-- Timeline -->
@@ -1260,7 +1260,7 @@
       Wat gebeurt er in de bedenktijd?
     </p>
       <div class="timeline-footer">
-			<a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width= 25px height=25px></a>
+			<a onclick="showArt(16)"><img src="assets/button%20right.png" width= 25px height=25px></a>
 				</div>
   </div>
   <div class="timeline__component timeline__component--bg">
@@ -1361,35 +1361,8 @@
   </div>
   </div>
 
-       <!-- New buttons -->
-    <div>
-        <h0>Belangrijke Termen</h0>
-        <a id="HomepageOvereenkomst" class="homepageButton" onclick="updateFilter(this);">overeenkomst</a>
-        <a id="HomepageToestemming" class="homepageButton" onclick="updateFilter(this);">toestemming</a>
-        <a id="HomepageTarieven" class="homepageButton" onclick="updateFilter(this);">betalingen en tarieven</a>
-    </div>
 
-<div>
-        <h0>Betrokken Partijen</h0>
-        <a id="HomepageConsument" class="homepageButton" onclick="updateFilter(this);">consument</a>
-        <a id="HomepageEnergieleverancier" class="homepageButton" onclick="updateFilter(this);">energieleverancier</a>
-        <a id="HomepageNetbeheerder" class="homepageButton" onclick="updateFilter(this);">netbeheerder</a>
-    </div>
-
-    <div>
-        <h0>Tijdlijn</h0>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick="hideArticles()"></a>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick=""></a>
-        <a id="" class="button" onclick=""></a>
-
-    </div>
-
-    <div>
+    <div class="twocolumn">
         <h0>Checklist</h0>
         <a id="checkList" class="button" onclick="updateFilter(this);">CheckList</a> <br>
         <input type="checkbox" id="check1" onclick="removeArt(0)">
