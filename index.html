@@ -11,7 +11,6 @@
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
-    <p style="right: 30%;bottom: 30%;">Example</p>
     <h0> Je bekijkt nu de artikelen relevant voor het filter</h0>
     <h0 id="current_filter" style="background-color: #bec9de;"></h0>
 
@@ -20,7 +19,7 @@
     <a id= "prevButton" class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
     <a id="articles_shown" class="counterText"style="right: 17%;bottom: 10%;"></a>
     <img class="UIbutton" src="assets/close.png" alt="next article" onclick="closeSidepanel();" width=40px height=40px style="right: 80%;bottom: 10%;">
-    <img id='alle artikelen' class="UIbutton" src="assets/filter_remove.png" alt="clear filter" onclick="updateFilter(this);" width=40px height=40px style="right: 70%;bottom: 10%;">
+    <img id='alle artikelen' class="UIbutton" src="assets/filter_remove.png" alt="clear filter" onclick="clearFilter(this);" width=40px height=40px style="right: 70%;bottom: 10%;">
 
     <!-- Below is all text that can be shown for a filter.
     The text has a parent div ID (e.g all_articles, ove_articles) which is seperated per filter and used later.
@@ -1475,6 +1474,17 @@
                 alert("you already clicked here, so the right articles are open");
             }
         }
+    }
+
+    function clearFilter(FilterPressed) {
+        j = getArticleNumberFromDivID(current_list[i])
+        updateFilter(FilterPressed)
+        document.getElementById(current_list[i]).style.display = "none";
+        i = j-1
+        document.getElementById("prevButton").style.display = "block";
+        document.getElementById("articles_shown").innerHTML = (i+1) + " / " + current_list.length;
+        document.getElementById(current_list[i]).style.display = "block";
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
     }
 
     //show and hide sideview elements
