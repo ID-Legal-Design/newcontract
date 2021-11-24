@@ -11,13 +11,14 @@
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
-    <p id="articles_shown"></p>
+    <p style="right: 30%;bottom: 30%;">Example</p>
     <h0> Je bekijkt nu de artikelen relevant voor het filter</h0>
     <h0 id="current_filter" style="background-color: #bec9de;"></h0>
 
     <!-- The UI button elements for close, next article, previous article-->
     <a id= "nextButton" class="buttonN" onclick="nextArticle();" style="right: 5%;bottom: 10%;">next article</a>
     <a id= "prevButton" class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
+    <a id="articles_shown" class="counterText"style="right: 17%;bottom: 10%;"></a>
     <img class="UIbutton" src="assets/close.png" alt="next article" onclick="closeSidepanel();" width=40px height=40px style="right: 80%;bottom: 10%;">
     <img id='alle artikelen' class="UIbutton" src="assets/filter_remove.png" alt="clear filter" onclick="updateFilter(this);" width=40px height=40px style="right: 70%;bottom: 10%;">
 
@@ -1457,6 +1458,7 @@
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         document.getElementById("prevButton").style.display = "none";
+        document.getElementById("nextButton").style.display = "block";
         currentButton = FilterPressed.id;
         if (currentButton !== previousButton) {
             hideArticles();
@@ -1500,12 +1502,13 @@
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").innerHTML = currentButton;
-        document.getElementById("articles_shown").innerHTML = " / " + current_list.length;
+        document.getElementById("articles_shown").innerHTML = (i+1) + " / " + current_list.length;
     }
 
     function nextArticle() {
         document.getElementById(current_list[i]).style.display = "none";
         document.getElementById("prevButton").style.display = "block";
+        document.getElementById("articles_shown").innerHTML = (i+2) + " / " + current_list.length;
         if (i < current_list.length - 1) {
             i = i + 1;
         }
@@ -1519,6 +1522,7 @@
     function previousArticle() {
         document.getElementById(current_list[i]).style.display = "none";
         document.getElementById("nextButton").style.display = "block";
+        document.getElementById("articles_shown").innerHTML = i + " / " + current_list.length;
         if (i > 0) {
             i = i - 1;
         }

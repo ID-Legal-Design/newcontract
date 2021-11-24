@@ -200,10 +200,6 @@ h0 {
     text-align: left;
 }
 
-twocolumn{
-
-}
-
 h1 {
     display: block;
     margin-top: 1em;
@@ -233,6 +229,20 @@ h4{
     text-align: center;
 }
 
+.counterText {
+    border: none;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    position: absolute;
+    margin-top: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A369D;
+    text-shadow: 0px 2px 4px rgba(0,0,0,.2);
+    text-align: center;
+}
 .header {
     font-size: 30px;
     font-weight: bold;
