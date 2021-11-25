@@ -1457,7 +1457,6 @@
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         document.getElementById("prevButton").style.display = "none";
-        document.getElementById("nextButton").style.display = "block";
         currentButton = FilterPressed.id;
         if (currentButton !== previousButton) {
             hideArticles();
@@ -1510,7 +1509,7 @@
         if (i < current_list.length - 1) {
             i = i + 1;
         }
-        else {
+        if (i == current_list.length - 1) {
             document.getElementById("nextButton").style.display = "none";
         }
         document.getElementById(current_list[i]).style.display = "block";
@@ -1523,7 +1522,7 @@
         if (i > 0) {
             i = i - 1;
         }
-        else {
+        if (i == 0) {
             document.getElementById("prevButton").style.display = "none";
         }
         document.getElementById(current_list[i]).style.display = "block";
