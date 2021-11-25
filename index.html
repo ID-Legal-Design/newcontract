@@ -30,7 +30,7 @@
     <!-- The UI button elements for close, next article, previous article-->
     <a id="nextButton" class="buttonN" onclick="nextArticle();" style="right: 5%;bottom: 10%;">next article</a>
     <a id="prevButton" class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
-    <a id="articles_shown" class="counterText" style="right: 17%;bottom: 10%;"></a>
+    <a id="articles_shown" class="counterText" style="right: 50%;bottom: 10%;"></a>
     <img class="UIbutton" src="assets/close.png" alt="next article" onclick="closeSidepanel();" width=40px height=40px
          style="right: 80%;bottom: 10%;">
     <img id='alle artikelen' class="UIbutton" src="assets/filter_remove.png" alt="clear filter"
@@ -2135,18 +2135,18 @@
     </div>
 
     <!-- buttons -->
-    <div>
-        <h4>Belangrijke Termen</h4>
-        <a id="overeenkomst" class="homepageButton" onclick="updateFilter(this);">overeenkomst</a>
-        <a id="toestemming" class="homepageButton" onclick="updateFilter(this);">toestemming</a>
-        <a id="tarieven" class="homepageButton" onclick="updateFilter(this);">tarieven</a>
+    <h4>Belangrijke Termen</h4>
+    <div class="flex-container">
+        <a id="overeenkomst" class="homepageButton flex-item" onclick="updateFilter(this);">overeenkomst</a>
+        <a id="toestemming" class="homepageButton flex-item" onclick="updateFilter(this);">toestemming</a>
+        <a id="tarieven" class="homepageButton flex-item" onclick="updateFilter(this);">tarieven</a>
     </div>
 
-    <div>
-        <h4>Betrokken Partijen</h4>
-        <a id="consument" class="homepageButton" onclick="updateFilter(this);">consument</a>
-        <a id="energieleverancier" class="homepageButton" onclick="updateFilter(this);">energieleverancier</a>
-        <a id="netbeheerder" class="homepageButton" onclick="updateFilter(this);">netbeheerder</a>
+    <h4>Betrokken Partijen</h4>
+    <div class="flex-container">
+        <a id="consument" class="homepageButton flex-item" onclick="updateFilter(this);">consument</a>
+        <a id="energieleverancier" class="homepageButton flex-item" onclick="updateFilter(this);">energieleverancier</a>
+        <a id="netbeheerder" class="homepageButton flex-item" onclick="updateFilter(this);">netbeheerder</a>
     </div>
 
     <!-- Timeline -->
@@ -2176,7 +2176,7 @@
                 Wat gebeurt er als u verhuist?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
         <div class="timeline__middle">
@@ -2196,7 +2196,7 @@
                 Houden wij ons niet aan de overeenkomst of heeft u andere schade?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
         <div class="timeline__component timeline__component--bottom timeline__component--bg">
@@ -2205,7 +2205,7 @@
                 Heeft u een klacht over ons of klopt het betaalde bedrag niet?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
 
@@ -2227,7 +2227,7 @@
                 Twijfelen wij of u aan de elektriciteitsmeter en/of gasmeter?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
         <div class="timeline__component timeline__component--bg">
@@ -2236,7 +2236,7 @@
                 Bent u het niet eens met de jaarnota of eindnota die u ontvangt?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
         <div class="timeline__middle">
@@ -2257,7 +2257,7 @@
                 Eindigt onze overeenkomst?
             </p>
             <div class="timeline-footer">
-                <a href="https://www.tue.nl/en/"><img src="assets/button%20right.png" width=25px height=25px></a>
+                <a onclick="showArt(16)"><img src="assets/button%20right.png" width=25px height=25px></a>
             </div>
         </div>
         <div class="timeline__component timeline__component--bottom">
@@ -2268,56 +2268,61 @@
         </div>
     </div>
 
+    <h0>Checklist</h0>
+    <div class="flex-container">
+        <div class="flex-item">
+            <input type="checkbox" id="check1" onclick="removeArt(0)">
+            <a id="" class="button" onclick="showArt(0);">Artikel 1</a><br>
+            <input type="checkbox" id="check2" onclick="removeArt(1)">
+            <a id="" class="button" onclick="showArt(1);">Artikel 2</a><br>
+            <input type="checkbox" id="check3" onclick="removeArt(2)">
+            <a id="" class="button" onclick="showArt(2);">Artikel 3</a><br>
+            <input type="checkbox" id="check4" onclick="removeArt(3)">
+            <a id="" class="button" onclick="showArt(3);">Artikel 4</a><br>
+            <input type="checkbox" id="check5" onclick="removeArt(4)">
+            <a id="" class="button" onclick="showArt(4);">Artikel 5</a><br>
+            <input type="checkbox" id="check6" onclick="removeArt(5)">
+            <a id="" class="button" onclick="showArt(5);">Artikel 6</a><br>
+            <input type="checkbox" id="check7" onclick="removeArt(6)">
+            <a id="" class="button" onclick="showArt(6);">Artikel 7</a><br>
+            <input type="checkbox" id="check8" onclick="removeArt(7)">
+            <a id="" class="button" onclick="showArt(7);">Artikel 8</a><br>
+        </div>
+        <div class="flex-item">
+            <input type="checkbox" id="check9" onclick="removeArt(8)">
+            <a id="" class="button" onclick="showArt(8);">Artikel 9</a><br>
+            <input type="checkbox" id="check10" onclick="removeArt(9)">
+            <a id="" class="button" onclick="showArt(9);">Artikel 10</a><br>
+            <input type="checkbox" id="check11" onclick="removeArt(10)">
+            <a id="" class="button" onclick="showArt(10);">Artikel 11</a><br>
+            <input type="checkbox" id="check12" onclick="removeArt(11)">
+            <a id="" class="button" onclick="showArt(11);">Artikel 12</a><br>
+            <input type="checkbox" id="check13" onclick="removeArt(12)">
+            <a id="" class="button" onclick="showArt(12);">Artikel 13</a><br>
+            <input type="checkbox" id="check14" onclick="removeArt(13)">
+            <a id="" class="button" onclick="showArt(13);">Artikel 14</a><br>
+            <input type="checkbox" id="check15" onclick="removeArt(14)">
+            <a id="" class="button" onclick="showArt(14);">Artikel 15</a><br>
+            <input type="checkbox" id="check16" onclick="removeArt(15)">
+            <a id="" class="button" onclick="showArt(15);">Artikel 16</a><br>
+        </div>
+        <div class="flex-item">
+            <input type="checkbox" id="check17" onclick="removeArt(16)">
+            <a id="" class="button" onclick="showArt(16);">Artikel 17</a><br>
+            <input type="checkbox" id="check18" onclick="removeArt(17)">
+            <a id="" class="button" onclick="showArt(17);">Artikel 18</a><br>
+            <input type="checkbox" id="check19" onclick="removeArt(18)">
+            <a id="" class="button" onclick="showArt(18);">Artikel 19</a><br>
+            <input type="checkbox" id="check20" onclick="removeArt(19)">
+            <a id="" class="button" onclick="showArt(19);">Artikel 20</a><br>
+            <input type="checkbox" id="check21" onclick="removeArt(20)">
+            <a id="" class="button" onclick="showArt(20);">Artikel 21</a><br>
+            <input type="checkbox" id="check22" onclick="removeArt(21)">
+            <a id="" class="button" onclick="showArt(21);">Artikel 22</a><br>
+            <input type="checkbox" id="check23" onclick="removeArt(22)">
+            <a id="" class="button" onclick="showArt(22);">Artikel 23</a><br>
+        </div>
 
-    <div class="twocolumn">
-        <h0>Checklist</h0>
-        <a id="checkList" class="button" onclick="updateFilter(this);">CheckList</a> <br>
-        <input type="checkbox" id="check1" onclick="removeArt(0)">
-        <a id="" class="button" onclick="showArt(0);">Artikel 1</a><br>
-        <input type="checkbox" id="check2" onclick="removeArt(1)">
-        <a id="" class="button" onclick="showArt(1);">Artikel 2</a><br>
-        <input type="checkbox" id="check3" onclick="removeArt(2)">
-        <a id="" class="button" onclick="showArt(2);">Artikel 3</a><br>
-        <input type="checkbox" id="check4" onclick="removeArt(3)">
-        <a id="" class="button" onclick="showArt(3);">Artikel 4</a><br>
-        <input type="checkbox" id="check5" onclick="removeArt(4)">
-        <a id="" class="button" onclick="showArt(4);">Artikel 5</a><br>
-        <input type="checkbox" id="check6" onclick="removeArt(5)">
-        <a id="" class="button" onclick="showArt(5);">Artikel 6</a><br>
-        <input type="checkbox" id="check7" onclick="removeArt(6)">
-        <a id="" class="button" onclick="showArt(6);">Artikel 7</a><br>
-        <input type="checkbox" id="check8" onclick="removeArt(7)">
-        <a id="" class="button" onclick="showArt(7);">Artikel 8</a><br>
-        <input type="checkbox" id="check9" onclick="removeArt(8)">
-        <a id="" class="button" onclick="showArt(8);">Artikel 9</a><br>
-        <input type="checkbox" id="check10" onclick="removeArt(9)">
-        <a id="" class="button" onclick="showArt(9);">Artikel 10</a><br>
-        <input type="checkbox" id="check11" onclick="removeArt(10)">
-        <a id="" class="button" onclick="showArt(10);">Artikel 11</a><br>
-        <input type="checkbox" id="check12" onclick="removeArt(11)">
-        <a id="" class="button" onclick="showArt(11);">Artikel 12</a><br>
-        <input type="checkbox" id="check13" onclick="removeArt(12)">
-        <a id="" class="button" onclick="showArt(12);">Artikel 13</a><br>
-        <input type="checkbox" id="check14" onclick="removeArt(13)">
-        <a id="" class="button" onclick="showArt(13);">Artikel 14</a><br>
-        <input type="checkbox" id="check15" onclick="removeArt(14)">
-        <a id="" class="button" onclick="showArt(14);">Artikel 15</a><br>
-        <input type="checkbox" id="check16" onclick="removeArt(15)">
-        <a id="" class="button" onclick="showArt(15);">Artikel 16</a><br>
-        <input type="checkbox" id="check17" onclick="removeArt(16)">
-        <a id="" class="button" onclick="showArt(16);">Artikel 17</a><br>
-        <input type="checkbox" id="check18" onclick="removeArt(17)">
-        <a id="" class="button" onclick="showArt(17);">Artikel 18</a><br>
-        <input type="checkbox" id="check19" onclick="removeArt(18)">
-        <a id="" class="button" onclick="showArt(18);">Artikel 19</a><br>
-        <input type="checkbox" id="check20" onclick="removeArt(19)">
-        <a id="" class="button" onclick="showArt(19);">Artikel 20</a><br>
-        <input type="checkbox" id="check21" onclick="removeArt(20)">
-        <a id="" class="button" onclick="showArt(20);">Artikel 21</a><br>
-        <input type="checkbox" id="check22" onclick="removeArt(21)">
-        <a id="" class="button" onclick="showArt(21);">Artikel 22</a><br>
-        <input type="checkbox" id="check23" onclick="removeArt(22)">
-        <a id="" class="button" onclick="showArt(22);">Artikel 23</a><br>
     </div>
 
 </div>
@@ -2348,6 +2353,7 @@
     var current_list = null;
 
     function showArt(art_nr) {
+
         document.getElementById(current_list[i]).style.display = "none";
         current_list[i] = articlesList[art_nr];
         document.getElementById(current_list[i]).style.display = "none";
