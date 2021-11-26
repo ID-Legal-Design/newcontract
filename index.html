@@ -2843,13 +2843,17 @@
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         document.getElementById("prevButton").style.display = "none";
-        document.getElementById("nextButton").style.display = "block";
         currentButton = FilterPressed.id;
         if (currentButton !== previousButton) {
             hideArticles();
             assignListToButton();
             updateArticles();
             previousButton = currentButton;
+            if (current_list.length > 1) {
+            document.getElementById("nextButton").style.display = "block";
+        }   else {
+            document.getElementById("nextButton").style.display = "none";
+        }
             if (sidepanelState != 1) { //if closed
                 openSidepanel();
             }
