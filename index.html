@@ -27,25 +27,24 @@
     <!-- The text above the article showing what filter is used-->
     <div id="sidepanelhead">
         <img class="UIbutton sidepanelheader" src="assets/close.png" alt="next article" onclick="closeSidepanel();"
-             width=60px
-             height=60px
-             style="right: 5%;">
+             width=50px
+             height=50px
+             style="right: 4%;position:absolute; top: 1%;">
     </div>
 
-    <div class="flex-container" style="justify-content: flex-start; align-items: center; column-gap: 5px">
-        <h0 class=flex-item >Artikelen gefilterd op  </h0>
-        <div id="current_filter" class="filterbox flex-item" ></div>
+    <div class="flex-container" style="justify-content: flex-start; align-items: baseline; column-gap: 5px">
+        <h0 class=flex-item>Artikelen gefilterd op</h0>
+        <div id="current_filter" class="filterbox flex-item"></div>
+        <div id="alle artikelen" class="sidepanel-button flex-item" onclick="clearFilter(this);"> verwijder filter</div>
     </div>
 
     <!-- The UI button elements within the sideview -->
-    <div class="flex-container" id="sidepanelfoot">
-        <img id="prevButton" class="UIbutton sidepanelfooter flex-item" src="assets/button left.png"
-             onclick="previousArticle();" width=60px height=60px style="left: 40%;">
-        <a id="articles_shown" class="counterText sidepanelfooter" style="left: 55%;"></a>
-        <img id="nextButton" class="UIbutton sidepanelfooter flex-item" src="assets/button right.png"
-             onclick="nextArticle();" width=60px height=60px style="left: 70%;">
-        <img id='alle artikelen' class="UIbutton sidepanelfooter flex-item" src="assets/filter_remove.png" alt="clear filter"
-             onclick="clearFilter(this);" width=60px height=60px style="left: 5%;">
+    <div class="flex-container sidepanelfooter">
+        <img id="prevButton" class="UIbutton flex-item" src="assets/button left.png"
+             onclick="previousArticle();" width=60px height=60px>
+        <a id="articles_shown" class="counterText flex-item"></a>
+        <img id="nextButton" class="UIbutton flex-item" src="assets/button right.png"
+             onclick="nextArticle();" width=60px height=60px>
     </div>
 
 
@@ -3171,10 +3170,10 @@
                 Hieronder kunt u meer informatie over deze partijen vinden.
             </p>
             <div class="flex-container">
-                <a id="consument" class="homepageButton flex-item" onclick="updateFilter(this);">consument</a>
-                <a id="energieleverancier" class="homepageButton flex-item"
+                <a id="consument" class="a-button flex-item" onclick="updateFilter(this);">consument</a>
+                <a id="energieleverancier" class="a-button flex-item"
                    onclick="updateFilter(this);">energieleverancier</a>
-                <a id="netbeheerder" class="homepageButton flex-item" onclick="updateFilter(this);">netbeheerder</a>
+                <a id="netbeheerder" class="a-button flex-item" onclick="updateFilter(this);">netbeheerder</a>
             </div>
 
         </div>
@@ -3186,6 +3185,7 @@
                 Om het contract zo overzichtelijk mogelijk te maken is deze ingedeeld op basis van gebeurtenissen.
                 Lees hier onder verder.
             </p>
+
             <div class="timeline">
                 <div class="timeline__component">
                     <div class="timeline__date timeline__date--right"></div>
@@ -3312,9 +3312,9 @@
 
         <h2>Belangrijke Termen</h2>
         <div class="flex-container">
-            <a id="overeenkomst" class="homepageButton flex-item" onclick="updateFilter(this);">overeenkomst</a>
-            <a id="toestemming" class="homepageButton flex-item" onclick="updateFilter(this);">toestemming</a>
-            <a id="tarieven" class="homepageButton flex-item" onclick="updateFilter(this);">tarieven</a>
+            <a id="overeenkomst" class="a-button flex-item" onclick="updateFilter(this);">overeenkomst</a>
+            <a id="toestemming" class="a-button flex-item" onclick="updateFilter(this);">toestemming</a>
+            <a id="tarieven" class="a-button flex-item" onclick="updateFilter(this);">tarieven</a>
         </div>
 
         <!-- checklist -->
@@ -3464,7 +3464,8 @@
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
-        document.getElementById("prevButton").style.display = "none";
+        document.getElementById("prevButton").style.opacity = 0;
+        document.getElementById("prevButton").onclick = null;
         currentButton = FilterPressed.id;
         if (currentButton !== previousButton) {
             hideArticles();
@@ -3472,9 +3473,11 @@
             updateArticles();
             previousButton = currentButton;
             if (current_list.length > 1) {
-                document.getElementById("nextButton").style.display = "block";
+                document.getElementById("nextButton").style.opacity = 100;
+                document.getElementById("nextButton").onclick = nextArticle;
             } else {
-                document.getElementById("nextButton").style.display = "none";
+                document.getElementById("nextButton").style.opacity = 0;
+                document.getElementById("nextButton").onclick = null;
             }
             if (sidepanelState != 1) { //if closed
                 openSidepanel();
@@ -3482,8 +3485,10 @@
         } else if (currentButton == previousButton) {
             if (sidepanelState != 1) { //if closed
                 openSidepanel();
-            } else {
-                alert("you already clicked here, so the right articles are open");
+            }
+            if (sidepanelState == 1) {
+                document.getElementById("prevButton").style.opacity = 100;
+                document.getElementById("prevButton").onclick = previousArticle
             }
         }
     }
@@ -3493,7 +3498,8 @@
         updateFilter(FilterPressed)
         document.getElementById(current_list[i]).style.display = "none";
         i = j - 1
-        document.getElementById("prevButton").style.display = "block";
+        document.getElementById("prevButton").style.opacity = 100;
+        document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
@@ -3529,13 +3535,15 @@
 
     function nextArticle() {
         document.getElementById(current_list[i]).style.display = "none";
-        document.getElementById("prevButton").style.display = "block";
+        document.getElementById("prevButton").style.opacity = 100;
+        document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (i + 2) + " / " + current_list.length;
         if (i < current_list.length - 1) {
             i = i + 1;
         }
         if (i == current_list.length - 1) {
-            document.getElementById("nextButton").style.display = "none";
+            document.getElementById("nextButton").style.opacity = 0;
+            document.getElementById("nextButton").onclick = null;
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
@@ -3543,13 +3551,15 @@
 
     function previousArticle() {
         document.getElementById(current_list[i]).style.display = "none";
-        document.getElementById("nextButton").style.display = "block";
+        document.getElementById("nextButton").style.opacity = 100;
+        document.getElementById("nextButton").onclick = nextArticle;
         document.getElementById("articles_shown").innerHTML = i + " / " + current_list.length;
         if (i > 0) {
             i = i - 1;
         }
         if (i == 0) {
-            document.getElementById("prevButton").style.display = "none";
+            document.getElementById("prevButton").style.opacity = 0;
+            document.getElementById("prevButton").onclick = null;
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));

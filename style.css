@@ -1,9 +1,11 @@
 :root {
-    --colorbright: #4472CA;
     --white: #ffffff;
     --counterart: 0;
     --shade1: #7ba0e5;
     --shade2: #e1e7ff;
+    --shade3: #0a369d;
+    --shade4: #435d99;
+    --shade5: #0f2a6b;
 }
 
 body {
@@ -32,12 +34,13 @@ p {
 }
 
 .sidepanelfooter {
-    bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    bottom: 5%;
+    position: absolute;
 }
 
-.sidepanelheader {
-    top: 10px;
-}
 
 /* adds scrollbar for sideview articles that are to long */
 #articlescontainer ol {
@@ -55,16 +58,15 @@ p {
     width: 70%;
     margin: auto;
     text-align: left;
-    padding: 5% 5% 5% 5%;
+    padding: 2% 5% 5% 5%;
     box-sizing: border-box;
 }
 
 .header {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 35px;
+    font-size: bold;
     display: block;
-    background-color: var(--colorbright);
-    text-transform: uppercase;
+    background-color: var(--shade5);
     color: white;
     padding: 5% 20% 5% 20%;
     text-align: center;
@@ -171,8 +173,8 @@ p {
 .a-button {
     border-color: #4472ca;
     border: solid;
-    padding: 15px 15px;
-    border-radius: 12px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
     transition-duration: 0.4s;
     text-align: center;
     text-decoration: none;
@@ -180,10 +182,29 @@ p {
     margin: 4px 2px;
     cursor: pointer;
     margin-top: 1em;
-    color: #4472ca;
+    color: var(--shade4);
 }
 
 .a-button:hover {
+    color: #b0c4ea;
+}
+
+.sidepanel-button {
+    border-color: #4472ca;
+    border: solid;
+    padding: 3px 10px 3px 10px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: var(--shade4);
+}
+
+.sidepanel-button:hover {
     color: #b0c4ea;
 }
 
@@ -226,7 +247,7 @@ p {
     margin: 1px 1px;
     margin-top: 1em;
     background-color: var(--shade1);
-    color:white;
+    color: white;
 }
 
 .UIbutton {
@@ -240,9 +261,12 @@ p {
     cursor: pointer;
     margin-top: 1em;
     color: white;
-    position: absolute;
 }
 
+.UIbutton:hover {
+    opacity: 0.5!important;;
+    filter: alpha(opacity=40)!important;
+}
 
 button.link {
     background: none;
@@ -256,7 +280,7 @@ h0 {
     margin-top: 1em;
     font-size: 15px;
     font-weight: bold;
-    color: #0A369D;
+    color: var(--shade3);
     text-align: left;
 }
 
@@ -265,7 +289,7 @@ h1 {
     margin-top: 1em;
     font-size: 20px;
     font-weight: bold;
-    color: #0A369D;
+    color: var(--shade3);
     text-align: left;
 }
 
@@ -274,7 +298,7 @@ h2 {
     margin-top: 1em;
     font-size: 17px;
     font-weight: bold;
-    color: var(--colorbright);
+    color: var(--shade4);
     text-align: left;
 }
 
@@ -300,7 +324,6 @@ checklist {
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    position: absolute;
     margin-top: 1em;
     font-size: 16px;
     font-weight: bold;
