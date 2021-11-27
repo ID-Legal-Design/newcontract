@@ -2,12 +2,15 @@
     --colorbright: #4472CA;
     --white: #ffffff;
     --counterart: 0;
+    --shade1: #7ba0e5;
+    --shade2: #e1e7ff;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     overflow: hidden;
+    margin: 0;
 }
 
 p {
@@ -65,6 +68,7 @@ p {
     color: white;
     padding: 5% 20% 5% 20%;
     text-align: center;
+    margin-top: -1rem;
 }
 
 .timeline {
@@ -221,7 +225,7 @@ p {
     font-size: 16px;
     margin: 1px 1px;
     margin-top: 1em;
-    background-color: #7ba0e5;
+    background-color: var(--shade1);
     color:white;
 }
 
@@ -311,7 +315,7 @@ checklist {
 }
 
 highlight {
-    background-color: #dde8fc;
+    background-color: var(--shade2);
     color: black;
 }
 
