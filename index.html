@@ -32,15 +32,17 @@
              style="right: 5%;">
     </div>
 
-    <h0>Je bekijkt nu de artikelen relevant voor het filter</h0>
-    <h0 id="current_filter" style="background-color: #bec9de;"></h0>
+    <div class="flex-container" style="justify-content: flex-start; align-items: center; column-gap: 5px">
+        <h0 class=flex-item >Artikelen gefilterd op  </h0>
+        <div id="current_filter" class="filterbox flex-item" ></div>
+    </div>
 
     <!-- The UI button elements within the sideview -->
     <div id="sidepanelfoot">
-        <img id="prevButton" class="UIbutton sidepanelfooter" src="assets/buttonleft.png"
+        <img id="prevButton" class="UIbutton sidepanelfooter" src="assets/button left.png"
              onclick="previousArticle();" width=60px height=60px style="left: 40%;">
         <a id="articles_shown" class="counterText sidepanelfooter" style="left: 55%;"></a>
-        <img id="nextButton" class="UIbutton sidepanelfooter" src="assets/buttonright.png"
+        <img id="nextButton" class="UIbutton sidepanelfooter" src="assets/button right.png"
              onclick="nextArticle();" width=60px height=60px style="left: 70%;">
         <img id='alle artikelen' class="UIbutton sidepanelfooter" src="assets/filter_remove.png" alt="clear filter"
              onclick="clearFilter(this);" width=60px height=60px style="left: 5%;">
@@ -3117,7 +3119,6 @@
 
 <div id="main">
     <!-- header elements -->
-    <br>
     <div class="header">
         Algemene voorwaarden voor de levering van elektriciteit en gas aan kleinverbruikers 2017
     </div>
@@ -3135,7 +3136,7 @@
 
         <!-- general content -->
         <div class="flex-container">
-            <div class="content flex-item" style="padding:20px 40px">
+            <div class="content flex-item a" style="padding:2% 5% 2% 2%">
                 <h2>Door wie zijn deze algemene voorwaarden gemaakt?</h2>
                 <p>Deze algemene voorwaarden zijn van Energie-Nederland, de vereniging van energieleveranciers in
                     Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden
@@ -3149,7 +3150,7 @@
                 <p>
             </div>
 
-            <div class="content flex-item" style="padding:20px 40px">
+            <div class="content flex-item a" style="padding:2% 5% 2% 2%">
                 <h2>Deze voorwaarden zijn er voor u en voor ons</h2>
                 <p> U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw energieleverancier.
                     Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels waaraan u en uw
@@ -3163,7 +3164,12 @@
 
         <!-- buttons -->
         <div id="termen">
-            <h1>Wie zijn er betrokken bij dit contract?</h1>
+            <h1>Betrokken partijen</h1>
+            <p>
+                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit contract
+                betrokken zijn.
+                Hieronder kunt u meer informatie over deze partijen vinden.
+            </p>
             <div class="flex-container">
                 <a id="consument" class="homepageButton flex-item" onclick="updateFilter(this);">consument</a>
                 <a id="energieleverancier" class="homepageButton flex-item"
@@ -3175,7 +3181,11 @@
 
         <!-- tijdlijn -->
         <div id="tijdlijn">
-            <h1>Gebeurtenissen van het contract</h1>
+            <h1>Het contract</h1>
+            <p>
+                Om het contract zo overzichtelijk mogelijk te maken is deze ingedeeld op basis van gebeurtenissen.
+                Lees hier onder verder.
+            </p>
             <div class="timeline">
                 <div class="timeline__component">
                     <div class="timeline__date timeline__date--right"></div>
@@ -3184,7 +3194,7 @@
                     <div class="timeline__point"></div>
                 </div>
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Bedenktijd</h2>
+                    <div class="timeline__title">Bedenktijd</div>
                     <p class="timeline__paragraph">
                         Wat gebeurt er in de bedenktijd?
                     </p>
@@ -3194,7 +3204,7 @@
                     </div>
                 </div>
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Ik ga verhuizen</h2>
+                    <div class="timeline__title">Ik ga verhuizen</div>
                     <p class="timeline__paragraph">
                         Wat gebeurt er als u verhuist?
                     </p>
@@ -3215,7 +3225,7 @@
                     <div class="timeline__point"></div>
                 </div>
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Ik heb schade</h2>
+                    <div class="timeline__title">Ik heb schade</div>
                     <p class="timeline__paragraph">
                         Houden wij ons niet aan de overeenkomst of heeft u andere schade?
                     </p>
@@ -3225,7 +3235,7 @@
                     </div>
                 </div>
                 <div class="timeline__component timeline__component--bottom timeline__component--bg">
-                    <h2 class="timeline__title">Ik heb een klacht</h2>
+                    <div class="timeline__title">Ik heb een klacht</div>
                     <p class="timeline__paragraph">
                         Heeft u een klacht over ons of klopt het betaalde bedrag niet?
                     </p>
@@ -3248,7 +3258,7 @@
                     <div class="timeline__point"></div>
                 </div>
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Meter onderzoek</h2>
+                    <div class="timeline__title">Meter onderzoek</div>
                     <p class="timeline__paragraph">
                         Twijfelen wij of u aan de elektriciteitsmeter en/of gasmeter?
                     </p>
@@ -3259,7 +3269,7 @@
                     </div>
                 </div>
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Jaarnota</h2>
+                    <div class="timeline__title">Jaarnota</div>
                     <p class="timeline__paragraph">
                         Bent u het niet eens met de jaarnota of eindnota die u ontvangt?
                     </p>
@@ -3281,7 +3291,7 @@
                 </div>
 
                 <div class="timeline__component timeline__component--bg">
-                    <h2 class="timeline__title">Einde van het contract</h2>
+                    <div class="timeline__title">Einde van het contract</div>
                     <p class="timeline__paragraph">
                         Eindigt onze overeenkomst?
                     </p>
@@ -3315,7 +3325,7 @@
                 heeft.
             </p>
             <div class="flex-container">
-                <div class="flex-item2">
+                <div class="flex-item b">
                     <input type="checkbox" id="check1" onclick="removeArt(0)">
                     <checklist><label for="check1">Artikel 1</label></checklist>
                     <a id="" onclick="showArt(0);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
@@ -3335,7 +3345,7 @@
                     <checklist><label for="check6">Artikel 6</label></checklist>
                     <a id="" onclick="showArt(5);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
                 </div>
-                <div class="flex-item2">
+                <div class="flex-item b">
                     <input type="checkbox" id="check7" onclick="removeArt(6)">
                     <checklist><label for="check7">Artikel 7</label></checklist>
                     <a id="" onclick="showArt(6);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
@@ -3356,7 +3366,7 @@
                     <a id="" onclick="showArt(11);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
 
                 </div>
-                <div class="flex-item2">
+                <div class="flex-item b">
                     <input type="checkbox" id="check13" onclick="removeArt(12)">
                     <checklist><label for="check13">Artikel 13</label></checklist>
                     <a id="" onclick="showArt(12);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
@@ -3378,7 +3388,7 @@
 
                 </div>
 
-                <div class="flex-item2">
+                <div class="flex-item b">
                     <input type="checkbox" id="check19" onclick="removeArt(18)">
                     <checklist><label for="check19">Artikel 19</label></checklist>
                     <a id="" onclick="showArt(18);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
@@ -3395,11 +3405,12 @@
                     <checklist><label for="check23">Artikel 23</label></checklist>
                     <a id="" onclick="showArt(22);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
                 </div>
-
             </div>
-            <a id="pdf" class="a-button flex-item" style="position: center" href="https://www.google.com/">download
-                pdf </a>
         </div>
+
+        <br>
+        <a id="pdf" class="a-button flex-item" style="position: center" href="https://www.google.com/">download
+            pdf </a>
 
     </div>
 </div>

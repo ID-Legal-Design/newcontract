@@ -49,11 +49,22 @@ p {
 }
 
 .contentContainer {
-    width: 60%;
+    width: 70%;
     margin: auto;
     text-align: left;
-    padding: 50px 50px 50px 50px;
+    padding: 5% 5% 5% 5%;
     box-sizing: border-box;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    background-color: var(--colorbright);
+    text-transform: uppercase;
+    color: white;
+    padding: 5% 20% 5% 20%;
+    text-align: center;
 }
 
 .timeline {
@@ -110,7 +121,7 @@ p {
 
 .timeline__title {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -201,22 +212,17 @@ p {
     color: white;
 }
 
-.buttonN {
-    border-color: #4472ca;
-    border: solid;
-    border-width: medium;
-    padding: 5px 5px;
-    border-radius: 12px;
+.filterbox {
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
     transition-duration: 0.4s;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    margin: 1px 1px;
     margin-top: 1em;
-   color: #4472ca;
-    display: inline-block;
-    position: absolute;
+    background-color: #7ba0e5;
+    color:white;
 }
 
 .UIbutton {
@@ -284,7 +290,6 @@ checklist {
     text-align: left;
 }
 
-
 .counterText {
     border: none;
     padding: 15px 15px;
@@ -299,16 +304,6 @@ checklist {
     text-align: center;
 }
 
-.header {
-    font-size: 30px;
-    font-weight: bold;
-    display: block;
-    background-color: var(--colorbright);
-    text-transform: uppercase;
-    color: white;
-    padding: 30px 300px 30px 300px;
-    text-align: center;
-}
 
 .logo {
     text-align: right;
@@ -367,11 +362,14 @@ highlight {
 }
 
 .flex-item {
+}
+
+.flex-item.a {
     padding: 10px;
     flex: 30%;
 }
 
-.flex-item2 {
+.flex-item.b {
     padding: 5px;
     flex: 25%;
     text-align: left;
@@ -379,8 +377,16 @@ highlight {
 
 /* Responsive layout - for mobile */
 @media (max-width: 800px) {
-    .flex-item {
+    .flex-item.a {
         flex: 100%;
+    }
+
+    .flex-item.b {
+        flex: 100%;
+    }
+
+    .contentContainer {
+        width: 90%;
     }
 }
 
