@@ -1,12 +1,24 @@
 :root {
-    --colorbright: #4472CA;
     --white: #ffffff;
     --counterart: 0;
+    --shade1: #7ba0e5;
+    --shade2: #e1e7ff;
+    --shade3: #0a369d;
+    --shade4: #435d99;
+    --shade5: #0f2a6b;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    text-align: left;
 }
 
 .sideviewContainer {
@@ -17,88 +29,123 @@ body {
     margin-left: 60%;
     padding: 50px 50px 50px 50px;
     box-sizing: border-box;
-    border-left-width: 0.2px;
-    border-left-style: solid;
+    background-color: #fafafa;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidepanelfooter {
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    bottom: 5%;
+    position: absolute;
+}
+
+
+/* adds scrollbar for sideview articles that are to long */
+#articlescontainer ol {
+    max-height: calc(100vh - 200px - 100px);
+    overflow: auto;
+}
+
+/* adds scrollbar to main element (moves it to middle page) */
+#main {
+    max-height: 98vh;
+    overflow: auto;
 }
 
 .contentContainer {
-    width: 60%;
+    width: 70%;
     margin: auto;
     text-align: left;
-    padding: 50px 50px 50px 50px;
+    padding: 2% 5% 5% 5%;
     box-sizing: border-box;
 }
+
+.header {
+    font-size: 35px;
+    font-size: bold;
+    display: block;
+    background-color: var(--shade5);
+    color: white;
+    padding: 5% 20% 5% 20%;
+    text-align: center;
+    margin-top: -1rem;
+}
+
 .timeline {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 3px 1fr;
-  font-family: "Nunito", sans-serif;
-  color: #0A369D;
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    font-family: "Nunito", sans-serif;
+    color: #0A369D;
 }
 
 .timeline__component {
-  margin: 0 20px 20px 20px;
+    margin: 0 20px 20px 20px;
 }
 
 .timeline__component--bg {
-  padding: 1.5em;
-  background: #bec9de;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+    padding: 1.5em;
+    background: #bec9de;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 /* LEAVE TILL LAST */
 .timeline__component--bottom {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .timeline__middle {
-  position: relative;
-  background: #4472CA;
+    position: relative;
+    background: #4472CA;
 }
 
 .timeline__point {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px;
-  height: 15px;
-  background: #4472CA;
-  border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #4472CA;
+    border-radius: 50%;
 }
 
 /* LEAVE TILL LAST */
 .timeline__point--bottom {
-  top: initial;
-  bottom: 0;
+    top: initial;
+    bottom: 0;
 }
 
 .timeline__date--right {
-  text-align: right;
+    text-align: right;
 }
 
 .timeline__title {
-  margin: 0;
-  font-size: 1.6em;
-  font-weight: bold;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .timeline__paragraph {
-  line-height: 1.5;
+    line-height: 1.5;
 }
-.timeline-footer{
-		background-color:#bec9de;
-		padding: 1px;
-		text-align: right;
-	}
-		.timeline-footer > a{
-			padding:1px;
-			cursor: pointer;
-			text-decoration: none;
-		}
+
+.timeline-footer {
+    background-color: #bec9de;
+    padding: 1px;
+    text-align: right;
+}
+
+.timeline-footer > a {
+    padding: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* new button */
 .homepageButton {
@@ -115,12 +162,50 @@ body {
     cursor: pointer;
     margin-top: 1em;
     color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
 }
 
-.homepageButton:hover{
+.homepageButton:hover {
     background-color: #bec9de;
     color: white;
+}
+
+.a-button {
+    border-color: #4472ca;
+    border: solid;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: var(--shade4);
+}
+
+.a-button:hover {
+    color: #b0c4ea;
+}
+
+.sidepanel-button {
+    border-color: #4472ca;
+    border: solid;
+    padding: 3px 10px 3px 10px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: var(--shade4);
+}
+
+.sidepanel-button:hover {
+    color: #b0c4ea;
 }
 
 .button {
@@ -152,19 +237,17 @@ body {
     color: white;
 }
 
-.buttonN {
-    background-color: #606060;
-    border: none;
-    padding: 15px 15px;
+.filterbox {
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    margin: 1px 1px;
     margin-top: 1em;
+    background-color: var(--shade1);
     color: white;
-    position: absolute;
 }
 
 .UIbutton {
@@ -178,9 +261,12 @@ body {
     cursor: pointer;
     margin-top: 1em;
     color: white;
-    position: absolute;
 }
 
+.UIbutton:hover {
+    opacity: 0.5!important;;
+    filter: alpha(opacity=40)!important;
+}
 
 button.link {
     background: none;
@@ -194,36 +280,42 @@ h0 {
     margin-top: 1em;
     font-size: 15px;
     font-weight: bold;
-    color: #0A369D;
+    color: var(--shade3);
     text-align: left;
 }
 
 h1 {
     display: block;
     margin-top: 1em;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
-    color: var(--colorbright);
+    color: var(--shade3);
+    text-align: left;
 }
 
 h2 {
+    display: block;
+    margin-top: 1em;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--shade4);
+    text-align: left;
+}
+
+h3 {
     display: inline;
     margin-top: 0em;
     font-size: 15px;
     font-weight: bold;
-}
-
-h3{
     text-align: left;
 }
 
-h4{
-    display: block;
-    margin-top: 1em;
-    font-size: 20px;
+checklist {
+    display: inline;
+    margin-top: 0em;
+    font-size: 15px;
     font-weight: bold;
-    color: #0A369D;
-    text-align: center;
+    text-align: left;
 }
 
 .counterText {
@@ -232,30 +324,21 @@ h4{
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    position: absolute;
     margin-top: 1em;
     font-size: 16px;
     font-weight: bold;
     color: #0A369D;
     text-align: center;
 }
-.header {
-    font-size: 30px;
-    font-weight: bold;
-    display: block;
-    background-color: var(--colorbright);
-    text-transform: uppercase;
-    color: white;
-    padding: 25px 25px 25px 25px;
-    text-align: center;
-}
+
+
 .logo {
     text-align: right;
     display: inline-block;
 }
 
 highlight {
-    background-color: #dde8fc;
+    background-color: var(--shade2);
     color: black;
 }
 
@@ -295,31 +378,61 @@ highlight {
 /* flexbox */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
 }
 
 .flex-item {
-  padding: 10px;
-  flex: 30%;
+}
+
+.flex-item.a {
+    padding: 10px;
+    flex: 30%;
+}
+
+.flex-item.b {
+    padding: 5px;
+    flex: 25%;
+    text-align: left;
 }
 
 /* Responsive layout - for mobile */
 @media (max-width: 800px) {
-  .flex-item {
-    flex: 100%;
-  }
+    .flex-item.a {
+        flex: 100%;
+    }
+
+    .flex-item.b {
+        flex: 100%;
+    }
+
+    .contentContainer {
+        width: 90%;
+    }
 }
 
-/* scrollbar */
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
 
-div.scrollbar {
-  height: 100px;
-  overflow-y: scroll;
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
 }
