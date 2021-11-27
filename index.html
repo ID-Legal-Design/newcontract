@@ -3464,7 +3464,7 @@
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
-        document.getElementById("prevButton").style.opacity = 0;
+        document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
         currentButton = FilterPressed.id;
         if (currentButton !== previousButton) {
@@ -3473,10 +3473,10 @@
             updateArticles();
             previousButton = currentButton;
             if (current_list.length > 1) {
-                document.getElementById("nextButton").style.opacity = 100;
+                document.getElementById("nextButton").classList.remove("hidden");
                 document.getElementById("nextButton").onclick = nextArticle;
             } else {
-                document.getElementById("nextButton").style.opacity = 0;
+                document.getElementById("nextButton").classList.add("hidden");
                 document.getElementById("nextButton").onclick = null;
             }
             if (sidepanelState != 1) { //if closed
@@ -3487,8 +3487,8 @@
                 openSidepanel();
             }
             if (sidepanelState == 1) {
-                document.getElementById("prevButton").style.opacity = 100;
-                document.getElementById("prevButton").onclick = previousArticle
+                document.getElementById("prevButton").classList.remove("hidden");
+                document.getElementById("prevButton").onclick = previousArticle;
             }
         }
     }
@@ -3498,7 +3498,7 @@
         updateFilter(FilterPressed)
         document.getElementById(current_list[i]).style.display = "none";
         i = j - 1
-        document.getElementById("prevButton").style.opacity = 100;
+        document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
         document.getElementById(current_list[i]).style.display = "block";
@@ -3535,14 +3535,14 @@
 
     function nextArticle() {
         document.getElementById(current_list[i]).style.display = "none";
-        document.getElementById("prevButton").style.opacity = 100;
+        document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (i + 2) + " / " + current_list.length;
         if (i < current_list.length - 1) {
             i = i + 1;
         }
         if (i == current_list.length - 1) {
-            document.getElementById("nextButton").style.opacity = 0;
+            document.getElementById("nextButton").classList.add("hidden");
             document.getElementById("nextButton").onclick = null;
         }
         document.getElementById(current_list[i]).style.display = "block";
@@ -3551,14 +3551,14 @@
 
     function previousArticle() {
         document.getElementById(current_list[i]).style.display = "none";
-        document.getElementById("nextButton").style.opacity = 100;
+        document.getElementById("nextButton").classList.remove("hidden");
         document.getElementById("nextButton").onclick = nextArticle;
         document.getElementById("articles_shown").innerHTML = i + " / " + current_list.length;
         if (i > 0) {
             i = i - 1;
         }
         if (i == 0) {
-            document.getElementById("prevButton").style.opacity = 0;
+            document.getElementById("prevButton").classList.add("hidden");
             document.getElementById("prevButton").onclick = null;
         }
         document.getElementById(current_list[i]).style.display = "block";
