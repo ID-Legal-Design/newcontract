@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <!-- Hotjar Tracking Code for https://id-legal-design.github.io/newcontract/ -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -27,7 +28,7 @@
     <h0>Je bekijkt nu de artikelen relevant voor het filter</h0>
     <h0 id="current_filter" style="background-color: #bec9de;"></h0>
 
-    <!-- The UI button elements for close, next article, previous article-->
+    <!-- The UI button elements within the sideview -->
     <a id="nextButton" class="buttonN" onclick="nextArticle();" style="right: 5%;bottom: 10%;">next article</a>
     <a id="prevButton" class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
     <a id="articles_shown" class="counterText" style="right: 50%;bottom: 10%;"></a>
@@ -867,6 +868,7 @@
             </ol>
         </div>
     </div>
+
     <!-- specific filter lists with colourcoding -->
     <div id=overeenkomst_list class=" legal-list">
         <div id="ove_1" style="display:none">
@@ -881,12 +883,11 @@
                         <ol>
                             <li>
                                 <highlight>wij u een aanbieding doen voor de levering van elektriciteit en/of gas,
+                                </highlight>
                             </li>
-                    </highlight>
-                <li>
-                    <highlight>u ons vraagt elektriciteit en/of gas te leveren,
-                </li>
-                </highlight>
+                            <li>
+                                <highlight>u ons vraagt elektriciteit en/of gas te leveren,                    </highlight>
+                            </li>
                 <li>
                     <highlight>u en wij een overeenkomst met elkaar hebben.
                 </li>
@@ -894,18 +895,17 @@
             </ol>
             </li></highlight>
             <li>
-                <highlight>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.
+                <highlight>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.            </highlight>
             </li>
-            </highlight>
+
             <li>
                 <highlight>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden die
                     gelden en hoe u hiervan
                     kennis kan nemen. Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk wanneer
                     wij de
                     overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden op onze
-                    website.
+                    website.            </highlight>
             </li>
-            </highlight>
             <li>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze is te vinden op de
                 website van de
                 Autoriteit Consument en Markt.
@@ -931,8 +931,8 @@
                     <highlight>Wij hebben met elkaar een overeenkomst als:
                         <ol>
                             <li>
-                                <highlight>u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag
-                                    accepteren, of
+                                u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag
+                                accepteren, of
                             </li>
                     </highlight>
                 <li>
@@ -2703,260 +2703,293 @@
 
 </div>
 
-<div id="main" class="contentContainer">
+<div id="main">
     <!-- header elements -->
-    <div class="logo">
-        <img src="assets/logo%20energy.png" alt="energy logo" width=20% height=20% style="margin:20px 0px">
-    </div>
-
     <br>
     <div class="header">
         Algemene voorwaarden voor de levering van elektriciteit en gas aan kleinverbruikers 2017
     </div>
-    <br>
 
-    <!-- general content -->
-    <div class="content">
-        <h0>Door wie zijn deze algemene voorwaarden gemaakt?</h0>
-        <h3>Deze algemene voorwaarden zijn van Energie-Nederland, de vereniging van energieleveranciers in
-            Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden met
-            de Consumentenbond en de Vereniging Eigen Huis besproken.
-            Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met elkaar eens over alle
-            voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade (artikel 17.4) en het
-            artikel
-            over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).</h3>
-    </div>
-
-    <div class="content">
-        <h0>Deze voorwaarden zijn er voor u en voor ons</h0>
-        <h3>U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw energieleverancier.
-            Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels waaraan u en uw
-            energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden, is het nodig dat u ze kent
-            en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product waarvoor u een
-            leveringsovereenkomst heeft afgesloten.</h3>
-    </div>
-
-    <!-- buttons -->
-    <h4>Belangrijke Termen</h4>
-    <div class="flex-container">
-        <a id="overeenkomst" class="homepageButton flex-item" onclick="updateFilter(this);">overeenkomst</a>
-        <a id="toestemming" class="homepageButton flex-item" onclick="updateFilter(this);">toestemming</a>
-        <a id="tarieven" class="homepageButton flex-item" onclick="updateFilter(this);">tarieven</a>
-    </div>
-
-    <h4>Betrokken Partijen</h4>
-    <div class="flex-container">
-        <a id="consument" class="homepageButton flex-item" onclick="updateFilter(this);">consument</a>
-        <a id="energieleverancier" class="homepageButton flex-item" onclick="updateFilter(this);">energieleverancier</a>
-        <a id="netbeheerder" class="homepageButton flex-item" onclick="updateFilter(this);">netbeheerder</a>
-    </div>
-
-    <!-- Timeline -->
-    <div id="content">
-        <h4>Gebeurtenissen van het contract</h4>
-    </div>
-
-    <div class="timeline">
-        <div class="timeline__component">
-            <div class="timeline__date timeline__date--right"></div>
+    <div class="contentContainer">
+        <h1>Introductie</h1>
+        <!-- general content -->
+        <div class="content">
+            Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit contract
+            doornemen.
+            Doormiddel van de interactieve knoppen op deze webpagina kunt u het volledige contract bekijken.
+            Mocht u geinteresseerd zijn in een printbare versie van het contract kunt u deze onderaan deze pagina
+            vinden.
         </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Bedenktijd</h2>
-            <p class="timeline__paragraph">
-                Wat gebeurt er in de bedenktijd?
-            </p>
-            <div class="timeline-footer">
-                <a id="bedenktijd" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
-                                                                      height=25px></a>
+
+        <!-- general content -->
+        <div class="flex-container">
+            <div class="content flex-item" style="padding:20px 40px">
+                <h2>Door wie zijn deze algemene voorwaarden gemaakt?</h2>
+                <p>Deze algemene voorwaarden zijn van Energie-Nederland, de vereniging van energieleveranciers in
+                    Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden
+                    met
+                    de Consumentenbond en de Vereniging Eigen Huis besproken.
+                    Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met elkaar eens over alle
+                    voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade (artikel 17.4) en
+                    het
+                    artikel
+                    over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
+                <p>
             </div>
-        </div>
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Ik ga verhuizen</h2>
-            <p class="timeline__paragraph">
-                Wat gebeurt er als u verhuist?
-            </p>
-            <div class="timeline-footer">
-                <a id="verhuis" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
-                                                                   height=25px></a>
-            </div>
-        </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component">
-            <div class="timeline__date">Start van het contract</div>
-        </div>
-        <div class="timeline__component">
-        </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Ik heb schade</h2>
-            <p class="timeline__paragraph">
-                Houden wij ons niet aan de overeenkomst of heeft u andere schade?
-            </p>
-            <div class="timeline-footer">
-                <a id="schade" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
-                                                                  height=25px></a>
-            </div>
-        </div>
-        <div class="timeline__component timeline__component--bottom timeline__component--bg">
-            <h2 class="timeline__title">Ik heb een klacht</h2>
-            <p class="timeline__paragraph">
-                Heeft u een klacht over ons of klopt het betaalde bedrag niet?
-            </p>
-            <div class="timeline-footer">
-                <a id="klacht" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
-                                                                  height=25px></a>
+
+            <div class="content flex-item" style="padding:20px 40px">
+                <h2>Deze voorwaarden zijn er voor u en voor ons</h2>
+                <p> U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw energieleverancier.
+                    Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels waaraan u en uw
+                    energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden, is het nodig dat u ze
+                    kent
+                    en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product waarvoor u een
+                    leveringsovereenkomst heeft afgesloten.
+                <p>
             </div>
         </div>
 
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component timeline__component--bottom">
-            <div class="timeline__date"></div>
-        </div>
-        <div class="timeline__component">
-            <div class="timeline__date timeline__date--right"></div>
-        </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Meter onderzoek</h2>
-            <p class="timeline__paragraph">
-                Twijfelen wij of u aan de elektriciteitsmeter en/of gasmeter?
-            </p>
-            <div class="timeline-footer">
-                <a id="meter onderzoek" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
-                                                                           height=25px></a>
+        <!-- buttons -->
+        <div id="termen">
+            <h1>Wie zijn er betrokken bij dit contract?</h1>
+            <div class="flex-container">
+                <a id="consument" class="homepageButton flex-item" onclick="updateFilter(this);">consument</a>
+                <a id="energieleverancier" class="homepageButton flex-item"
+                   onclick="updateFilter(this);">energieleverancier</a>
+                <a id="netbeheerder" class="homepageButton flex-item" onclick="updateFilter(this);">netbeheerder</a>
             </div>
-        </div>
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Jaarnota</h2>
-            <p class="timeline__paragraph">
-                Bent u het niet eens met de jaarnota of eindnota die u ontvangt?
-            </p>
-            <div class="timeline-footer">
-                <a id="jaarnota" onclick="updateFilter(this);""><img src="assets/button%20right.png" width=25px
-                                                                     height=25px></a>
-            </div>
-        </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
-        </div>
-        <div class="timeline__component timeline__component--bottom">
-            <div class="timeline__date"></div>
-        </div>
-        <div class="timeline__component timeline__component--bottom">
-        </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
+
         </div>
 
-        <div class="timeline__component timeline__component--bg">
-            <h2 class="timeline__title">Einde van het contract</h2>
-            <p class="timeline__paragraph">
-                Eindigt onze overeenkomst?
-            </p>
-            <div class="timeline-footer">
-                <a id="einde overeenkomst" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
+        <!-- tijdlijn -->
+        <div id="tijdlijn">
+            <h1>Gebeurtenissen van het contract</h1>
+            <div class="timeline">
+                <div class="timeline__component">
+                    <div class="timeline__date timeline__date--right"></div>
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Bedenktijd</h2>
+                    <p class="timeline__paragraph">
+                        Wat gebeurt er in de bedenktijd?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="bedenktijd" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
                                                                               height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Ik ga verhuizen</h2>
+                    <p class="timeline__paragraph">
+                        Wat gebeurt er als u verhuist?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="verhuis" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
+                                                                           height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component">
+                    <div class="timeline__date">Start van het contract</div>
+                </div>
+                <div class="timeline__component">
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Ik heb schade</h2>
+                    <p class="timeline__paragraph">
+                        Houden wij ons niet aan de overeenkomst of heeft u andere schade?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="schade" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
+                                                                          height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__component timeline__component--bottom timeline__component--bg">
+                    <h2 class="timeline__title">Ik heb een klacht</h2>
+                    <p class="timeline__paragraph">
+                        Heeft u een klacht over ons of klopt het betaalde bedrag niet?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="klacht" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=25px
+                                                                          height=25px></a>
+                    </div>
+                </div>
+
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bottom">
+                    <div class="timeline__date"></div>
+                </div>
+                <div class="timeline__component">
+                    <div class="timeline__date timeline__date--right"></div>
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Meter onderzoek</h2>
+                    <p class="timeline__paragraph">
+                        Twijfelen wij of u aan de elektriciteitsmeter en/of gasmeter?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="meter onderzoek" onclick="updateFilter(this);"><img src="assets/button%20right.png"
+                                                                                   width=25px
+                                                                                   height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Jaarnota</h2>
+                    <p class="timeline__paragraph">
+                        Bent u het niet eens met de jaarnota of eindnota die u ontvangt?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="jaarnota" onclick="updateFilter(this);""><img src="assets/button%20right.png" width=25px
+                                                                             height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+                <div class="timeline__component timeline__component--bottom">
+                    <div class="timeline__date"></div>
+                </div>
+                <div class="timeline__component timeline__component--bottom">
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
+
+                <div class="timeline__component timeline__component--bg">
+                    <h2 class="timeline__title">Einde van het contract</h2>
+                    <p class="timeline__paragraph">
+                        Eindigt onze overeenkomst?
+                    </p>
+                    <div class="timeline-footer">
+                        <a id="einde overeenkomst" onclick="updateFilter(this);"><img src="assets/button%20right.png"
+                                                                                      width=25px
+                                                                                      height=25px></a>
+                    </div>
+                </div>
+                <div class="timeline__component timeline__component--bottom">
+                    <div class="timeline__date"></div>
+                </div>
+                <div class="timeline__middle">
+                    <div class="timeline__point"></div>
+                </div>
             </div>
         </div>
-        <div class="timeline__component timeline__component--bottom">
-            <div class="timeline__date"></div>
+
+        <h2>Belangrijke Termen</h2>
+        <div class="flex-container">
+            <a id="overeenkomst" class="homepageButton flex-item" onclick="updateFilter(this);">overeenkomst</a>
+            <a id="toestemming" class="homepageButton flex-item" onclick="updateFilter(this);">toestemming</a>
+            <a id="tarieven" class="homepageButton flex-item" onclick="updateFilter(this);">tarieven</a>
         </div>
-        <div class="timeline__middle">
-            <div class="timeline__point"></div>
+
+        <!-- checklist -->
+        <div id="checklist">
+            <h1>Checklist</h1>
+            <p>
+                Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u gemist
+                heeft.
+            </p>
+            <div class="flex-container">
+                <div class="flex-item2">
+                    <input type="checkbox" id="check1" onclick="removeArt(0)">
+                    <checklist><label for="check1">Artikel 1</label></checklist>
+                    <a id="" onclick="showArt(0);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check2" onclick="removeArt(1)">
+                    <checklist><label for="check2">Artikel 2</label></checklist>
+                    <a id="" onclick="showArt(1);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check3" onclick="removeArt(2)">
+                    <checklist><label for="check3">Artikel 3</label></checklist>
+                    <a id="" onclick="showArt(2);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check4" onclick="removeArt(3)">
+                    <checklist><label for="check4">Artikel 4</label></checklist>
+                    <a id="" onclick="showArt(3);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check5" onclick="removeArt(4)">
+                    <checklist><label for="check5">Artikel 5</label></checklist>
+                    <a id="" onclick="showArt(4);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check6" onclick="removeArt(5)">
+                    <checklist><label for="check6">Artikel 6</label></checklist>
+                    <a id="" onclick="showArt(5);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                </div>
+                <div class="flex-item2">
+                    <input type="checkbox" id="check7" onclick="removeArt(6)">
+                    <checklist><label for="check7">Artikel 7</label></checklist>
+                    <a id="" onclick="showArt(6);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check8" onclick="removeArt(7)">
+                    <checklist><label for="check8">Artikel 8</label></checklist>
+                    <a id="" onclick="showArt(7);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check9" onclick="removeArt(8)">
+                    <checklist><label for="check9">Artikel 9</label></checklist>
+                    <a id="" onclick="showArt(8);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check10" onclick="removeArt(9)">
+                    <checklist><label for="check10">Artikel 10</label></checklist>
+                    <a id="" onclick="showArt(9);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check11" onclick="removeArt(10)">
+                    <checklist><label for="check11">Artikel 11</label></checklist>
+                    <a id="" onclick="showArt(10);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check12" onclick="removeArt(11)">
+                    <checklist><label for="check12">Artikel 12 </label></checklist>
+                    <a id="" onclick="showArt(11);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+
+                </div>
+                <div class="flex-item2">
+                    <input type="checkbox" id="check13" onclick="removeArt(12)">
+                    <checklist><label for="check13">Artikel 13</label></checklist>
+                    <a id="" onclick="showArt(12);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check14" onclick="removeArt(13)">
+                    <checklist><label for="check14">Artikel 14</label></checklist>
+                    <a id="" onclick="showArt(13);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check15" onclick="removeArt(14)">
+                    <checklist><label for="check15">Artikel 15</label></checklist>
+                    <a id="" onclick="showArt(14);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check16" onclick="removeArt(15)">
+                    <checklist><label for="check16">Artikel 16</label></checklist>
+                    <a id="" onclick="showArt(15);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check17" onclick="removeArt(16)">
+                    <checklist><label for="check17">Artikel 17</label></checklist>
+                    <a id="" onclick="showArt(16);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check18" onclick="removeArt(17)">
+                    <checklist><label for="check18">Artikel 18</label></checklist>
+                    <a id="" onclick="showArt(17);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+
+                </div>
+
+                <div class="flex-item2">
+                    <input type="checkbox" id="check19" onclick="removeArt(18)">
+                    <checklist><label for="check19">Artikel 19</label></checklist>
+                    <a id="" onclick="showArt(18);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check20" onclick="removeArt(19)">
+                    <checklist><label for="check20">Artikel 20</label></checklist>
+                    <a id="" onclick="showArt(19);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check21" onclick="removeArt(20)">
+                    <checklist><label for="check21">Artikel 21</label></checklist>
+                    <a id="" onclick="showArt(20);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check22" onclick="removeArt(21)">
+                    <checklist><label for="check22">Artikel 22</label></checklist>
+                    <a id="" onclick="showArt(21);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                    <input type="checkbox" id="check23" onclick="removeArt(22)">
+                    <checklist><label for="check23">Artikel 23</label></checklist>
+                    <a id="" onclick="showArt(22);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                </div>
+
+            </div>
+            <a id="pdf" class="a-button flex-item" style="position: center" href="https://www.google.com/">download
+                pdf </a>
         </div>
+
     </div>
-
-    <h0>Checklist</h0>
-    <div class="flex-container">
-        <div class="flex-item">
-            <input type="checkbox" id="check1" onclick="removeArt(0)">
-            <h2><label for="check1">Artikel 1</label></h2>
-            <a id="" onclick="showArt(0);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check2" onclick="removeArt(1)">
-            <h2><label for="check2">Artikel 2</label></h2>
-            <a id="" onclick="showArt(1);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check3" onclick="removeArt(2)">
-            <h2><label for="check3">Artikel 3</label></h2>
-            <a id="" onclick="showArt(2);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check4" onclick="removeArt(3)">
-            <h2><label for="check4">Artikel 4</label></h2>
-            <a id="" onclick="showArt(3);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check5" onclick="removeArt(4)">
-            <h2><label for="check5">Artikel 5</label></h2>
-            <a id="" onclick="showArt(4);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check6" onclick="removeArt(5)">
-            <h2><label for="check6">Artikel 6</label></h2>
-            <a id="" onclick="showArt(5);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check7" onclick="removeArt(6)">
-            <h2><label for="check7">Artikel 7</label></h2>
-            <a id="" onclick="showArt(6);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check8" onclick="removeArt(7)">
-            <h2><label for="check8">Artikel 8</label></h2>
-            <a id="" onclick="showArt(7);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-        </div>
-        <div class="flex-item">
-            <input type="checkbox" id="check9" onclick="removeArt(8)">
-            <h2><label for="check9">Artikel 9</label></h2>
-            <a id="" onclick="showArt(8);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check10" onclick="removeArt(9)">
-            <h2><label for="check10">Artikel 10</label></h2>
-            <a id="" onclick="showArt(9);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check11" onclick="removeArt(10)">
-            <h2><label for="check11">Artikel 11</label></h2>
-            <a id="" onclick="showArt(10);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check12" onclick="removeArt(11)">
-            <h2><label for="check12">Artikel 12</label></h2>
-            <a id="" onclick="showArt(11);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check13" onclick="removeArt(12)">
-            <h2><label for="check13">Artikel 13</label></h2>
-            <a id="" onclick="showArt(12);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check14" onclick="removeArt(13)">
-            <h2><label for="check14">Artikel 14</label></h2>
-            <a id="" onclick="showArt(13);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check15" onclick="removeArt(14)">
-            <h2><label for="check15">Artikel 15</label></h2>
-            <a id="" onclick="showArt(14);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check16" onclick="removeArt(15)">
-            <h2><label for="check16">Artikel 16</label></h2>
-            <a id="" onclick="showArt(15);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-        </div>
-        <div class="flex-item">
-            <input type="checkbox" id="check17" onclick="removeArt(16)">
-            <h2><label for="check17">Artikel 17</label></h2>
-            <a id="" onclick="showArt(16);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check18" onclick="removeArt(17)">
-            <h2><label for="check18">Artikel 18</label></h2>
-            <a id="" onclick="showArt(17);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check19" onclick="removeArt(18)">
-            <h2><label for="check19">Artikel 19</label></h2>
-            <a id="" onclick="showArt(18);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check20" onclick="removeArt(19)">
-            <h2><label for="check20">Artikel 20</label></h2>
-            <a id="" onclick="showArt(19);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check21" onclick="removeArt(20)">
-            <h2><label for="check21">Artikel 21</label></h2>
-            <a id="" onclick="showArt(20);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check22" onclick="removeArt(21)">
-            <h2><label for="check22">Artikel 22</label></h2>
-            <a id="" onclick="showArt(21);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            <input type="checkbox" id="check23" onclick="removeArt(22)">
-            <h2><label for="check23">Artikel 23</label></h2>
-            <a id="" onclick="showArt(22);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
-        </div>
-
-    </div>
-
 </div>
 </body>
 
@@ -2969,19 +3002,20 @@
     var currentButton;
     //variable used to loop through array lists
     var i = 0;
+    //use a function to automatically update all with the written content
+    var current_list = null;
 
-    //array of IDs of the text DIVs for each filter
+    //all articles IDs
     let articlesList = new Array();
-    /// common terms variables
+    // common terms IDs
     let overeenkomstList = new Array();
     let toestemmingList = new Array();
     let tarievenList = new Array();
-    /// stakeholders variables
+    // stakeholders IDs
     let consumentList = new Array();
     let energieleverancierList = new Array();
     let netbeheerderList = new Array();
-
-    //timeline variables
+    //timeline IDs
     let bedenktijdList = new Array();
     let verhuizenList = new Array();
     let schadeList = new Array();
@@ -2989,9 +3023,6 @@
     let meteronderzoekList = new Array();
     let jaarnotaList = new Array();
     let eindeovereenkomstList = new Array();
-
-    //use a function to automatically update all with the written content
-    var current_list = null;
 
     function showArt(art_nr) {
         if (current_list == null) {
@@ -3004,9 +3035,6 @@
         document.getElementById(articlesList[art_nr]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
-    }
-
-    function removeArt(art_nr) {
     }
 
     window.onload = assignContentToList();
@@ -3154,7 +3182,6 @@
     }
 
     //for each filter an array is filled with the available content automatically
-    //note how tarieven, consument, energieleverancier and netbeheerder are not yet correctly linked
     function assignContentToList() {
         articlesList = getDivIdArryFromHtmlCollectionId('articles_list');
         toestemmingList = getDivIdArryFromHtmlCollectionId('toestemming_list');
@@ -3171,8 +3198,6 @@
         meteronderzoekList = getDivIdArryFromHtmlCollectionId('meter_onderzoek_list');
         jaarnotaList = getDivIdArryFromHtmlCollectionId('jaarnota_list');
         eindeovereenkomstList = getDivIdArryFromHtmlCollectionId('einde_overeenkomst_list');
-
-
     }
 
     //overcomplicated method for getting the div ID from an htmlcollection element in an array

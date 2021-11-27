@@ -6,7 +6,13 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    text-align: left;
 }
 
 .sideviewContainer {
@@ -17,8 +23,8 @@ body {
     margin-left: 60%;
     padding: 50px 50px 50px 50px;
     box-sizing: border-box;
-    border-left-width: 0.2px;
-    border-left-style: solid;
+    background-color: #fdfdfd;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contentContainer {
@@ -28,77 +34,80 @@ body {
     padding: 50px 50px 50px 50px;
     box-sizing: border-box;
 }
+
 .timeline {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 3px 1fr;
-  font-family: "Nunito", sans-serif;
-  color: #0A369D;
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    font-family: "Nunito", sans-serif;
+    color: #0A369D;
 }
 
 .timeline__component {
-  margin: 0 20px 20px 20px;
+    margin: 0 20px 20px 20px;
 }
 
 .timeline__component--bg {
-  padding: 1.5em;
-  background: #bec9de;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+    padding: 1.5em;
+    background: #bec9de;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 /* LEAVE TILL LAST */
 .timeline__component--bottom {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .timeline__middle {
-  position: relative;
-  background: #4472CA;
+    position: relative;
+    background: #4472CA;
 }
 
 .timeline__point {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px;
-  height: 15px;
-  background: #4472CA;
-  border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #4472CA;
+    border-radius: 50%;
 }
 
 /* LEAVE TILL LAST */
 .timeline__point--bottom {
-  top: initial;
-  bottom: 0;
+    top: initial;
+    bottom: 0;
 }
 
 .timeline__date--right {
-  text-align: right;
+    text-align: right;
 }
 
 .timeline__title {
-  margin: 0;
-  font-size: 1.6em;
-  font-weight: bold;
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 .timeline__paragraph {
-  line-height: 1.5;
+    line-height: 1.5;
 }
-.timeline-footer{
-		background-color:#bec9de;
-		padding: 1px;
-		text-align: right;
-	}
-		.timeline-footer > a{
-			padding:1px;
-			cursor: pointer;
-			text-decoration: none;
-		}
+
+.timeline-footer {
+    background-color: #bec9de;
+    padding: 1px;
+    text-align: right;
+}
+
+.timeline-footer > a {
+    padding: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* new button */
 .homepageButton {
@@ -115,12 +124,32 @@ body {
     cursor: pointer;
     margin-top: 1em;
     color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
 }
 
-.homepageButton:hover{
+.homepageButton:hover {
     background-color: #bec9de;
     color: white;
+}
+
+.a-button {
+    border-color: #4472ca;
+    border: solid;
+    padding: 15px 15px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: #4472ca;
+}
+
+.a-button:hover {
+    color: #b0c4ea;
 }
 
 .button {
@@ -201,30 +230,37 @@ h0 {
 h1 {
     display: block;
     margin-top: 1em;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
-    color: var(--colorbright);
+    color: #0A369D;
+    text-align: left;
 }
 
 h2 {
+    display: block;
+    margin-top: 1em;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--colorbright);
+    text-align: left;
+}
+
+h3 {
     display: inline;
     margin-top: 0em;
     font-size: 15px;
     font-weight: bold;
-}
-
-h3{
     text-align: left;
 }
 
-h4{
-    display: block;
-    margin-top: 1em;
-    font-size: 20px;
+checklist {
+    display: inline;
+    margin-top: 0em;
+    font-size: 15px;
     font-weight: bold;
-    color: #0A369D;
-    text-align: center;
+    text-align: left;
 }
+
 
 .counterText {
     border: none;
@@ -239,6 +275,7 @@ h4{
     color: #0A369D;
     text-align: center;
 }
+
 .header {
     font-size: 30px;
     font-weight: bold;
@@ -246,9 +283,10 @@ h4{
     background-color: var(--colorbright);
     text-transform: uppercase;
     color: white;
-    padding: 25px 25px 25px 25px;
+    padding: 30px 300px 30px 300px;
     text-align: center;
 }
+
 .logo {
     text-align: right;
     display: inline-block;
@@ -295,31 +333,37 @@ highlight {
 /* flexbox */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
 }
 
 .flex-item {
-  padding: 10px;
-  flex: 30%;
+    padding: 10px;
+    flex: 30%;
+}
+
+.flex-item2 {
+    padding: 5px;
+    flex: 25%;
+    text-align: left;
 }
 
 /* Responsive layout - for mobile */
 @media (max-width: 800px) {
-  .flex-item {
-    flex: 100%;
-  }
+    .flex-item {
+        flex: 100%;
+    }
 }
 
 /* scrollbar */
 
 div.scrollbar {
-  height: 100px;
-  overflow-y: scroll;
+    height: 100px;
+    overflow-y: scroll;
 }
