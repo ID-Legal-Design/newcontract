@@ -25,17 +25,27 @@
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
+    <div id="sidepanelhead">
+        <img class="UIbutton sidepanelheader" src="assets/close.png" alt="next article" onclick="closeSidepanel();"
+             width=60px
+             height=60px
+             style="right: 5%;">
+    </div>
+
     <h0>Je bekijkt nu de artikelen relevant voor het filter</h0>
     <h0 id="current_filter" style="background-color: #bec9de;"></h0>
 
     <!-- The UI button elements within the sideview -->
-    <a id="nextButton" class="buttonN" onclick="nextArticle();" style="right: 5%;bottom: 10%;">next article</a>
-    <a id="prevButton" class="buttonN" onclick="previousArticle();" style="right: 25%;bottom: 10%;">previous article</a>
-    <a id="articles_shown" class="counterText" style="right: 50%;bottom: 10%;"></a>
-    <img class="UIbutton" src="assets/close.png" alt="next article" onclick="closeSidepanel();" width=70px height=70px
-         style="right: 80%;bottom: 10%;">
-    <img id='alle artikelen' class="UIbutton" src="assets/filter_remove.png" alt="clear filter"
-         onclick="clearFilter(this);" width=70px height=70px style="right: 70%;bottom: 10%;">
+    <div id="sidepanelfoot">
+        <img id="prevButton" class="UIbutton sidepanelfooter" src="assets/buttonleft.png"
+             onclick="previousArticle();" width=60px height=60px style="left: 40%;">
+        <a id="articles_shown" class="counterText sidepanelfooter" style="left: 55%;"></a>
+        <img id="nextButton" class="UIbutton sidepanelfooter" src="assets/buttonright.png"
+             onclick="nextArticle();" width=60px height=60px style="left: 70%;">
+        <img id='alle artikelen' class="UIbutton sidepanelfooter" src="assets/filter_remove.png" alt="clear filter"
+             onclick="clearFilter(this);" width=60px height=60px style="left: 5%;">
+    </div>
+
 
     <!-- Below is all text that can be shown for a filter.
     The text has a parent div ID (e.g all_articles, ove_articles) which is seperated per filter and used later.
