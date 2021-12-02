@@ -3334,6 +3334,7 @@
                 Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u gemist
                 heeft.
             </p>
+            <a id="checkList" class="a-button flex-item" onclick="updateFilter(this);">checklist</a>
             <div class="flex-container">
                 <div class="flex-item b">
                     <input type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
@@ -3463,6 +3464,8 @@
     window.onload = assignContentToList();
 
     function showArt(art_nr) {
+        document.getElementById("nextButton").classList.add("hidden");
+        document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
             current_list = articlesList;
         }
@@ -3473,9 +3476,11 @@
         document.getElementById(articlesList[art_nr]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
+        document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
     }
     
     function updateChecklist(checkbox, art_nr) {
+        
         if (checkbox.checked == true) {
             checkListDummy[art_nr] = true;
         }
@@ -3486,12 +3491,16 @@
     }
 
     function fillCheckList(){
-        for (i = 0; i < checkListDummy.length; i++)
-        console.log((i+1) + ": " + checkListDummy[i]);
-            if (checkListDummy[i] == true) {
-                articlesList.push(articlesList[i]);
+        checkList = [];
+        var n_articles_in_checklist = 0;
+        for (j = 0; j < checkListDummy.length; j++)
+            if (checkListDummy[j] == true) {
+                checkList.push(articlesList[j]);
+                n_articles_in_checklist++;
+                current_list[i] = checkList[j];
+                document.documentElement.style.setProperty('--counterart', (j));
             }
-            
+            document.getElementById("articles_shown").innerHTML = "1" + " / " + n_articles_in_checklist;
     }
 
     //Based on button press update side view
@@ -3655,7 +3664,7 @@
         consumentList = getDivIdArryFromHtmlCollectionId('consument_list');
         energieleverancierList = getDivIdArryFromHtmlCollectionId('energieleverancier_list');
         netbeheerderList = getDivIdArryFromHtmlCollectionId('netbeheerder_list');
-        //checkList = getDivIdArryFromHtmlCollectionId('articles_list');
+        checkList = getDivIdArryFromHtmlCollectionId('articles_list');
         bedenktijdList = getDivIdArryFromHtmlCollectionId('bedenktijd_list');
         verhuizenList = getDivIdArryFromHtmlCollectionId('verhuizen_list');
         schadeList = getDivIdArryFromHtmlCollectionId('schade_list');
