@@ -3334,7 +3334,6 @@
                 Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u gemist
                 heeft.
             </p>
-            <a id="checkList" class="a-button flex-item" onclick="updateFilter(this);">checklist</a>
             <div class="flex-container">
                 <div class="flex-item b">
                     <input type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
@@ -3416,6 +3415,8 @@
                     <checklist><label for="check23">Artikel 23</label></checklist>
                     <a onclick="showArt(22);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
                 </div>
+                <a id="checkList" class="a-button flex-item" onclick="updateFilter(document.getElementById('alle artikelen'));checklistChecked();updateFilter(this)">Open selected</a>
+                <a id="checkList" class="a-button flex-item" onclick="updateFilter(document.getElementById('alle artikelen'));checklistUnChecked();updateFilter(this)">Open unselected</a>
             </div>
         </div>
 
@@ -3459,7 +3460,7 @@
     let eindeovereenkomstList = new Array();
     //checkList ID
     let checkList = new Array();
-    let checkListDummy = new Array(24).fill(false);
+    let checkListDummy = new Array(23).fill(false);
 
     window.onload = assignContentToList();
 
@@ -3485,22 +3486,23 @@
             checkListDummy[art_nr] = true;
         }
         else {
-            checkListDummy[art_nr] = false;
         }
-        fillCheckList();
     }
 
-    function fillCheckList(){
+    function checklistChecked(){
         checkList = [];
-        var n_articles_in_checklist = 0;
         for (j = 0; j < checkListDummy.length; j++)
             if (checkListDummy[j] == true) {
                 checkList.push(articlesList[j]);
-                n_articles_in_checklist++;
-                current_list[i] = checkList[j];
-                document.documentElement.style.setProperty('--counterart', (j));
             }
-            document.getElementById("articles_shown").innerHTML = "1" + " / " + n_articles_in_checklist;
+    }
+
+    function checklistUnChecked(){
+        checkList = [];
+        for (j = 0; j < checkListDummy.length; j++)
+            if (checkListDummy[j] == false) {
+                checkList.push(articlesList[j]);
+            }
     }
 
     //Based on button press update side view
