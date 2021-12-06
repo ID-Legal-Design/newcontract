@@ -3459,6 +3459,7 @@
 
     window.onload = assignContentToList();
 
+    //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
@@ -3475,6 +3476,7 @@
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
     }
     
+    //Keeps track of the checked checkboxes
     function updateChecklist(checkbox, art_nr) {
         
         if (checkbox.checked == true) {
@@ -3484,6 +3486,7 @@
         }
     }
 
+    //Fill filter with the checked articles
     function checklistChecked(){
         checkList = [];
         for (j = 0; j < checkListDummy.length; j++)
@@ -3492,6 +3495,7 @@
             }
     }
 
+    //Fill filter with the unchecked articles
     function checklistUnChecked(){
         checkList = [];
         for (j = 0; j < checkListDummy.length; j++)
