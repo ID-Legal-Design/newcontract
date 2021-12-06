@@ -336,7 +336,9 @@ checklist {
     text-align: center;
 }
 
-
+label {
+    font-size: 13px;
+}
 .logo {
     text-align: right;
     display: inline-block;
