@@ -394,7 +394,7 @@ highlight {
 
 .box {
     margin: 0 0%;
-    padding: 50px 100px 50px 100px
+    padding: 50px 100px 50px 100px;
 }
 
 .box ul {
@@ -437,8 +437,15 @@ highlight {
     position: absolute;
     left: -30px;
 }
-
 .box ul li > span:before {
+    content: "";
+    width: 27px;
+    display: block;
+    height: 100%;
+    border: 1px dashed #fff;
+    position: absolute;
+}
+.box ul li > span:after {
     content: "";
     display: block;
     width: 10px;
@@ -448,14 +455,8 @@ highlight {
     border: 2px solid #fff;
     position: absolute;
     left: -7.5px;
-}
+    top: -6px;
 
-.box ul li > span:before {
-    top: -10px
-}
-
-.box ul li > span:after {
-    top: 95%
 }
 
 .box .title {
