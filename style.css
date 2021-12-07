@@ -33,6 +33,62 @@ p {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* The next three parts belong to the expandable buttons */
+.collapsible {
+    background: var(--shade2);
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+    color: var(--shade3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+  }
+  
+  /* background color when mouse is hovered over the button */
+  .active, .collapsible:hover {
+    background-color:var(--shade1);
+  }
+  
+  /* Style of the content that is hidden by default */
+  .content {
+    padding: 0.3em;
+    background-color:var(--shade1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    height: 100%;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  /*set scrollbar corner color to transparant */
+  ::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+  }
+
+  /*Symbol at right side of the buttton when it is collapsed */
+  .collapsible:after {
+    content: '\2795'; 
+    font-size: 9px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    margin-top: 4px;
+  }
+
+  /*Symbol at right side of the button when it is expanded */
+  .active:after {
+    content: "\2796";
+  }
+
 .sidepanelfooter {
     justify-content: center;
     align-items: center;
@@ -42,7 +98,7 @@ p {
 }
 
 
-/* adds scrollbar for sideview articles that are to long */
+/* adds scrollbar for sideview articles that are too long */
 #articlescontainer ol {
     max-height: calc(100vh - 200px - 100px);
     overflow: auto;
@@ -403,6 +459,7 @@ highlight {
 .flex-item.a {
     padding: 10px;
     flex: 30%;
+    
 }
 
 .flex-item.b {

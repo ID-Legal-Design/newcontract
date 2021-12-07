@@ -3135,18 +3135,15 @@
     <div class="contentContainer">
         <h1>Introductie</h1>
         <!-- general content -->
-        <div class="content">
-            Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit contract
+        <div class="flex-container">
+            <p>Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit contract
             doornemen.
             Doormiddel van de interactieve knoppen op deze webpagina kunt u het volledige contract bekijken.
             Mocht u geinteresseerd zijn in een printbare versie van het contract kunt u deze onderaan deze pagina
-            vinden.
-        </div>
-
-        <div class="flex-container">
-            <div class="flex-item b">
-                <button data-toggle="collapse" data-target="#intro_1"><h3>Door wie zijn deze algemene voorwaarden gemaakt? </h3><img src="assets/button%20right.png" width=15px height=15px></button><br>
-                <div id="intro_1" class="collapse">
+            vinden.</p>
+            <div class="flex-item a">
+                <button type="button" class="collapsible"><h3>Door wie zijn deze algemene voorwaarden gemaakt?</h3></button>
+                <div class="content">
                     <p>Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers in
                         Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden
                         met
@@ -3155,43 +3152,24 @@
                         voorwaarden, maar er zijn twee uitzonderingen en        dat zijn het artikel over schade (artikel 17.4) en
                         het
                         artikel
-                        over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).</p>
-                  </div>
+                        over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
+                    </p>
+                </div>
             </div>
-
-            <div class="flex-item b">
-                <a onclick="showArt(0);"> <h3>Deze voorwaarden zijn er voor u en voor ons </h3><img src="assets/button%20right.png" width=15px height=15px></a><br>
-            </div>
-        </div>
-
-        <!-- general content -->
-        <div class="flex-container">
-            <div class="content flex-item a" style="padding:2% 5% 2% 2%">
-                <h2>Door wie zijn deze algemene voorwaarden gemaakt?</h2>
-                <p>Deze algemene voorwaarden zijn van Energie-Nederland, de vereniging van energieleveranciers in
-                    Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden
-                    met
-                    de Consumentenbond en de Vereniging Eigen Huis besproken.
-                    Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met elkaar eens over alle
-                    voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade (artikel 17.4) en
-                    het
-                    artikel
-                    over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
-                <p>
-            </div>
-
-            <div class="content flex-item a" style="padding:2% 5% 2% 2%">
-                <h2>Deze voorwaarden zijn er voor u en voor ons</h2>
-                <p> U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw energieleverancier.
-                    Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels waaraan u en uw
-                    energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden, is het nodig dat u ze
-                    kent
-                    en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product waarvoor u een
-                    leveringsovereenkomst heeft afgesloten.
-                <p>
+            <div class="flex-item a">
+                <button type="button" class="collapsible"><h3>Deze voorwaarden zijn er voor u en voor ons</h3></button>
+                <div class="content">
+                    <p>U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw energieleverancier.
+                        Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels waaraan u en uw
+                        energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden, is het nodig dat u ze
+                        kent
+                        en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product waarvoor u een
+                        leveringsovereenkomst heeft afgesloten.
+                    </p>
+                </div>
             </div>
         </div>
-
+        
         <!-- buttons -->
         <div id="termen">
             <h1>Betrokken partijen</h1>
@@ -3201,10 +3179,31 @@
                 Hieronder kunt u meer informatie over deze partijen vinden.
             </p>
             <div class="flex-container">
-                <a id="consument" class="a-button flex-item" onclick="updateFilter(this);">consument</a>
-                <a id="energieleverancier" class="a-button flex-item"
-                   onclick="updateFilter(this);">energieleverancier</a>
-                <a id="netbeheerder" class="a-button flex-item" onclick="updateFilter(this);">netbeheerder</a>
+                <div class="flex-item a">
+                    <button type="button" class="collapsible"><h3>Consument &nbsp<img src="assets/Consument.png" width=25px height=25px/></button>
+                    <div class="content">
+                        <p> Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het gaat in dit geval om het kopen van een dienstverlening, namelijk het leveren van energie door de energie leverancier.   
+                            <a id="consument" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="flex-item a">
+                    <button type="button" class="collapsible"><h3>Energie leverancier&nbsp<img src="assets/Energy-supplier.png" width=25px height=25px/></h3></button>
+                    <div class="content">
+                        <p>Een energieleverancier verkoopt elektriciteit en/of gas. Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan bestaan uit elektriciteit en gas.
+                            <a id="energieleverancier" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-item a">
+                    <button type="button" class="collapsible"><h3>Netbeheerder&nbsp<img src="assets/Netbeheerder.PNG" width=25px height=25px/></h3></button>
+                    <div class="content">
+                        <p>De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het energienetwerk waarover gas en elektriciteit geleverd wordt.
+                            <a id="netbeheerder" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -3492,8 +3491,22 @@
 
     window.onload = assignContentToList();
 
-    
+    //Function for collapsing and expanding buttons
+    var coll = document.getElementsByClassName("collapsible");
+    var k;
 
+        for (k = 0; k < coll.length; k++) {
+            coll[k].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
@@ -3520,8 +3533,12 @@
                 openSidepanel();
             }
             if (sidepanelState == 1) {
+                if (i == 0) {
+                    document.getElementById("prevButton").classList.add("hidden");
+                } else {
                 document.getElementById("prevButton").classList.remove("hidden");
                 document.getElementById("prevButton").onclick = previousArticle;
+                }
             }
         }
     }
