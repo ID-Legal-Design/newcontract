@@ -3143,6 +3143,27 @@
             vinden.
         </div>
 
+        <div class="flex-container">
+            <div class="flex-item b">
+                <button data-toggle="collapse" data-target="#intro_1"><h3>Door wie zijn deze algemene voorwaarden gemaakt? </h3><img src="assets/button%20right.png" width=15px height=15px></button><br>
+                <div id="intro_1" class="collapse">
+                    <p>Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers in
+                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn de voorwaarden
+                        met
+                        de Consumentenbond en de Vereniging Eigen Huis besproken.
+                        Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met elkaar eens over alle
+                        voorwaarden, maar er zijn twee uitzonderingen en        dat zijn het artikel over schade (artikel 17.4) en
+                        het
+                        artikel
+                        over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).</p>
+                  </div>
+            </div>
+
+            <div class="flex-item b">
+                <a onclick="showArt(0);"> <h3>Deze voorwaarden zijn er voor u en voor ons </h3><img src="assets/button%20right.png" width=15px height=15px></a><br>
+            </div>
+        </div>
+
         <!-- general content -->
         <div class="flex-container">
             <div class="content flex-item a" style="padding:2% 5% 2% 2%">
@@ -3185,7 +3206,6 @@
                    onclick="updateFilter(this);">energieleverancier</a>
                 <a id="netbeheerder" class="a-button flex-item" onclick="updateFilter(this);">netbeheerder</a>
             </div>
-
         </div>
 
         <!-- tijdlijn -->
@@ -3471,6 +3491,9 @@
     }
 
     window.onload = assignContentToList();
+
+    
+
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {

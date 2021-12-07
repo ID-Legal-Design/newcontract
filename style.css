@@ -98,7 +98,7 @@ p {
 .timeline__component--bottom {
     margin-bottom: 0;
 }
-
+  
 .timeline__middle {
     position: relative;
     background: #4472CA;
@@ -313,6 +313,7 @@ h3 {
     font-size: 15px;
     font-weight: bold;
     text-align: left;
+    cursor: pointer;
 }
 
 checklist {
@@ -336,6 +337,9 @@ checklist {
     text-align: center;
 }
 
+label {
+    font-size: 13px;
+}
 
 .logo {
     text-align: right;
