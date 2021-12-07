@@ -3169,7 +3169,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- buttons -->
         <div id="termen">
             <h1>Betrokken partijen</h1>
@@ -3182,10 +3182,10 @@
                 <div class="flex-item a">
                     <button type="button" class="collapsible"><h3>Consument &nbsp<img src="assets/Consument.png" width=25px height=25px/></button>
                     <div class="content">
-                        <p> Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het gaat in dit geval om het kopen van een dienstverlening, namelijk het leveren van energie door de energie leverancier.   
+                        <p> Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het gaat in dit geval om het kopen van een dienstverlening, namelijk het leveren van energie door de energie leverancier.
                             <a id="consument" onclick="updateFilter(this);"><img src="assets/button%20right.png" width=15px height=15px></a><br>
                         </p>
-                        
+
                     </div>
                 </div>
                 <div class="flex-item a">
@@ -3435,7 +3435,7 @@
 
         <br>
         <br>
-        <a id="pdf" class="a-button flex-item" style="position: center" href="https://www.google.com/">download
+        <a id="pdf" class="a-button flex-item" style="position: center" href="assets/PDF_TUENERGY.pdf">download
             pdf </a>
 
     </div>
@@ -3494,10 +3494,10 @@
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
     }
-    
+
     //Keeps track of the checked checkboxes
     function updateChecklist(checkbox, art_nr) {
-        
+
         if (checkbox.checked == true) {
             checkListDummy[art_nr] = true;
         }
@@ -3542,7 +3542,7 @@
                 }
             });
         }
-    
+
 
     //Function for collapsing and expanding buttons
     var coll = document.getElementsByClassName("collapsible");
@@ -3559,7 +3559,7 @@
                 }
             });
         }
-    
+
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
