@@ -1,11 +1,15 @@
 :root {
     --white: #ffffff;
+    --dark: #2b2f32;
     --counterart: 0;
     --shade1: #7ba0e5;
     --shade2: #e1e7ff;
     --shade3: #0a369d;
     --shade4: #435d99;
     --shade5: #0f2a6b;
+    --shade6: #f6f6f6;
+
+    --indexCircle: 10px;
 }
 
 body {
@@ -152,79 +156,6 @@ p {
     margin-top: -1rem;
 }
 
-.timeline {
-    margin: 0 auto;
-    max-width: 750px;
-    padding: 25px;
-    display: grid;
-    grid-template-columns: 1fr 3px 1fr;
-    font-family: "Nunito", sans-serif;
-    color: #0A369D;
-}
-
-.timeline__component {
-    margin: 0 20px 20px 20px;
-}
-
-.timeline__component--bg {
-    padding: 1.5em;
-    background: #bec9de;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-}
-
-/* LEAVE TILL LAST */
-.timeline__component--bottom {
-    margin-bottom: 0;
-}
-
-.timeline__middle {
-    position: relative;
-    background: #4472CA;
-}
-
-.timeline__point {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    background: #4472CA;
-    border-radius: 50%;
-}
-
-/* LEAVE TILL LAST */
-.timeline__point--bottom {
-    top: initial;
-    bottom: 0;
-}
-
-.timeline__date--right {
-    text-align: right;
-}
-
-.timeline__title {
-    margin: 0;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
-.timeline__paragraph {
-    line-height: 1.5;
-}
-
-.timeline-footer {
-    background-color: #bec9de;
-    padding: 1px;
-    text-align: right;
-}
-
-.timeline-footer > a {
-    padding: 1px;
-    cursor: pointer;
-    text-decoration: none;
-}
 
 /* new button */
 .homepageButton {
@@ -347,9 +278,9 @@ p {
     filter: alpha(opacity=40);
 }
 
-.hidden{
-    opacity: 0!important;
-    pointer-events: none!important;
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 button.link {
@@ -468,11 +399,16 @@ highlight {
     box-sizing: border-box;
 }
 
-.flex-container {
+.flex-container.normal {
     display: flex;
     flex-wrap: wrap;
     font-size: 30px;
     text-align: center;
+    flex-direction: row;
+}
+
+.flex-container.graphicIndex {
+    background-color: var(--shade4);
 }
 
 .flex-item {
@@ -488,6 +424,12 @@ highlight {
     padding: 5px;
     flex: 25%;
     text-align: left;
+}
+
+.flex-item.cat {
+    padding: 5px;
+    text-align: left;
+    min-width: 150px;
 }
 
 /* Responsive layout - for mobile */
@@ -524,3 +466,107 @@ highlight {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
 }
+
+/*----------- graphical index------------- */
+/* https://codepen.io/mo7amedk7alid29/pen/dRoMwo */
+
+.box {
+    margin: 0 0%;
+    padding: 50px 100px 50px 100px
+}
+
+.box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.box ul:last-of-type {
+    top: 10px
+}
+
+.box ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px dashed #fff;
+    position: absolute;
+    top: 0;
+    left: 30px
+}
+
+.box ul li {
+    margin: 20px 60px 60px;
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.box ul li > span {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: -30px;
+}
+
+.box ul li > span:before, .box ul li > span:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff6d6d;
+    border: 2px solid #fff;
+    position: absolute;
+    left: -7.5px;
+}
+
+.box ul li > span:before {
+    top: -10px
+}
+
+.box ul li > span:after {
+    top: 95%
+}
+
+.box .title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px
+}
+
+.box .name {
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: right;
+    margin-right: 20px
+}
+
+.box .time span {
+    position: absolute;
+    left: -100px;
+    color: #fff;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.box .time span:first-child {
+    top: -16px
+}
+
+.box .time span:last-child {
+    top: 94%
+}
+
