@@ -415,6 +415,10 @@ highlight {
 .flex-container.graphicIndex {
     background-color: var(--shade4);
 }
+.flex-container.graphicIndex.second-block {
+    background-color: var(--shade5);
+}
+
 
 .flex-item {
 }
@@ -477,7 +481,7 @@ highlight {
 
 .box {
     margin: 0 0%;
-    padding: 50px 100px 50px 100px;
+    padding: 25px 100px 25px 100px;
 }
 
 .box ul {
