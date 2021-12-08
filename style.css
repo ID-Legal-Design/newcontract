@@ -70,14 +70,14 @@ p {
     color: var(--shade3);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+
   }
-  
+
   /* background color when mouse is hovered over the button */
   .active, .collapsible:hover {
     background-color:var(--shade1);
   }
-  
+
   /* Style of the content that is hidden by default */
   .content {
     padding: 0.3em;
@@ -99,7 +99,7 @@ p {
 
   /*Symbol at right side of the buttton when it is collapsed */
   .collapsible:after {
-    content: '\2795'; 
+    content: '\2795';
     font-size: 9px;
     color: white;
     float: right;
@@ -143,7 +143,7 @@ p {
 
 .header {
     font-size: 35px;
-    font-size: bold;
+    font-weight: bold;
     display: block;
     background-color: var(--shade5);
     color: white;
@@ -481,7 +481,7 @@ highlight {
 .flex-item.a {
     padding: 10px;
     flex: 30%;
-    
+
 }
 
 .flex-item.b {

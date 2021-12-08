@@ -3544,6 +3544,23 @@
         }
     
 
+    //Function for collapsing and expanding buttons
+    var coll = document.getElementsByClassName("collapsible");
+    var k;
+
+        for (k = 0; k < coll.length; k++) {
+            coll[k].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    
+
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         document.getElementById("prevButton").classList.add("hidden");
