@@ -25,29 +25,6 @@ p {
     text-align: left;
 }
 
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.active, .collapsible:hover {
-    background-color: #ccc;
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
 .sideviewContainer {
     display: none;
     width: 40%;
@@ -402,6 +379,14 @@ highlight {
 
 * {
     box-sizing: border-box;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+    flex-direction: row;
 }
 
 .flex-container.normal {

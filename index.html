@@ -3202,7 +3202,7 @@
     <div class="contentContainer">
         <h1>Introductie</h1>
         <!-- general content -->
-        <div class="flex-container">
+        <div class="flex-container2">
             <p>Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit contract
             doornemen.
             Doormiddel van de interactieve knoppen op deze webpagina kunt u het volledige contract bekijken.
@@ -3245,7 +3245,7 @@
                 betrokken zijn.
                 Hieronder kunt u meer informatie over deze partijen vinden.
             </p>
-            <div class="flex-container">
+            <div class="flex-container2">
                 <div class="flex-item a">
                     <button type="button" class="collapsible"><h3>Consument &nbsp<img src="assets/Consument.png" width=25px height=25px/></button>
                     <div class="content">
@@ -3561,23 +3561,6 @@
                 checkList.push(articlesList[j]);
             }
     }
-
-    //Function for collapsing and expanding buttons
-    var coll = document.getElementsByClassName("collapsible");
-    var k;
-
-        for (k = 0; k < coll.length; k++) {
-            coll[k].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-
 
     //Function for collapsing and expanding buttons
     var coll = document.getElementsByClassName("collapsible");
