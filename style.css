@@ -105,7 +105,7 @@ p {
 
 /* adds scrollbar for sideview articles that are too long */
 #articlescontainer ol {
-    max-height: calc(100vh - 200px - 100px);
+    max-height: calc(100vh - 200px - 140px);
     overflow: auto;
 }
 
