@@ -33,9 +33,26 @@
     </div>
 
     <div class="flex-container normal" style="justify-content: flex-start; align-items: baseline; column-gap: 5px">
-        <h0 class=flex-item>Artikelen gefilterd op</h0>
+        <h0 class=flex-item>Artikelen gefilterd op </h0>
         <div id="current_filter" class="filterbox flex-item"></div>
         <div id="alle artikelen" class="sidepanel-button flex-item" onclick="clearFilter(this);"> verwijder filter</div>
+    </p>
+    </div>
+
+    <div class="flex-container normal" style="right: 10%;position:absolute; top: 5%;">
+            <!-- Filter buttons -->
+            <label class="toggle-control consument">
+                <input id="consument_switch" type="checkbox" checked="checked" onclick="changeFilterColor(this, 1)">
+                <span class="control"></span>
+              </label>
+              <label class="toggle-control energie_leverancier">
+                <input id="energie_leverancier_switch" type="checkbox" checked="checked" onclick="changeFilterColor(this, 2)">
+                <span class="control"></span>
+              </label>
+              <label class="toggle-control netbeheerder">
+                <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor(this, 3)">
+                <span class="control"></span>
+              </label>
     </div>
 
     <!-- The UI button elements within the sideview -->
@@ -1030,25 +1047,23 @@
                 <h1>Leveringstarieven voor elektriciteit en/of gas</h1>
                 <ol>
                     <li>
-                        <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
+                        <highlight1>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
                             belastingen, die wij met u hebben
                             afgesproken bevestigen wij u schriftelijk of digitaal in de overeenkomst (zie ook artikel
-                            2.1).
-                            Tevens melden wij u de
-                            netbeheerkosten.
-                        </highlight>
+                            2.1). Tevens melden wij u de netbeheerkosten.
+                        </highlight1>
                     </li>
                     <li>
-                        <highlight>Deze leveringstarieven zijn voor u altijd digitaal beschikbaar of kunt u bij ons
+                        <highlight2>Deze leveringstarieven zijn voor u altijd digitaal beschikbaar of kunt u bij ons
                             opvragen.
-                        </highlight>
+                        </highlight2>
                     </li>
                     <li>
-                        <highlight>De (termijn)bedragen die wij u in rekening gaan brengen, berekenen wij met de
+                        <highlight3>De (termijn)bedragen die wij u in rekening gaan brengen, berekenen wij met de
                             afgesproken
                             leveringstarieven en het
                             bij ons bekende verbruik. Ook de netbeheerkosten worden in het (termijn)bedrag meegenomen.
-                        </highlight>
+                        </highlight3>
                     </li>
                 </ol>
             </div>
@@ -2481,21 +2496,13 @@
                             dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
                             door de
                             energie leverancier.
-                            <a id="consument" onclick="updateFilter(this);"><img src="assets/button%20right.png"
-                                                                                 width=15px height=15px></a><br>
-                        </p>
-
                     </div>
                 </div>
                 <div class="flex-item a">
                     <button type="button" class="collapsible"><h3>Energie leverancier&nbsp<img
                             src="assets/Energy-supplier.png" width=25px height=25px/></h3></button>
                     <div class="content">
-                        <p>Een energieleverancier verkoopt elektriciteit en/of gas. Een energieleverancier
-                            verzorgt de
-                            in- en verkoop en de levering van energie, wat kan bestaan uit elektriciteit en gas.
-                            <a id="energieleverancier" onclick="updateFilter(this);"><img
-                                    src="assets/button%20right.png" width=15px height=15px></a><br>
+                        <p>Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan bestaan uit elektriciteit en gas.
                         </p>
                     </div>
                 </div>
@@ -2507,9 +2514,6 @@
                     <div class="content">
                         <p>De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
                             energienetwerk waarover gas en elektriciteit geleverd wordt.
-                            <a id="netbeheerder" onclick="updateFilter(this);"><img
-                                    src="assets/button%20right.png"
-                                    width=15px height=15px></a><br>
                         </p>
                     </div>
                 </div>
@@ -2767,122 +2771,122 @@
             <div class="flex-container normal">
                 <div class="flex-item b">
                     <input type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
-                    <checklist><label for="check1">Artikel 1: Waarvoor zijn deze voorwaarden?</label>
+                    <checklist><label id="check_text1" for="check1">Artikel 1: Waarvoor zijn deze voorwaarden?</label>
                     </checklist>
                     <a onclick="showArt(0);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
-                    <input type="checkbox" id="check2" onclick="updateChecklist(this, 1)">
-                    <checklist><label for="check2">Artikel 2: Onze overeenkomst</label></checklist>
+                    <input type="checkbox" id="check2" onclick="updateChecklist(this, 0)">
+                    <checklist><label id="check_text2" for="check2">Artikel 2: Onze overeenkomst</label></checklist>
                     <a onclick="showArt(1);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check3" onclick="updateChecklist(this, 2)">
-                    <checklist><label for="check3">Artikel 3: U heeft een aansluiting op het elektriciteitsnet
+                    <checklist><label id="check_text3" for="check3">Artikel 3: U heeft een aansluiting op het elektriciteitsnet
                         en/of het
                         gasnet</label></checklist>
                     <a onclick="showArt(2);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check4" onclick="updateChecklist(this, 3)">
-                    <checklist><label for="check4">Artikel 4: Wekt u ook zelf elektriciteit op?</label>
+                    <checklist><label id="check_text4" for="check4">Artikel 4: Wekt u ook zelf elektriciteit op?</label>
                     </checklist>
                     <a onclick="showArt(3);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check5" onclick="updateChecklist(this, 4)">
-                    <checklist><label for="check5">Artikel 5: Wat doen wij als wij met u een overeenkomst
+                    <checklist><label id="check_text5" for="check5">Artikel 5: Wat doen wij als wij met u een overeenkomst
                         hebben?</label></checklist>
                     <a onclick="showArt(4);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check6" onclick="updateChecklist(this, 5)">
-                    <checklist><label for="check6">Artikel 6: Wat doen wij als er een storing is op het
+                    <checklist><label id="check_text6" for="check6">Artikel 6: Wat doen wij als er een storing is op het
                         elektriciteitsnet of gasnet?</label></checklist>
                     <a onclick="showArt(5);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check7" onclick="updateChecklist(this, 6)">
-                    <checklist><label for="check7">Artikel 7: Wat doen wij als u zich niet aan de voorwaarden
+                    <checklist><label id="check_text7" for="check7">Artikel 7: Wat doen wij als u zich niet aan de voorwaarden
                         houdt?</label></checklist>
                     <a onclick="showArt(6);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check8" onclick="updateChecklist(this, 7)">
-                    <checklist><label for="check8">Artikel 8: Welke informatie krijgen wij van u?</label>
+                    <checklist><label id="check_text8" for="check8">Artikel 8: Welke informatie krijgen wij van u?</label>
                     </checklist>
                     <a onclick="showArt(7);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check9" onclick="updateChecklist(this, 8)">
-                    <checklist><label for="check9">Artikel 9: De elektriciteitsmeter en de gasmeter</label>
+                    <checklist><label id="check_text9" for="check9">Artikel 9: De elektriciteitsmeter en de gasmeter</label>
                     </checklist>
                     <a onclick="showArt(8);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check10" onclick="updateChecklist(this, 9)">
-                    <checklist><label for="check10">Artikel 10: Onderzoek van de elektriciteitsmeter en/ of de
+                    <checklist><label id="check_text10" for="check10">Artikel 10: Onderzoek van de elektriciteitsmeter en/ of de
                         gasmeter
                         en/of de meting</label></checklist>
                     <a onclick="showArt(9);"><img src="assets/button%20right.png" width=15px
                                                   height=15px></a><br>
                     <input type="checkbox" id="check11" onclick="updateChecklist(this, 10)">
-                    <checklist><label for="check11">Artikel 11: Leveringstarieven voor elektriciteit en/of
+                    <checklist><label id="check_text11" for="check11">Artikel 11: Leveringstarieven voor elektriciteit en/of
                         gas</label>
                     </checklist>
                     <a onclick="showArt(10);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check12" onclick="updateChecklist(this, 11)">
-                    <checklist><label for="check12">Artikel 12: U betaalt voor elektriciteit en/of gas</label>
+                    <checklist><label id="check_text12" for="check12">Artikel 12: U betaalt voor elektriciteit en/of gas</label>
                     </checklist>
                     <a onclick="showArt(11);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                 </div>
                 <div class="flex-item b">
                     <input type="checkbox" id="check13" onclick="updateChecklist(this, 12)">
-                    <checklist><label for="check13">Artikel 13: Niet eens met een jaarnota of eindnota?</label>
+                    <checklist><label id="check_text13" for="check13">Artikel 13: Niet eens met een jaarnota of eindnota?</label>
                     </checklist>
                     <a onclick="showArt(12);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check14" onclick="updateChecklist(this, 13)">
-                    <checklist><label for="check14">Artikel 14: Verjaring van vorderingen</label></checklist>
+                    <checklist><label id="check_text14" for="check14">Artikel 14: Verjaring van vorderingen</label></checklist>
                     <a onclick="showArt(13);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check15" onclick="updateChecklist(this, 14)">
-                    <checklist><label for="check15">Artikel 15: Zekerheden vragen</label></checklist>
+                    <checklist><label id="check_text15" for="check15">Artikel 15: Zekerheden vragen</label></checklist>
                     <a onclick="showArt(14);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check16" onclick="updateChecklist(this, 15)">
-                    <checklist><label for="check16">Artikel 16: Wat doen wij met uw persoonlijke
+                    <checklist><label id="check_text16" for="check16">Artikel 16: Wat doen wij met uw persoonlijke
                         gegevens?</label>
                     </checklist>
                     <a onclick="showArt(15);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check17" onclick="updateChecklist(this, 16)">
-                    <checklist><label for="check17">Artikel 17: Heeft u schade?</label></checklist>
+                    <checklist><label id="check_text17" for="check17">Artikel 17: Heeft u schade?</label></checklist>
                     <a onclick="showArt(16);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check18" onclick="updateChecklist(this, 17)">
-                    <checklist><label for="check18">Artikel 18: Heeft u een klacht?</label></checklist>
+                    <checklist><label id="check_text18" for="check18">Artikel 18: Heeft u een klacht?</label></checklist>
                     <a onclick="showArt(17);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check19" onclick="updateChecklist(this, 18)">
-                    <checklist><label for="check19">Artikel 19: Mogen wij deze voorwaarden en onze
+                    <checklist><label id="check_text19" for="check19">Artikel 19: Mogen wij deze voorwaarden en onze
                         leveringstarieven
                         veranderen?</label></checklist>
                     <a onclick="showArt(18);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check20" onclick="updateChecklist(this, 19)">
-                    <checklist><label for="check20">Artikel 20: Wat gebeurt er als u verhuist?</label>
+                    <checklist><label id="check_text20" for="check20">Artikel 20: Wat gebeurt er als u verhuist?</label>
                     </checklist>
                     <a onclick="showArt(19);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check21" onclick="updateChecklist(this, 20)">
-                    <checklist><label for="check21">Artikel 21: Hoe lang duurt onze overeenkomst?</label>
+                    <checklist><label id="check_text21" for="check21">Artikel 21: Hoe lang duurt onze overeenkomst?</label>
                     </checklist>
                     <a onclick="showArt(20);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check22" onclick="updateChecklist(this, 21)">
-                    <checklist><label for="check22">Artikel 22: Wat gebeurt als onze overeenkomst
+                    <checklist><label id="check_text22" for="check22">Artikel 22: Wat gebeurt als onze overeenkomst
                         eindigt?</label>
                     </checklist>
                     <a onclick="showArt(21);"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                     <input type="checkbox" id="check23" onclick="updateChecklist(this, 22)">
-                    <checklist><label for="check23">Artikel 23: Vanaf wanneer gelden deze voorwaarden?</label>
+                    <checklist><label id="check_text23" for="check23">Artikel 23: Vanaf wanneer gelden deze voorwaarden?</label>
                     </checklist>
-                    <a onclick="showArt(22);"><img src="assets/button%20right.png" width=15px
+                    <a onclick="stopTimer();"><img src="assets/button%20right.png" width=15px
                                                    height=15px></a><br>
                 </div>
             </div>
@@ -2934,25 +2938,81 @@
     //checkList ID
     let checkList = new Array();
     let checkListDummy = new Array(23).fill(false);
+    let checkListTimerDummy = new Array(23).fill(10);
+
+    //timer
+    var timer;
+
+    //tijdelijke timer naast de artikelen in checklist (kan zonder problemen weggehaald worden)
+    for (i = 0; i < checkListTimerDummy.length; i++)
+            document.getElementById("check_text" + (i+1)).innerHTML = document.getElementById("check_text" + (i+1)).textContent + " Timer: " + checkListTimerDummy[i];
 
     window.onload = assignContentToList();
 
     //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
+        stopTimer();
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
             current_list = articlesList;
+        } else {
+        document.getElementById(current_list[i]).style.display = "none";
         }
         openSidepanel()
-        document.getElementById(current_list[i]).style.display = "none";
+
         current_list[i] = articlesList[art_nr];
         document.getElementById(current_list[i]).style.display = "none";
         document.getElementById(articlesList[art_nr]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
+        startTimer(art_nr);
     }
+
+    function changeFilterColor(checkbox, stakeholder) {
+        if (stakeholder == 1){
+            if (checkbox.checked == false){
+            document.body.style.setProperty('--highlight1', 'white')
+            }
+            else {
+                document.body.style.setProperty('--highlight1', 'lightblue')
+            }
+        }
+        if (stakeholder == 2){
+            if (checkbox.checked == false){
+            document.body.style.setProperty('--highlight2', 'white')
+            }
+            else {
+                document.body.style.setProperty('--highlight2', 'lightyellow')
+            }
+        }
+        if (stakeholder == 3){
+            if (checkbox.checked == false){
+            document.body.style.setProperty('--highlight3', 'white')
+            }
+            else {
+                document.body.style.setProperty('--highlight3', 'lightcoral')
+            }
+        }
+    }
+
+function startTimer(art_nr){
+
+    timer = setInterval(function(){
+        checkListTimerDummy[art_nr]--;
+        document.getElementById("check_text" + (art_nr+1)).innerHTML = "Artikel" + (art_nr+1) + ": " + checkListTimerDummy[art_nr];
+
+        if(checkListTimerDummy[art_nr] == 0) {
+            clearInterval(timer);
+            document.getElementById("check" + (art_nr+1)).checked = true;
+        }
+    },1000);
+}
+
+function stopTimer(){
+    clearInterval(timer);
+}
 
     //Keeps track of the checked checkboxes
     function updateChecklist(checkbox, art_nr) {
@@ -3004,13 +3064,16 @@
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
+        stopTimer();
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
         currentButton = FilterPressed.id;
+
         if (currentButton !== previousButton) {
             hideArticles();
             assignListToButton();
             updateArticles();
+            startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
             previousButton = currentButton;
             if (current_list.length > 1) {
                 document.getElementById("nextButton").classList.remove("hidden");
@@ -3040,6 +3103,7 @@
     function clearFilter(FilterPressed) {
         j = getArticleNumberFromDivID(current_list[i])
         updateFilter(FilterPressed)
+        stopTimer();
         document.getElementById(current_list[i]).style.display = "none";
         i = j - 1
         document.getElementById("prevButton").classList.remove("hidden");
@@ -3047,6 +3111,7 @@
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
+        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
     }
 
     //show and hide sideview elements
@@ -3078,6 +3143,7 @@
     }
 
     function nextArticle() {
+        stopTimer();
         document.getElementById(current_list[i]).style.display = "none";
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
@@ -3091,9 +3157,11 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
+        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
     }
 
     function previousArticle() {
+        stopTimer();
         document.getElementById(current_list[i]).style.display = "none";
         document.getElementById("nextButton").classList.remove("hidden");
         document.getElementById("nextButton").onclick = nextArticle;
@@ -3107,6 +3175,7 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
+        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
     }
 
     //connects each button to its own list by updating current_list
