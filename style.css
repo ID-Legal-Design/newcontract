@@ -10,8 +10,13 @@
     --shade6: #f6f6f6;
     --indexCircle: 10px;
     --highlight1: lightblue;
-    --highlight2: lightyellow;
-    --highlight3: lightcoral;
+    --highlight2: lightcoral;
+    --highlight3: #CFACB3;
+    --highlight4: lightyellow;
+    --highlight5: #D6ECE3;
+    --highlight6: #FBDCC6;
+    --highlight7: #D3D3D3;   
+
 }
 
 .toggle-control {
@@ -43,7 +48,7 @@
 }
 
 .toggle-control.netbeheerder input:checked ~ .control {
-    background-color: var(--highlight3);
+    background-color: var(--highlight4);
 }
 
 .toggle-control input:checked ~ .control:after {
@@ -70,6 +75,7 @@
     border-radius: 25px;
     background: white;
     transition: left 0.15s ease-in;
+    
 }
 
 body {
@@ -388,18 +394,45 @@ label {
     display: inline-block;
 }
 
+/* highlight consument */
 highlight1 {
     background-color: var(--highlight1);
     color: black;
 }
 
+/* highlight energie leverancier*/
 highlight2 {
     background-color: var(--highlight2);
     color: black;
 }
 
+/* highlight consument + energie leverancier */
 highlight3 {
     background-color: var(--highlight3);
+    color: black;
+}
+
+/* highlight netbeheerder */
+highlight4 {
+    background-color: var(--highlight4);
+    color: black;
+}
+
+/* highlight netbeheerder + consument */
+highlight5 {
+    background-color: var(--highlight5);
+    color: black;
+}
+
+/* highlight netbeheerder + energieleverancier */
+highlight6 {
+    background-color: var(--highlight6);
+    color: black;
+}
+
+/* highlight consument + netbeheerder + energieleverancier */
+highlight7 {
+    background-color: var(--highlight7);
     color: black;
 }
 
