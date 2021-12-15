@@ -53,6 +53,11 @@
                 <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
                 <span class="control"></span>
               </label>
+
+              <label class="toggle-control original">
+                <input id="original_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
+                <span class="control"></span>
+              </label>
     </div>
 
     <!-- The UI button elements within the sideview -->
@@ -2946,6 +2951,7 @@
     var consument_filter            = document.getElementById("consument_switch");
     var energie_leverancier_filter  = document.getElementById("energie_leverancier_switch");
     var netbeheerder_filter         = document.getElementById("netbeheerder_switch");
+    var original_filter             = document.getElementById("original_switch");
 
     window.onload = assignContentToList();
 
@@ -2972,6 +2978,17 @@
 
     function changeFilterColor() {
 
+        if (original_filter.checked){
+
+            document.body.style.setProperty('--highlight1', 'lightblue');
+            document.body.style.setProperty('--highlight2', 'lightblue');
+            document.body.style.setProperty('--highlight3', 'lightblue');
+            document.body.style.setProperty('--highlight4', 'lightblue');
+            document.body.style.setProperty('--highlight5', 'lightblue');
+            document.body.style.setProperty('--highlight6', 'lightblue');
+            document.body.style.setProperty('--highlight7', 'lightblue');
+        }
+            else {
         if (consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
         document.body.style.setProperty('--highlight1', 'lightblue');
         document.body.style.setProperty('--highlight2', 'white');
@@ -3035,8 +3052,8 @@
         document.body.style.setProperty('--highlight6', '#FBDCC6');
         document.body.style.setProperty('--highlight7', '#D3D3D3');
     }
+        }
 }
-
 
 
 

@@ -51,6 +51,10 @@
     background-color: var(--highlight4);
 }
 
+.toggle-control.original input:checked ~ .control {
+    background-color: var(--highlight4);
+}
+
 .toggle-control input:checked ~ .control:after {
     left: 55px;
 }
