@@ -52,7 +52,7 @@
 }
 
 .toggle-control.original input:checked ~ .control {
-    background-color: var(--highlight4);
+    background-color: var(--shade1);
 }
 
 .toggle-control input:checked ~ .control:after {

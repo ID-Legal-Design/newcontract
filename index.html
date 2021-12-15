@@ -93,10 +93,10 @@
                         </ol>
                     </highlight3></li>
                     <li><highlight>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.</highlight></li>
-                    <li><highlight3>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden die gelden
+                    <li><highlight3>Voordat wij een overeenkomst met elkaar hebben <b> informeren wij u over de voorwaarden die gelden
                         en
                         hoe u hiervan
-                        kennis kan nemen. Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
+                        kennis kan nemen.</b> Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
                         wanneer
                         wij de
                         overeenkomst aan u bevestigen. Deze voorwaarden en de kwaliteitscriteria zijn ook te vinden op
@@ -109,7 +109,7 @@
                         Autoriteit Consument en Markt.
                     </highlight2></li>
                     <li><highlight2>
-                        Wij mogen ook andere afspraken met u maken. Die afspraken gelden als:
+                        <b>Wij mogen ook andere afspraken met u maken.</b> Die afspraken gelden als:
                         <ol>
                             <li><highlight2>we die afspraken volgens de wet of regelgeving mogen maken,</highlight2></li>
                             <li><highlight2>we die afspraken volgens deze voorwaarden mogen maken, en</highlight2></li>
@@ -2953,6 +2953,8 @@
     var netbeheerder_filter         = document.getElementById("netbeheerder_switch");
     var original_filter             = document.getElementById("original_switch");
 
+    original_filter.checked = false;
+
     window.onload = assignContentToList();
 
     //show one particular item from all articles (art_nr = article number minus 1!)
@@ -2987,6 +2989,13 @@
             document.body.style.setProperty('--highlight5', 'lightblue');
             document.body.style.setProperty('--highlight6', 'lightblue');
             document.body.style.setProperty('--highlight7', 'lightblue');
+
+            if (consument_filter.checked || energie_leverancier_filter.checked) {
+                document.body.style.setProperty('--highlight3', 'lightblue');
+            } else {
+                document.body.style.setProperty('--highlight3', 'white');
+            }
+            
         }
             else {
         if (consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
