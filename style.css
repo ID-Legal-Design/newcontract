@@ -1,7 +1,7 @@
 :root {
     --white: #ffffff;
-    --grey: #efefef;
-    --dark: #2b2f32;
+    --grey: #f8f9fa;
+    --dark: #63676b;
     --counterart: 0;
     --shade1: #7ba0e5;
     --shade2: #e1e7ff;
@@ -82,7 +82,6 @@
     border-radius: 25px;
     background: white;
     transition: left 0.15s ease-in;
-
 }
 
 body {
@@ -91,6 +90,7 @@ body {
     overflow: hidden;
     margin: 0;
     background-color: var(--grey);
+    color: #343a40;
 }
 
 p {
@@ -111,28 +111,6 @@ p {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* The next three parts belong to the expandable buttons */
-.collapsible {
-    background: var(--shade2);
-    cursor: pointer;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 15px;
-    font-family: "Nunito", sans-serif;
-    color: var(--shade3);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-}
-
-/* background color when mouse is hovered over the button */
-.active, .collapsible:hover {
-    background-color: var(--shade1);
-}
-
 /* Style of the content that is hidden by default */
 .content {
     padding: 0.3em;
@@ -151,21 +129,6 @@ p {
 /*set scrollbar corner color to transparant */
 ::-webkit-scrollbar-corner {
     background: rgba(0, 0, 0, 0);
-}
-
-/*Symbol at right side of the buttton when it is collapsed */
-.collapsible:after {
-    content: '\2795';
-    font-size: 9px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-    margin-top: 4px;
-}
-
-/*Symbol at right side of the button when it is expanded */
-.active:after {
-    content: "\2796";
 }
 
 .sidepanelfooter {
@@ -272,7 +235,6 @@ p {
     color: white;
 }
 
-
 .button2 {
     background-color: #606060;
     border: none;
@@ -332,11 +294,12 @@ button.link {
 
 h0 {
     display: block;
-    margin-top: 1em;
     font-size: 15px;
     font-weight: bold;
     color: var(--shade3);
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 h1 {
@@ -346,6 +309,8 @@ h1 {
     font-weight: bold;
     color: var(--shade3);
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 h1.list-title {
@@ -361,6 +326,8 @@ h2 {
     font-weight: bold;
     color: var(--shade4);
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 h3 {
@@ -371,6 +338,7 @@ h3 {
     text-align: left;
     cursor: pointer;
 }
+
 
 checklist {
     display: inline;
@@ -442,17 +410,6 @@ highlight6 {
 highlight7 {
     background-color: var(--highlight7);
     color: black;
-}
-
-.header {
-    font-size: 35px;
-    font-weight: bold;
-    display: block;
-    background-color: var(--shade5);
-    color: white;
-    padding: 5% 20% 5% 20%;
-    text-align: center;
-    margin-top: -1rem;
 }
 
 .footer {
@@ -560,7 +517,7 @@ highlight7 {
 }
 
 /* Responsive layout - for mobile */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .flex-item.a {
         flex: 100%;
     }
@@ -693,8 +650,54 @@ highlight7 {
 /* */
 .main-container-style {
     border-radius: 25px;
-    background-color: #606060;
     padding: 20px;
     background-color: var(--white);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
+
+.btn {
+    margin: 5px;
+}
+
+.card {
+    border: 1px solid var(--shade2);
+    margin: 5px;
+    padding: 20px 20px 20px 20px;
+}
+
+.card.main-card {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    border-radius: 15px;
+    border: 0px;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 2px -2px rgb(0 0 0 / 0.05);
+    border: 0px;
+    padding: 1em;
+}
+
+
+card-header-title {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 17px;
+    color: var(--shade4);
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.btn-primary {
+    background-color: var(--shade1);
+    border-color: var(--shade1);
+}
+
+.navbar{
+    padding: 0px 30px 0px 30px;
+}
+
+

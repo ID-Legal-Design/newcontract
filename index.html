@@ -12,6 +12,7 @@
     <!-- individual CSS + fonts -->
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <!-- Hotjar Tracking Code for https://id-legal-design.github.io/newcontract/ -->
     <script>
@@ -28,7 +29,7 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 </head>
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500px">
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
@@ -4625,143 +4626,167 @@
 </div>
 </div>
 
-<div class="footer">
-    <a id="pdf" class="a-button" style="position: center" href="https://tuenergy.wixsite.com/home" target="_blank">download
-        pdf </a>
-</div>
 
 <div id="main">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">TU/e Energy </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#voorwaarden">Voorwaarden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#belangrijke termen">Belangrijke Termen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tijdlijn">Tijdlijn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#checklists">Gelezen Artikelen</a>
+                </li>
+            </ul>
+            <a id="pdf" class="sidepanel-button" style="position: center" href="https://tuenergy.wixsite.com/home"
+               target="_blank">download
+                pdf </a>
+        </div>
+    </nav>
 
     <div class="contentContainer">
         <p></p>
-        <div id="voorwaarden" class="card">
-            <div class="card-header"><h1>Onze voorwaarden</h1></div>
-            <div class="card-body">
-                <p class="card-text">
-                    Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
-                    contract
-                    doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de pdf
-                    lezen
-                    kunt u deze ten alle tijden onderaan uw scherm vinden.
-                </p>
-                <button class="btn btn-primary" type="buttons" data-toggle="collapse"
-                        data-target="#voorwaarden1"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Door wie zijn deze algemene voorwaarden
-                    gemaakt?
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#voorwaarden2"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Deze voorwaarden zijn er voor u en voor ons
-                </button>
-                <p>
-                <div class="row">
-                    <div class="collapse col" id="voorwaarden1">
-                        <div class="card card-body">
-                            Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
-                            in
-                            Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn
-                            de
-                            voorwaarden
-                            met
-                            de Consumentenbond en de Vereniging Eigen Huis besproken.
-                            Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met
-                            elkaar eens
-                            over
-                            alle
-                            voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade
-                            (artikel
-                            17.4)
-                            en
-                            het
-                            artikel
-                            over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
+        <div class="row">
+            <div class="col col-lg-6 col-md-12">
+                <div id="voorwaarden" class="card main-card">
+                    <card-header-title class="card-header">Onze voorwaarden</card-header-title>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
+                            contract
+                            doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de
+                            pdf
+                            lezen
+                            kunt u deze ten alle tijden onderaan uw scherm vinden.
+                        </p>
+                        <button class="btn btn-primary" type="buttons" data-toggle="collapse"
+                                data-target="#voorwaarden1"
+                                aria-expanded="false" aria-controls="collapseExample">
+                            Door wie zijn deze algemene voorwaarden
+                            gemaakt?
+                        </button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#voorwaarden2"
+                                aria-expanded="false" aria-controls="collapseExample">
+                            Deze voorwaarden zijn er voor u en voor ons
+                        </button>
+                        <p>
+                        <div class="row">
+                            <div class="collapse col" id="voorwaarden1">
+                                <div class="card card-body">
+                                    Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
+                                    in
+                                    Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn
+                                    de
+                                    voorwaarden
+                                    met
+                                    de Consumentenbond en de Vereniging Eigen Huis besproken.
+                                    Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met
+                                    elkaar eens
+                                    over
+                                    alle
+                                    voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade
+                                    (artikel
+                                    17.4)
+                                    en
+                                    het
+                                    artikel
+                                    over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
+                                </div>
+                            </div>
+                            <div class="collapse col" id="voorwaarden2">
+                                <div class="card card-body">
+                                    U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
+                                    energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden
+                                    staan
+                                    de regels
+                                    waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden te
+                                    houden,
+                                    is het
+                                    nodig dat u ze
+                                    kent
+                                    en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product
+                                    waarvoor
+                                    u
+                                    een
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="collapse col" id="voorwaarden2">
-                        <div class="card card-body">
-                            U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
-                            energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan
-                            de regels
-                            waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden,
-                            is het
-                            nodig dat u ze
-                            kent
-                            en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product
-                            waarvoor
-                            u
-                            een
+
+                </div>
+            </div>
+            <div class="col col-lg-6 col-md-12">
+                <div id="belangrijke termen" class="card main-card">
+                    <card-header-title class="card-header">Belangrijke Partijen</card-header-title>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
+                            contract
+                            betrokken zijn.
+                            Hieronder kunt u meer informatie over deze partijen vinden.</p>
+                        <button class="btn btn-primary" type="buttons" data-toggle="collapse"
+                                data-target="#stakeholderText1"
+                                aria-expanded="false" aria-controls="collapseExample">
+                            <i class="bi bi-person text-primary text-light"></i>
+                            Consument
+                        </button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#stakeholderText2"
+                                aria-expanded="false" aria-controls="collapseExample">
+                            <i class="bi bi-plug text-primary text-light"></i>
+                            Energieleverancier
+                        </button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#stakeholderText3"
+                                aria-expanded="false" aria-controls="collapseExample">
+                            <i class="bi bi-columns text-primary text-light"></i>
+                            Netbeheerder
+                        </button>
+                        <p>
+                        <div class="row">
+                            <div class="collapse col-md-6" id="stakeholderText1">
+                                <div class="card card-body">
+                                    Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
+                                    gaat in
+                                    dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
+                                    door de
+                                    energie leverancier.
+                                </div>
+                            </div>
+                            <div class="collapse col-md-6" id="stakeholderText2">
+                                <div class="card card-body">
+                                    Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat
+                                    kan
+                                    bestaan
+                                    uit elektriciteit en gas.
+                                </div>
+                            </div>
+                            <div class="collapse col-md-6" id="stakeholderText3">
+                                <div class="card card-body">
+                                    De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
+                                    energienetwerk waarover gas en elektriciteit geleverd wordt.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-        <p></p>
-        <div id="belangrijke termen" class="card">
-            <div class="card-header"><h1>Belangrijke Partijen</h1></div>
-            <div class="card-body">
-                <p class="card-text">
-                    Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
-                    contract
-                    betrokken zijn.
-                    Hieronder kunt u meer informatie over deze partijen vinden.</p>
-                <button class="btn btn-primary" type="buttons" data-toggle="collapse" data-target="#stakeholderText1"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    <i class="bi bi-person text-primary text-light"></i>
-                    Consument
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stakeholderText2"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    <i class="bi bi-plug text-primary text-light"></i>
-                    Energieleverancier
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stakeholderText3"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    <i class="bi bi-columns text-primary text-light"></i>
-                    Netbeheerder
-                </button>
-                <p>
-                <div class="row">
-                    <div class="collapse col" id="stakeholderText1">
-                        <div class="card card-body">
-                            Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
-                            gaat in
-                            dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
-                            door de
-                            energie leverancier.
-                        </div>
-                    </div>
-                    <div class="collapse col" id="stakeholderText2">
-                        <div class="card card-body">
-                            Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan
-                            bestaan
-                            uit elektriciteit en gas.
-                        </div>
-                    </div>
-                    <div class="collapse col" id="stakeholderText3">
-                        <div class="card card-body">
-                            De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
-                            energienetwerk waarover gas en elektriciteit geleverd wordt.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p></p>
-        <div id="test" class="card">
-            <div class="card-header"><h1>Onze voorwaarden</h1></div>
-            <div class="card-body">
-                <p class="card-text">
-                    Test text
-                </p>
-            </div>
-
         </div>
         <!-- tijdlijn -->
         <p></p>
-        <div id="tijdlijn" class="card">
-            <div class="card-header"><h1>Bekijk het contract</h1></div>
+        <div id="tijdlijn" class="card main-card">
+            <card-header-title class="card-header">Bekijk het contract</card-header-title>
             <div class="card-body">
                 <p class="card-text">
                     Om het contract zo overzichtelijk mogelijk te maken, is deze ingedeeld op basis van categorien.
@@ -5001,8 +5026,8 @@
 
         </div>
         <p></p>
-        <div id="checklist2" class="card">
-            <div class="card-header"><h1>Gelezen artikelen</h1></div>
+        <div id="checklists" class="card main-card">
+            <card-header-title class="card-header">Gelezen artikelen</card-header-title>
             <div class="card-body">
                 <p class="card-text">
                     Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u
