@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap + bootstrap icons-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
           integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
 
     <!-- individual CSS + fonts -->
     <link rel="stylesheet" href="style.css">
@@ -4622,36 +4625,40 @@
 </div>
 </div>
 
-<div id="main">
-    <!-- header elements -->
-    <div class="header">
-        Algemene voorwaarden voor de levering van elektriciteit en gas aan kleinverbruikers 2017
-    </div>
+<div class="footer">
+    <a id="pdf" class="a-button" style="position: center" href="https://tuenergy.wixsite.com/home" target="_blank">download
+        pdf </a>
+</div>
 
-    <div class="footer">
-        <a id="pdf" class="a-button" style="position: center" href="https://tuenergy.wixsite.com/home" target="_blank">download
-            pdf </a>
-    </div>
+<div id="main">
 
     <div class="contentContainer">
-
-        <div id="Voorwaarden lezen">
-            <h1>Lees hier onze voorwaarden</h1>
-            <p>
-                Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
-                contract
-                doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de pdf
-                lezen
-                kunt u deze ten alle tijden onderaan uw scherm vinden.
-            </p>
-
-            <div id="eh" class="flex-container2">
-                <div class="flex-item a">
-                    <button type="button" class="collapsible"><h3>Door wie zijn deze algemene voorwaarden
-                        gemaakt?</h3>
-                    </button>
-                    <div class="content">
-                        <p>Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
+        <p></p>
+        <div id="voorwaarden" class="card">
+            <div class="card-header"><h1>Onze voorwaarden</h1></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
+                    contract
+                    doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de pdf
+                    lezen
+                    kunt u deze ten alle tijden onderaan uw scherm vinden.
+                </p>
+                <button class="btn btn-primary" type="buttons" data-toggle="collapse"
+                        data-target="#voorwaarden1"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    Door wie zijn deze algemene voorwaarden
+                    gemaakt?
+                </button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#voorwaarden2"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    Deze voorwaarden zijn er voor u en voor ons
+                </button>
+                <p>
+                <div class="row">
+                    <div class="collapse col" id="voorwaarden1">
+                        <div class="card card-body">
+                            Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
                             in
                             Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn
                             de
@@ -4669,495 +4676,466 @@
                             het
                             artikel
                             over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
-                        </p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex-item a">
-                    <button type="button" class="collapsible"><h3>Deze voorwaarden zijn er voor u en voor
-                        ons</h3>
-                    </button>
-                    <div class="content">
-                        <p>U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
-                            energieleverancier.
-                            Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan de regels
-                            waaraan u
-                            en uw
-                            energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden, is het
-                            nodig dat
-                            u
-                            ze
+                    <div class="collapse col" id="voorwaarden2">
+                        <div class="card card-body">
+                            U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
+                            energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden staan
+                            de regels
+                            waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden te houden,
+                            is het
+                            nodig dat u ze
                             kent
                             en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product
                             waarvoor
                             u
                             een
-                            leveringsovereenkomst heeft afgesloten.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <br>
-
         </div>
-
-        <!-- buttons -->
-        <div id="termen">
-            <h1>Betrokken partijen</h1>
-            <p>
-                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
-                contract
-                betrokken zijn.
-                Hieronder kunt u meer informatie over deze partijen vinden.
-            </p>
-            <div class="flex-container2">
-                <div class="flex-item a">
-                    <button type="button" class="collapsible"><h3>Consument &nbsp<img src="assets/Consument.png"
-                                                                                      width=25px height=25px/>
-                    </button>
-                    <div class="content">
-                        <p> Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
+        <p></p>
+        <div id="belangrijke termen" class="card">
+            <div class="card-header"><h1>Belangrijke Partijen</h1></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
+                    contract
+                    betrokken zijn.
+                    Hieronder kunt u meer informatie over deze partijen vinden.</p>
+                <button class="btn btn-primary" type="buttons" data-toggle="collapse" data-target="#stakeholderText1"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="bi bi-person text-primary text-light"></i>
+                    Consument
+                </button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stakeholderText2"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="bi bi-plug text-primary text-light"></i>
+                    Energieleverancier
+                </button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stakeholderText3"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="bi bi-columns text-primary text-light"></i>
+                    Netbeheerder
+                </button>
+                <p>
+                <div class="row">
+                    <div class="collapse col" id="stakeholderText1">
+                        <div class="card card-body">
+                            Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
                             gaat in
                             dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
                             door de
                             energie leverancier.
+                        </div>
                     </div>
-                </div>
-                <div class="flex-item a">
-                    <button type="button" class="collapsible"><h3>Energie leverancier&nbsp<img
-                            src="assets/Energy-supplier.png" width=25px height=25px/></h3></button>
-                    <div class="content">
-                        <p>Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan bestaan
+                    <div class="collapse col" id="stakeholderText2">
+                        <div class="card card-body">
+                            Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan
+                            bestaan
                             uit elektriciteit en gas.
-                        </p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex-item a">
-                    <button type="button" class="collapsible"><h3>Netbeheerder&nbsp<img
-                            src="assets/Netbeheerder.PNG"
-                            width=25px height=25px/></h3>
-                    </button>
-                    <div class="content">
-                        <p>De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
+                    <div class="collapse col" id="stakeholderText3">
+                        <div class="card card-body">
+                            De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
                             energienetwerk waarover gas en elektriciteit geleverd wordt.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="termen2" class="container">
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Consument
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Energieleverancier
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Netbeheerder
-                </button>
-            <p>
-            <div class="row">
-                <div class="collapse col" id="collapseExample1">
-                    <div class="card card-body">
-                        Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
-                        gaat in
-                        dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
-                        door de
-                        energie leverancier.
-                    </div>
-                </div>
-                <div class="collapse col" id="collapseExample2">
-                    <div class="card card-body">
-                        Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat kan bestaan
-                        uit elektriciteit en gas.
-                    </div>
-                </div>
-                <div class="collapse col" id="collapseExample3">
-                    <div class="card card-body">
-                        De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
-                        energienetwerk waarover gas en elektriciteit geleverd wordt.
-                    </div>
-                </div>
+        <p></p>
+        <div id="test" class="card">
+            <div class="card-header"><h1>Onze voorwaarden</h1></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Test text
+                </p>
             </div>
-        </div>
 
+        </div>
         <!-- tijdlijn -->
-        <div id="tijdlijn">
-            <h1>Bekijk het contract</h1>
-            <p>
-                Om het contract zo overzichtelijk mogelijk te maken, is deze ingedeeld op basis van categorien.
-                Door op de categorie-filters te klikken kan je de bijbehorende teksten uit het contract
-                bekijken.
-            </p>
+        <p></p>
+        <div id="tijdlijn" class="card">
+            <div class="card-header"><h1>Bekijk het contract</h1></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Om het contract zo overzichtelijk mogelijk te maken, is deze ingedeeld op basis van categorien.
+                    Door op de categorie-filters te klikken kan je de bijbehorende teksten uit het contract
+                    bekijken.
+                </p>
+                <div class=" flex-container graphicIndex second-block">
+                    <div class="box">
+                        <h1 class="list-title"> Let op ... </h1>
+                        <ul id="second-list">
+                            <li>
+                            <span>
+                            </span>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="tarieven" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">De tarieven</div>
+                                    <div class=info"> Relevante artikelen over ...</div>
+                                </div>
+                            </li>
+                            <li>
 
-            <div class=" flex-container graphicIndex second-block">
-                <div class="box">
-                    <h1 class="list-title"> Let op ... </h1>
-                    <ul id="second-list">
-                        <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="tarieven" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="toestemming en gegevens"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">De gegevens en toestemmingen</div>
+                                    <div class=info"> Relevante artikelen over ...</div>
                                 </div>
-                                <div class="title">De tarieven</div>
-                                <div class=info"> Relevante artikelen over ...</div>
-                            </div>
-                        </li>
-                        <li>
-
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="toestemming en gegevens"
-                                                              onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="verplichtingen" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">De kleine letters</div>
+                                    <div class=info"> Relevante artikelen over ...</div>
                                 </div>
-                                <div class="title">De gegevens en toestemmingen</div>
-                                <div class=info"> Relevante artikelen over ...</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>
-                            </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="verplichtingen" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
-                                </div>
-                                <div class="title">De kleine letters</div>
-                                <div class=info"> Relevante artikelen over ...</div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class=" flex-container graphicIndex">
-                <div class="box">
-                    <h1 class="list-title">Vaste gebeurtenissen</h1>
-                    <ul id="first-list">
-                        <li>
+                <div class=" flex-container graphicIndex">
+                    <div class="box">
+                        <h1 class="list-title">Vaste gebeurtenissen</h1>
+                        <ul id="first-list">
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="aansluiting"
-                                                              onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="aansluiting"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Aansluiting</div>
+                                    <div class=info"> Eenmalig | Heeft u de benodigde aansluiting?
+                                    </div>
                                 </div>
-                                <div class="title">Aansluiting</div>
-                                <div class=info"> Eenmalig | Heeft u de benodigde aansluiting?
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="time">
-                                <span>Start looptijd</span>
-                            </div>
-                            <span>
-                            </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="start overeenkomst"
-                                                              onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
-                                </div>
-                                <div class="title">Start overeenkomst</div>
-                                <div class=info"> Eenmalig | Wat te weten voor de voorwaarden starten?
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>
-                            </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="bedenktijd" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
-                                </div>
-                                <div class="title">Bedenktijd</div>
-                                <div class=info"> Eenmalig | Wat gebeurt er in de bedenktijd na afsluiting van
-                                    het
-                                    contract?
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <span>
-                            </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="jaarnota" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
-                                </div>
-                                <div class="title">Jaarnota</div>
-                                <div class=info"> Jaarlijks | Wat is de jaarnota die u ontvang?</div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <span>
-                            </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="einde overeenkomst"
-                                                              onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
-                                </div>
-                                <div class="title">Einde overeenkomst</div>
-                                <div class=info"> Eenmalig | Wat als de overeenkomst wordt beeindigt?</div>
+                            </li>
+                            <li>
                                 <div class="time">
-                                    <span>Einde looptijd</span>
+                                    <span>Start looptijd</span>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
+                                <span>
+                            </span>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="start overeenkomst"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Start overeenkomst</div>
+                                    <div class=info"> Eenmalig | Wat te weten voor de voorwaarden starten?
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="verjaring" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="bedenktijd" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Bedenktijd</div>
+                                    <div class=info"> Eenmalig | Wat gebeurt er in de bedenktijd na afsluiting van
+                                        het
+                                        contract?
+                                    </div>
                                 </div>
-                                <div class="title">Verjaring van vorderingen</div>
-                                <div class=info"> Eenmalig | Wanneer verjaart de mogelijkheid tot verdoring van
-                                    kosten?
+                            </li>
+                            <li>
+                            <span>
+                            </span>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="jaarnota" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Jaarnota</div>
+                                    <div class=info"> Jaarlijks | Wat is de jaarnota die u ontvang?</div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+
+                            <span>
+                            </span>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="einde overeenkomst"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Einde overeenkomst</div>
+                                    <div class=info"> Eenmalig | Wat als de overeenkomst wordt beeindigt?</div>
+                                    <div class="time">
+                                        <span>Einde looptijd</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            <span>
+                            </span>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="verjaring" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">Verjaring van vorderingen</div>
+                                    <div class=info"> Eenmalig | Wanneer verjaart de mogelijkheid tot verdoring van
+                                        kosten?
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class=" flex-container graphicIndex second-block">
-                <div class="box">
-                    <h1 class="list-title">Wat als ... </h1>
-                    <ul id="second-list">
-                        <li>
+                <div class=" flex-container graphicIndex second-block">
+                    <div class="box">
+                        <h1 class="list-title">Wat als ... </h1>
+                        <ul id="second-list">
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="klacht" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="klacht" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U een klacht heeft?</div>
                                 </div>
-                                <div class="title">U een klacht heeft?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
 
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="schade" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="schade" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U schade heeft?</div>
                                 </div>
-                                <div class="title">U schade heeft?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
 
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="verhuizen" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="verhuizen" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U gaat verhuizen?</div>
                                 </div>
-                                <div class="title">U gaat verhuizen?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="meter" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="meter" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U een meteronderzoek of meter probleem heeft?</div>
                                 </div>
-                                <div class="title">U een meteronderzoek of meter probleem heeft?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="elektriciteit opwekken" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="elektriciteit opwekken"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U elektriciteit opwekt?</div>
                                 </div>
-                                <div class="title">U elektriciteit opwekt?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="storing" onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="storing" onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U heeft last van een storing?</div>
                                 </div>
-                                <div class="title">U heeft last van een storing?</div>
-                            </div>
-                        </li>
-                        <li>
+                            </li>
+                            <li>
                             <span>
                             </span>
-                            <div>
-                                <div style="float: right; bottom: 0;">
-                                    <div class="btn-panel"><a id="schending voorwaarden"
-                                                              onclick="updateFilter(this);"><img
-                                            src="assets/button%20right.png" width=25px height=25px></a></div>
+                                <div>
+                                    <div style="float: right; bottom: 0;">
+                                        <div class="btn-panel"><a id="schending voorwaarden"
+                                                                  onclick="updateFilter(this);"><img
+                                                src="assets/button%20right.png" width=25px height=25px></a></div>
+                                    </div>
+                                    <div class="title">U de voorwaarden schend?</div>
                                 </div>
-                                <div class="title">U de voorwaarden schend?</div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
         </div>
-
-        <!-- checklist -->
-        <div id="checklist">
-            <h1>Gelezen artikelen</h1>
-            <p>
-                Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u
-                gemist
-                heeft.
-            </p>
-            <div class="flex-container normal">
-                <div class="flex-item b">
-                    <input type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
-                    <checklist><label id="check_text1" for="check1">Waarvoor zijn deze voorwaarden?</label>
-                    </checklist>
-                    <a onclick="showArt(0);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check2" onclick="updateChecklist(this, 0)">
-                    <checklist><label id="check_text2" for="check2">Onze overeenkomst</label></checklist>
-                    <a onclick="showArt(1);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check3" onclick="updateChecklist(this, 2)">
-                    <checklist><label id="check_text3" for="check3">U heeft een aansluiting op het elektriciteitsnet
-                        en/of het
-                        gasnet</label></checklist>
-                    <a onclick="showArt(2);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check4" onclick="updateChecklist(this, 3)">
-                    <checklist><label id="check_text4" for="check4">Wekt u ook zelf elektriciteit op?</label>
-                    </checklist>
-                    <a onclick="showArt(3);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check5" onclick="updateChecklist(this, 4)">
-                    <checklist><label id="check_text5" for="check5">Wat doen wij als wij met u een overeenkomst
-                        hebben?</label></checklist>
-                    <a onclick="showArt(4);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check6" onclick="updateChecklist(this, 5)">
-                    <checklist><label id="check_text6" for="check6">Wat doen wij als er een storing is op het
-                        elektriciteitsnet of gasnet?</label></checklist>
-                    <a onclick="showArt(5);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check7" onclick="updateChecklist(this, 6)">
-                    <checklist><label id="check_text7" for="check7">Wat doen wij als u zich niet aan de voorwaarden
-                        houdt?</label></checklist>
-                    <a onclick="showArt(6);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check8" onclick="updateChecklist(this, 7)">
-                    <checklist><label id="check_text8" for="check8">Welke informatie krijgen wij van u?</label>
-                    </checklist>
-                    <a onclick="showArt(7);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check9" onclick="updateChecklist(this, 8)">
-                    <checklist><label id="check_text9" for="check9">De elektriciteitsmeter en de gasmeter</label>
-                    </checklist>
-                    <a onclick="showArt(8);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check10" onclick="updateChecklist(this, 9)">
-                    <checklist><label id="check_text10" for="check10">Onderzoek van de elektriciteitsmeter en/ of de
-                        gasmeter
-                        en/of de meting</label></checklist>
-                    <a onclick="showArt(9);"><img src="assets/button%20right.png" width=15px
-                                                  height=15px></a><br>
-                    <input type="checkbox" id="check11" onclick="updateChecklist(this, 10)">
-                    <checklist><label id="check_text11" for="check11">Leveringstarieven voor elektriciteit en/of
-                        gas</label>
-                    </checklist>
-                    <a onclick="showArt(10);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check12" onclick="updateChecklist(this, 11)">
-                    <checklist><label id="check_text12" for="check12">U betaalt voor elektriciteit en/of gas</label>
-                    </checklist>
-                    <a onclick="showArt(11);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check13" onclick="updateChecklist(this, 12)">
-                    <checklist><label id="check_text13" for="check13">Niet eens met een jaarnota of eindnota?</label>
-                    </checklist>
-                    <a onclick="showArt(12);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check14" onclick="updateChecklist(this, 13)">
-                    <checklist><label id="check_text14" for="check14">Verjaring van vorderingen</label></checklist>
-                    <a onclick="showArt(13);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check15" onclick="updateChecklist(this, 14)">
-                    <checklist><label id="check_text15" for="check15">Zekerheden vragen</label></checklist>
-                    <a onclick="showArt(14);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check16" onclick="updateChecklist(this, 15)">
-                    <checklist><label id="check_text16" for="check16">Wat doen wij met uw persoonlijke
-                        gegevens?</label>
-                    </checklist>
-                    <a onclick="showArt(15);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check17" onclick="updateChecklist(this, 16)">
-                    <checklist><label id="check_text17" for="check17">Heeft u schade?</label></checklist>
-                    <a onclick="showArt(16);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check18" onclick="updateChecklist(this, 17)">
-                    <checklist><label id="check_text18" for="check18">Heeft u een klacht?</label></checklist>
-                    <a onclick="showArt(17);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check19" onclick="updateChecklist(this, 18)">
-                    <checklist><label id="check_text19" for="check19">Mogen wij deze voorwaarden en onze
-                        leveringstarieven
-                        veranderen?</label></checklist>
-                    <a onclick="showArt(18);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check20" onclick="updateChecklist(this, 19)">
-                    <checklist><label id="check_text20" for="check20">Wat gebeurt er als u verhuist?</label>
-                    </checklist>
-                    <a onclick="showArt(19);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check21" onclick="updateChecklist(this, 20)">
-                    <checklist><label id="check_text21" for="check21">Hoe lang duurt onze overeenkomst?</label>
-                    </checklist>
-                    <a onclick="showArt(20);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check22" onclick="updateChecklist(this, 21)">
-                    <checklist><label id="check_text22" for="check22">Wat gebeurt als onze overeenkomst
-                        eindigt?</label>
-                    </checklist>
-                    <a onclick="showArt(21);"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
-                    <input type="checkbox" id="check23" onclick="updateChecklist(this, 22)">
-                    <checklist><label id="check_text23" for="check23">Vanaf wanneer gelden deze voorwaarden?</label>
-                    </checklist>
-                    <a onclick="stopTimer();"><img src="assets/button%20right.png" width=15px
-                                                   height=15px></a><br>
+        <p></p>
+        <div id="checklist2" class="card">
+            <div class="card-header"><h1>Gelezen artikelen</h1></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Hier kunt u alle artikelen terug vinden op volgorde. De checklist laat zien welke artikelen u
+                    gemist
+                    heeft.
+                </p>
+                <div class="flex-container normal">
+                    <div class="flex-item b">
+                        <input type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
+                        <checklist><label id="check_text1" for="check1">Waarvoor zijn deze voorwaarden?</label>
+                        </checklist>
+                        <a onclick="showArt(0);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check2" onclick="updateChecklist(this, 0)">
+                        <checklist><label id="check_text2" for="check2">Onze overeenkomst</label></checklist>
+                        <a onclick="showArt(1);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check3" onclick="updateChecklist(this, 2)">
+                        <checklist><label id="check_text3" for="check3">U heeft een aansluiting op het elektriciteitsnet
+                            en/of het
+                            gasnet</label></checklist>
+                        <a onclick="showArt(2);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check4" onclick="updateChecklist(this, 3)">
+                        <checklist><label id="check_text4" for="check4">Wekt u ook zelf elektriciteit op?</label>
+                        </checklist>
+                        <a onclick="showArt(3);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check5" onclick="updateChecklist(this, 4)">
+                        <checklist><label id="check_text5" for="check5">Wat doen wij als wij met u een overeenkomst
+                            hebben?</label></checklist>
+                        <a onclick="showArt(4);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check6" onclick="updateChecklist(this, 5)">
+                        <checklist><label id="check_text6" for="check6">Wat doen wij als er een storing is op het
+                            elektriciteitsnet of gasnet?</label></checklist>
+                        <a onclick="showArt(5);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check7" onclick="updateChecklist(this, 6)">
+                        <checklist><label id="check_text7" for="check7">Wat doen wij als u zich niet aan de voorwaarden
+                            houdt?</label></checklist>
+                        <a onclick="showArt(6);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check8" onclick="updateChecklist(this, 7)">
+                        <checklist><label id="check_text8" for="check8">Welke informatie krijgen wij van u?</label>
+                        </checklist>
+                        <a onclick="showArt(7);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check9" onclick="updateChecklist(this, 8)">
+                        <checklist><label id="check_text9" for="check9">De elektriciteitsmeter en de gasmeter</label>
+                        </checklist>
+                        <a onclick="showArt(8);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check10" onclick="updateChecklist(this, 9)">
+                        <checklist><label id="check_text10" for="check10">Onderzoek van de elektriciteitsmeter en/ of de
+                            gasmeter
+                            en/of de meting</label></checklist>
+                        <a onclick="showArt(9);"><img src="assets/button%20right.png" width=15px
+                                                      height=15px></a><br>
+                        <input type="checkbox" id="check11" onclick="updateChecklist(this, 10)">
+                        <checklist><label id="check_text11" for="check11">Leveringstarieven voor elektriciteit en/of
+                            gas</label>
+                        </checklist>
+                        <a onclick="showArt(10);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check12" onclick="updateChecklist(this, 11)">
+                        <checklist><label id="check_text12" for="check12">U betaalt voor elektriciteit en/of gas</label>
+                        </checklist>
+                        <a onclick="showArt(11);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check13" onclick="updateChecklist(this, 12)">
+                        <checklist><label id="check_text13" for="check13">Niet eens met een jaarnota of
+                            eindnota?</label>
+                        </checklist>
+                        <a onclick="showArt(12);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check14" onclick="updateChecklist(this, 13)">
+                        <checklist><label id="check_text14" for="check14">Verjaring van vorderingen</label></checklist>
+                        <a onclick="showArt(13);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check15" onclick="updateChecklist(this, 14)">
+                        <checklist><label id="check_text15" for="check15">Zekerheden vragen</label></checklist>
+                        <a onclick="showArt(14);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check16" onclick="updateChecklist(this, 15)">
+                        <checklist><label id="check_text16" for="check16">Wat doen wij met uw persoonlijke
+                            gegevens?</label>
+                        </checklist>
+                        <a onclick="showArt(15);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check17" onclick="updateChecklist(this, 16)">
+                        <checklist><label id="check_text17" for="check17">Heeft u schade?</label></checklist>
+                        <a onclick="showArt(16);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check18" onclick="updateChecklist(this, 17)">
+                        <checklist><label id="check_text18" for="check18">Heeft u een klacht?</label></checklist>
+                        <a onclick="showArt(17);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check19" onclick="updateChecklist(this, 18)">
+                        <checklist><label id="check_text19" for="check19">Mogen wij deze voorwaarden en onze
+                            leveringstarieven
+                            veranderen?</label></checklist>
+                        <a onclick="showArt(18);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check20" onclick="updateChecklist(this, 19)">
+                        <checklist><label id="check_text20" for="check20">Wat gebeurt er als u verhuist?</label>
+                        </checklist>
+                        <a onclick="showArt(19);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check21" onclick="updateChecklist(this, 20)">
+                        <checklist><label id="check_text21" for="check21">Hoe lang duurt onze overeenkomst?</label>
+                        </checklist>
+                        <a onclick="showArt(20);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check22" onclick="updateChecklist(this, 21)">
+                        <checklist><label id="check_text22" for="check22">Wat gebeurt als onze overeenkomst
+                            eindigt?</label>
+                        </checklist>
+                        <a onclick="showArt(21);"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                        <input type="checkbox" id="check23" onclick="updateChecklist(this, 22)">
+                        <checklist><label id="check_text23" for="check23">Vanaf wanneer gelden deze voorwaarden?</label>
+                        </checklist>
+                        <a onclick="stopTimer();"><img src="assets/button%20right.png" width=15px
+                                                       height=15px></a><br>
+                    </div>
                 </div>
+                <br>
+                <a id="checkList" class="a-button flex-item"
+                   onclick="updateFilter(document.getElementById('alle artikelen'));checklistUnChecked();updateFilter(this)">Ongelezen
+                    artikelen openen</a>
             </div>
-            <br>
 
-            <a id="checkList" class="a-button flex-item"
-               onclick="updateFilter(document.getElementById('alle artikelen'));checklistUnChecked();updateFilter(this)">Ongelezen
-                artikelen openen</a>
         </div>
 
 

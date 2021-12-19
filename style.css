@@ -1,5 +1,6 @@
 :root {
     --white: #ffffff;
+    --grey: #efefef;
     --dark: #2b2f32;
     --counterart: 0;
     --shade1: #7ba0e5;
@@ -15,22 +16,22 @@
     --highlight4: lightyellow;
     --highlight5: #D6ECE3;
     --highlight6: #FBDCC6;
-    --highlight7: #D3D3D3;   
+    --highlight7: #D3D3D3;
 
 }
 
 .toggle-control {
     display: block;
-    position:relative;
+    position: relative;
     padding-left: 100px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
-    
+
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .toggle-control input {
@@ -39,6 +40,7 @@
     height: 0;
     width: 0;
 }
+
 .toggle-control.consument input:checked ~ .control {
     background-color: var(--highlight1);
 }
@@ -58,6 +60,7 @@
 .toggle-control input:checked ~ .control:after {
     left: 55px;
 }
+
 .toggle-control .control {
     position: absolute;
     top: 0;
@@ -79,7 +82,7 @@
     border-radius: 25px;
     background: white;
     transition: left 0.15s ease-in;
-    
+
 }
 
 body {
@@ -87,6 +90,7 @@ body {
     font-size: 14px;
     overflow: hidden;
     margin: 0;
+    background-color: var(--grey);
 }
 
 p {
@@ -189,7 +193,7 @@ p {
     width: 70%;
     margin: auto;
     text-align: left;
-   /* padding: 2% 5% 5% 5%; */
+    /* padding: 2% 5% 5% 5%; */
     box-sizing: border-box;
 }
 
@@ -686,3 +690,11 @@ highlight7 {
     width: 100px;
 }
 
+/* */
+.main-container-style {
+    border-radius: 25px;
+    background-color: #606060;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
