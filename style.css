@@ -575,10 +575,11 @@ highlight7 {
     display: block;
     width: 0;
     height: 100%;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     position: absolute;
     top: 0;
-    left: 27px
+    left: 27px;
+    background: white;
 }
 
 .box ul li {
@@ -606,6 +607,8 @@ highlight7 {
     display: block;
     height: 100%;
     border: 1px dashed #fff;
+    background: white;
+    top: -2px;
     position: absolute;
 }
 
@@ -616,7 +619,7 @@ highlight7 {
     height: 10px;
     border-radius: 50%;
     background: var(--shade2);
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     position: absolute;
     left: -7.5px;
     top: -6px;
@@ -630,7 +633,6 @@ highlight7 {
 }
 
 .box .btn-panel {
-    margin-top: 10px;
     text-transform: capitalize;
     font-style: italic;
     text-align: right;
@@ -645,6 +647,7 @@ highlight7 {
     font-size: 80%;
     font-weight: bold;
     width: 100px;
+    top: 20px;
 }
 
 /* */
@@ -696,8 +699,9 @@ card-header-title {
     border-color: var(--shade1);
 }
 
-.navbar{
+.navbar {
     padding: 0px 30px 0px 30px;
+    align-items: baseline;
 }
 
 
