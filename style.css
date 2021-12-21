@@ -10,25 +10,22 @@
     --shade5: #0f2a6b;
     --shade6: #f6f6f6;
     --indexCircle: 10px;
-    --highlight1: lightblue;
-    --highlight2: lightcoral;
-    --highlight3: #CFACB3;
-    --highlight4: lightyellow;
-    --highlight5: #D6ECE3;
-    --highlight6: #FBDCC6;
-    --highlight7: #D3D3D3;
+    --highlight1: #B7CBF1;
+    --highlight2: #B7CBF1;
+    --highlight3: #93B1EA;
+    --highlight4: #B7CBF1;
+    --highlight5: #93B1EA;
+    --highlight6: #93B1EA;
+    --highlight7: #7BA0E5;
 
 }
 
-.img-thumbnail{background-color:transparent}
-
 .toggle-control {
 
-    position: relative;
-    padding-left: 100px;
-    margin-bottom: 12px;
+    position: relative; 
+    padding-left: 40px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 10px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -44,15 +41,15 @@
 }
 
 .toggle-control.consument input:checked ~ .control {
-    background-color: var(--highlight1);
+    background-color: #93B1EA;
 }
 
 .toggle-control.energie_leverancier input:checked ~ .control {
-    background-color: var(--highlight2);
+    background-color: #93B1EA;
 }
 
 .toggle-control.netbeheerder input:checked ~ .control {
-    background-color: var(--highlight4);
+    background-color: #93B1EA;
 }
 
 .toggle-control.original input:checked ~ .control {
@@ -60,30 +57,32 @@
 }
 
 .toggle-control input:checked ~ .control:after {
-    left: 55px;
+    left: 17.5px;
 }
 
 .toggle-control .control {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
-    width: 100px;
+    height: 30px;
+    width: 45px;
     border-radius: 25px;
-    background-color: darkgray;
-    transition: background-color 0.15s ease-in;
+    background-color: lightgrey;
+    transition: background-color 0.20s ease-in;
 }
 
 .toggle-control .control:after {
     content: "";
     position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 40px;
-    height: 40px;
+    left: 2.5px;
+    top: 2.5px;
+    width: 25px;
+    height: 25px;
     border-radius: 25px;
+    background-image: url("/assets/close.png");
     background: white;
-    transition: left 0.15s ease-in;
+    transition: left 0.20s ease-in;
+    
 }
 
 body {
@@ -251,6 +250,8 @@ p {
     color: white;
 }
 
+
+
 .filterbox {
     display: block;
     font-size: 15px;
@@ -259,8 +260,6 @@ p {
     text-align: middle;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-   
-
 }
 
 .filterbox2 {
@@ -272,6 +271,16 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     text-decoration: underline;
+}
+
+.filterbox3 {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--shade3);
+    text-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 .UIbutton {
@@ -385,42 +394,49 @@ label {
 highlight1 {
     background-color: var(--highlight1);
     color: black;
+
 }
 
 /* highlight energie leverancier*/
 highlight2 {
     background-color: var(--highlight2);
     color: black;
+
 }
 
 /* highlight consument + energie leverancier */
 highlight3 {
     background-color: var(--highlight3);
     color: black;
+
 }
 
 /* highlight netbeheerder */
 highlight4 {
     background-color: var(--highlight4);
     color: black;
+
 }
 
 /* highlight netbeheerder + consument */
 highlight5 {
     background-color: var(--highlight5);
     color: black;
+
 }
 
 /* highlight netbeheerder + energieleverancier */
 highlight6 {
     background-color: var(--highlight6);
     color: black;
+
 }
 
 /* highlight consument + netbeheerder + energieleverancier */
 highlight7 {
     background-color: var(--highlight7);
     color: black;
+
 }
 
 .footer {
@@ -706,9 +722,14 @@ card-header-title {
     letter-spacing: 0.2em;
 }
 
+.bi-file-earmark-arrow-down {
+    margin-top:15px;
+}
+
 .btn-primary {
     background-color: var(--shade1);
     border-color: var(--shade1);
+    border-radius: 25px;
 }
 
 .navbar {

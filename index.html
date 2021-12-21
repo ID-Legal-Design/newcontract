@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
 
     <!-- Hotjar Tracking Code for https://id-legal-design.github.io/newcontract/ -->
     <script>
@@ -51,8 +52,42 @@
         <div class="p-2">
             <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
         </div>
-      </div>
+    </div>
+    <div class="d-flex align-content-around flex-wrap">
+        <div class="card main-card">
+            <div class="d-flex align-self-center">
+                <div class="filterbox3 flex-item"><i class="bi bi-person fa-5x"></i>&nbspConsument 
+                    <label class="toggle-control consument">
+                        <input id="consument_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
+                        <span class="control"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
 
+        <div class="card main-card">
+            <div class="align-self-center">
+                <div class="filterbox3 flex-item"><i class="bi bi-plug"></i>&nbspEnergie leverancier 
+                    <label class="toggle-control energie_leverancier">
+                        <input id="energie_leverancier_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
+                        <span class="control"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card main-card ">
+            <div class="align-self-center">
+                <div class="filterbox3 flex-item"><i class="bi bi-columns"></i>&nbspNetbeheerder
+                    <label class="toggle-control netbeheerder">
+                        <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
+                        <span class="control"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- The UI button elements within the sideview -->
     <div class="flex-container normal sidepanelfooter">
         <div class="d-flex align-content-around flex-wrap" style="height: 30px;">
@@ -67,25 +102,6 @@
                 <img id="nextButton" class="UIbutton flex-item" src="assets/button right.png"
                 onclick="nextArticle();" width=30px height=30px>
             </div>
-            <div class="mr-auto">
-                <label class="toggle-control consument">
-                    <input id="consument_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                    <span class="control"></span>
-                </label>
-            </div>
-            <div class="mr-auto">
-                <label class="toggle-control energie_leverancier">
-                    <input id="energie_leverancier_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                    <span class="control"></span>
-                </label>
-            </div>
-            <div class="mr-auto">
-                <label class="toggle-control netbeheerder">
-                    <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                    <span class="control"></span>
-                </label>
-            </div>
-
         </div>
     </div>
 
@@ -4664,9 +4680,13 @@
                     <a class="nav-link" href="#checklists">Gelezen Artikelen</a>
                 </li>
             </ul>
-            <a id="pdf" src="" class="img-fluid" style="position: center" href="https://tuenergy.wixsite.com/home"
-               target="_blank"><img
-               src="assets/pdf.png" width=50px height=50px ></a>
+            <a id="pdf" href="https://tuenergy.wixsite.com/home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" margin-top= "25" fill="black" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                    <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
+                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                  </svg>
+
+            </a>
         </div>
     </nav>
 
@@ -4720,6 +4740,7 @@
                                         over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
                                     </div>
                                 </div>
+                                
                                 <div class="collapse col-md-12" id="voorwaarden2" data-parent="#collapse_one">
                                     <div class="card card-body">
                                         U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
@@ -5244,6 +5265,7 @@
     //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
         stopTimer();
+        document.getElementById("alle artikelen").classList.remove("hidden");
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
@@ -5274,67 +5296,67 @@
             document.body.style.setProperty('--highlight7', 'white');
 
         } else if (consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'lightblue');
+            document.body.style.setProperty('--highlight1', '#B7CBF1');
             document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', 'lightblue');
+            document.body.style.setProperty('--highlight3', '#B7CBF1');
             document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', 'lightblue');
+            document.body.style.setProperty('--highlight5', '#B7CBF1');
             document.body.style.setProperty('--highlight6', 'white');
-            document.body.style.setProperty('--highlight7', 'lightblue');
+            document.body.style.setProperty('--highlight7', '#B7CBF1');
 
         } else if (!consument_filter.checked && energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', 'lightcoral');
-            document.body.style.setProperty('--highlight3', 'lightcoral');
+            document.body.style.setProperty('--highlight2', '#B7CBF1');
+            document.body.style.setProperty('--highlight3', '#B7CBF1');
             document.body.style.setProperty('--highlight4', 'white');
             document.body.style.setProperty('--highlight5', 'white');
-            document.body.style.setProperty('--highlight6', 'lightcoral');
-            document.body.style.setProperty('--highlight7', 'lightcoral');
+            document.body.style.setProperty('--highlight6', '#B7CBF1');
+            document.body.style.setProperty('--highlight7', '#B7CBF1');
 
         } else if (!consument_filter.checked && !energie_leverancier_filter.checked && netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', 'white');
             document.body.style.setProperty('--highlight2', 'white');
             document.body.style.setProperty('--highlight3', 'white');
-            document.body.style.setProperty('--highlight4', 'lightyellow');
-            document.body.style.setProperty('--highlight5', 'lightyellow');
-            document.body.style.setProperty('--highlight6', 'lightyellow');
-            document.body.style.setProperty('--highlight7', 'lightyellow');
+            document.body.style.setProperty('--highlight4', '#B7CBF1');
+            document.body.style.setProperty('--highlight5', '#B7CBF1');
+            document.body.style.setProperty('--highlight6', '#B7CBF1');
+            document.body.style.setProperty('--highlight7', '#B7CBF1');
 
         } else if (consument_filter.checked && energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'lightblue');
-            document.body.style.setProperty('--highlight2', 'lightcoral');
-            document.body.style.setProperty('--highlight3', '#CFACB3');
+            document.body.style.setProperty('--highlight1', '#B7CBF1');
+            document.body.style.setProperty('--highlight2', '#B7CBF1');
+            document.body.style.setProperty('--highlight3', '#93B1EA');
             document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', 'lightblue');
-            document.body.style.setProperty('--highlight6', 'lightcoral');
-            document.body.style.setProperty('--highlight7', '#CFACB3');
+            document.body.style.setProperty('--highlight5', '#B7CBF1');
+            document.body.style.setProperty('--highlight6', '#B7CBF1');
+            document.body.style.setProperty('--highlight7', '#93B1EA');
 
         } else if (consument_filter.checked && !energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'lightblue');
+            document.body.style.setProperty('--highlight1', '#B7CBF1');
             document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', 'lightblue');
-            document.body.style.setProperty('--highlight4', 'lightyellow');
-            document.body.style.setProperty('--highlight5', '#D6ECE3');
-            document.body.style.setProperty('--highlight6', 'lightyellow');
-            document.body.style.setProperty('--highlight7', '#D6ECE3');
+            document.body.style.setProperty('--highlight3', '#B7CBF1');
+            document.body.style.setProperty('--highlight4', '#B7CBF1');
+            document.body.style.setProperty('--highlight5', '#93B1EA');
+            document.body.style.setProperty('--highlight6', '#B7CBF1');
+            document.body.style.setProperty('--highlight7', '#93B1EA');
 
         } else if (!consument_filter.checked && energie_leverancier_filter.checked && netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', 'lightcoral');
-            document.body.style.setProperty('--highlight3', 'lightcoral');
-            document.body.style.setProperty('--highlight4', 'lightyellow');
-            document.body.style.setProperty('--highlight5', 'lightyellow');
-            document.body.style.setProperty('--highlight6', '#FBDCC6');
-            document.body.style.setProperty('--highlight7', '#FBDCC6');
+            document.body.style.setProperty('--highlight2', '#B7CBF1');
+            document.body.style.setProperty('--highlight3', '#B7CBF1');
+            document.body.style.setProperty('--highlight4', '#B7CBF1');
+            document.body.style.setProperty('--highlight5', '#B7CBF1');
+            document.body.style.setProperty('--highlight6', '#93B1EA');
+            document.body.style.setProperty('--highlight7', '#93B1EA');
 
         } else if (consument_filter.checked && energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'lightblue');
-            document.body.style.setProperty('--highlight2', 'lightcoral');
-            document.body.style.setProperty('--highlight3', '#CFACB3');
-            document.body.style.setProperty('--highlight4', 'lightyellow');
-            document.body.style.setProperty('--highlight5', '#D6ECE3');
-            document.body.style.setProperty('--highlight6', '#FBDCC6');
-            document.body.style.setProperty('--highlight7', '#D3D3D3');
+            document.body.style.setProperty('--highlight1', '#B7CBF1');
+            document.body.style.setProperty('--highlight2', '#B7CBF1');
+            document.body.style.setProperty('--highlight3', '#93B1EA');
+            document.body.style.setProperty('--highlight4', '#B7CBF1');
+            document.body.style.setProperty('--highlight5', '#93B1EA');
+            document.body.style.setProperty('--highlight6', '#93B1EA');
+            document.body.style.setProperty('--highlight7', '#7BA0E5');
         }
     }
 
@@ -5397,6 +5419,7 @@
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         stopTimer();
+        document.getElementById("alle artikelen").classList.remove("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
         currentButton = FilterPressed.id;
@@ -5444,6 +5467,7 @@
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        document.getElementById("alle artikelen").classList.add("hidden");
     }
 
     //show and hide sideview elements
