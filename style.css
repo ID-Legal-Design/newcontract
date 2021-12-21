@@ -20,8 +20,10 @@
 
 }
 
+.img-thumbnail{background-color:transparent}
+
 .toggle-control {
-    display: block;
+
     position: relative;
     padding-left: 100px;
     margin-bottom: 12px;
@@ -105,8 +107,8 @@ p {
     height: 100%;
     position: fixed;
     margin-left: 60%;
-    padding: 50px 50px 50px 50px;
-    box-sizing: border-box;
+    padding: 10px 50px 50px 50px;
+    
     background-color: #fafafa;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
@@ -250,21 +252,30 @@ p {
 }
 
 .filterbox {
-    padding: 5px 10px 5px 10px;
-    border-radius: 30px;
-    transition-duration: 0.4s;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 1px 1px;
-    margin-top: 1em;
-    background-color: var(--shade1);
-    color: white;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--shade3);
+    text-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+   
+
+}
+
+.filterbox2 {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--shade3);
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: underline;
 }
 
 .UIbutton {
     border: none;
-    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -293,11 +304,11 @@ button.link {
 }
 
 h0 {
-    display: block;
+    display: inline;
     font-size: 15px;
     font-weight: bold;
     color: var(--shade3);
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -441,22 +452,23 @@ highlight7 {
 
 .legal-list ol {
     counter-reset: clause;
-    text-indent: -3em;
+    text-indent: -2em;
     list-style: none;
 }
 
 .legal-list ol li {
     counter-increment: clause;
+    
 }
 
 .legal-list ol li:before {
     content: counter(section) "." counters(clause, ".") " ";
-    margin: 0 0.7em 0 0;
+    margin: 0 0.3em 0 0;
 }
 
 .legal-list ol li ol li {
     list-style: none;
-    text-indent: -2em;
+    text-indent: -2.1em;
 }
 
 .legal-list ol li ol li:before {
