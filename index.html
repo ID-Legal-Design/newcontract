@@ -30,10 +30,11 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500px">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500">
 
 <div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
+
     <div class="d-flex justify-content-end" style="height: 25px;">
         <div class="ml-auto p-2 align-self-stretch" id="sidepanelhead">
             <img class="UIbutton sidepanelheader" src="assets/close.png" alt="next article"
@@ -5303,7 +5304,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
-        startTimer(art_nr);
+        startTimer(current_list[i]);
     }
 
     function changeFilterColor() {
@@ -5382,17 +5383,29 @@
         }
     }
 
+    //function checks how many characters are in the article and sets a timer accordingly
+    //thus taking into account the length of article before it gets checked
+    function startTimer(ArticleID) {
+        let element = document.getElementById(ArticleID).innerText;
+        let art_nr = getArticleNumberFromDivID(current_list[i]) - 1;
+        let durationTimer;
 
-    function startTimer(art_nr) {
+        //calculate timer using average reading speed (of 250 wpm)
+        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250*2)) * 60 * 100;
 
+        //give timer a maxiumum
+        if(durationTimer > 1200){
+           durationTimer = 1200;
+        }
+
+        //set timer using calculated duration
         timer = setInterval(function () {
             checkListTimerDummy[art_nr]--;
-
             if (checkListTimerDummy[art_nr] == 0) {
                 clearInterval(timer);
                 document.getElementById("check" + (art_nr + 1)).checked = true;
             }
-        }, 1000);
+        }, durationTimer);
     }
 
     function stopTimer() {
@@ -5450,7 +5463,7 @@
             hideArticles();
             assignListToButton();
             updateArticles();
-            startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+            startTimer(current_list[i]);
             previousButton = currentButton;
             if (current_list.length > 1) {
                 document.getElementById("nextButton").classList.remove("hidden");
@@ -5488,7 +5501,7 @@
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
         document.getElementById("alle artikelen").classList.add("hidden");
     }
 
@@ -5536,7 +5549,7 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
         checkFilters(current_list[i]);
     }
 
@@ -5555,7 +5568,7 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
         checkFilters(current_list[i]);
     }
 
@@ -5639,7 +5652,6 @@
         array_titles = array_div_titles.map(function (e) {
             return e.id;
         });
-        console.log(array_titles)
         return array_titles;
     }
 
