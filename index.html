@@ -32,14 +32,14 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500px">
 
-<div id="sideview" class="sideviewContainer" >
+<div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
     <div class="d-flex justify-content-end" style="height: 25px;">
-        <div class="ml-auto p-2 align-self-stretch"id="sidepanelhead">
+        <div class="ml-auto p-2 align-self-stretch" id="sidepanelhead">
             <img class="UIbutton sidepanelheader" src="assets/close.png" alt="next article"
-            onclick="closeSidepanel();stopTimer();"
-            width=25px
-            height=25px>
+                 onclick="closeSidepanel();stopTimer();"
+                 width=25px
+                 height=25px>
         </div>
     </div>
     <div class="d-flex align-content-around flex-wrap">
@@ -53,36 +53,48 @@
             <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
         </div>
     </div>
-    <div class="d-flex align-content-around flex-wrap">
-        <div class="card main-card">
+    <div class="d-flex align-content-around flex-sm-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap">
+        <div id="consumentFilter" class="card filter-card">
             <div class="d-flex align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-person fa-5x"></i>&nbspConsument
-                    <label class="toggle-control consument">
-                        <input id="consument_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <i class="flex-item bi bi-person fa-5x"></i>&nbspConsument
+                        <label class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
+                            <input id="consument_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card main-card">
+        <div id="energieleverancierFilter" class="card filter-card">
             <div class="align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-plug"></i>&nbspEnergie leverancier
-                    <label class="toggle-control energie_leverancier">
-                        <input id="energie_leverancier_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center" style="text-align: center">
+                        <i class="flex-item bi bi-plug"></i>&nbspEnergie leverancier
+                        <label class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
+                            <input id="energie_leverancier_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card main-card ">
+        <div id="netbeheerderFilter" class="card filter-card">
             <div class="align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-columns"></i>&nbspNetbeheerder
-                    <label class="toggle-control netbeheerder">
-                        <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <i class="flex-item bi bi-columns"></i>&nbspNetbeheerder
+                        <label class="flex-item toggle-control netbeheerder" style="transform: scale(0.8, 0.8)">
+                            <input id="netbeheerder_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,14 +105,14 @@
         <div class="d-flex align-content-around flex-wrap" style="height: 30px;">
             <div class="p-2">
                 <img id="prevButton" class="UIbutton flex-item" src="assets/button left.png"
-                onclick="previousArticle();" width=30px height=30px>
+                     onclick="previousArticle();" width=30px height=30px>
             </div>
             <div class="align-self-center">
                 <a id="articles_shown" class="counterText flex-item"></a>
             </div>
             <div class="p-2">
                 <img id="nextButton" class="UIbutton flex-item" src="assets/button right.png"
-                onclick="nextArticle();" width=30px height=30px>
+                     onclick="nextArticle();" width=30px height=30px>
             </div>
         </div>
     </div>
@@ -4681,10 +4693,11 @@
                 </li>
             </ul>
             <a id="pdf" href="https://tuenergy.wixsite.com/home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" margin-top= "25" fill="grey" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" margin-top="25" fill="grey"
+                     class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                     <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                  </svg>
+                </svg>
 
             </a>
         </div>
@@ -4699,9 +4712,11 @@
                     <div id="collapse_one">
                         <div class="card-body">
                             <p class="card-text">
-                                Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
+                                Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van
+                                dit
                                 contract
-                                doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de
+                                doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch
+                                liever de
                                 pdf
                                 lezen
                                 kunt u deze ten alle tijden onderaan uw scherm vinden.
@@ -4712,7 +4727,8 @@
                                 Door wie zijn deze algemene voorwaarden
                                 gemaakt?
                             </button>
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#voorwaarden2"
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#voorwaarden2"
                                     aria-expanded="false" aria-controls="collapseExample">
                                 Deze voorwaarden zijn er voor u en voor ons
                             </button>
@@ -4720,9 +4736,11 @@
                             <div class="row">
                                 <div class="collapse col-md-12" id="voorwaarden1" data-parent="#collapse_one">
                                     <div class="card card-body">
-                                        Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
+                                        Deze algemene voorwaarden zijn van TU Energy, de vereniging van
+                                        energieleveranciers
                                         in
-                                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn
+                                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER)
+                                        zijn
                                         de
                                         voorwaarden
                                         met
@@ -4731,7 +4749,8 @@
                                         elkaar eens
                                         over
                                         alle
-                                        voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade
+                                        voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over
+                                        schade
                                         (artikel
                                         17.4)
                                         en
@@ -4744,15 +4763,18 @@
                                 <div class="collapse col-md-12" id="voorwaarden2" data-parent="#collapse_one">
                                     <div class="card card-body">
                                         U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
-                                        energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden
+                                        energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze
+                                        voorwaarden
                                         staan
                                         de regels
-                                        waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden te
+                                        waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden
+                                        te
                                         houden,
                                         is het
                                         nodig dat u ze
                                         kent
-                                        en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product
+                                        en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het
+                                        product
                                         waarvoor
                                         u
                                         een
@@ -4769,7 +4791,8 @@
                     <div id="collapse_one2">
                         <div class="card-body">
                             <p class="card-text">
-                                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
+                                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij
+                                dit
                                 contract
                                 betrokken zijn.
                                 Hieronder kunt u meer informatie over deze partijen vinden.</p>
@@ -4795,7 +4818,8 @@
                             <div class="row">
                                 <div class="collapse col-md-12" id="stakeholderText1" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
+                                        Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf.
+                                        Het
                                         gaat in
                                         dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
                                         door de
@@ -4804,7 +4828,8 @@
                                 </div>
                                 <div class="collapse col-md-12" id="stakeholderText2" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat
+                                        Een energieleverancier verzorgt de in- en verkoop en de levering van energie,
+                                        wat
                                         kan
                                         bestaan
                                         uit elektriciteit en gas.
@@ -4812,7 +4837,8 @@
                                 </div>
                                 <div class="collapse col-md-12" id="stakeholderText3" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
+                                        De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor
+                                        het
                                         energienetwerk waarover gas en elektriciteit geleverd wordt.
                                     </div>
                                 </div>
@@ -5493,6 +5519,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").innerHTML = currentButton;
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
+        checkFilters(current_list[i]);
     }
 
     function nextArticle() {
@@ -5511,6 +5538,7 @@
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        checkFilters(current_list[i]);
     }
 
     function previousArticle() {
@@ -5529,6 +5557,7 @@
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        checkFilters(current_list[i]);
     }
 
     //connects each button to its own list by updating current_list
@@ -5619,6 +5648,36 @@
     function getArticleNumberFromDivID(ArticleID) {
         let result = ArticleID.slice(4);
         return result;
+    }
+
+    //function that checks if the filter contains a certain highlight (and thus filter)
+    // and updates showing the filter buttons accordingly
+    function checkFilters(ArticleID) {
+        let element = document.getElementById(ArticleID).innerHTML;
+        if (element.includes("highlight1") || element.includes("highlight3")
+            || element.includes("highlight5") || element.includes("highlight7")) {
+            console.log('yes consument');
+            document.getElementById("consumentFilter").style.opacity = "100%";
+        } else {
+            console.log('no consument');
+            document.getElementById("consumentFilter").style.opacity = "30%";
+        }
+        if (element.includes("highlight2") || element.includes("highlight3")
+            || element.includes("highlight6") || element.includes("highlight7")) {
+            console.log('yes energieleverancier');
+            document.getElementById("energieleverancierFilter").style.opacity = "100%";
+        } else {
+            console.log('no energieleverancier');
+            document.getElementById("energieleverancierFilter").style.opacity = "30%";
+        }
+        if (element.includes("highlight4") || element.includes("highlight5")
+            || element.includes("highlight6") || element.includes("highlight7")) {
+            console.log('yes netbeheerder');
+            document.getElementById("netbeheerderFilter").style.opacity = "100%";
+        } else {
+            console.log('no netbeheerder');
+            document.getElementById("netbeheerderFilter").style.opacity = "30%";
+        }
     }
 
 </script>
