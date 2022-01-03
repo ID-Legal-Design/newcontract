@@ -13,15 +13,14 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-
-    <!-- Hotjar Tracking Code for https://id-legal-design.github.io/newcontract/ -->
+    
+    <!-- Hotjar Tracking Code for https://www.tuenergy-contract.nl/ -->
     <script>
         (function (h, o, t, j, a, r) {
             h.hj = h.hj || function () {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
-            h._hjSettings = {hjid: 2719357, hjsv: 6};
+            h._hjSettings = {hjid: 2767269, hjsv: 6};
             a = o.getElementsByTagName('head')[0];
             r = o.createElement('script');
             r.async = 1;
@@ -30,16 +29,17 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500px">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="500">
 
-<div id="sideview" class="sideviewContainer" >
+<div id="sideview" class="sideviewContainer">
     <!-- The text above the article showing what filter is used-->
+
     <div class="d-flex justify-content-end" style="height: 25px;">
-        <div class="ml-auto p-2 align-self-stretch"id="sidepanelhead">
+        <div class="ml-auto p-2 align-self-stretch" id="sidepanelhead">
             <img class="UIbutton sidepanelheader" src="assets/close.png" alt="next article"
-            onclick="closeSidepanel();stopTimer();"
-            width=25px
-            height=25px>
+                 onclick="closeSidepanel();stopTimer();"
+                 width=25px
+                 height=25px>
         </div>
     </div>
     <div class="d-flex align-content-around flex-wrap">
@@ -53,36 +53,48 @@
             <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
         </div>
     </div>
-    <div class="d-flex align-content-around flex-wrap">
-        <div class="card main-card">
+    <div class="d-flex align-content-around flex-sm-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap">
+        <div id="consumentFilter" class="card filter-card">
             <div class="d-flex align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-person fa-5x"></i>&nbspConsument
-                    <label class="toggle-control consument">
-                        <input id="consument_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <i class="flex-item bi bi-person fa-5x"></i>&nbspConsument
+                        <label class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
+                            <input id="consument_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card main-card">
+        <div id="energieleverancierFilter" class="card filter-card">
             <div class="align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-plug"></i>&nbspEnergie leverancier
-                    <label class="toggle-control energie_leverancier">
-                        <input id="energie_leverancier_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center" style="text-align: center">
+                        <i class="flex-item bi bi-plug"></i>&nbspEnergie leverancier
+                        <label class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
+                            <input id="energie_leverancier_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="card main-card ">
+        <div id="netbeheerderFilter" class="card filter-card">
             <div class="align-self-center">
-                <div class="filterbox3 flex-item"><i class="bi bi-columns"></i>&nbspNetbeheerder
-                    <label class="toggle-control netbeheerder">
-                        <input id="netbeheerder_switch" type="checkbox" checked="checked" onclick="changeFilterColor()">
-                        <span class="control"></span>
-                    </label>
+                <div class="filterbox3 flex-item">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <i class="flex-item bi bi-columns"></i>&nbspNetbeheerder
+                        <label class="flex-item toggle-control netbeheerder" style="transform: scale(0.8, 0.8)">
+                            <input id="netbeheerder_switch" type="checkbox" checked="checked"
+                                   onclick="changeFilterColor()">
+                            <span class="control"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,14 +105,14 @@
         <div class="d-flex align-content-around flex-wrap" style="height: 30px;">
             <div class="p-2">
                 <img id="prevButton" class="UIbutton flex-item" src="assets/button left.png"
-                onclick="previousArticle();" width=30px height=30px>
+                     onclick="previousArticle();" width=30px height=30px>
             </div>
             <div class="align-self-center">
                 <a id="articles_shown" class="counterText flex-item"></a>
             </div>
             <div class="p-2">
                 <img id="nextButton" class="UIbutton flex-item" src="assets/button right.png"
-                onclick="nextArticle();" width=30px height=30px>
+                     onclick="nextArticle();" width=30px height=30px>
             </div>
         </div>
     </div>
@@ -1871,11 +1883,11 @@
 
                             </ol>
                         </highlight1>
+                        <highlight3>
+                            (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
+                            netbeheerder.
+                        </highlight3>
                     </li>
-
-                    (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
-                    netbeheerder.
-                    </highlight3></li>
                 </ol>
             </div>
             <div id="toe_8" style="display:none">
@@ -2003,35 +2015,35 @@
                 <h1>Waarvoor zijn deze voorwaarden?</h1>
                 <ol>
                     <li>
-                        <highlight>Dit zijn de voorwaarden van TU Energy B.V. In deze voorwaarden staan
-                            de afspraken die wij hebben gemaakt en waar u en wij ons aan moeten houden als u van ons
-                            elektriciteit en/of gas
-                            geleverd krijgt. <br>
-                            De voorwaarden gelden als:
-                            <ol>
-                                <li>
-                                    <highlight>wij u een aanbieding doen voor de levering van elektriciteit en/of gas,
-                                    </highlight>
-                                </li>
-                                <li>
-                                    <highlight>u ons vraagt elektriciteit en/of gas te leveren,</highlight>
-                                </li>
-                                <li>
-                                    <highlight>u en wij een overeenkomst met elkaar hebben.</highlight>
-                                </li>
-                            </ol>
-                        </highlight>
+                        Dit zijn de voorwaarden van TU Energy B.V. In deze voorwaarden staan
+                        de afspraken die wij hebben gemaakt en waar u en wij ons aan moeten houden als u van ons
+                        elektriciteit en/of gas
+                        geleverd krijgt. <br>
+                        De voorwaarden gelden als:
+                        <ol>
+                            <li>
+                                wij u een aanbieding doen voor de levering van elektriciteit en/of gas,
+
+                            </li>
+                            <li>
+                                u ons vraagt elektriciteit en/of gas te leveren,
+                            </li>
+                            <li>
+                                u en wij een overeenkomst met elkaar hebben.
+                            </li>
+                        </ol>
+
                     </li>
                     <li>
-                        <highlight>In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.</highlight>
+                        In aanvulling op deze voorwaarden gelden ook onze kwaliteitscriteria.
                     </li>
                     <li>
-                        <highlight1>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden
+                        <b>Voordat wij een overeenkomst met elkaar hebben informeren wij u over de voorwaarden
                             die gelden
                             en
                             hoe u hiervan
                             kennis kan nemen.
-                        </highlight1>
+                        </b>
                         Wij verstrekken u deze voorwaarden en onze kwaliteitscriteria uiterlijk
                         wanneer
                         wij de
@@ -2040,110 +2052,110 @@
                         website.
                     </li>
                     <li>
-                        <highlight>Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze
-                            is te vinden
-                            op
-                            de website van de
-                            Autoriteit Consument en Markt.
-                        </highlight>
+                        Ook zijn wij gehouden aan wat in de Informatiecode Elektriciteit en Gas staat. Deze
+                        is te vinden
+                        op
+                        de website van de
+                        Autoriteit Consument en Markt.
+
                     </li>
                     <li>
-                        <highlight1>
+                        <b>
                             Wij mogen ook andere afspraken met u maken.
-                        </highlight1>
+                        </b>
                         Die afspraken gelden als:
                         <ol>
                             <li>
-                                <highlight>we die afspraken volgens de wet of regelgeving mogen maken,</highlight>
+                                we die afspraken volgens de wet of regelgeving mogen maken,
                             </li>
                             <li>
-                                <highlight>we die afspraken volgens deze voorwaarden mogen maken, en</highlight>
+                                we die afspraken volgens deze voorwaarden mogen maken, en
                             </li>
                             <li>
-                                <highlight>we deze afspraken schriftelijk of digitaal vastleggen, en u aangeeft dat u
-                                    het daar mee
-                                    eens
-                                    bent.
+                                we deze afspraken schriftelijk of digitaal vastleggen, en u aangeeft dat u
+                                het daar mee
+                                eens
+                                bent.
                             </li>
                         </ol>
                         Zijn er situaties waarover niets staat in deze voorwaarden? Dan maken we daarover afspraken die
                         voor
                         u en ons redelijk zijn.
-                        </highlight></li>
+                    </li>
                 </ol>
             </div>
             <div id="ver_2" style="display:none">
                 <h1>Onze overeenkomst</h1>
                 <ol>
                     <li>
-                        <highlight>Wij hebben met elkaar een overeenkomst als:
-                            <ol>
-                                <li>
-                                    <highlight>u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag
-                                        accepteren, of
-                                    </highlight>
-                                </li>
-                                <li>
-                                    <highlight>wij u een aanbieding doen voor elektriciteit en/of gas en u onze
-                                        aanbieding
-                                        accepteert.
-                                    </highlight>
-                                </li>
-                            </ol>
-                            Wij leggen deze overeenkomst schriftelijk of digitaal vast en bevestigen u deze schriftelijk
-                            of
-                            digitaal.
-                        </highlight>
+                        Wij hebben met elkaar een overeenkomst als:
+                        <ol>
+                            <li>
+                                u ons vraagt elektriciteit en/of gas te leveren en wij uw aanvraag
+                                accepteren, of
+
+                            </li>
+                            <li>
+                                wij u een aanbieding doen voor elektriciteit en/of gas en u onze
+                                aanbieding
+                                accepteert.
+
+                            </li>
+                        </ol>
+                        Wij leggen deze overeenkomst schriftelijk of digitaal vast en bevestigen u deze schriftelijk
+                        of
+                        digitaal.
+
                     </li>
                     <li>
-                        <highlight1>Nadat wij deze overeenkomst aan u hebben bevestigd, mag u de overeenkomst binnen
+                        <b>Nadat wij deze overeenkomst aan u hebben bevestigd, mag u de overeenkomst binnen
                             veertien
                             kalenderdagen
                             ongedaan maken. U hoeft ons niet uit te leggen waarom.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight> In deze periode van veertien kalenderdagen zullen wij uw oude energieleverancier nog
-                            niet
-                            vragen de
-                            overeenkomst
-                            met u te beëindigen. Ook zullen wij de netbeheerder nog niet doorgeven dat u overstapt naar
-                            ons.
-                            Wilt u tijdens
-                            deze periode wel al geleverd krijgen, dan moet u dat schriftelijk of digitaal bij ons
-                            aanvragen.
-                            Wij
-                            zullen dan direct de
-                            overeenkomst met uw oude energieleverancier opzeggen en aan de netbeheerder doorgeven dat u
-                            naar
-                            ons
-                            overstapt.
-                        </highlight>
+                        In deze periode van veertien kalenderdagen zullen wij uw oude energieleverancier nog
+                        niet
+                        vragen de
+                        overeenkomst
+                        met u te beëindigen. Ook zullen wij de netbeheerder nog niet doorgeven dat u overstapt naar
+                        ons.
+                        Wilt u tijdens
+                        deze periode wel al geleverd krijgen, dan moet u dat schriftelijk of digitaal bij ons
+                        aanvragen.
+                        Wij
+                        zullen dan direct de
+                        overeenkomst met uw oude energieleverancier opzeggen en aan de netbeheerder doorgeven dat u
+                        naar
+                        ons
+                        overstapt.
+
                     </li>
                     <li>
-                        <highlight>Maakt u de overeenkomst ongedaan binnen veertien kalenderdagen en hebben wij u op uw
-                            verzoek in
-                            deze
-                            periode al
-                            wel elektriciteit en/of gas geleverd? Dan moet u ons de afgesproken kosten betalen voor de
-                            levering
-                            voor de periode
-                            totdat u – op eigen initiatief – weer van leverancier wisselt.
-                        </highlight>
+                        Maakt u de overeenkomst ongedaan binnen veertien kalenderdagen en hebben wij u op uw
+                        verzoek in
+                        deze
+                        periode al
+                        wel elektriciteit en/of gas geleverd? Dan moet u ons de afgesproken kosten betalen voor de
+                        levering
+                        voor de periode
+                        totdat u – op eigen initiatief – weer van leverancier wisselt.
+
                     </li>
                     <li>
-                        <highlight>In de overeenkomst melden we de datum waarop de levering begint. Mocht deze datum
-                            niet gehaald
-                            worden dan
-                            informeren wij u hier tijdig over.
-                        </highlight>
+                        In de overeenkomst melden we de datum waarop de levering begint. Mocht deze datum
+                        niet gehaald
+                        worden dan
+                        informeren wij u hier tijdig over.
+
                     </li>
                     <li>Vraagt u ons elektriciteit en/of gas te leveren?
-                        <highlight1>Wij mogen u normaal gesproken een overeenkomst
+                        <b>Wij mogen u normaal gesproken een overeenkomst
                             niet
                             weigeren. Wel mogen
                             wij uw betalingsgedrag onderzoeken. Ook mogen wij u zekerheden vragen,
-                        </highlight1>
+                        </b>
                         lees hiervoor artikel 15
                         van
                         deze voorwaarden.
@@ -2153,106 +2165,106 @@
                         wij u geen andere overeenkomst aanbieden.
                     </li>
                     <li>
-                        <highlight1>Ook bieden wij u geen overeenkomst aan of mogen wij de overeenkomst in deze periode
+                        <b>Ook bieden wij u geen overeenkomst aan of mogen wij de overeenkomst in deze periode
                             beëindigen
                             in de
                             volgende situaties:
                             <ol>
                                 <li>
-                                    <highlight1>u geeft ons niet de informatie waar wij om vragen;</highlight1>
+                                    <b>u geeft ons niet de informatie waar wij om vragen; </b>
                                 </li>
                                 <li>
-                                    <highlight1>u moet ons nog een rekening betalen en u doet dat niet;</highlight1>
+                                    <b>u moet ons nog een rekening betalen en u doet dat niet; </b>
                                 </li>
                                 <li>
-                                    <highlight1>wij hebben u om zekerheden gevraagd, maar die geeft u ons niet;
-                                    </highlight1>
+                                    <b>wij hebben u om zekerheden gevraagd, maar die geeft u ons niet;
+                                    </b>
                                 </li>
                                 <li>
-                                    <highlight1>u houdt zich niet aan de regels van onze overeenkomst, deze voorwaarden,
+                                    <b>u houdt zich niet aan de regels van onze overeenkomst, deze voorwaarden,
                                         de wet of
                                         andere
                                         regels van de overheid,
                                         waardoor het niet redelijk is dat wij u elektriciteit en/of gas gaan leveren.
-                                    </highlight1>
+                                    </b>
                                 </li>
                             </ol>
-                            </highlight>
+
                     </li>
                     <li>
-                        <highlight>Bieden wij u geen overeenkomst aan? Of beëindigen wij de overeenkomst? Dan informeren
-                            we u
-                            schriftelijk of digitaal zo snel
-                            mogelijk daarover. Daarin melden wij u waarom wij u geen overeenkomst aanbieden of waarom we
-                            de
-                            overeenkomst beëindigen.
-                        </highlight>
+                        Bieden wij u geen overeenkomst aan? Of beëindigen wij de overeenkomst? Dan informeren
+                        we u
+                        schriftelijk of digitaal zo snel
+                        mogelijk daarover. Daarin melden wij u waarom wij u geen overeenkomst aanbieden of waarom we
+                        de
+                        overeenkomst beëindigen.
+
                     </li>
                     <li>Gaat u de overeenkomst samen met iemand anders aan?
-                        <highlight1>Dan moet u zich allebei aan de overeenkomst
+                        <b>Dan moet u zich allebei aan de overeenkomst
                             houden.
-                        </highlight1>
+                        </b>
                         Als één van
                         u niet meer kan betalen, of volgens de wet niet meer hoeft te betalen, dan moet de ander de
                         rekening
                         toch helemaal betalen.
                     </li>
                     <li>
-                        <highlight>U mag de rechten en plichten van de overeenkomst die u met ons heeft niet aan een
-                            ander
-                            overdragen.
-                            Dat mag alleen als u
-                            daarvoor van ons schriftelijk toestemming krijgt. Wij bevestigen dit dan schriftelijk of
-                            digitaal
-                            aan u. Wij kunnen op dat
-                            moment nieuwe afspraken maken.
-                        </highlight>
+                        U mag de rechten en plichten van de overeenkomst die u met ons heeft niet aan een
+                        ander
+                        overdragen.
+                        Dat mag alleen als u
+                        daarvoor van ons schriftelijk toestemming krijgt. Wij bevestigen dit dan schriftelijk of
+                        digitaal
+                        aan u. Wij kunnen op dat
+                        moment nieuwe afspraken maken.
+
                     </li>
                     <li>
-                        <highlight>Wij mogen de rechten en plichten van de overeenkomst die wij met u hebben in twee
-                            situaties wel
-                            aan
-                            een andere
-                            energieleverancier overdragen. U geeft ons hiervoor nu al toestemming en onze afspraken
-                            blijven
-                            gelden. Als wij dit doen,
-                            melden wij u dit schriftelijk of digitaal. Wij mogen dat in deze twee situaties:
-                            <ol>
-                                <li>
-                                    <highlight>ons bedrijf wordt overgenomen door een ander bedrijf;</highlight>
-                                </li>
-                                <li>
-                                    <highlight>wij geven de rechten en plichten van de overeenkomst die wij met u hebben
-                                        aan een ander
-                                        bedrijf, maar wij blijven ervoor
-                                        verantwoordelijk dat het andere bedrijf deze rechten en plichten nakomt.
-                                    </highlight>
-                                </li>
-                            </ol>
-                            Net zoals hierboven blijven onze afspraken ook gelden bij een fusie of een splitsing van ons
-                            bedrijf. In andere situaties kunt
-                            u binnen dertig kalenderdagen nadat u van ons hierover bericht heeft gekregen de
-                            overeenkomst
-                            zonder
-                            bijkomende kosten
-                            beëindigen volgens de afspraken die wij hebben gemaakt.
-                        </highlight>
+                        Wij mogen de rechten en plichten van de overeenkomst die wij met u hebben in twee
+                        situaties wel
+                        aan
+                        een andere
+                        energieleverancier overdragen. U geeft ons hiervoor nu al toestemming en onze afspraken
+                        blijven
+                        gelden. Als wij dit doen,
+                        melden wij u dit schriftelijk of digitaal. Wij mogen dat in deze twee situaties:
+                        <ol>
+                            <li>
+                                ons bedrijf wordt overgenomen door een ander bedrijf;
+                            </li>
+                            <li>
+                                wij geven de rechten en plichten van de overeenkomst die wij met u hebben
+                                aan een ander
+                                bedrijf, maar wij blijven ervoor
+                                verantwoordelijk dat het andere bedrijf deze rechten en plichten nakomt.
+
+                            </li>
+                        </ol>
+                        Net zoals hierboven blijven onze afspraken ook gelden bij een fusie of een splitsing van ons
+                        bedrijf. In andere situaties kunt
+                        u binnen dertig kalenderdagen nadat u van ons hierover bericht heeft gekregen de
+                        overeenkomst
+                        zonder
+                        bijkomende kosten
+                        beëindigen volgens de afspraken die wij hebben gemaakt.
+
                     </li>
                     <li>
-                        <highlight>Onze overeenkomst eindigt als de overheid onze leveringsvergunning(en) intrekt. De
-                            overheid
-                            heeft
-                            geregeld dat andere
-                            partijen de levering overnemen.
-                        </highlight>
+                        Onze overeenkomst eindigt als de overheid onze leveringsvergunning(en) intrekt. De
+                        overheid
+                        heeft
+                        geregeld dat andere
+                        partijen de levering overnemen.
+
                     </li>
                     <li>
-                        <highlight1>Onze overeenkomst wordt in het Nederlands geschreven, tenzij we daarover andere
+                        <b>Onze overeenkomst wordt in het Nederlands geschreven, tenzij we daarover andere
                             afspraken maken.
                             Het
                             Nederlands recht
                             geldt voor deze overeenkomst.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -2262,56 +2274,56 @@
                     <li>Als wij een overeenkomst met u hebben, willen wij u op de afgesproken startdatum elektriciteit
                         en/of
                         gas gaan leveren.
-                        <highlight1>Om op tijd te leveren, geeft u ons toestemming om onder andere de volgende dingen te
+                        <b>Om op tijd te leveren, geeft u ons toestemming om onder andere de volgende dingen te
                             doen
-                        </highlight1>
+                        </b>
                         .
                         <ol>
                             <li>
-                                <highlight1>Wij beëindigen uw overeenkomst met uw oude energieleverancier.</highlight1>
+                                <b>Wij beëindigen uw overeenkomst met uw oude energieleverancier. </b>
                             </li>
                             <li>
-                                <highlight1>Verhuist u? Dan melden wij u aan bij de netbeheerder voor een nieuwe
+                                <b>Verhuist u? Dan melden wij u aan bij de netbeheerder voor een nieuwe
                                     aansluit- en
                                     transportovereenkomst op uw
                                     nieuwe adres.
-                                </highlight1>
+                                </b>
                                 Wij zeggen voor u de bestaande trans-portovereenkomst met uw netbeheerder
                                 op
                                 het oude adres op.
                             </li>
                         </ol>
-                        </highlight1></li>
+                        </b></li>
                     <li>
-                        <highlight>Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor
-                            het aan u
-                            kunnen leveren
-                            van elektriciteit en/of gas dan, <br>
-                            (a) geeft u ons toestemming om bij uw netbeheerder het volgende op te vragen:
-                            <ol>
-                                <li>
-                                    <highlight>de gemiddelde hoeveelheid elektriciteit en/of gas die in de laatste jaren
-                                        op het adres
-                                        is
-                                        verbruikt en de
-                                        bijbhorende meterstanden;
-                                    </highlight>
-                                </li>
-                                <li>
-                                    <highlight>gegevens over de overeenkomst met uw oude leverancier zoals de datum
-                                        waarop de
-                                        overeenkomst
-                                        eindigt, de
-                                        opzegtermijn en wie uw oude leverancier is;
-                                    </highlight>
-                                </li>
-                                <li>
-                                    <highlight>gegevens over het type aansluiting en over uw meter;</highlight>
-                                </li>
-                            </ol>
-                            (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
-                            netbeheerder.
-                        </highlight>
+                        Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor
+                        het aan u
+                        kunnen leveren
+                        van elektriciteit en/of gas dan, <br>
+                        (a) geeft u ons toestemming om bij uw netbeheerder het volgende op te vragen:
+                        <ol>
+                            <li>
+                                de gemiddelde hoeveelheid elektriciteit en/of gas die in de laatste jaren
+                                op het adres
+                                is
+                                verbruikt en de
+                                bijbhorende meterstanden;
+
+                            </li>
+                            <li>
+                                gegevens over de overeenkomst met uw oude leverancier zoals de datum
+                                waarop de
+                                overeenkomst
+                                eindigt, de
+                                opzegtermijn en wie uw oude leverancier is;
+
+                            </li>
+                            <li>
+                                gegevens over het type aansluiting en over uw meter;
+                            </li>
+                        </ol>
+                        (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
+                        netbeheerder.
+
                     </li>
                 </ol>
             </div>
@@ -2319,23 +2331,23 @@
                 <h1>Wat doen wij als er een storing is op het elektriciteitsnet of gasnet?</h1>
                 <ol>
                     <li>
-                        <highlight>Het transport van elektriciteit en/of gas is de verantwoordelijkheid van de
-                            netbeheerder. Bij
-                            een
-                            storing kunnen wij u
-                            minder of geen elektriciteit en/of gas leveren en kunt u minder of geen elektriciteit
-                            terugleveren.
-                            Dit heeft geen
-                            gevolgen voor de geldigheid en de duur van de overeenkomst die wij met u hebben.
-                        </highlight>
+                        Het transport van elektriciteit en/of gas is de verantwoordelijkheid van de
+                        netbeheerder. Bij
+                        een
+                        storing kunnen wij u
+                        minder of geen elektriciteit en/of gas leveren en kunt u minder of geen elektriciteit
+                        terugleveren.
+                        Dit heeft geen
+                        gevolgen voor de geldigheid en de duur van de overeenkomst die wij met u hebben.
+
                     </li>
                     <li>
-                        <highlight1>Heeft u hierdoor schade? Dan zijn we daar niet aansprakelijk voor en betalen die
+                        <b>Heeft u hierdoor schade? Dan zijn we daar niet aansprakelijk voor en betalen die
                             schade niet. U
                             kunt
                             hiervoor contact
                             opnemen met uw netbeheerder.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -2343,26 +2355,26 @@
                 <h1>Wat doen wij als u zich niet aan de voorwaarden houdt?</h1>
                 <ol>
                     <li>
-                        <highlight1>Houdt u zich niet aan de voorwaarden? Betaalt u bijvoorbeeld onze rekening niet? Of
+                        <b>Houdt u zich niet aan de voorwaarden? Betaalt u bijvoorbeeld onze rekening niet? Of
                             onze
                             rekening
                             van een vorig
                             adres?
                             <ol>
                                 <li>
-                                    <highlight1>Dan mogen wij het leveren van elektriciteit en/of gas beëindigen.
-                                    </highlight1>
+                                    <b>Dan mogen wij het leveren van elektriciteit en/of gas beëindigen.
+                                    </b>
                                 </li>
                                 <li>
-                                    <highlight1>Dan mogen we extra voorwaarden stellen. Wij mogen u dan bijvoorbeeld
+                                    <b>Dan mogen we extra voorwaarden stellen. Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen,
                                         lees
                                         hiervoor artikel
                                         15 van deze voorwaarden.
-                                    </highlight1>
+                                    </b>
                                 </li>
                                 <li>
-                                    <highlight1>En dan mogen we ook onze overeenkomst beëindigen.</highlight1>
+                                    <b>En dan mogen we ook onze overeenkomst beëindigen. </b>
                                 </li>
                             </ol>
                             Als we dit doen, melden we u dit vooraf schriftelijk of digitaal. Wij houden ons hierbij aan
@@ -2370,17 +2382,17 @@
                             wet
                             en regelgeving. Wij
                             zullen dit alleen doen als de niet-nakoming van de overeenkomst dit rechtvaardigt.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>We doen wat hierboven staat niet als:
+                        <b>We doen wat hierboven staat niet als:
                             <ol>
                                 <li>
-                                    <highlight1>u de elektriciteit en het gas alleen gebruikt voor uw huishouden, en
-                                    </highlight1>
+                                    <b>u de elektriciteit en het gas alleen gebruikt voor uw huishouden, en
+                                    </b>
                                 </li>
                                 <li>
-                                    <highlight1>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
+                                    <b>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien
                                         kalenderdagen na de
                                         afwijzing van een betalingsregeling of van een bezwaar over een nota als bedoeld
@@ -2388,13 +2400,13 @@
                                         artikel
                                         13.1 heeft gevraagd een
                                         beslissing te nemen over ons verschil van mening.
-                                    </highlight1>
+                                    </b>
                                 </li>
                             </ol>
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Hebben wij de levering opgeschort? Wij gaan weer elektriciteit en/of gas leveren als
+                        <b>Hebben wij de levering opgeschort? Wij gaan weer elektriciteit en/of gas leveren als
                             u zich weer
                             aan
                             alle voorwaarden
@@ -2402,15 +2414,15 @@
                             kosten
                             en schade
                             moet u aan ons vergoeden.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Krijgt u van ons geen elektriciteit en/of gas geleverd omdat u zich niet aan de
+                        <b>Krijgt u van ons geen elektriciteit en/of gas geleverd omdat u zich niet aan de
                             voorwaarden
                             houdt?
                             En heeft u hierdoor
                             schade geleden? Dan zijn we hiervoor niet aansprakelijk en betalen wij die schade niet.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -2418,74 +2430,74 @@
                 <h1>Welke informatie krijgen wij van u?</h1>
                 <ol>
                     <li>
-                        <highlight>U geeft ons de informatie die wij nodig hebben om u elektriciteit en/of gas te kunnen
-                            leveren en
-                            de
-                            kosten hiervoor in
-                            rekening te kunnen brengen.
-                        </highlight>
+                        U geeft ons de informatie die wij nodig hebben om u elektriciteit en/of gas te kunnen
+                        leveren en
+                        de
+                        kosten hiervoor in
+                        rekening te kunnen brengen.
+
                     </li>
                     <li>
-                        <highlight1>Verandert iets in uw situatie? Of gebeurt iets dat belangrijk is voor het leveren
+                        <b>Verandert iets in uw situatie? Of gebeurt iets dat belangrijk is voor het leveren
                             van
                             elektriciteit
                             en/of gas? Geef dat dan
                             onmiddellijk aan ons door.
-                        </highlight1>
+                        </b>
                         Bijvoorbeeld:
                         <ol>
                             <li>
-                                <highlight>Een naamswijziging of wijziging e-mailadres.</highlight>
+                                Een naamswijziging of wijziging e-mailadres.
                             </li>
                             <li>
-                                <highlight>U wilt de rekening op een ander adres krijgen.</highlight>
+                                U wilt de rekening op een ander adres krijgen.
                             </li>
                             <li>
-                                <highlight>Wijziging van uw rekeningnummer (IBAN).</highlight>
+                                Wijziging van uw rekeningnummer (IBAN).
                             </li>
                             <li>
-                                <highlight>Uw elektriciteitsmeter of gasmeter is kapot of de verzegeling is verbroken.
-                                </highlight>
+                                Uw elektriciteitsmeter of gasmeter is kapot of de verzegeling is verbroken.
+
                             </li>
                             <li>
-                                <highlight>U denkt in de toekomst veel meer of veel minder elektriciteit en/of gas te
-                                    gaan
-                                    gebruiken.
-                                </highlight>
+                                U denkt in de toekomst veel meer of veel minder elektriciteit en/of gas te
+                                gaan
+                                gebruiken.
+
                             </li>
                             <li>
-                                <highlight>U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
-                                    afspraken uit
-                                    artikel
-                                    4 gelden dan ook.
+                                U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
+                                afspraken uit
+                                artikel
+                                4 gelden dan ook.
                             </li>
                         </ol>
                         Wij geven deze veranderingen en gebeurtenissen door aan de netbeheerder als wij dat verplicht
                         zijn.
-                        </highlight></li>
+                    </li>
                     <li>
-                        <highlight>Tevens geldt ook wat in artikel 54 van de Elektriciteitswet en in artikel 22 van de
-                            Gaswet
-                            staat.
-                            Dat betekent het
-                            volgende:
-                            <ol>
-                                <li>
-                                    <highlight>Stapt u over naar een nieuwe energieleverancier? Dan geeft u de
-                                        meterstanden aan de
-                                        nieuwe
-                                        energieleverancier
-                                        door.
-                                    </highlight>
-                                </li>
-                                <li>
-                                    <highlight>Gaat u verhuizen? Dan geeft u de meterstanden van uw oude en nieuwe adres
-                                        aan ons
-                                        door.
-                                    </highlight>
-                                </li>
-                            </ol>
-                        </highlight>
+                        Tevens geldt ook wat in artikel 54 van de Elektriciteitswet en in artikel 22 van de
+                        Gaswet
+                        staat.
+                        Dat betekent het
+                        volgende:
+                        <ol>
+                            <li>
+                                Stapt u over naar een nieuwe energieleverancier? Dan geeft u de
+                                meterstanden aan de
+                                nieuwe
+                                energieleverancier
+                                door.
+
+                            </li>
+                            <li>
+                                Gaat u verhuizen? Dan geeft u de meterstanden van uw oude en nieuwe adres
+                                aan ons
+                                door.
+
+                            </li>
+                        </ol>
+
                     </li>
                 </ol>
             </div>
@@ -2493,59 +2505,59 @@
                 <h1>De elektriciteitsmeter en de gasmeter</h1>
                 <ol>
                     <li>
-                        <highlight>De elektriciteitsmeter en de gasmeter zijn van uw netbeheerder. Met deze meters
-                            stellen wij de
-                            omvang van de
-                            levering vast. We kunnen hierover ook andere afspraken maken.
-                        </highlight>
+                        De elektriciteitsmeter en de gasmeter zijn van uw netbeheerder. Met deze meters
+                        stellen wij de
+                        omvang van de
+                        levering vast. We kunnen hierover ook andere afspraken maken.
+
                     </li>
                     <li>
-                        <highlight>De netbeheerder zorgt ervoor dat de elektriciteitsmeter en de gasmeter de hoeveelheid
-                            elektriciteit
-                            en/of gas meten
-                            zoals in de wet staat. Wij gaan er daarom vanuit dat de hoeveelheid elektriciteit en/of gas
-                            die
-                            gemeten is, klopt.
-                        </highlight>
+                        De netbeheerder zorgt ervoor dat de elektriciteitsmeter en de gasmeter de hoeveelheid
+                        elektriciteit
+                        en/of gas meten
+                        zoals in de wet staat. Wij gaan er daarom vanuit dat de hoeveelheid elektriciteit en/of gas
+                        die
+                        gemeten is, klopt.
+
                     </li>
                     <li>
-                        <highlight>U mag niets doen waardoor niet of niet goed kan worden vastgesteld hoeveel
-                            elektriciteit en/of
-                            gas u
-                            van ons geleverd krijgt.
-                        </highlight>
+                        U mag niets doen waardoor niet of niet goed kan worden vastgesteld hoeveel
+                        elektriciteit en/of
+                        gas u
+                        van ons geleverd krijgt.
+
                     </li>
                     <li>
-                        <highlight>Voor de goede uitvoering van de overeenkomst mogen wij de gegevens van de
-                            elektriciteits- en/of
-                            gasmeter
-                            gebruiken, of deze verder verwerken.
-                        </highlight>
+                        Voor de goede uitvoering van de overeenkomst mogen wij de gegevens van de
+                        elektriciteits- en/of
+                        gasmeter
+                        gebruiken, of deze verder verwerken.
+
                     </li>
                     <li>
-                        <highlight>Op ons verzoek geeft u ons de standen van uw elektriciteitsmeter en/of gasmeter door
-                            binnen de
-                            door
-                            ons
-                            aangegeven termijn.
-                        </highlight>
+                        Op ons verzoek geeft u ons de standen van uw elektriciteitsmeter en/of gasmeter door
+                        binnen de
+                        door
+                        ons
+                        aangegeven termijn.
+
                     </li>
                     <li>
-                        <highlight>Meetgegevens per kwartier of uur en per dag gebruiken wij alleen wanneer u ons
-                            hiervoor
-                            schriftelijk
-                            of digitaal
-                            toestemming heeft gegeven.
-                        </highlight>
+                        Meetgegevens per kwartier of uur en per dag gebruiken wij alleen wanneer u ons
+                        hiervoor
+                        schriftelijk
+                        of digitaal
+                        toestemming heeft gegeven.
+
                     </li>
                     <li>
-                        <highlight1>Krijgen wij de gegevens van uw elektriciteitsmeter en/of gasmeter niet op tijd? Of
+                        <b>Krijgen wij de gegevens van uw elektriciteitsmeter en/of gasmeter niet op tijd? Of
                             gaat bij het
                             opnemen of verwerken
                             van de meetgegevens iets fout, dan mogen wij berekenen hoeveel elektriciteit en/of gas u
                             geleverd
                             heeft gekregen.
-                        </highlight1>
+                        </b>
                         Krijgen we alsnog de juiste meetgegevens? Dan bekijken we hoeveel elektriciteit en/of gas u
                         werkelijk geleverd heeft
                         gekregen en brengen die werkelijke hoeveelheid in rekening.
@@ -2556,12 +2568,12 @@
                 <h1>Onderzoek van de elektriciteitsmeter en/ of gasmeter en/of meting</h1>
                 <ol>
                     <li>
-                        <highlight1>Twijfelen wij of u eraan of de elektriciteitsmeter en/of de gasmeter goed werken of
+                        <b>Twijfelen wij of u eraan of de elektriciteitsmeter en/of de gasmeter goed werken of
                             de meting
                             juist
                             is? Dan mogen wij
                             of u de netbeheerder vragen de elektriciteitsmeter en/of de gasmeter te laten onderzoeken.
-                        </highlight1>
+                        </b>
                         Wij
                         informeren u dan
                         over het onderzoek, de kosten van het onderzoek en over de nieuwe meter, als die nodig is.
@@ -2569,37 +2581,37 @@
                         geldt:
                         <ol>
                             <li>
-                                <highlight>Willen wij de meter laten onderzoeken? Dan moeten wij de kosten van het
-                                    onderzoek
-                                    betalen.
-                                </highlight>
+                                Willen wij de meter laten onderzoeken? Dan moeten wij de kosten van het
+                                onderzoek
+                                betalen.
+
                             </li>
                             <li>
-                                <highlight1>Wilt u de meter laten onderzoeken? Dan moet u vooraf de kosten van het
+                                <b>Wilt u de meter laten onderzoeken? Dan moet u vooraf de kosten van het
                                     onderzoek aan de
                                     netbeheerder betalen.
-                                </highlight1>
+                                </b>
                                 Werkt de meter niet goed? Dan krijgt u het geld weer terug.
                             </li>
                         </ol>
                     </li>
                     <li>
-                        <highlight>Blijkt uit het onderzoek dat de elektriciteitsmeter en/of de gasmeter niet goed
-                            werkt, of de
-                            meting
-                            niet juist is, dan
-                            bepaalt de netbeheerder op basis van het onderzoek hoeveel elektriciteit en/of gas u
-                            geleverd
-                            heeft
-                            gekregen.
-                        </highlight>
+                        Blijkt uit het onderzoek dat de elektriciteitsmeter en/of de gasmeter niet goed
+                        werkt, of de
+                        meting
+                        niet juist is, dan
+                        bepaalt de netbeheerder op basis van het onderzoek hoeveel elektriciteit en/of gas u
+                        geleverd
+                        heeft
+                        gekregen.
+
                     </li>
                     <li>
-                        <highlight1>Werkte de elektriciteitsmeter en/of de gasmeter langer dan twee jaar niet goed, of
+                        <b>Werkte de elektriciteitsmeter en/of de gasmeter langer dan twee jaar niet goed, of
                             was de meting
                             niet juist, dan maken
                             wij een herberekening over de periode van de voorgaande 24 maanden.
-                        </highlight1>
+                        </b>
                         Wij rekenen dan terug vanaf
                         het
                         moment dat
@@ -2609,26 +2621,26 @@
                         de meting.
                     </li>
                     <li>
-                        <highlight></highlight>
+
                     </li>
                     <li>
-                        <highlight1>Als uit het onderzoek geen duidelijke gegevens komen waarmee wij de omvang van de
+                        <b>Als uit het onderzoek geen duidelijke gegevens komen waarmee wij de omvang van de
                             levering
                             kunnen
                             vaststellen,
                             dan mogen wij de omvang van de levering schatten.
-                        </highlight1>
+                        </b>
                         Bij de schatting maken we onder andere gebruik
                         van
                         meetgegevens uit het verleden zover die bekend zijn.
                     </li>
                     <li>
-                        <highlight>Heeft u of iemand anders fraude gepleegd met de elektriciteitsmeter of de gasmeter?
-                            Dan maken
-                            wij
-                            een
-                            herberekening voor de hele periode van de ontdekte fraude.
-                        </highlight>
+                        Heeft u of iemand anders fraude gepleegd met de elektriciteitsmeter of de gasmeter?
+                        Dan maken
+                        wij
+                        een
+                        herberekening voor de hele periode van de ontdekte fraude.
+
                     </li>
                 </ol>
             </div>
@@ -2636,27 +2648,27 @@
                 <h1>Leveringstarieven voor elektriciteit en/of gas</h1>
                 <ol>
                     <li>
-                        <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
-                            belastingen,
-                            die
-                            wij met u hebben
-                            afgesproken bevestigen wij u schriftelijk of digitaal in de overeenkomst (zie ook artikel
-                            2.1).
-                            Tevens melden wij u de
-                            netbeheerkosten.
-                        </highlight>
+                        De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
+                        belastingen,
+                        die
+                        wij met u hebben
+                        afgesproken bevestigen wij u schriftelijk of digitaal in de overeenkomst (zie ook artikel
+                        2.1).
+                        Tevens melden wij u de
+                        netbeheerkosten.
+
                     </li>
                     <li>
-                        <highlight1>Deze leveringstarieven zijn voor u altijd digitaal beschikbaar of kunt u bij ons
+                        <b>Deze leveringstarieven zijn voor u altijd digitaal beschikbaar of kunt u bij ons
                             opvragen.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight>De (termijn)bedragen die wij u in rekening gaan brengen, berekenen wij met de
-                            afgesproken
-                            leveringstarieven en het
-                            bij ons bekende verbruik. Ook de netbeheerkosten worden in het (termijn)bedrag meegenomen.
-                        </highlight>
+                        De (termijn)bedragen die wij u in rekening gaan brengen, berekenen wij met de
+                        afgesproken
+                        leveringstarieven en het
+                        bij ons bekende verbruik. Ook de netbeheerkosten worden in het (termijn)bedrag meegenomen.
+
                     </li>
                 </ol>
             </div>
@@ -2664,129 +2676,129 @@
                 <h1>U betaalt voor elektriciteit en/of gas</h1>
                 <ol>
                     <li>
-                        <highlight>U betaalt voor de elektriciteit en/of het gas dat u van ons geleverd krijgt. U
-                            betaalt ons ook
-                            de
-                            netbeheerkosten.
-                        </highlight>
+                        U betaalt voor de elektriciteit en/of het gas dat u van ons geleverd krijgt. U
+                        betaalt ons ook
+                        de
+                        netbeheerkosten.
+
                     </li>
                     <li>
-                        <highlight>Wij mogen u vragen in termijnbedragen te betalen. Wij spreken met u af wanneer u de
-                            termijnbedragen
-                            gaat betalen.
-                            Wij bepalen de hoogte van deze termijnbedragen. Wilt u een ander termijnbedrag betalen? Neem
-                            dan
-                            met
-                            ons contact op.
-                        </highlight>
+                        Wij mogen u vragen in termijnbedragen te betalen. Wij spreken met u af wanneer u de
+                        termijnbedragen
+                        gaat betalen.
+                        Wij bepalen de hoogte van deze termijnbedragen. Wilt u een ander termijnbedrag betalen? Neem
+                        dan
+                        met
+                        ons contact op.
+
                     </li>
                     <li>
-                        <highlight>Minimaal één keer per jaar krijgt u van ons een jaarnota waarop alle kosten staan die
-                            u aan ons
-                            verschuldigd bent. Op
-                            deze jaarnota staan ook de termijnbedragen die u moest betalen voor de leveringsperiode
-                            waarop
-                            de
-                            jaarnota
-                            betrekking heeft. Wij berekenen dan hoeveel u terug krijgt of hoeveel u nog moet betalen.
-                            Heeft
-                            u
-                            zelf meer
-                            elektriciteit opgewekt dan u heeft verbruikt dan houden we hier rekening mee. Een eindnota
-                            krijgt u
-                            als u verhuist of
-                            als u de overeenkomst beëindigt. Een tegoed op een jaarnota of eindnota kan gebruikt worden
-                            voor
-                            het
-                            verrekenen
-                            van een eventuele openstaande vordering. In de Kwaliteitscriteria staat omschreven aan welke
-                            voorwaarden wij hier
-                            verder moeten voldoen.
-                        </highlight>
+                        Minimaal één keer per jaar krijgt u van ons een jaarnota waarop alle kosten staan die
+                        u aan ons
+                        verschuldigd bent. Op
+                        deze jaarnota staan ook de termijnbedragen die u moest betalen voor de leveringsperiode
+                        waarop
+                        de
+                        jaarnota
+                        betrekking heeft. Wij berekenen dan hoeveel u terug krijgt of hoeveel u nog moet betalen.
+                        Heeft
+                        u
+                        zelf meer
+                        elektriciteit opgewekt dan u heeft verbruikt dan houden we hier rekening mee. Een eindnota
+                        krijgt u
+                        als u verhuist of
+                        als u de overeenkomst beëindigt. Een tegoed op een jaarnota of eindnota kan gebruikt worden
+                        voor
+                        het
+                        verrekenen
+                        van een eventuele openstaande vordering. In de Kwaliteitscriteria staat omschreven aan welke
+                        voorwaarden wij hier
+                        verder moeten voldoen.
+
                     </li>
                     <li>
-                        <highlight>Krijgt u van ons een bedrag terug, maar moet u ons ook nog een bedrag betalen? Dan
-                            mag u dit
-                            bedrag
-                            pas
-                            verrekenen met het bedrag dat u nog van ons krijgt als u ons hierover vooraf schriftelijk of
-                            digitaal heeft geïnformeerd
-                            en wij u hiervoor uitdrukkelijk toestemming hebben gegeven. U moet zich dan nog wel houden
-                            aan
-                            de
-                            overige
-                            voorwaarden die hierover in de wet staan. Verrekenen met nog door u te betalen
-                            termijnbedragen
-                            is in
-                            het geheel niet
-                            mogelijk.
-                        </highlight>
+                        Krijgt u van ons een bedrag terug, maar moet u ons ook nog een bedrag betalen? Dan
+                        mag u dit
+                        bedrag
+                        pas
+                        verrekenen met het bedrag dat u nog van ons krijgt als u ons hierover vooraf schriftelijk of
+                        digitaal heeft geïnformeerd
+                        en wij u hiervoor uitdrukkelijk toestemming hebben gegeven. U moet zich dan nog wel houden
+                        aan
+                        de
+                        overige
+                        voorwaarden die hierover in de wet staan. Verrekenen met nog door u te betalen
+                        termijnbedragen
+                        is in
+                        het geheel niet
+                        mogelijk.
+
                     </li>
                     <li>
-                        <highlight>U kunt ons uitsluitend betalen op die manieren die wij u ter beschikking stellen. Wij
-                            bieden u
-                            een
-                            ruime keuze uit
-                            betalingswijzen. Afhankelijk van de afgesproken manier van betalen kunnen de rechtstreeks
-                            daarmee
-                            samenhangende
-                            extra kosten in rekening gebracht worden of aanvullende voorwaarden van toepassing zijn.
-                        </highlight>
+                        U kunt ons uitsluitend betalen op die manieren die wij u ter beschikking stellen. Wij
+                        bieden u
+                        een
+                        ruime keuze uit
+                        betalingswijzen. Afhankelijk van de afgesproken manier van betalen kunnen de rechtstreeks
+                        daarmee
+                        samenhangende
+                        extra kosten in rekening gebracht worden of aanvullende voorwaarden van toepassing zijn.
+
                     </li>
                     <li>Wij laten u weten op welke datum u ons uiterlijk moet betalen en op welk rekeningnummer (IBAN).
-                        <highlight1>Betaalt u te laat? Dan informeren wij u eerst schriftelijk of digitaal dat u in
+                        <b>Betaalt u te laat? Dan informeren wij u eerst schriftelijk of digitaal dat u in
                             verzuim bent.
-                        </highlight1>
+                        </b>
                         U
                         krijgt dan nog veertien
                         kalenderdagen de tijd om te betalen zonder dat wij hiervoor extra kosten in rekening brengen.
                         Ook
                         informeren wij u
                         over de gevolgen als u niet alsnog binnen deze veertien kalenderdagen betaalt.
-                        <highlight1>Dan moet u ons de
+                        <b>Dan moet u ons de
                             gewone wettelijke
                             rente betalen. Ook moet u ons buitengerechtelijke incassokosten betalen.
-                        </highlight1>
+                        </b>
                         Hiervoor is in de wet
                         een
                         maximum gesteld.
                         De hoogte van de kosten die wij bij u daarvoor inrekening brengen staat op onze website.
                     </li>
                     <li>
-                        <highlight1>Als u binnen de termijn van veertien kalenderdagen schriftelijk of digitaal een
+                        <b>Als u binnen de termijn van veertien kalenderdagen schriftelijk of digitaal een
                             verzoek tot het
                             treffen van een
                             betalingsregeling bij ons indient, en u aangeeft waarom u dit wilt, nemen wij hierover een
                             beslissing.
-                        </highlight1>
+                        </b>
                         Wij zullen deze
                         beslissing toelichten.
                         <ol>
                             <li>
-                                <highlight>Spreken wij een betalingsregeling met u af? Dan moet u zich daaraan houden.
-                                    Doet u dat
-                                    niet?
-                                    Dan gaat u de
-                                    gewone wettelijke rente en de buitengerechtelijke incassokosten betalen.
-                                </highlight>
+                                Spreken wij een betalingsregeling met u af? Dan moet u zich daaraan houden.
+                                Doet u dat
+                                niet?
+                                Dan gaat u de
+                                gewone wettelijke rente en de buitengerechtelijke incassokosten betalen.
+
                             </li>
                             <li>
-                                <highlight>Spreken wij geen betalingsregeling met u af? Dan moet u de nota gewoon
-                                    betalen. Doet u
-                                    dat
-                                    niet? Dan gaat u de
-                                    gewone wettelijke rente en de buitengerechtelijke incassokosten betalen.
-                                </highlight>
+                                Spreken wij geen betalingsregeling met u af? Dan moet u de nota gewoon
+                                betalen. Doet u
+                                dat
+                                niet? Dan gaat u de
+                                gewone wettelijke rente en de buitengerechtelijke incassokosten betalen.
+
                             </li>
                         </ol>
                         Naast de termijnen van de betalingsregeling moet u ons ook de overig verschuldigde bedragen
                         betalen.
                         U kunt
                         hierover geen betalingsregeling meer treffen.
-                        <highlight1>Betaalt u niet? Dan vervalt de betalingsregeling.
+                        <b>Betaalt u niet? Dan vervalt de betalingsregeling.
                             U
                             bent dan in verzuim.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -2794,37 +2806,37 @@
                 <h1>Verjaring van vorderingen</h1>
                 <ol>
                     <li>
-                        <highlight>Hebben wij een rechtsvordering op u tot betaling van de geleverde elektriciteit en/of
-                            gas dan
-                            verjaart deze na verloop
-                            van twee jaar als u de elektriciteit en/of gas alleen voor uw huishouden gebruikt. Gebruikt
-                            u de
-                            elektriciteit en/of gas
-                            niet alleen voor uw huishouden, dan verjaart deze rechtsvordering na verloop van vijf jaar.
-                        </highlight>
+                        Hebben wij een rechtsvordering op u tot betaling van de geleverde elektriciteit en/of
+                        gas dan
+                        verjaart deze na verloop
+                        van twee jaar als u de elektriciteit en/of gas alleen voor uw huishouden gebruikt. Gebruikt
+                        u de
+                        elektriciteit en/of gas
+                        niet alleen voor uw huishouden, dan verjaart deze rechtsvordering na verloop van vijf jaar.
+
                     </li>
                     <li>
-                        <highlight>Hebben wij een rechtsvordering op u tot betaling van netbeheerkosten, dan verjaart
-                            deze na
-                            verloop
-                            van twee jaar.
-                        </highlight>
+                        Hebben wij een rechtsvordering op u tot betaling van netbeheerkosten, dan verjaart
+                        deze na
+                        verloop
+                        van twee jaar.
+
                     </li>
                     <li>
-                        <highlight>Iedere keer dat wij u berichten dat wij nog geld van u krijgen hebben wij opnieuw
-                            twee jaar de
-                            tijd
-                            om ervoor te zorgen
-                            dat u betaalt.
-                        </highlight>
+                        Iedere keer dat wij u berichten dat wij nog geld van u krijgen hebben wij opnieuw
+                        twee jaar de
+                        tijd
+                        om ervoor te zorgen
+                        dat u betaalt.
+
                     </li>
                     <li>
-                        <highlight1>Hebben wij u een te lage rekening gestuurd, dan mogen wij op het moment dat wij
+                        <b>Hebben wij u een te lage rekening gestuurd, dan mogen wij op het moment dat wij
                             daarachter komen
                             u
                             alsnog vragen
                             de rest te betalen.
-                        </highlight1>
+                        </b>
                         Ook dan hebben we twee jaar of vijf jaar de tijd, afhankelijk of u de
                         elektriciteit en/of gas wel of niet
                         voor uw huishouden gebruikt, om ervoor te zorgen dat u betaalt. Die periode begint op het moment
@@ -2833,21 +2845,21 @@
                         had moeten betalen.
                     </li>
                     <li>
-                        <highlight>Hebben wij een rechtsvordering op u voor betaling van netbeheerkosten dan moeten wij
-                            u binnen
-                            twee
-                            jaar nadat wij
-                            deze kosten bij u in rekening mogen brengen een rekening sturen. Doen wij dit niet, dan
-                            mogen
-                            wij
-                            die
-                            netbeheerkosten niet meer bij u in rekening brengen.
-                        </highlight>
+                        Hebben wij een rechtsvordering op u voor betaling van netbeheerkosten dan moeten wij
+                        u binnen
+                        twee
+                        jaar nadat wij
+                        deze kosten bij u in rekening mogen brengen een rekening sturen. Doen wij dit niet, dan
+                        mogen
+                        wij
+                        die
+                        netbeheerkosten niet meer bij u in rekening brengen.
+
                     </li>
                     <li>
-                        <highlight>Heeft u teveel energiebelasting betaald, dan kunnen wij u deze na vijf jaar niet meer
-                            terugbetalen.
-                        </highlight>
+                        Heeft u teveel energiebelasting betaald, dan kunnen wij u deze na vijf jaar niet meer
+                        terugbetalen.
+
                     </li>
                 </ol>
             </div>
@@ -2855,30 +2867,30 @@
                 <h1>Zekerheden vragen</h1>
                 <ol>
                     <li>
-                        <highlight1>Wij mogen zekerheden aan u vragen,</highlight1>
+                        <b>Wij mogen zekerheden aan u vragen, </b>
                         zoals een waarborgsom. Ook mogen we bijvoorbeeld aan u een
                         bankgarantie
                         vragen.
-                        <highlight1>Dit mogen we vragen als het in artikel 2 genoemde onderzoek naar uw betalingsgedrag
+                        <b>Dit mogen we vragen als het in artikel 2 genoemde onderzoek naar uw betalingsgedrag
                             daartoe
                             aanleiding
                             geeft of u bij ons eerder betalingsachterstanden hebt gehad.
-                        </highlight1>
+                        </b>
                         Wij hebben dan de zekerheid dat u
                         betaalt voor de
                         elektriciteit die en/of het gas dat u van ons geleverd krijgt.
                     </li>
                     <li>
-                        <highlight1>Wij mogen u vragen de waarborgsom vooraf te betalen. De waarborgsom is maximaal
+                        <b>Wij mogen u vragen de waarborgsom vooraf te betalen. De waarborgsom is maximaal
                             gelijk aan het
                             bedrag dat u
                             vermoedelijk betaalt voor zes maanden elektriciteit en/of gas en de hoogte van de
                             waarborgsom is
                             redelijk voor uw situatie.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Als wij vinden dat de zekerheid niet meer nodig is betalen wij u de waarborgsom
+                        <b>Als wij vinden dat de zekerheid niet meer nodig is betalen wij u de waarborgsom
                             terug.
                             Eindigt onze overeenkomst? Dan betalen wij u ook de waarborgsom terug. U ontvangt het bedrag
                             binnen
@@ -2887,15 +2899,15 @@
                             Dan
                             verrekenen we
                             deze bedragen.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight>Over de waarborgsom ontvangt u de helft van de gewone wettelijke rente. U ontvangt
-                            deze rente op
-                            het
-                            moment dat
-                            wij u het bedrag terugbetalen.
-                        </highlight>
+                        Over de waarborgsom ontvangt u de helft van de gewone wettelijke rente. U ontvangt
+                        deze rente op
+                        het
+                        moment dat
+                        wij u het bedrag terugbetalen.
+
                     </li>
                 </ol>
             </div>
@@ -2903,20 +2915,20 @@
                 <h1>Wat doen wij met uw persoonlijke gegevens?</h1>
                 <ol>
                     <li>
-                        <highlight1>Bij een aanvraag of het aangaan van een leveringsovereenkomst vragen wij u om
+                        <b>Bij een aanvraag of het aangaan van een leveringsovereenkomst vragen wij u om
                             persoonlijke
                             gegevens.
                             Deze
                             gegevens leggen wij vast en gebruiken wij om de overeenkomst uit te voeren.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Wilt u weten welke persoonlijke gegevens wij van u bewaren? Stuur ons dan
+                        <b>Wilt u weten welke persoonlijke gegevens wij van u bewaren? Stuur ons dan
                             schriftelijk of
                             digitaal
                             een kopie van uw
                             paspoort of identiteitskaart (u maakt hierop uw BSN-nummer en uw foto onherkenbaar).
-                        </highlight1>
+                        </b>
                         Wij sturen
                         u
                         dan een
@@ -2929,12 +2941,12 @@
                         gebracht.
                     </li>
                     <li>
-                        <highlight1>Wilt u dat wij deze persoonlijke gegevens veranderen? Meldt ons dan schriftelijk of
+                        <b>Wilt u dat wij deze persoonlijke gegevens veranderen? Meldt ons dan schriftelijk of
                             digitaal
                             waarom
                             u dat wilt. Wij
                             lichten u dan schriftelijk of digitaal onze beslissing toe.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -2942,19 +2954,19 @@
                 <h1>Heeft u schade?</h1>
                 <ol>
                     <li>
-                        <highlight1>Houden wij ons niet aan de overeenkomst?</highlight1>
+                        <b>Houden wij ons niet aan de overeenkomst? </b>
                         Is ons dat te verwijten, oftewel volgens de wet ons toe
                         te
                         rekenen, en heeft
                         u daardoor direct schade?
-                        <highlight1> Dan betalen wij deze schade.</highlight1>
+                        <b> Dan betalen wij deze schade. </b>
                         Het maakt niet uit of het onze
                         verantwoordelijkheid is of de
                         verantwoordelijkheid van iemand anders die voor ons werkt. Hierbij geldt ook wat hieronder
                         staat.
                     </li>
                     <li>
-                        <highlight1>Wij betalen geen schade aan zaken die door u worden gebruikt voor een bedrijf of
+                        <b>Wij betalen geen schade aan zaken die door u worden gebruikt voor een bedrijf of
                             beroep, schade
                             als
                             gevolg van een
@@ -2962,10 +2974,10 @@
                             als
                             gevolg van
                             winstderving, tenzij er sprake is van opzet of grove schuld.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Meldt ons deze schade onmiddellijk. In ieder geval binnen twee maanden nadat u deze
+                        <b>Meldt ons deze schade onmiddellijk. In ieder geval binnen twee maanden nadat u deze
                             schade
                             kreeg.
                             Meldt u de
@@ -2974,40 +2986,40 @@
                             deze
                             schade niet
                             eerder heeft kunnen melden.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Als wij verplicht zijn tot het vergoeden van de schade, betalen wij ten hoogste €
+                        <b>Als wij verplicht zijn tot het vergoeden van de schade, betalen wij ten hoogste €
                             2.000.000,-
                             per
                             gebeurtenis, ook als de
                             schade hoger is.
-                        </highlight1>
+                        </b>
                         Dit bedrag verdelen wij dan naar evenredigheid over iedereen die ook deze
                         schade
                         bij deze
                         gebeurtenis heeft geleden. Bovendien,
-                        <highlight1> als u de elektriciteit en/of gas niet alleen voor
+                        <b> als u de elektriciteit en/of gas niet alleen voor
                             huishoudelijke doeleinden
                             gebruikt, is de vergoeding voor schade, niet zijnde persoonsschade, beperkt tot ten hoogste
                             €
                             1.400,-.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Deze aansprakelijkheidsregeling geldt ook voor derden die wij voor de uitvoering van
+                        <b>Deze aansprakelijkheidsregeling geldt ook voor derden die wij voor de uitvoering van
                             de
                             overeenkomst
                             hebben
                             ingeschakeld, en ook voor personen voor wie wij of die derden aansprakelijk zijn.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
+                        <b>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
                             wij ons
                             daardoor niet aan de
                             overeenkomst houden, dan betalen wij die schade niet.
-                        </highlight1>
+                        </b>
                         Dit staat in artikel 6.
                     </li>
                 </ol>
@@ -3017,61 +3029,61 @@
                 <ol>
                     <li>Heeft u een klacht over ons? Of over het bedrag dat u betaalt voor de kosten van de
                         netbeheerder?
-                        <highlight1>Stuur ons de
+                        <b>Stuur ons de
                             klacht dan eerst schriftelijk of digitaal.
-                        </highlight1>
+                        </b>
                         In onze kwaliteitscriteria staat hoe u dat moet doen
                         en
                         hoe snel we uw klacht
                         behandelen.
                     </li>
                     <li>Bent u het er niet mee eens hoe wij uw klacht hebben opgelost?
-                        <highlight1> Leg dan binnen twaalf maanden
+                        <b> Leg dan binnen twaalf maanden
                             nadat u
                             uw klacht bij
                             ons indiende,
-                        </highlight1>
+                        </b>
                         uw klacht voor aan de Geschillencommissie Energie (www.degeschillencommissie.nl).
                         U
                         mag ook naar
                         de rechter.
                     </li>
                     <li>
-                        <highlight1>Of bent u het er niet mee eens dat wij geen betalingsregeling met u afspreken
-                        </highlight1>
+                        <b>Of bent u het er niet mee eens dat wij geen betalingsregeling met u afspreken
+                        </b>
                         over het bedrag
                         dat u
                         moet betalen, en
                         u bent het wel met ons eens dat u dit bedrag moet betalen, en zijn wij van plan de levering van
                         elektriciteit en/of gas te
                         beëindigen? Dan kunt u
-                        <highlight1> binnen tien kalenderdagen</highlight1>
+                        <b> binnen tien kalenderdagen </b>
                         naar de Geschillencommissie Energie.
                     </li>
                     <li>
-                        <highlight1>Gaat u naar de Geschillencommissie Energie? Dan betaalt u daarvoor klachtengeld.
+                        <b>Gaat u naar de Geschillencommissie Energie? Dan betaalt u daarvoor klachtengeld.
                             Krijgt u gelijk
-                        </highlight1>
+                        </b>
                         van
                         de
                         Geschillencommissie Energie en bepaalt de Geschillencommissie dat wij dit bedrag aan u moeten
                         betalen?
-                        <highlight1> Dan
+                        <b> Dan
                             betalen wij u dat bedrag terug.
-                        </highlight1>
+                        </b>
                     </li>
                     <li>
-                        <highlight1>Als wij dat nodig vinden, mogen wij ook naar de Geschillencommissie Energie of naar
+                        <b>Als wij dat nodig vinden, mogen wij ook naar de Geschillencommissie Energie of naar
                             de rechter
                             gaan.
-                        </highlight1>
+                        </b>
                         Als wij ervoor
                         kiezen om naar de Geschillencommissie Energie te gaan, informeren we u schriftelijk of digitaal.
-                        <highlight1>Hierbij vragen wij u
+                        <b>Hierbij vragen wij u
                             of u het ermee eens bent dat ons verschil van mening door de Geschillencommissie Energie
                             wordt
                             beoordeeld.
-                        </highlight1>
+                        </b>
                         Ook
                         vragen wij u dan om de klacht voor te leggen bij de Geschillencommissie Energie. Als u het er
                         niet
@@ -3079,18 +3091,18 @@
                         u niet binnen vijf weken heeft gereageerd, dan kunnen wij alsnog naar de rechter.
                     </li>
                     <li>
-                        <highlight1>U en wij moeten ons aan het besluit van de Geschillencommissie Energie houden.
-                        </highlight1>
+                        <b>U en wij moeten ons aan het besluit van de Geschillencommissie Energie houden.
+                        </b>
                         Dit staat in het
                         reglement van de
                         Geschillencommissie Energie.
                     </li>
                     <li>
-                        <highlight>U kunt uw geschil ook voorleggen via het Europese Online Dispute Resolution platform
-                            (ODR):
-                            http://ec.europa.eu/
-                            consumers/odr/.
-                        </highlight>
+                        U kunt uw geschil ook voorleggen via het Europese Online Dispute Resolution platform
+                        (ODR):
+                        http://ec.europa.eu/
+                        consumers/odr/.
+
                     </li>
                 </ol>
             </div>
@@ -3098,19 +3110,19 @@
                 <h1>Mogen wij deze voorwaarden en onze leveringstarieven veranderen?</h1>
                 <ol>
                     <li>
-                        <highlight1>Wij mogen deze voorwaarden altijd veranderen.</highlight1>
+                        <b>Wij mogen deze voorwaarden altijd veranderen. </b>
                     </li>
                     <li>Veranderen wij deze voorwaarden?
-                        <highlight1> Dan informeren wij u minimaal tien kalenderdagen voor de
+                        <b> Dan informeren wij u minimaal tien kalenderdagen voor de
                             verandering schriftelijk
                             of digitaal.
-                        </highlight1>
+                        </b>
                     </li>
                     Wij melden dan ook dat u onze overeenkomst mag beëindigen. Daarvoor gelden wel deze
                     voorwaarden.
                     <li>
-                        <highlight1>Wij kunnen met elkaar afspreken dat wij de leveringstarieven mogen veranderen
-                        </highlight1>
+                        <b>Wij kunnen met elkaar afspreken dat wij de leveringstarieven mogen veranderen
+                        </b>
                         tijdens de
                         overeenkomst. Redenen
                         hiervoor zijn overheidsbesluiten en de ontwikkelingen op de markt voor elektriciteit of gas,
@@ -3126,8 +3138,8 @@
                         geval zal deze reden duidelijk aan u uitgelegd worden.
                     </li>
                     <li>
-                        <highlight1>Veranderen wij de leveringstarieven? Dan informeren we u schriftelijk of digitaal.
-                        </highlight1>
+                        <b>Veranderen wij de leveringstarieven? Dan informeren we u schriftelijk of digitaal.
+                        </b>
                         Wij
                         informeren u
                         tijdig voordat wij
@@ -3140,20 +3152,20 @@
                         van de overheidsheffingen of de belastingen.
                     </li>
                     <li>
-                        <highlight>Wij kunnen ook met elkaar afspreken dat wij de leveringstarieven niet mogen
-                            veranderen tijdens
-                            de
-                            overeenkomst. Dit
-                            geldt niet voor een wijziging van de tarieven door een wijziging van de overheidsheffingen
-                            of de
-                            belastingen.
-                        </highlight>
+                        Wij kunnen ook met elkaar afspreken dat wij de leveringstarieven niet mogen
+                        veranderen tijdens
+                        de
+                        overeenkomst. Dit
+                        geldt niet voor een wijziging van de tarieven door een wijziging van de overheidsheffingen
+                        of de
+                        belastingen.
+
                     </li>
                     <li>
-                        <highlight1>De netbeheerder kan zijn tarieven ook veranderen. In zijn algemene voorwaarden staan
+                        <b>De netbeheerder kan zijn tarieven ook veranderen. In zijn algemene voorwaarden staan
                             de regels
                             hiervoor.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -3161,102 +3173,102 @@
                 <h1>Wat gebeurt er als u verhuist?</h1>
                 <ol>
                     <li>
-                        <highlight>Verhuist u? Informeert u ons dan schriftelijk of digitaal of bel ons. Onze
-                            overeenkomst loopt
-                            door
-                            op het nieuwe adres.
-                        </highlight>
+                        Verhuist u? Informeert u ons dan schriftelijk of digitaal of bel ons. Onze
+                        overeenkomst loopt
+                        door
+                        op het nieuwe adres.
+
                     </li>
                     <li>
-                        <highlight1>Wat moet u doen u als u verhuist?</highlight1>
+                        <b>Wat moet u doen u als u verhuist? </b>
                         <ol>
                             <li>
-                                <highlight1>Informeer ons dan twee weken voordat u verhuist over uw nieuwe adres.
-                                </highlight1>
+                                <b>Informeer ons dan twee weken voordat u verhuist over uw nieuwe adres.
+                                </b>
                             </li>
                             <li>
-                                <highlight1>Stuur ons binnen vijf werkdagen nadat u bent verhuisd schriftelijk of
+                                <b>Stuur ons binnen vijf werkdagen nadat u bent verhuisd schriftelijk of
                                     digitaal de
                                     meterstanden van uw oude adres.
                                     Zet hierop ook uw handtekening. Laat als dat kan ook de nieuwe bewoner zijn
                                     handtekening
                                     zetten.
-                                </highlight1>
+                                </b>
                             </li>
                             <li>
-                                <highlight1>Stuur ons ook binnen vijf werkdagen nadat u bent verhuisd schriftelijk of
+                                <b>Stuur ons ook binnen vijf werkdagen nadat u bent verhuisd schriftelijk of
                                     digitaal de
                                     meterstanden van uw nieuwe
                                     adres. Als dat kan ook met de handtekening van de vorige bewoner.
-                                </highlight1>
+                                </b>
                             </li>
                         </ol>
                     </li>
                     <li>
-                        <highlight1>Wat doen wij als u verhuist?</highlight1>
+                        <b>Wat doen wij als u verhuist? </b>
                         <ol>
                             <li>
-                                <highlight>Dan informeren wij u schriftelijk of digitaal dat wij de levering voor het
-                                    oude adres
-                                    gaan
-                                    beëindigen. Uw overeen
-                                    komst loopt door voor uw nieuwe huis.
-                                </highlight>
+                                Dan informeren wij u schriftelijk of digitaal dat wij de levering voor het
+                                oude adres
+                                gaan
+                                beëindigen. Uw overeen
+                                komst loopt door voor uw nieuwe huis.
+
                             </li>
                             <li>
-                                <highlight>Denken wij dat u op uw nieuwe adres veel meer of veel minder elektriciteit
-                                    en/of gas
-                                    gaat
-                                    gebruiken? Dan mogen
-                                    wij de overeenkomst wijzigen. Bent u het niet met deze wijzigingen eens? Dan mag u
-                                    de
-                                    overeenkomst beëindigen
-                                    binnen de daarvoor geldende voorwaarden.
-                                </highlight>
+                                Denken wij dat u op uw nieuwe adres veel meer of veel minder elektriciteit
+                                en/of gas
+                                gaat
+                                gebruiken? Dan mogen
+                                wij de overeenkomst wijzigen. Bent u het niet met deze wijzigingen eens? Dan mag u
+                                de
+                                overeenkomst beëindigen
+                                binnen de daarvoor geldende voorwaarden.
+
                             </li>
                             <li>
-                                <highlight>Wij melden u aan bij de netbeheerder voor een nieuwe aansluit- en
-                                    transportover-eenkomst
-                                    op
-                                    uw nieuwe adres.
-                                    Wij zeggen voor u de bestaande overeenkomst met uw netbeheerder op het oude adres
-                                    op.
-                                </highlight>
+                                Wij melden u aan bij de netbeheerder voor een nieuwe aansluit- en
+                                transportover-eenkomst
+                                op
+                                uw nieuwe adres.
+                                Wij zeggen voor u de bestaande overeenkomst met uw netbeheerder op het oude adres
+                                op.
+
                             </li>
                         </ol>
                     </li>
                     <li>
-                        <highlight>Heeft u op uw nieuwe adres nog geen aansluiting op het elektriciteits- en/of het
-                            gasnet? Dan
-                            kunt u
-                            van ons nog geen
-                            elektriciteit en/of gas geleverd krijgen. U krijgt van ons pas elektriciteit en/of gas
-                            geleverd
-                            als
-                            uw netbeheerder voor
-                            een juiste aansluiting heeft gezorgd.
-                        </highlight>
+                        Heeft u op uw nieuwe adres nog geen aansluiting op het elektriciteits- en/of het
+                        gasnet? Dan
+                        kunt u
+                        van ons nog geen
+                        elektriciteit en/of gas geleverd krijgen. U krijgt van ons pas elektriciteit en/of gas
+                        geleverd
+                        als
+                        uw netbeheerder voor
+                        een juiste aansluiting heeft gezorgd.
+
                     </li>
                     <li>
-                        <highlight>Heeft u tijdelijk twee adressen? Dan krijgt u tijdelijk gas en/of elektriciteit
-                            geleverd op
-                            beide
-                            adressen. Tenzij
-                            redelijkerwijs niet van ons verlangd kan worden dat wij ook nog ten behoeve van het oude
-                            perceel
-                            elektriciteit en/
-                            of gas tegen de overeengekomen voorwaarden blijven leveren. Wilt u (na verloop van tijd)
-                            alleen
-                            op
-                            uw nieuwe adres
-                            elektriciteit en/of gas geleverd krijgen, moet u wel de overeenkomst op uw oude adres
-                            opzeggen.
-                            Doet
-                            u dat niet, dan
-                            brengen wij u de kosten voor de levering op uw oude adres bij u in rekening tot het moment
-                            dat
-                            rechtsgeldig is opgezegd.
-                        </highlight>
+                        Heeft u tijdelijk twee adressen? Dan krijgt u tijdelijk gas en/of elektriciteit
+                        geleverd op
+                        beide
+                        adressen. Tenzij
+                        redelijkerwijs niet van ons verlangd kan worden dat wij ook nog ten behoeve van het oude
+                        perceel
+                        elektriciteit en/
+                        of gas tegen de overeengekomen voorwaarden blijven leveren. Wilt u (na verloop van tijd)
+                        alleen
+                        op
+                        uw nieuwe adres
+                        elektriciteit en/of gas geleverd krijgen, moet u wel de overeenkomst op uw oude adres
+                        opzeggen.
+                        Doet
+                        u dat niet, dan
+                        brengen wij u de kosten voor de levering op uw oude adres bij u in rekening tot het moment
+                        dat
+                        rechtsgeldig is opgezegd.
+
                     </li>
                 </ol>
             </div>
@@ -3264,55 +3276,55 @@
                 <h1>Hoe lang duurt onze overeenkomst?</h1>
                 <ol>
                     <li>
-                        <highlight>U kunt met ons een overeenkomst aangaan met een vaste einddatum of zonder vaste
-                            einddatum.
-                        </highlight>
+                        U kunt met ons een overeenkomst aangaan met een vaste einddatum of zonder vaste
+                        einddatum.
+
                     </li>
                     <li>
-                        <highlight1>U kunt onze overeenkomst opzeggen op dezelfde wijze waarop u de overeenkomst met ons
+                        <b>U kunt onze overeenkomst opzeggen op dezelfde wijze waarop u de overeenkomst met ons
                             afgesloten
                             heeft:
                             mondeling, schriftelijk of digitaal. U moet hierbij rekening houden met een opzegtermijn van
                             dertig
                             kalenderdagen.
-                        </highlight1>
+                        </b>
                         Wij
                         kunnen ook met u afspreken dat de opzegtermijn korter is dan dertig kalenderdagen.
                     </li>
                     <li>
-                        <highlight1>Heeft u een overeenkomst met een vaste einddatum en beëindigt u deze overeenkomst
+                        <b>Heeft u een overeenkomst met een vaste einddatum en beëindigt u deze overeenkomst
                             eerder dan de
                             afgesproken
                             einddatum? Dan kunnen wij u hiervoor een opzegvergoeding in rekening brengen.
-                        </highlight1>
+                        </b>
                         Deze
                         opzegvergoeding
                         hoeft u niet
                         te betalen als wij de kwaliteitscriteria hebben aangepast zonder dat het moest van de overheid.
                     </li>
                     <li>
-                        <highlight1>Heeft u een overeenkomst zonder vaste einddatum dan kunt u kosteloos opzeggen.
-                        </highlight1>
+                        <b>Heeft u een overeenkomst zonder vaste einddatum dan kunt u kosteloos opzeggen.
+                        </b>
                     </li>
                     <li>
-                        <highlight>Heeft u een overeenkomst met een vaste einddatum en gebruikt u de elektriciteit en/of
-                            gas alleen
-                            voor uw
-                            huishouden, dan kunnen wij u op het moment dat onze overeenkomst bijna is afgelopen een
-                            nieuw
-                            aanbod
-                            doen.
-                            In dit aanbod staat dan de duur van de aangeboden overeenkomst, de voorwaarden waaronder de
-                            aangeboden
-                            overeenkomst kan worden beëindigd en de van toepassing zijnde tarieven. Wij geven hierbij
-                            aan
-                            wat
-                            gebeurt als u
-                            deze nieuwe overeenkomst niet aanvaardt.
-                        </highlight>
+                        Heeft u een overeenkomst met een vaste einddatum en gebruikt u de elektriciteit en/of
+                        gas alleen
+                        voor uw
+                        huishouden, dan kunnen wij u op het moment dat onze overeenkomst bijna is afgelopen een
+                        nieuw
+                        aanbod
+                        doen.
+                        In dit aanbod staat dan de duur van de aangeboden overeenkomst, de voorwaarden waaronder de
+                        aangeboden
+                        overeenkomst kan worden beëindigd en de van toepassing zijnde tarieven. Wij geven hierbij
+                        aan
+                        wat
+                        gebeurt als u
+                        deze nieuwe overeenkomst niet aanvaardt.
+
                     </li>
                     <li>
-                        <highlight1>Heeft uw overeenkomst met een vaste einddatum de einddatum bereikt en bent u met ons
+                        <b>Heeft uw overeenkomst met een vaste einddatum de einddatum bereikt en bent u met ons
                             of een
                             andere
                             leverancier
@@ -3323,7 +3335,7 @@
                             artikel
                             18
                             ook van toepassing.
-                        </highlight1>
+                        </b>
                     </li>
                 </ol>
             </div>
@@ -3331,19 +3343,19 @@
                 <h1>Wat gebeurt als onze overeenkomst eindigt?</h1>
                 <ol>
                     <li>
-                        <highlight1>Eindigt onze overeenkomst? Dan krijgt u van ons geen elektriciteit en/of gas meer
+                        <b>Eindigt onze overeenkomst? Dan krijgt u van ons geen elektriciteit en/of gas meer
                             geleverd.
-                        </highlight1>
+                        </b>
                         Wel
                         kunnen wij hierover
                         andere afspraken met u maken.
                     </li>
                     <li>
-                        <highlight>Heeft u op dat moment nog geen andere energieleverancier, dan moet de netbeheerder uw
-                            aansluiting op
-                            het
-                            elektriciteitsnet of het gasnet afsluiten en/of het transport onderbreken.
-                        </highlight>
+                        Heeft u op dat moment nog geen andere energieleverancier, dan moet de netbeheerder uw
+                        aansluiting op
+                        het
+                        elektriciteitsnet of het gasnet afsluiten en/of het transport onderbreken.
+
                     </li>
                 </ol>
             </div>
@@ -3483,9 +3495,9 @@
                     </highlight3>
                 </li>
                 <li>
-                    <highlight7>Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het
-                        aan u
-                        kunnen leveren
+                    <highlight7>
+                        Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het
+                        aan u kunnen leveren
                         van elektriciteit en/of gas dan, <br>
                         (a) geeft u ons toestemming om bij uw netbeheerder het volgende op te vragen:
                         <ol>
@@ -3506,12 +3518,12 @@
                                 </highlight7>
                             </li>
                             <li>
-                                <highlight7>gegevens over het type aansluiting en over uw meter;</highlight>
+                                <highlight7>gegevens over het type aansluiting en over uw meter;</highlight7>
                             </li>
                         </ol>
                         (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
                         netbeheerder.
-                    </highlight7>
+                        <highlight7>
                 </li>
             </ol>
         </div>
@@ -4680,12 +4692,12 @@
                     <a class="nav-link" href="#checklists">Gelezen Artikelen</a>
                 </li>
             </ul>
-            <a id="pdf" href="https://tuenergy.wixsite.com/home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" margin-top= "25" fill="grey" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+            <a id="pdf" href="https://tuenergy.wixsite.com/home" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" margin-top="25" fill="grey"
+                     class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                     <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                  </svg>
-
+                </svg>
             </a>
         </div>
     </nav>
@@ -4699,9 +4711,11 @@
                     <div id="collapse_one">
                         <div class="card-body">
                             <p class="card-text">
-                                Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van dit
+                                Voordat u een contract met ons aangaat kunt u op deze pagina de algemene voorwaarden van
+                                dit
                                 contract
-                                doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch liever de
+                                doornemen. Speciaal voor u zijn de voorwaarden interactief weergeven. Mocht u toch
+                                liever de
                                 pdf
                                 lezen
                                 kunt u deze ten alle tijden onderaan uw scherm vinden.
@@ -4712,7 +4726,8 @@
                                 Door wie zijn deze algemene voorwaarden
                                 gemaakt?
                             </button>
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#voorwaarden2"
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#voorwaarden2"
                                     aria-expanded="false" aria-controls="collapseExample">
                                 Deze voorwaarden zijn er voor u en voor ons
                             </button>
@@ -4720,9 +4735,11 @@
                             <div class="row">
                                 <div class="collapse col-md-12" id="voorwaarden1" data-parent="#collapse_one">
                                     <div class="card card-body">
-                                        Deze algemene voorwaarden zijn van TU Energy, de vereniging van energieleveranciers
+                                        Deze algemene voorwaarden zijn van TU Energy, de vereniging van
+                                        energieleveranciers
                                         in
-                                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER) zijn
+                                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER)
+                                        zijn
                                         de
                                         voorwaarden
                                         met
@@ -4731,7 +4748,8 @@
                                         elkaar eens
                                         over
                                         alle
-                                        voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over schade
+                                        voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over
+                                        schade
                                         (artikel
                                         17.4)
                                         en
@@ -4744,15 +4762,18 @@
                                 <div class="collapse col-md-12" id="voorwaarden2" data-parent="#collapse_one">
                                     <div class="card card-body">
                                         U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
-                                        energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze voorwaarden
+                                        energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze
+                                        voorwaarden
                                         staan
                                         de regels
-                                        waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden te
+                                        waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden
+                                        te
                                         houden,
                                         is het
                                         nodig dat u ze
                                         kent
-                                        en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het product
+                                        en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het
+                                        product
                                         waarvoor
                                         u
                                         een
@@ -4769,7 +4790,8 @@
                     <div id="collapse_one2">
                         <div class="card-body">
                             <p class="card-text">
-                                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij dit
+                                Voordat u het contract doorneemt is het belangrijk om te begrijpen welke partijen bij
+                                dit
                                 contract
                                 betrokken zijn.
                                 Hieronder kunt u meer informatie over deze partijen vinden.</p>
@@ -4795,7 +4817,8 @@
                             <div class="row">
                                 <div class="collapse col-md-12" id="stakeholderText1" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf. Het
+                                        Een consument is iemand die iets koopt niet voor zijn of haar beroep of bedrijf.
+                                        Het
                                         gaat in
                                         dit geval om het kopen van een dienstverlening, namelijk het leveren van energie
                                         door de
@@ -4804,7 +4827,8 @@
                                 </div>
                                 <div class="collapse col-md-12" id="stakeholderText2" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        Een energieleverancier verzorgt de in- en verkoop en de levering van energie, wat
+                                        Een energieleverancier verzorgt de in- en verkoop en de levering van energie,
+                                        wat
                                         kan
                                         bestaan
                                         uit elektriciteit en gas.
@@ -4812,7 +4836,8 @@
                                 </div>
                                 <div class="collapse col-md-12" id="stakeholderText3" data-parent="#collapse_one2">
                                     <div class="card card-body">
-                                        De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor het
+                                        De netbeheerder is een onafhankelijke organisatie die verantwoordelijk is voor
+                                        het
                                         energienetwerk waarover gas en elektriciteit geleverd wordt.
                                     </div>
                                 </div>
@@ -5278,7 +5303,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
-        startTimer(art_nr);
+        startTimer(current_list[i]);
     }
 
     function changeFilterColor() {
@@ -5357,17 +5382,29 @@
         }
     }
 
+    //function checks how many characters are in the article and sets a timer accordingly
+    //thus taking into account the length of article before it gets checked
+    function startTimer(ArticleID) {
+        let element = document.getElementById(ArticleID).innerText;
+        let art_nr = getArticleNumberFromDivID(current_list[i]) - 1;
+        let durationTimer;
 
-    function startTimer(art_nr) {
+        //calculate timer using average reading speed (of 250 wpm)
+        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2)) * 60 * 100;
 
+        //give timer a maxiumum
+        if (durationTimer > 1200) {
+            durationTimer = 1200;
+        }
+
+        //set timer using calculated duration
         timer = setInterval(function () {
             checkListTimerDummy[art_nr]--;
-
             if (checkListTimerDummy[art_nr] == 0) {
                 clearInterval(timer);
                 document.getElementById("check" + (art_nr + 1)).checked = true;
             }
-        }, 1000);
+        }, durationTimer);
     }
 
     function stopTimer() {
@@ -5425,7 +5462,7 @@
             hideArticles();
             assignListToButton();
             updateArticles();
-            startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+            startTimer(current_list[i]);
             previousButton = currentButton;
             if (current_list.length > 1) {
                 document.getElementById("nextButton").classList.remove("hidden");
@@ -5463,7 +5500,7 @@
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
         document.getElementById("alle artikelen").classList.add("hidden");
     }
 
@@ -5493,6 +5530,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
         document.getElementById("current_filter").innerHTML = currentButton;
         document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
+        checkFilters(current_list[i]);
     }
 
     function nextArticle() {
@@ -5510,7 +5548,8 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
+        checkFilters(current_list[i]);
     }
 
     function previousArticle() {
@@ -5528,7 +5567,8 @@
         }
         document.getElementById(current_list[i]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(getArticleNumberFromDivID(current_list[i]) - 1);
+        startTimer(current_list[i]);
+        checkFilters(current_list[i]);
     }
 
     //connects each button to its own list by updating current_list
@@ -5611,7 +5651,6 @@
         array_titles = array_div_titles.map(function (e) {
             return e.id;
         });
-        console.log(array_titles)
         return array_titles;
     }
 
@@ -5619,6 +5658,36 @@
     function getArticleNumberFromDivID(ArticleID) {
         let result = ArticleID.slice(4);
         return result;
+    }
+
+    //function that checks if the filter contains a certain highlight (and thus filter)
+    // and updates showing the filter buttons accordingly
+    function checkFilters(ArticleID) {
+        let element = document.getElementById(ArticleID).innerHTML;
+        if (element.includes("highlight1") || element.includes("highlight3")
+            || element.includes("highlight5") || element.includes("highlight7")) {
+            console.log('yes consument');
+            document.getElementById("consumentFilter").style.opacity = "100%";
+        } else {
+            console.log('no consument');
+            document.getElementById("consumentFilter").style.opacity = "30%";
+        }
+        if (element.includes("highlight2") || element.includes("highlight3")
+            || element.includes("highlight6") || element.includes("highlight7")) {
+            console.log('yes energieleverancier');
+            document.getElementById("energieleverancierFilter").style.opacity = "100%";
+        } else {
+            console.log('no energieleverancier');
+            document.getElementById("energieleverancierFilter").style.opacity = "30%";
+        }
+        if (element.includes("highlight4") || element.includes("highlight5")
+            || element.includes("highlight6") || element.includes("highlight7")) {
+            console.log('yes netbeheerder');
+            document.getElementById("netbeheerderFilter").style.opacity = "100%";
+        } else {
+            console.log('no netbeheerder');
+            document.getElementById("netbeheerderFilter").style.opacity = "30%";
+        }
     }
 
 </script>
