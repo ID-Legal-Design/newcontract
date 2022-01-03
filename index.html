@@ -1884,11 +1884,11 @@
 
                             </ol>
                         </highlight1>
-                    </li>
-
+                    <highlight3>
                     (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
                     netbeheerder.
-                    </highlight3></li>
+                    </highlight3>
+                    </li>
                 </ol>
             </div>
             <div id="toe_8" style="display:none">
@@ -3496,9 +3496,9 @@
                     </highlight3>
                 </li>
                 <li>
-                    <highlight7>Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het
-                        aan u
-                        kunnen leveren
+                    <highlight7>
+                        Wanneer uw toestemming volgens de wet noodzakelijk is en de gegevens nodig zijn voor het
+                        aan u kunnen leveren
                         van elektriciteit en/of gas dan, <br>
                         (a) geeft u ons toestemming om bij uw netbeheerder het volgende op te vragen:
                         <ol>
@@ -3519,12 +3519,12 @@
                                 </highlight7>
                             </li>
                             <li>
-                                <highlight7>gegevens over het type aansluiting en over uw meter;</highlight>
+                                <highlight7>gegevens over het type aansluiting en over uw meter;</highlight7>
                             </li>
                         </ol>
                         (b) geeft u ons toestemming om gegevens over uw overeenkomst met ons, te verstrekken aan uw
                         netbeheerder.
-                    </highlight7>
+                        <highlight7>
                 </li>
             </ol>
         </div>
@@ -5391,11 +5391,11 @@
         let durationTimer;
 
         //calculate timer using average reading speed (of 250 wpm)
-        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250*2)) * 60 * 100;
+        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2)) * 60 * 100;
 
         //give timer a maxiumum
-        if(durationTimer > 1200){
-           durationTimer = 1200;
+        if (durationTimer > 1200) {
+            durationTimer = 1200;
         }
 
         //set timer using calculated duration
