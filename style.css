@@ -403,28 +403,38 @@ highlight7 {
 
 .legal-list ol {
     counter-reset: clause;
-    text-indent: -2em;
     list-style: none;
+    margin: 0;
+    padding: 2px;
 }
 
 .legal-list ol li {
     counter-increment: clause;
+    list-style-position: inside;
+    padding-left: 40px;
+    position: relative;
 
 }
 
 .legal-list ol li:before {
     content: counter(section) "." counters(clause, ".") " ";
-    margin: 0 0.3em 0 0;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 .legal-list ol li ol li {
     list-style: none;
-    text-indent: -2.1em;
+    list-style-position: inside;
+    padding-left: 20px;
+    position: relative;
 }
 
 .legal-list ol li ol li:before {
     content: " - ";
-    margin: 0 1.4em 0 0;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 /* flexbox */
