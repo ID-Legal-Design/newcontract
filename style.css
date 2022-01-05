@@ -17,7 +17,8 @@
     --highlight5: #93B1EA;
     --highlight6: #93B1EA;
     --highlight7: #7BA0E5;
-
+    --sidepanelWidth: 50%;
+    --sidepanelArticlesHeight: 360px;
 }
 
 body {
@@ -38,10 +39,10 @@ p {
 
 .sideviewContainer {
     display: none;
-    width: 40%;
+    width: var(--sidepanelWidth);
     height: 100%;
     position: fixed;
-    margin-left: 60%;
+    margin-left: calc(100% - var(--sidepanelWidth));
     padding: 10px 50px 50px 50px;
 
     background-color: #fafafa;
@@ -79,8 +80,9 @@ p {
 
 /* adds scrollbar for sideview articles that are too long */
 #articlescontainer ol {
-    max-height: calc(100vh - 200px - 140px);
+    max-height: calc(100vh - var(--sidepanelArticlesHeight));
     overflow: auto;
+    padding: 5px;
 }
 
 /* adds scrollbar to main element (moves it to middle page) */
