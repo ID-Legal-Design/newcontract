@@ -5354,7 +5354,7 @@
         } else {
             document.getElementById(current_list[i]).style.display = "none";
         }
-        openSidepanel()
+        openSidepanel();
 
         current_list[i] = articlesList[art_nr];
         document.getElementById(current_list[i]).style.display = "none";
@@ -5366,7 +5366,6 @@
     }
 
     function changeFilterColor() {
-
         if (!consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', 'white');
             document.body.style.setProperty('--highlight2', 'white');
@@ -5759,7 +5758,7 @@
         let c = document.getElementById("sidepanelFilterButtons").clientHeight;
         let d = document.getElementById("sidepanelBetweenArticles").clientHeight;
         let maxHeight = a + b + c + d;
-       // document.documentElement.style.setProperty('--sidepanelArticlesHeight', maxHeight);
+        // document.documentElement.style.setProperty('--sidepanelArticlesHeight', maxHeight);
         // console.log(maxHeight);
     }
 
