@@ -5149,7 +5149,8 @@
             <card-header-title class="card-header">Gelezen artikelen</card-header-title>
             <div class="card-body">
                 <p class="card-text">
-                    Hier kunt u alle artikelen op volgorde terug vinden. De artikelen die u gelezen heeft zijn automatisch voor u
+                    Hier kunt u alle artikelen op volgorde terug vinden. De artikelen die u gelezen heeft zijn
+                    automatisch voor u
                     aangevinkt, hierdoor kunt u makkelijk zien welke artikelen u gemist heeft.
                 </p>
                 <div class="row">
@@ -5255,7 +5256,7 @@
                         <div>
                             <input class="showhover" type="checkbox" id="check15" onclick="updateChecklist(this, 14)">
                             <checklist class="showhover" onclick="showArt(14);">
-                                 Zekerheden vragen
+                                Zekerheden vragen
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
@@ -5346,7 +5347,7 @@
     var previousButton = null;
     var currentButton;
     //variable used to loop through array lists
-    var i = 0;
+    var current_art = 0;
     //use a function to automatically update all with the written content
     var current_list = null;
 
@@ -5391,20 +5392,18 @@
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
-            current_list = articlesList;
+            current_list = [...articlesList];
         } else {
-            document.getElementById(current_list[i]).style.display = "none";
+            document.getElementById(current_list[current_art]).style.display = "none";
         }
         openSidepanel();
-
-        current_list[i] = articlesList[art_nr];
-        document.getElementById(current_list[i]).style.display = "none";
+        current_list[current_art] = articlesList[art_nr];
+        document.getElementById(current_list[current_art]).style.display = "none";
         document.getElementById(articlesList[art_nr]).style.display = "block";
-        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
-        startTimer(current_list[i]);
-        console.log(current_list[i]);
+        startTimer(current_list[current_art]);
     }
 
     function changeFilterColor() {
@@ -5486,7 +5485,7 @@
     //thus taking into account the length of article before it gets checked
     function startTimer(ArticleID) {
         let element = document.getElementById(ArticleID).innerText;
-        let art_nr = getArticleNumberFromDivID(current_list[i]) - 1;
+        let art_nr = getArticleNumberFromDivID(current_list[current_art]) - 1;
         let durationTimer;
 
         //calculate timer using average reading speed (of 250 wpm)
@@ -5534,7 +5533,7 @@
         }
     }
 
-        //Fill filter with the checked articles
+    //Fill filter with the checked articles
     function checklistUnchecked() {
         checkList = [];
         for (j = 0; j < checkListDummy.length; j++)
@@ -5575,7 +5574,7 @@
             hideArticles();
             assignListToButton();
             updateArticles();
-            startTimer(current_list[i]);
+            startTimer(current_list[current_art]);
             previousButton = currentButton;
             if (current_list.length > 1) {
                 document.getElementById("nextButton").classList.remove("hidden");
@@ -5592,7 +5591,7 @@
                 openSidepanel();
             }
             if (sidepanelState == 1) {
-                if (i == 0) {
+                if (current_art == 0) {
                     document.getElementById("prevButton").classList.add("hidden");
                 } else {
                     document.getElementById("prevButton").classList.remove("hidden");
@@ -5603,17 +5602,17 @@
     }
 
     function clearFilter(FilterPressed) {
-        j = getArticleNumberFromDivID(current_list[i])
+        j = getArticleNumberFromDivID(current_list[current_art])
         updateFilter(FilterPressed)
         stopTimer();
-        document.getElementById(current_list[i]).style.display = "none";
-        i = j - 1
+        document.getElementById(current_list[current_art]).style.display = "none";
+        current_art = j - 1
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
-        document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
-        document.getElementById(current_list[i]).style.display = "block";
-        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(current_list[i]);
+        document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
+        document.getElementById(current_list[current_art]).style.display = "block";
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
+        startTimer(current_list[current_art]);
         document.getElementById("alle artikelen").classList.add("hidden");
     }
 
@@ -5635,56 +5634,56 @@
     //Hide article, if there is something to hide
     function hideArticles() {
         if (current_list != null) {
-            document.getElementById(current_list[i]).style.display = "none";
+            document.getElementById(current_list[current_art]).style.display = "none";
         }
     }
 
     function updateArticles() {
-        i = 0;
-        document.getElementById(current_list[i]).style.display = "block";
-        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
+        current_art = 0;
+        document.getElementById(current_list[current_art]).style.display = "block";
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         document.getElementById("current_filter").innerHTML = currentButton;
-        document.getElementById("articles_shown").innerHTML = (i + 1) + " / " + current_list.length;
-        checkFilters(current_list[i]);
+        document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
+        checkFilters(current_list[current_art]);
         calculateArticlesContainerHeight();
     }
 
     function nextArticle() {
         stopTimer();
-        document.getElementById(current_list[i]).style.display = "none";
+        document.getElementById(current_list[current_art]).style.display = "none";
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
-        document.getElementById("articles_shown").innerHTML = (i + 2) + " / " + current_list.length;
-        if (i < current_list.length - 1) {
-            i = i + 1;
+        document.getElementById("articles_shown").innerHTML = (current_art + 2) + " / " + current_list.length;
+        if (current_art < current_list.length - 1) {
+            current_art = current_art + 1;
         }
-        if (i == current_list.length - 1) {
+        if (current_art == current_list.length - 1) {
             document.getElementById("nextButton").classList.add("hidden");
             document.getElementById("nextButton").onclick = null;
         }
-        document.getElementById(current_list[i]).style.display = "block";
-        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(current_list[i]);
-        checkFilters(current_list[i]);
+        document.getElementById(current_list[current_art]).style.display = "block";
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
+        startTimer(current_list[current_art]);
+        checkFilters(current_list[current_art]);
     }
 
     function previousArticle() {
         stopTimer();
-        document.getElementById(current_list[i]).style.display = "none";
+        document.getElementById(current_list[current_art]).style.display = "none";
         document.getElementById("nextButton").classList.remove("hidden");
         document.getElementById("nextButton").onclick = nextArticle;
-        document.getElementById("articles_shown").innerHTML = i + " / " + current_list.length;
-        if (i > 0) {
-            i = i - 1;
+        document.getElementById("articles_shown").innerHTML = current_art + " / " + current_list.length;
+        if (current_art > 0) {
+            current_art = current_art - 1;
         }
-        if (i == 0) {
+        if (current_art == 0) {
             document.getElementById("prevButton").classList.add("hidden");
             document.getElementById("prevButton").onclick = null;
         }
-        document.getElementById(current_list[i]).style.display = "block";
-        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[i]));
-        startTimer(current_list[i]);
-        checkFilters(current_list[i]);
+        document.getElementById(current_list[current_art]).style.display = "block";
+        document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
+        startTimer(current_list[current_art]);
+        checkFilters(current_list[current_art]);
     }
 
     //connects each button to its own list by updating current_list
@@ -5782,26 +5781,26 @@
         let element = document.getElementById(ArticleID).innerHTML;
         if (element.includes("highlight1") || element.includes("highlight3")
             || element.includes("highlight5") || element.includes("highlight7")) {
-           // console.log('yes consument');
+            // console.log('yes consument');
             document.getElementById("consumentFilter").style.opacity = "100%";
         } else {
-           // console.log('no consument');
+            // console.log('no consument');
             document.getElementById("consumentFilter").style.opacity = "30%";
         }
         if (element.includes("highlight2") || element.includes("highlight3")
             || element.includes("highlight6") || element.includes("highlight7")) {
-           // console.log('yes energieleverancier');
+            // console.log('yes energieleverancier');
             document.getElementById("energieleverancierFilter").style.opacity = "100%";
         } else {
-          //  console.log('no energieleverancier');
+            //  console.log('no energieleverancier');
             document.getElementById("energieleverancierFilter").style.opacity = "30%";
         }
         if (element.includes("highlight4") || element.includes("highlight5")
             || element.includes("highlight6") || element.includes("highlight7")) {
-          //  console.log('yes netbeheerder');
+            //  console.log('yes netbeheerder');
             document.getElementById("netbeheerderFilter").style.opacity = "100%";
         } else {
-          //  console.log('no netbeheerder');
+            //  console.log('no netbeheerder');
             document.getElementById("netbeheerderFilter").style.opacity = "30%";
         }
     }
