@@ -690,6 +690,11 @@ card-header-title {
     align-items: baseline;
 }
 
+/*For showing hover on the 'tijdlijn' items */
+.showhover:hover  {
+cursor: pointer;
+}
+
 .toggle-control {
 
     position: relative;
@@ -757,4 +762,4 @@ card-header-title {
 
 a.hyperlink-style {color:var(--shade4);text-decoration:none;font-weight:bold;padding:2px;}
 a.hyperlink-style:link {color:var(--shade4);text-decoration:none;;padding:2px;}
-a.hyperlink-style:hover {border-style: solid;border-color:var(--shade4);text-decoration:none;}
+a.hyperlink-style:hover {text-decoration:underline;}
