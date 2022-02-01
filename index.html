@@ -55,13 +55,13 @@
     </div>
     <div id="sidepanelFilterButtons"
          class="d-flex align-content-around flex-sm-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap">
-        <div id="consumentFilter" class="card filter-card">
+        <div id="firstFilter" class="card filter-card">
             <div class="d-flex align-self-center">
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center">
-                        <i class="flex-item bi bi-person fa-5x"></i>&nbspConsument
+                        <i class="flex-item bi bi-person fa-5x"></i>&nbspBelangrijk
                         <label class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
-                            <input id="consument_switch" type="checkbox" checked="checked"
+                            <input id="first_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
                         </label>
@@ -70,13 +70,13 @@
             </div>
         </div>
 
-        <div id="energieleverancierFilter" class="card filter-card">
+        <div id="secondFilter" class="card filter-card">
             <div class="align-self-center">
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center" style="text-align: center">
-                        <i class="flex-item bi bi-plug"></i>&nbspEnergie leverancier
+                        <i class="flex-item bi bi-plug"></i>&nbspToelichting
                         <label class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
-                            <input id="energie_leverancier_switch" type="checkbox" checked="checked"
+                            <input id="second_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
                         </label>
@@ -85,20 +85,21 @@
             </div>
         </div>
 
-        <div id="netbeheerderFilter" class="card filter-card">
-            <div class="align-self-center">
-                <div class="filterbox3 flex-item">
-                    <div class="d-flex flex-wrap justify-content-center">
-                        <i class="flex-item bi bi-columns"></i>&nbspNetbeheerder
-                        <label class="flex-item toggle-control netbeheerder" style="transform: scale(0.8, 0.8)">
-                            <input id="netbeheerder_switch" type="checkbox" checked="checked"
-                                   onclick="changeFilterColor()">
-                            <span class="control"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div id="netbeheerderFilter" class="card filter-card">-->
+<!--            <div class="align-self-center">-->
+<!--                <div class="filterbox3 flex-item">-->
+<!--                    <div class="d-flex flex-wrap justify-content-center">-->
+<!--                        <i class="flex-item bi bi-columns"></i>&nbspNetbeheerder-->
+<!--                        <label class="flex-item toggle-control netbeheerder" style="transform: scale(0.8, 0.8)">-->
+<!--                            <input id="netbeheerder_switch" type="checkbox" checked="checked"-->
+<!--                                   onclick="changeFilterColor()">-->
+<!--                            <span class="control"></span>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
     </div>
 
     <!-- The UI button elements within the sideview -->
@@ -4132,6 +4133,10 @@
     //timer
     var timer;
 
+    //important switches
+    var first_filter = document.getElementById("first_switch");
+    var second_filter = document.getElementById("second_switch");
+
     //Stakeholder switches
     var consument_filter = document.getElementById("consument_switch");
     var energie_leverancier_filter = document.getElementById("energie_leverancier_switch");
@@ -4159,6 +4164,7 @@
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
         startTimer(current_list[current_art]);
+        checkFilters(current_list[current_art]);
         console.log(current_list);
     }
 
@@ -4169,7 +4175,26 @@
         showArt(art_nr);
     }
 
+    //change filter color for new
+    //TODO: change these
     function changeFilterColor() {
+        if (!first_filter.checked && !second_filter.checked) {
+            document.body.style.setProperty('--highlight1', 'white');
+            document.body.style.setProperty('--highlight2', 'white');
+        } else if (first_filter.checked && !second_filter.checked) {
+            document.body.style.setProperty('--highlight1', '#b7cbf1');
+            document.body.style.setProperty('--highlight2', 'white');
+        } else if (!first_filter.checked && second_filter.checked) {
+            document.body.style.setProperty('--highlight1', 'white');
+            document.body.style.setProperty('--highlight2', '#dbdfe7');
+        } else if (first_filter.checked && second_filter.checked) {
+            document.body.style.setProperty('--highlight1', '#B7CBF1');
+            document.body.style.setProperty('--highlight2', '#dbdfe7');
+        }
+    }
+
+    //for old stakeholder filters
+    function changeFilterColor2() {
         if (!consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', 'white');
             document.body.style.setProperty('--highlight2', 'white');
@@ -4178,7 +4203,6 @@
             document.body.style.setProperty('--highlight5', 'white');
             document.body.style.setProperty('--highlight6', 'white');
             document.body.style.setProperty('--highlight7', 'white');
-
         } else if (consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
             document.body.style.setProperty('--highlight1', '#B7CBF1');
             document.body.style.setProperty('--highlight2', 'white');
@@ -4365,8 +4389,8 @@
     }
 
     function clearFilter(FilterPressed) {
-        j = getArticleNumberFromDivID(current_list[current_art])
-        updateFilter(FilterPressed)
+        j = getArticleNumberFromDivID(current_list[current_art]);
+        updateFilter(FilterPressed);
         stopTimer();
         document.getElementById(current_list[current_art]).style.display = "none";
         current_art = j - 1
@@ -4385,6 +4409,7 @@
         document.getElementById("mainContent").style.width = "90%";
         document.getElementById("sideview").style.display = "block";
         sidepanelState = 1;
+        changeFilterColor();
     }
 
     function closeSidepanel() {
@@ -4549,26 +4574,18 @@
         if (element.includes("highlight1") || element.includes("highlight3")
             || element.includes("highlight5") || element.includes("highlight7")) {
             // console.log('yes consument');
-            document.getElementById("consumentFilter").style.opacity = "100%";
+            document.getElementById("firstFilter").style.opacity = "100%";
         } else {
             // console.log('no consument');
-            document.getElementById("consumentFilter").style.opacity = "30%";
+            document.getElementById("firstFilter").style.opacity = "30%";
         }
         if (element.includes("highlight2") || element.includes("highlight3")
             || element.includes("highlight6") || element.includes("highlight7")) {
             // console.log('yes energieleverancier');
-            document.getElementById("energieleverancierFilter").style.opacity = "100%";
+            document.getElementById("secondFilter").style.opacity = "100%";
         } else {
             //  console.log('no energieleverancier');
-            document.getElementById("energieleverancierFilter").style.opacity = "30%";
-        }
-        if (element.includes("highlight4") || element.includes("highlight5")
-            || element.includes("highlight6") || element.includes("highlight7")) {
-            //  console.log('yes netbeheerder');
-            document.getElementById("netbeheerderFilter").style.opacity = "100%";
-        } else {
-            //  console.log('no netbeheerder');
-            document.getElementById("netbeheerderFilter").style.opacity = "30%";
+            document.getElementById("secondFilter").style.opacity = "30%";
         }
     }
 
