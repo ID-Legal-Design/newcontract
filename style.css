@@ -329,6 +329,7 @@ label {
     display: inline-block;
 }
 
+
 /* highlight consument */
 highlight1 {
     background-color: var(--highlight1);
@@ -722,7 +723,7 @@ card-header-title {
 }
 
 .toggle-control.energie_leverancier input:checked ~ .control {
-    background-color: #93B1EA;
+    background-color: #d9e7fc;
 }
 
 .toggle-control.netbeheerder input:checked ~ .control {
