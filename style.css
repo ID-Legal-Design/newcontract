@@ -723,7 +723,7 @@ card-header-title {
 }
 
 .toggle-control.energie_leverancier input:checked ~ .control {
-    background-color: #93B1EA;
+    background-color: #d9e7fc;
 }
 
 .toggle-control.netbeheerder input:checked ~ .control {
