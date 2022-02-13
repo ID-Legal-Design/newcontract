@@ -656,7 +656,7 @@ highlight7 {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
     border-radius: 15px;
     border: 0px;
-    padding: 15px 15px 15px 15px;
+    padding: 10px;
 }
 
 .card-header {
@@ -700,7 +700,6 @@ card-header-title {
 }
 
 .toggle-control {
-
     position: relative;
     padding-left: 40px;
     cursor: pointer;
@@ -741,8 +740,8 @@ card-header-title {
 
 .toggle-control .control {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
+    left: 5px;
     height: 30px;
     width: 45px;
     border-radius: 25px;

@@ -60,7 +60,7 @@
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center">
                         &nbspBelangrijk
-                        <label class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
+                        <label id="first_switch_a" class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
                             <input id="first_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
@@ -69,13 +69,12 @@
                 </div>
             </div>
         </div>
-
         <div id="secondFilter" class="card filter-card">
             <div class="align-self-center">
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center" style="text-align: center">
                         &nbspToelichting
-                        <label class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
+                        <label id="second_switch_a" class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
                             <input id="second_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
@@ -84,22 +83,6 @@
                 </div>
             </div>
         </div>
-
-        <!--        <div id="netbeheerderFilter" class="card filter-card">-->
-        <!--            <div class="align-self-center">-->
-        <!--                <div class="filterbox3 flex-item">-->
-        <!--                    <div class="d-flex flex-wrap justify-content-center">-->
-        <!--                        <i class="flex-item bi bi-columns"></i>&nbspNetbeheerder-->
-        <!--                        <label class="flex-item toggle-control netbeheerder" style="transform: scale(0.8, 0.8)">-->
-        <!--                            <input id="netbeheerder_switch" type="checkbox" checked="checked"-->
-        <!--                                   onclick="changeFilterColor()">-->
-        <!--                            <span class="control"></span>-->
-        <!--                        </label>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
     </div>
 
     <!-- The UI button elements within the sideview -->
@@ -6588,23 +6571,28 @@
 
     //function that checks if the filter contains a certain highlight (and thus filter)
     // and updates showing the filter buttons accordingly
+    //disables when needed
     function checkFilters(ArticleID) {
         let element = document.getElementById(ArticleID).innerHTML;
         if (element.includes("highlight1") || element.includes("highlight3")
             || element.includes("highlight5") || element.includes("highlight7")) {
-            // console.log('yes consument');
             document.getElementById("firstFilter").style.opacity = "100%";
+            document.getElementById("first_switch_a").style.cursor = "pointer";
+            document.getElementById("first_switch").disabled = false;
         } else {
-            // console.log('no consument');
             document.getElementById("firstFilter").style.opacity = "20%";
+            document.getElementById("first_switch_a").style.cursor = "default";
+            document.getElementById("first_switch").disabled = true;
         }
         if (element.includes("highlight2") || element.includes("highlight3")
             || element.includes("highlight6") || element.includes("highlight7")) {
-            // console.log('yes energieleverancier');
             document.getElementById("secondFilter").style.opacity = "100%";
+            document.getElementById("second_switch_a").style.cursor = "pointer";
+            document.getElementById("second_switch").disabled = false;
         } else {
-            //  console.log('no energieleverancier');
             document.getElementById("secondFilter").style.opacity = "20%";
+            document.getElementById("second_switch_a").style.cursor = "default";
+            document.getElementById("second_switch").disabled = true;
         }
     }
 
