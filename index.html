@@ -5618,7 +5618,8 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary" id="pdf" href="https://www.tuenergy-contract-trad.nl/" target="_blank" style="font-size:0.9em;color:white;">
+                    <a class="nav-link btn btn-primary" id="pdf" href="https://www.tuenergy-contract-trad.nl/"
+                       target="_blank" style="font-size:0.9em;color:white;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="white"
                              class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                             <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
@@ -6183,7 +6184,7 @@
                 <a id="checkList" class="btn btn-primary"
                    onclick="updateFilter(document.getElementById('alle artikelen'));checklistUnchecked();updateFilter(this)">Ongelezen
                     artikelen openen</a>
-<!--                <a id="highlights" class="btn btn-primary" onclick="updateFilter(this)"> open highlights </a>-->
+                <!--                <a id="highlights" class="btn btn-primary" onclick="updateFilter(this)"> open highlights </a>-->
             </div>
         </div>
 
@@ -6249,12 +6250,23 @@
     var first_filter = document.getElementById("first_switch");
     var second_filter = document.getElementById("second_switch");
 
-    //Stakeholder switches
-    var consument_filter = document.getElementById("consument_switch");
-    var energie_leverancier_filter = document.getElementById("energie_leverancier_switch");
-    var netbeheerder_filter = document.getElementById("netbeheerder_switch");
-
     window.onload = assignContentToList();
+
+    //Function for collapsing and expanding buttons
+    var coll = document.getElementsByClassName("collapsible");
+    var k;
+
+    for (k = 0; k < coll.length; k++) {
+        coll[k].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 
     //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
@@ -6288,7 +6300,6 @@
     }
 
     //change filter color for new
-    //TODO: change these
     function changeFilterColor() {
         if (!first_filter.checked && !second_filter.checked) {
             document.body.style.setProperty('--highlight1', 'clear');
@@ -6302,81 +6313,6 @@
         } else if (first_filter.checked && second_filter.checked) {
             document.body.style.setProperty('--highlight1', '#a9c1ee');
             document.body.style.setProperty('--highlight2', '#d9e7fc');
-        }
-    }
-
-    //for old stakeholder filters
-    function changeFilterColor2() {
-        if (!consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', 'white');
-            document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', 'white');
-            document.body.style.setProperty('--highlight6', 'white');
-            document.body.style.setProperty('--highlight7', 'white');
-        } else if (consument_filter.checked && !energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#B7CBF1');
-            document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', '#B7CBF1');
-            document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', '#B7CBF1');
-            document.body.style.setProperty('--highlight6', 'white');
-            document.body.style.setProperty('--highlight7', '#B7CBF1');
-
-        } else if (!consument_filter.checked && energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', '#B7CBF1');
-            document.body.style.setProperty('--highlight3', '#B7CBF1');
-            document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', 'white');
-            document.body.style.setProperty('--highlight6', '#B7CBF1');
-            document.body.style.setProperty('--highlight7', '#B7CBF1');
-
-        } else if (!consument_filter.checked && !energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', 'white');
-            document.body.style.setProperty('--highlight4', '#B7CBF1');
-            document.body.style.setProperty('--highlight5', '#B7CBF1');
-            document.body.style.setProperty('--highlight6', '#B7CBF1');
-            document.body.style.setProperty('--highlight7', '#B7CBF1');
-
-        } else if (consument_filter.checked && energie_leverancier_filter.checked && !netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#B7CBF1');
-            document.body.style.setProperty('--highlight2', '#B7CBF1');
-            document.body.style.setProperty('--highlight3', '#93B1EA');
-            document.body.style.setProperty('--highlight4', 'white');
-            document.body.style.setProperty('--highlight5', '#B7CBF1');
-            document.body.style.setProperty('--highlight6', '#B7CBF1');
-            document.body.style.setProperty('--highlight7', '#93B1EA');
-
-        } else if (consument_filter.checked && !energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#B7CBF1');
-            document.body.style.setProperty('--highlight2', 'white');
-            document.body.style.setProperty('--highlight3', '#B7CBF1');
-            document.body.style.setProperty('--highlight4', '#B7CBF1');
-            document.body.style.setProperty('--highlight5', '#93B1EA');
-            document.body.style.setProperty('--highlight6', '#B7CBF1');
-            document.body.style.setProperty('--highlight7', '#93B1EA');
-
-        } else if (!consument_filter.checked && energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', 'white');
-            document.body.style.setProperty('--highlight2', '#B7CBF1');
-            document.body.style.setProperty('--highlight3', '#B7CBF1');
-            document.body.style.setProperty('--highlight4', '#B7CBF1');
-            document.body.style.setProperty('--highlight5', '#B7CBF1');
-            document.body.style.setProperty('--highlight6', '#93B1EA');
-            document.body.style.setProperty('--highlight7', '#93B1EA');
-
-        } else if (consument_filter.checked && energie_leverancier_filter.checked && netbeheerder_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#B7CBF1');
-            document.body.style.setProperty('--highlight2', '#B7CBF1');
-            document.body.style.setProperty('--highlight3', '#93B1EA');
-            document.body.style.setProperty('--highlight4', '#B7CBF1');
-            document.body.style.setProperty('--highlight5', '#93B1EA');
-            document.body.style.setProperty('--highlight6', '#93B1EA');
-            document.body.style.setProperty('--highlight7', '#7BA0E5');
         }
     }
 
@@ -6421,18 +6357,6 @@
     }
 
     //Fill filter with the checked articles
-    function checklistChecked() {
-        checkList = [];
-        for (j = 0; j < checkListDummy.length; j++)
-            if (checkListDummy[j] == true) {
-                checkList.push(artList[j]);
-            }
-        if (checklist = []) {
-            checkList.push(artList[j]);
-        }
-    }
-
-    //Fill filter with the checked articles
     function checklistUnchecked() {
         checkList = [];
         for (j = 0; j < checkListDummy.length; j++)
@@ -6443,23 +6367,6 @@
             checkList.push(artList[0]);
         }
     }
-
-    //Function for collapsing and expanding buttons
-    var coll = document.getElementsByClassName("collapsible");
-    var k;
-
-    for (k = 0; k < coll.length; k++) {
-        coll[k].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
