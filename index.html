@@ -60,7 +60,8 @@
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center">
                         &nbspBelangrijk
-                        <label id="first_switch_a" class="flex-item toggle-control consument" style="transform: scale(0.8, 0.8)">
+                        <label id="first_switch_a" class="flex-item toggle-control consument"
+                               style="transform: scale(0.8, 0.8)">
                             <input id="first_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
@@ -74,7 +75,8 @@
                 <div class="filterbox3 flex-item">
                     <div class="d-flex flex-wrap justify-content-center" style="text-align: center">
                         &nbspToelichting
-                        <label id="second_switch_a" class="flex-item toggle-control energie_leverancier" style="transform: scale(0.8, 0.8)">
+                        <label id="second_switch_a" class="flex-item toggle-control energie_leverancier"
+                               style="transform: scale(0.8, 0.8)">
                             <input id="second_switch" type="checkbox" checked="checked"
                                    onclick="changeFilterColor()">
                             <span class="control"></span>
@@ -6221,6 +6223,11 @@
     let verList = new Array();
     let eleList = new Array();
 
+    //prolific to hotjar
+    let prolificId = 'test';
+    let studyId = 'test';
+    let sessionId = 'test';
+
     //checkList ID
     let checkList = new Array();
     let checkListDummy = new Array(22).fill(false);
@@ -6234,6 +6241,7 @@
     var second_filter = document.getElementById("second_switch");
 
     window.onload = assignContentToList();
+    window.onload = getProlificInformationUrl();
 
     //Function for collapsing and expanding buttons
     var coll = document.getElementsByClassName("collapsible");
@@ -6605,6 +6613,22 @@
         let maxHeight = a + b + c + d;
         // document.documentElement.style.setProperty('--sidepanelArticlesHeight', maxHeight);
         // console.log(maxHeight);
+    }
+
+    function getProlificInformationUrl() {
+        //example url https://www.tuenergy-contract.nl/?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
+        const url = new URL(window.location.href);
+        prolificId = url.searchParams.get('PROLIFIC_PID');
+        studyId = url.searchParams.get('STUDY_ID');
+        sessionId = url.searchParams.get('SESSION_ID');
+        console.log("prolificid=  " + prolificId);
+        console.log("studyid=  " + studyId);
+        console.log("sessionid=  " + sessionId);
+
+        hj('identify', prolificId, {
+            study: studyId,
+            session: sessionId
+        });
     }
 
 </script>
