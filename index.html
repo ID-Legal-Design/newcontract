@@ -5615,7 +5615,6 @@
             </ul>
         </div>
     </nav>
-
     <div id="mainContent" class="contentContainer">
         <p></p>
         <div class="row">
@@ -5989,7 +5988,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <p></p>
         <div id="checklists" class="card main-card">
@@ -6172,8 +6170,14 @@
                 <!--                <a id="highlights" class="btn btn-primary" onclick="updateFilter(this)"> open highlights </a>-->
             </div>
         </div>
+    </div>
 
-
+    <div class="footer">
+        <div class="d-flex justify-content-around">
+            <div id="footer_id" class="p">Flex item 1</div>
+         <!--   <div id="footer_session" class="p">Flex item 2</div>
+            <div id="footer_study" class="p">Flex item 3</div> -->
+        </div>
     </div>
 </div>
 
@@ -6188,7 +6192,6 @@
 
 
 <script>
-
     //variable used to check if sidepanel is open
     var sidepanelState = 0;
     //variables saving current and previous button value
@@ -6621,14 +6624,19 @@
         prolificId = url.searchParams.get('PROLIFIC_PID');
         studyId = url.searchParams.get('STUDY_ID');
         sessionId = url.searchParams.get('SESSION_ID');
-        console.log("prolificid=  " + prolificId);
-        console.log("studyid=  " + studyId);
-        console.log("sessionid=  " + sessionId);
+        console.log("Prolific ID=  " + prolificId);
+        console.log("Study ID=  " + studyId);
+        console.log("Session ID=  " + sessionId);
 
         hj('identify', prolificId, {
             study: studyId,
             session: sessionId
         });
+
+        document.getElementById("footer_id").textContent = "Prolific ID = " + prolificId;
+        document.getElementById("footer_study").textContent = "Study ID =  " + studyId;
+        document.getElementById("footer_session").textContent = "Session ID =  " + sessionId;
+
     }
 
 </script>
