@@ -5,10 +5,11 @@
     --grey: #f8f9fa;
     --dark: #63676b;
     /*main colours website*/
-    --shade3: #003fa8; /*G - titels + hyperlinks*/
+    /*main colors website*/
+    --shade3: #0a369d; /*G - titels + hyperlinks*/
     --shade1: #3080ff; /*G - main knoppen + bolletjes tijdlijn*/
-    --shade4: #003fa8; /*lichtere vlakken tijdlijn*/
-    --shade5: #00358f; /*donkere vlakken tijdlijn*/
+    --shade4: #0246ab; /*lichtere vlakken tijdlijn*/
+    --shade5: #0e3591; /*donkere vlakken tijdlijn*/
     /*placeholders for highlights index.html*/
     --highlight1: #a7c8ff;
     --highlight2: #c6eeff;
@@ -678,6 +679,7 @@ card-header-title {
 }
 
 .btn-primary {
+    background-color: var(--shade4);
     border-color: var(--shade1);
     border-radius: 25px;
 }
