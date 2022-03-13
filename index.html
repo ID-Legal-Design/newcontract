@@ -6295,7 +6295,8 @@
         let durationTimer;
 
         //calculate timer using average reading speed (of 250 wpm)
-        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2.3)) * 60 * 100;
+        // The times 2.3 is to make it faster than the average
+        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2.7)) * 60 * 100;
 
         //give timer a maxiumum
         if (durationTimer > 3000) {
