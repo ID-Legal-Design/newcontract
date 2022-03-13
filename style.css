@@ -1,23 +1,23 @@
 :root {
+    /*basic text colours*/
     --white: #ffffff;
     --clear: #ffffff00;
     --grey: #f8f9fa;
     --dark: #63676b;
+    /*main colours website*/
+    /*main colors website*/
+    --shade3: #0a369d; /*G - titels + hyperlinks*/
+    --shade1: #3080ff; /*G - main knoppen + bolletjes tijdlijn*/
+    --shade4: #0042a5; /*lichtere vlakken tijdlijn*/
+    --shade6: #4773da; /*lichtere vlakken tijdlijn - 2*/
+    --shade5: #023888; /*donkere vlakken tijdlijn*/
+    --shade7: #3f6acb; /*donkere vlakken tijdlijn - 2*/
+    /*placeholders for highlights index.html*/
+    --highlight1: #a7c8ff;
+    --highlight2: #c6eeff;
+    /*other variables*/
     --counterart: 0;
-    --shade1: #7ba0e5;
-    --shade2: #e1e7ff;
-    --shade3: #0a369d;
-    --shade4: #435d99;
-    --shade5: #0f2a6b;
-    --shade6: #f6f6f6;
     --indexCircle: 10px;
-    --highlight1: #B7CBF1;
-    --highlight2: #B7CBF1;
-    --highlight3: #93B1EA;
-    --highlight4: #B7CBF1;
-    --highlight5: #93B1EA;
-    --highlight6: #93B1EA;
-    --highlight7: #7BA0E5;
     --sidepanelWidth: 50%;
     --sidepanelArticlesHeight: 360px;
 }
@@ -282,7 +282,7 @@ h2 {
     margin-top: 1em;
     font-size: 17px;
     font-weight: bold;
-    color: var(--shade4);
+    color: var(--shade3);
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -295,7 +295,7 @@ h3 {
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-    color: var(--shade4);
+    color: var(--shade3);
 }
 
 
@@ -550,7 +550,19 @@ highlight7 {
     margin: 20px 60px 20px;
     position: relative;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--shade7);
+    color: #fff;
+    border-radius: 10px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.box ul li.second-block {
+    margin: 20px 60px 20px;
+    position: relative;
+    padding: 10px 20px;
+    background: var(--shade6);
     color: #fff;
     border-radius: 10px;
     line-height: 20px;
@@ -582,7 +594,7 @@ highlight7 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--shade2);
+    background: var(--shade1);
     border: 1px solid #fff;
     position: absolute;
     left: -7.5px;
@@ -626,7 +638,7 @@ highlight7 {
 }
 
 .card {
-    border: 1px solid var(--shade2);
+    border: 1px solid var(--shade1);
     margin: 5px;
 }
 
@@ -657,7 +669,7 @@ card-header-title {
     display: block;
     margin-top: 0.5em;
     font-size: 17px;
-    color: var(--shade4);
+    color: var(--shade3);
     text-align: left;
     font-weight: bold;
     text-transform: uppercase;
@@ -669,7 +681,7 @@ card-header-title {
 }
 
 .btn-primary {
-    background-color: var(--shade1);
+    background-color: var(--shade4);
     border-color: var(--shade1);
     border-radius: 25px;
 }
@@ -704,11 +716,11 @@ card-header-title {
 }
 
 .toggle-control.consument input:checked ~ .control {
-    background-color: #93B1EA;
+    background-color: var(--highlight1);
 }
 
 .toggle-control.energie_leverancier input:checked ~ .control {
-    background-color: #d9e7fc;
+    background-color: var(--highlight2);
 }
 
 .toggle-control.netbeheerder input:checked ~ .control {
@@ -749,14 +761,14 @@ card-header-title {
 }
 
 a.hyperlink-style {
-    color: var(--shade4);
+    color: var(--shade3);
     text-decoration: none;
     font-weight: bold;
     padding: 2px;
 }
 
 a.hyperlink-style:link {
-    color: var(--shade4);
+    color: var(--shade3);
     text-decoration: none;;
     padding: 2px;
 }
@@ -779,6 +791,6 @@ a.hyperlink-style:hover {
     height: 30px;
     border-top-right-radius: 10px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    padding:0.2rem;
+    padding: 0.2rem;
 }
 

@@ -5649,47 +5649,24 @@
                                 <div class="collapse col-md-12" id="voorwaarden1" data-parent="#collapse_one">
                                     <div class="card card-body">
                                         Deze algemene voorwaarden zijn van TU Energy, de vereniging van
-                                        energieleveranciers
-                                        in
-                                        Nederland. In de Commissie Zelfregulering van de Sociaal-Economische Raad (SER)
-                                        zijn
-                                        de
-                                        voorwaarden
-                                        met
+                                        energieleveranciers in Nederland. In de Commissie Zelfregulering van de
+                                        Sociaal-Economische Raad (SER) zijn de voorwaarden met
                                         de Consumentenbond en de Vereniging Eigen Huis besproken.
                                         Energie-Nederland, de Consumentenbond en de Vereniging Eigen Huis zijn het met
-                                        elkaar eens
-                                        over
-                                        alle
-                                        voorwaarden, maar er zijn twee uitzonderingen en dat zijn het artikel over
-                                        schade
-                                        (artikel
-                                        17.4)
-                                        en
-                                        het
-                                        artikel
+                                        elkaar eens over alle voorwaarden, maar er zijn twee uitzonderingen en dat
+                                        zijn het artikel over schade (artikel 17.4) en het artikel
                                         over de redenen waarom wij de leveringstarieven mogen veranderen (artikel 19.3).
                                     </div>
                                 </div>
 
                                 <div class="collapse col-md-12" id="voorwaarden2" data-parent="#collapse_one">
                                     <div class="card card-body">
-                                        U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten met uw
-                                        energieleverancier. Deze voorwaarden horen bij die overeenkomst. In deze
-                                        voorwaarden
-                                        staan
-                                        de regels
-                                        waaraan u en uw energieleverancier zich moeten houden. Om u aan deze voorwaarden
-                                        te
-                                        houden,
-                                        is het
-                                        nodig dat u ze
-                                        kent
+                                        U heeft een leveringsovereenkomst voor elektriciteit en/of gas afgesloten
+                                        met uw energieleve-rancier. Deze voorwaarden horen bij die overeenkomst.
+                                        In deze voorwaarden staan de regels waaraan u en uw energieleverancier zich
+                                        moeten houden. Om u aan deze voorwaarden te houden, is het nodig dat u ze kent
                                         en begrijpt. Samen met deze voorwaarden gelden ook de voorwaarden voor het
-                                        product
-                                        waarvoor
-                                        u
-                                        een
+                                        product waarvoor u een leveringsovereenkomst heeft afgesloten.
                                     </div>
                                 </div>
                             </div>
@@ -5811,7 +5788,7 @@
                     <div class="box">
                         <h1 class="list-title">Van Begin tot Eind</h1>
                         <ul id="second-list">
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="aansluiting" onclick="updateFilter(this);">
@@ -5824,7 +5801,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                                 <div class="time">
                                     <span>Start looptijd</span>
                                 </div>
@@ -5840,7 +5817,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="bedenktijd" onclick="updateFilter(this);">
@@ -5853,7 +5830,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="jaarnota" onclick="updateFilter(this);">
@@ -5866,7 +5843,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="storing en schade" onclick="updateFilter(this);">
@@ -5879,7 +5856,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="wijzigingen" onclick="updateFilter(this);">
@@ -5892,7 +5869,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="second-block">
                             <span>
                             </span>
                                 <div class="showhover" id="einde overeenkomst" onclick="updateFilter(this);">
@@ -6299,14 +6276,14 @@
             document.body.style.setProperty('--highlight1', 'clear');
             document.body.style.setProperty('--highlight2', 'clear');
         } else if (first_filter.checked && !second_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#a9c1ee');
+            document.body.style.setProperty('--highlight1', '#a7c8ff');
             document.body.style.setProperty('--highlight2', 'clear');
         } else if (!first_filter.checked && second_filter.checked) {
             document.body.style.setProperty('--highlight1', 'clear');
-            document.body.style.setProperty('--highlight2', '#d9e7fc');
+            document.body.style.setProperty('--highlight2', '#c6eeff');
         } else if (first_filter.checked && second_filter.checked) {
-            document.body.style.setProperty('--highlight1', '#a9c1ee');
-            document.body.style.setProperty('--highlight2', '#d9e7fc');
+            document.body.style.setProperty('--highlight1', '#a7c8ff');
+            document.body.style.setProperty('--highlight2', '#c6eeff');
         }
     }
 
@@ -6318,7 +6295,8 @@
         let durationTimer;
 
         //calculate timer using average reading speed (of 250 wpm)
-        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2.3)) * 60 * 100;
+        // The times 2.3 is to make it faster than the average
+        durationTimer = (element.replace(/\s+/g, ' ').trim().split(" ").length / (250 * 2.7)) * 60 * 100;
 
         //give timer a maxiumum
         if (durationTimer > 3000) {
