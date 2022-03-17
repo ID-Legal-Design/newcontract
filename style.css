@@ -6,12 +6,12 @@
     --dark: #63676b;
     /*main colours website*/
     /*main colors website*/
-    --shade3: #0a369d; /*G - titels + hyperlinks*/
-    --shade1: #3080ff; /*G - main knoppen + bolletjes tijdlijn*/
-    --shade4: #0042a5; /*lichtere vlakken tijdlijn*/
-    --shade6: #4773da; /*lichtere vlakken tijdlijn - 2*/
-    --shade5: #023888; /*donkere vlakken tijdlijn*/
-    --shade7: #3f6acb; /*donkere vlakken tijdlijn - 2*/
+    --shade3: #1A237E; /*G - titels + hyperlinks*/
+    --shade1: #283593; /*G - main knoppen + bolletjes tijdlijn*/
+    --shade4: #303F9F; /*lichtere vlakken tijdlijn*/
+    --shade6: #5C6BC0; /*lichtere vlakken tijdlijn - 2*/
+    --shade5: #3F51B5; /*donkere vlakken tijdlijn*/
+    --shade7: #7986CB; /*donkere vlakken tijdlijn - 2*/
     /*placeholders for highlights index.html*/
     --highlight1: #a7c8ff;
     --highlight2: #c6eeff;
