@@ -302,6 +302,7 @@ h3 {
 checklist {
     display: inline;
     margin-top: 0em;
+    margin-left: 5px;
     font-size: 13px;
     font-weight: bold;
     text-align: left;
