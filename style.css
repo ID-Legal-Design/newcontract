@@ -535,30 +535,36 @@ highlight7 {
     top: 10px
 }
 
-.box ul:before {
+.box ul li:before {
     content: "";
     display: block;
     width: 0;
-    height: 100%;
+    height: calc(50% + 10px);
     border: 1px solid #fff;
     position: absolute;
-    top: 0;
-    left: 26px;
+    bottom: 50%;
+    left: -34px;
     background: white;
 }
 
-.box ul#first-list:before{
-    height: 79%;
-    top:19px;
+.box ul li.no-line-before:before {
+    border: 0px solid #fff;
 }
 
-.box ul#second-list:before{
-    height: 89%;
-    top:28px;
+.box ul li:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: calc(50% + 10px);
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: -34px;
+    background: white;
 }
-.box ul#third-list:before{
-    height: 90%;
-    top:18px;
+
+.box ul li.no-line-after:after {
+    border: 0px solid #fff;
 }
 
 .box ul li {
@@ -614,7 +620,7 @@ highlight7 {
     position: absolute;
     left: -7.5px;
     top: -6px;
-
+    z-index: 1;
 }
 
 .box .title {
