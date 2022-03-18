@@ -51,6 +51,7 @@
         </div>
         <div class="p-2">
             <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
+            <div id="vorige artikelen" class="btn btn-primary" onclick="updateFilter(this)"> vorig filter</div>
         </div>
     </div>
     <div id="sidepanelFilterButtons"
@@ -6152,8 +6153,8 @@
     <div class="footer">
         <div class="d-flex justify-content-around">
             <div id="footer_id" class="p">Flex item 1</div>
-         <!--   <div id="footer_session" class="p">Flex item 2</div>
-            <div id="footer_study" class="p">Flex item 3</div> -->
+            <!--   <div id="footer_session" class="p">Flex item 2</div>
+               <div id="footer_study" class="p">Flex item 3</div> -->
         </div>
     </div>
 </div>
@@ -6172,13 +6173,14 @@
     //variable used to check if sidepanel is open
     var sidepanelState = 0;
     //variables saving current and previous button value
+    var currentButton = null;
     var previousButton = null;
-    var currentButton;
     //variable used to loop through array lists
     var current_art = 0;
     //use a function to automatically update all with the written content
     var current_list = null;
-    var current_afk = null;
+
+    var art_history = new Array();
 
     //all articles IDs
     let artList = new Array();
@@ -6227,6 +6229,7 @@
     var coll = document.getElementsByClassName("collapsible");
     var k;
 
+
     for (k = 0; k < coll.length; k++) {
         coll[k].addEventListener("click", function () {
             this.classList.toggle("active");
@@ -6249,11 +6252,11 @@
         if (current_list == null) {
             current_list = [...artList];
         } else {
-            document.getElementById(current_list[current_art]).style.display = "none";
+            hideArticles();
         }
         openSidepanel();
         current_list[current_art] = artList[art_nr];
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById(artList[art_nr]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
@@ -6264,7 +6267,7 @@
     }
 
     function HyperlinkArt(art_nr) {
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         previousButton = null;
         current_list = null;
         showArt(art_nr);
@@ -6342,49 +6345,32 @@
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
+        currentButton = FilterPressed.id;
+        if (currentButton !== 'vorige artikelen') {
+            saveArticleHistory();
+        }
         stopTimer();
         document.getElementById("alle artikelen").classList.remove("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
-        currentButton = FilterPressed.id;
-
-        if (currentButton !== previousButton) {
-            hideArticles();
-            assignListToButton();
-            updateArticles();
-            startTimer(current_list[current_art]);
-            previousButton = currentButton;
-            if (current_list.length > 1) {
-                document.getElementById("nextButton").classList.remove("hidden");
-                document.getElementById("nextButton").onclick = nextArticle;
-            } else {
-                document.getElementById("nextButton").classList.add("hidden");
-                document.getElementById("nextButton").onclick = null;
-            }
-            if (sidepanelState != 1) { //if closed
-                openSidepanel();
-            }
-        } else if (currentButton == previousButton) {
-            if (sidepanelState != 1) { //if closed
-                openSidepanel();
-            }
-            if (sidepanelState == 1) {
-                if (current_art == 0) {
-                    document.getElementById("prevButton").classList.add("hidden");
-                } else {
-                    document.getElementById("prevButton").classList.remove("hidden");
-                    document.getElementById("prevButton").onclick = previousArticle;
-                }
-            }
+        hideArticles();
+        assignListToButton();
+        updateArticles();
+        startTimer(current_list[current_art]);
+        previousButton = currentButton;
+        showNavigationButton();
+        if (sidepanelState != 1) { //if closed
+            openSidepanel();
         }
     }
 
     function clearFilter(FilterPressed) {
+        saveArticleHistory();
+        stopTimer();
         j = getArticleNumberFromDivID(current_list[current_art]);
         updateFilter(FilterPressed);
-        stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
-        current_art = j - 1
+        hideArticles();
+        current_art = j - 1;
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
@@ -6393,6 +6379,25 @@
         startTimer(current_list[current_art]);
         document.getElementById("alle artikelen").classList.add("hidden");
     }
+
+    function showNavigationButton() {
+        if (current_list.length > 1) {
+            document.getElementById("nextButton").classList.remove("hidden");
+            document.getElementById("nextButton").onclick = nextArticle;
+        } else {
+            document.getElementById("nextButton").classList.add("hidden");
+            document.getElementById("nextButton").onclick = null;
+        }
+        if (sidepanelState == 1) {
+            if (current_art == 0) {
+                document.getElementById("prevButton").classList.add("hidden");
+            } else {
+                document.getElementById("prevButton").classList.remove("hidden");
+                document.getElementById("prevButton").onclick = previousArticle;
+            }
+        }
+    }
+
 
     //show and hide sideview elements
     function openSidepanel() {
@@ -6410,6 +6415,13 @@
         sidepanelState = 0;
     }
 
+    function saveArticleHistory() {
+        const save_state = {"list": current_list, "art": current_art};
+        art_history.push(save_state);
+        console.log("history size: " + art_history.length);
+        checkHistory();
+    }
+
     //Hide article, if there is something to hide
     function hideArticles() {
         if (current_list != null) {
@@ -6418,7 +6430,6 @@
     }
 
     function updateArticles() {
-        current_art = 0;
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         document.getElementById("current_filter").innerHTML = currentButton;
@@ -6429,7 +6440,7 @@
 
     function nextArticle() {
         stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (current_art + 2) + " / " + current_list.length;
@@ -6448,7 +6459,7 @@
 
     function previousArticle() {
         stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById("nextButton").classList.remove("hidden");
         document.getElementById("nextButton").onclick = nextArticle;
         document.getElementById("articles_shown").innerHTML = current_art + " / " + current_list.length;
@@ -6472,46 +6483,80 @@
             current_list = artList;
         } else if (currentButton == 'highlights') {
             current_list = higList;
+            current_art = 0;
         } else if (currentButton == 'checkList') {
             current_list = checkList;
+            current_art = 0;
         }
         //let op
         else if (currentButton == 'tarieven en betalingen') {
             current_list = tarList;
+            current_art = 0;
         } else if (currentButton == 'persoonlijke gegevens') {
             current_list = perList;
+            current_art = 0;
         } else if (currentButton == 'conflicten') {
             current_list = conList;
+            current_art = 0;
         }
         //vaste gebeurtenissen
         else if (currentButton == 'aansluiting') {
             current_list = aanList;
+            current_art = 0;
         } else if (currentButton == 'start overeenkomst') {
             current_list = staList;
+            current_art = 0;
         } else if (currentButton == 'bedenktijd') {
             current_list = bedList;
+            current_art = 0;
         } else if (currentButton == 'jaarnota') {
             current_list = jaaList;
+            current_art = 0;
         } else if (currentButton == 'storing en schade') {
             current_list = stoList;
+            current_art = 0;
         } else if (currentButton == 'wijzigingen') {
             current_list = wijList;
+            current_art = 0;
         } else if (currentButton == 'einde overeenkomst') {
             current_list = einList;
+            current_art = 0;
         }
         //wat als
         else if (currentButton == 'rekeningen') {
             current_list = rekList;
+            current_art = 0;
         } else if (currentButton == 'klachten') {
             current_list = klaList;
+            current_art = 0;
         } else if (currentButton == 'meter en onderzoek') {
             current_list = metList;
+            current_art = 0;
         } else if (currentButton == 'schade') {
             current_list = schList;
+            current_art = 0;
         } else if (currentButton == 'verhuizen') {
             current_list = verList;
+            current_art = 0;
         } else if (currentButton == 'elektriciteit opwekken') {
             current_list = eleList;
+            current_art = 0;
+        }
+        //other
+        if (currentButton == 'vorige artikelen') {
+            const previous_view = art_history.pop();
+            checkHistory();
+            console.log("ga naar: " + previous_view.list + " - pagnia: " + previous_view.art);
+            current_list = previous_view.list;
+            current_art = previous_view.art;
+        }
+    }
+
+    function checkHistory() {
+        if (art_history.length <= 1) {
+            document.getElementById("vorige artikelen").classList.add("hidden");
+        } else {
+            document.getElementById("vorige artikelen").classList.remove("hidden");
         }
     }
 
