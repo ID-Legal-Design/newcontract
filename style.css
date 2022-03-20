@@ -243,6 +243,10 @@ p {
     pointer-events: none !important;
 }
 
+.disabled{
+
+}
+
 button.link {
     background: none;
     border: none;

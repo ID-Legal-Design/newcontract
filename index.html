@@ -50,8 +50,10 @@
             <div id="current_filter" class="filterbox2 flex-item"></div>
         </div>
         <div class="p-2">
-            <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
-            <div id="vorige artikelen" class="btn btn-primary" onclick="updateFilter(this)"> vorig filter</div>
+            <button id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> alle artikelen </button>
+            <button id="vorige categorie" class="btn btn-primary" onclick="updateFilter(this)">
+                vorige categorie
+            </button>
         </div>
     </div>
     <div id="sidepanelFilterButtons"
@@ -6246,7 +6248,9 @@
     function showArt(art_nr) {
         console.log(current_list);
         stopTimer();
-        document.getElementById("alle artikelen").classList.remove("hidden");
+        document.getElementById("alle artikelen").style.opacity = "100%";
+        document.getElementById("alle artikelen").style.cursor = "pointer";
+        document.getElementById("alle artikelen").disabled = false;
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
@@ -6346,11 +6350,13 @@
     //Based on button press update side view
     function updateFilter(FilterPressed) {
         currentButton = FilterPressed.id;
-        if (currentButton !== 'vorige artikelen') {
+        if (currentButton !== 'vorige categorie') {
             saveArticleHistory();
         }
         stopTimer();
-        document.getElementById("alle artikelen").classList.remove("hidden");
+        document.getElementById("alle artikelen").style.opacity = "100%";
+        document.getElementById("alle artikelen").style.cursor = "pointer";
+        document.getElementById("alle artikelen").disabled = false;
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
         hideArticles();
@@ -6377,7 +6383,9 @@
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
-        document.getElementById("alle artikelen").classList.add("hidden");
+        document.getElementById("alle artikelen").style.opacity = "20%";
+        document.getElementById("alle artikelen").style.cursor = "default";
+        document.getElementById("alle artikelen").disabled = true;
     }
 
     function showNavigationButton() {
@@ -6432,7 +6440,6 @@
     function updateArticles() {
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
-        document.getElementById("current_filter").innerHTML = currentButton;
         document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
         checkFilters(current_list[current_art]);
         calculateArticlesContainerHeight();
@@ -6478,7 +6485,7 @@
 
     //connects each button to its own list by updating current_list
     function assignListToButton() {
-        //overige lijsten
+        document.getElementById("current_filter").innerHTML = currentButton;
         if (currentButton == 'alle artikelen') {
             current_list = artList;
         } else if (currentButton == 'highlights') {
@@ -6543,20 +6550,63 @@
             current_art = 0;
         }
         //other
-        if (currentButton == 'vorige artikelen') {
+        if (currentButton == 'vorige categorie') {
             const previous_view = art_history.pop();
+            previous_view.list.length
             checkHistory();
-            console.log("ga naar: " + previous_view.list + " - pagnia: " + previous_view.art);
             current_list = previous_view.list;
             current_art = previous_view.art;
+            let reference_list =  previous_view.list[0].slice(0,3);
+            console.log(reference_list);
+            if(reference_list == 'art'){
+                document.getElementById("current_filter").innerHTML = 'alle artikelen';
+            } else if(reference_list == 'hig'){
+                document.getElementById("current_filter").innerHTML = 'highlights';
+            } else if(reference_list == 'tar'){
+                document.getElementById("current_filter").innerHTML = 'tarieven en betalingen';
+            } else if(reference_list == 'per'){
+                document.getElementById("current_filter").innerHTML = 'persoonlijke gegevens';
+            } else if(reference_list == 'con'){
+                document.getElementById("current_filter").innerHTML = 'conflicten';
+            } else if(reference_list == 'aan'){
+                document.getElementById("current_filter").innerHTML = 'aansluiting';
+            } else if(reference_list == 'sta'){
+                document.getElementById("current_filter").innerHTML = 'start overeenkomst';
+            } else if(reference_list == 'bed'){
+                document.getElementById("current_filter").innerHTML = 'bedenktijd';
+            } else if(reference_list == 'jaa'){
+                document.getElementById("current_filter").innerHTML = 'jaarnota';
+            } else if(reference_list == 'sto'){
+                document.getElementById("current_filter").innerHTML = 'storing en schade';
+            } else if(reference_list == 'wij'){
+                document.getElementById("current_filter").innerHTML = 'wijzigingen';
+            }else if(reference_list == 'ein'){
+                document.getElementById("current_filter").innerHTML = 'einde overeenkomst';
+            }else if(reference_list == 'rek'){
+                document.getElementById("current_filter").innerHTML = 'rekeningen';
+            }else if(reference_list == 'kla'){
+                document.getElementById("current_filter").innerHTML = 'klachten';
+            }else if(reference_list == 'met'){
+                document.getElementById("current_filter").innerHTML = 'meter en onderzoek';
+            }else if(reference_list == 'sch'){
+                document.getElementById("current_filter").innerHTML = 'schade';
+            }else if(reference_list == 'ver'){
+                document.getElementById("current_filter").innerHTML = 'verhuizen';
+            }else if(reference_list == 'ele'){
+                document.getElementById("current_filter").innerHTML = 'elektriciteit opwekken';
+            }
         }
     }
 
     function checkHistory() {
         if (art_history.length <= 1) {
-            document.getElementById("vorige artikelen").classList.add("hidden");
+            document.getElementById("vorige categorie").style.opacity = "20%";
+            document.getElementById("vorige categorie").style.cursor = "default";
+            document.getElementById("vorige categorie").disabled = true;
         } else {
-            document.getElementById("vorige artikelen").classList.remove("hidden");
+            document.getElementById("vorige categorie").style.opacity = "100%";
+            document.getElementById("vorige categorie").style.cursor = "pointer";
+            document.getElementById("vorige categorie").disabled = false;
         }
     }
 
