@@ -50,7 +50,10 @@
             <div id="current_filter" class="filterbox2 flex-item"></div>
         </div>
         <div class="p-2">
-            <div id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> verwijder filter</div>
+            <button id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> alle artikelen </button>
+            <button id="vorige categorie" class="btn btn-primary" onclick="updateFilter(this)">
+                vorige categorie
+            </button>
         </div>
     </div>
     <div id="sidepanelFilterButtons"
@@ -5747,7 +5750,7 @@
                     <div class="box">
                         <h1 class="list-title"> Let op ... </h1>
                         <ul id="first-list">
-                            <li>
+                            <li class="no-line-before">
                             <span>
                             </span>
                                 <div class="showhover" id="tarieven en betalingen" onclick="updateFilter(this);">
@@ -5770,7 +5773,7 @@
                                     <div class="title">Persoonlijke gegevens</div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="no-line-after">
                             <span>
                             </span>
                                 <div class="showhover" id="conflicten" onclick="updateFilter(this);">
@@ -5788,7 +5791,7 @@
                     <div class="box">
                         <h1 class="list-title">Van Begin tot Eind</h1>
                         <ul id="second-list">
-                            <li class="second-block">
+                            <li class="second-block no-line-before">
                             <span>
                             </span>
                                 <div class="showhover" id="aansluiting" onclick="updateFilter(this);">
@@ -5869,7 +5872,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="second-block">
+                            <li class="second-block no-line-after">
                             <span>
                             </span>
                                 <div class="showhover" id="einde overeenkomst" onclick="updateFilter(this);">
@@ -5892,7 +5895,7 @@
                     <div class="box">
                         <h1 class="list-title">Wat als ... </h1>
                         <ul id="third-list">
-                            <li>
+                            <li class="no-line-before">
                             <span>
                             </span>
                                 <div class="showhover" id="rekeningen" onclick="updateFilter(this);">
@@ -5950,7 +5953,7 @@
                                     <div class="title">U gaat verhuizen?</div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="no-line-after">
                             <span>
                             </span>
                                 <div class="showhover" id="elektriciteit opwekken" onclick="updateFilter(this);">
@@ -5980,161 +5983,161 @@
                         <div>
                             <input class="showhover" type="checkbox" id="check1" onclick="updateChecklist(this, 0)">
                             <checklist class="showhover" onclick="showArt(0);">
-                                Waarvoor zijn deze voorwaarden?
+                                1. Waarvoor zijn deze voorwaarden?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check2" onclick="updateChecklist(this, 1)">
                             <checklist class="showhover" onclick="showArt(1);">
-                                Onze overeenkomst
+                                2. Onze overeenkomst
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check3" onclick="updateChecklist(this, 2)">
                             <checklist class="showhover" onclick="showArt(2);">
-                                U heeft een aansluiting op het elektriciteitsnet en/of het gasnet
+                                3. U heeft een aansluiting op het elektriciteitsnet en/of het gasnet
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check4" onclick="updateChecklist(this, 3)">
                             <checklist class="showhover" onclick="showArt(3);">
-                                Wekt u ook zelf elektriciteit op?
+                                4. Wekt u ook zelf elektriciteit op?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check5" onclick="updateChecklist(this, 4)">
                             <checklist class="showhover" onclick="showArt(4);">
-                                Wat doen wij als wij met u een overeenkomst hebben?
+                                5. Wat doen wij als wij met u een overeenkomst hebben?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check6" onclick="updateChecklist(this, 5)">
                             <checklist class="showhover" onclick="showArt(5);">
-                                Wat doen wij als er een storing is op het elektriciteitsnet of gasnet?
+                                6. Wat doen wij als er een storing is op het elektriciteitsnet of gasnet?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check7" onclick="updateChecklist(this, 6)">
                             <checklist class="showhover" onclick="showArt(6);">
-                                Wat doen wij als u zich niet aan de voorwaarden houdt?
+                                7. Wat doen wij als u zich niet aan de voorwaarden houdt?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check8" onclick="updateChecklist(this, 7)">
                             <checklist class="showhover" onclick="showArt(7);">
-                                Welke informatie krijgen wij van u?
+                                8. Welke informatie krijgen wij van u?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check9" onclick="updateChecklist(this, 8)">
                             <checklist class="showhover" onclick="showArt(8);">
-                                De elektriciteitsmeter en de gasmeter
+                                9. De elektriciteitsmeter en de gasmeter
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check10" onclick="updateChecklist(this, 9)">
                             <checklist class="showhover" onclick="showArt(9);">
-                                Onderzoek van de elektriciteitsmeter en/ of de gasmeter en/of de meting
+                                10. Onderzoek van de elektriciteitsmeter en/ of de gasmeter en/of de meting
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check11" onclick="updateChecklist(this, 10)">
                             <checklist class="showhover" onclick="showArt(10);">
-                                Leveringstarieven voor elektriciteit en/of gas
+                                11. Leveringstarieven voor elektriciteit en/of gas
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check12" onclick="updateChecklist(this, 11)">
                             <checklist class="showhover" onclick="showArt(11);">
-                                U betaalt voor elektriciteit en/of gas
+                                12. U betaalt voor elektriciteit en/of gas
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check13" onclick="updateChecklist(this, 12)">
                             <checklist class="showhover" onclick="showArt(12);">
-                                Niet eens met een jaarnota of eindnota?
+                                13. Niet eens met een jaarnota of eindnota?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check14" onclick="updateChecklist(this, 13)">
                             <checklist class="showhover" onclick="showArt(13);">
-                                Verjaring van vorderingen
+                                14. Verjaring van vorderingen
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check15" onclick="updateChecklist(this, 14)">
                             <checklist class="showhover" onclick="showArt(14);">
-                                Zekerheden vragen
+                                15. Zekerheden vragen
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check16" onclick="updateChecklist(this, 15)">
                             <checklist class="showhover" onclick="showArt(15);">
-                                Wat doen wij met uw persoonlijke gegevens?
+                                16. Wat doen wij met uw persoonlijke gegevens?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check17" onclick="updateChecklist(this, 16)">
                             <checklist class="showhover" onclick="showArt(16);">
-                                Heeft u schade?
+                                17. Heeft u schade?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check18" onclick="updateChecklist(this, 17)">
                             <checklist class="showhover" onclick="showArt(17);">
-                                Heeft u een klacht?
+                                18. Heeft u een klacht?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check19" onclick="updateChecklist(this, 18)">
                             <checklist class="showhover" onclick="showArt(18);">
-                                Mogen wij deze voorwaarden en onze leveringstarieven veranderen?
+                                19. Mogen wij deze voorwaarden en onze leveringstarieven veranderen?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check20" onclick="updateChecklist(this, 19)">
                             <checklist class="showhover" onclick="showArt(19);">
-                                Wat gebeurt er als u verhuist?
+                                20. Wat gebeurt er als u verhuist?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check21" onclick="updateChecklist(this, 20)">
                             <checklist class="showhover" onclick="showArt(20);">
-                                Hoe lang duurt onze overeenkomst?
+                                21. Hoe lang duurt onze overeenkomst?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check22" onclick="updateChecklist(this, 21)">
                             <checklist class="showhover" onclick="showArt(21);">
-                                Wat gebeurt als onze overeenkomst eindigt?
+                                22. Wat gebeurt als onze overeenkomst eindigt?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
                         <div>
                             <input class="showhover" type="checkbox" id="check23" onclick="updateChecklist(this, 22)">
                             <checklist class="showhover" onclick="showArt(22);">
-                                Vanaf wanneer gelden deze voorwaarden?
+                                23. Vanaf wanneer gelden deze voorwaarden?
                                 <a><img src="assets/button%20checklist.png" width=15px height=15px></a><br>
                             </checklist>
                         </div>
@@ -6152,8 +6155,8 @@
     <div class="footer">
         <div class="d-flex justify-content-around">
             <div id="footer_id" class="p">Flex item 1</div>
-         <!--   <div id="footer_session" class="p">Flex item 2</div>
-            <div id="footer_study" class="p">Flex item 3</div> -->
+            <!--   <div id="footer_session" class="p">Flex item 2</div>
+               <div id="footer_study" class="p">Flex item 3</div> -->
         </div>
     </div>
 </div>
@@ -6172,13 +6175,14 @@
     //variable used to check if sidepanel is open
     var sidepanelState = 0;
     //variables saving current and previous button value
+    var currentButton = null;
     var previousButton = null;
-    var currentButton;
     //variable used to loop through array lists
     var current_art = 0;
     //use a function to automatically update all with the written content
     var current_list = null;
-    var current_afk = null;
+
+    var art_history = new Array();
 
     //all articles IDs
     let artList = new Array();
@@ -6227,6 +6231,7 @@
     var coll = document.getElementsByClassName("collapsible");
     var k;
 
+
     for (k = 0; k < coll.length; k++) {
         coll[k].addEventListener("click", function () {
             this.classList.toggle("active");
@@ -6243,17 +6248,19 @@
     function showArt(art_nr) {
         console.log(current_list);
         stopTimer();
-        document.getElementById("alle artikelen").classList.remove("hidden");
+        document.getElementById("alle artikelen").style.opacity = "100%";
+        document.getElementById("alle artikelen").style.cursor = "pointer";
+        document.getElementById("alle artikelen").disabled = false;
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
             current_list = [...artList];
         } else {
-            document.getElementById(current_list[current_art]).style.display = "none";
+            hideArticles();
         }
         openSidepanel();
         current_list[current_art] = artList[art_nr];
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById(artList[art_nr]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         document.getElementById("current_filter").textContent = "Artikel " + (art_nr + 1);
@@ -6264,7 +6271,7 @@
     }
 
     function HyperlinkArt(art_nr) {
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         previousButton = null;
         current_list = null;
         showArt(art_nr);
@@ -6342,57 +6349,63 @@
 
     //Based on button press update side view
     function updateFilter(FilterPressed) {
+        currentButton = FilterPressed.id;
+        if (currentButton !== 'vorige categorie') {
+            saveArticleHistory();
+        }
         stopTimer();
-        document.getElementById("alle artikelen").classList.remove("hidden");
+        document.getElementById("alle artikelen").style.opacity = "100%";
+        document.getElementById("alle artikelen").style.cursor = "pointer";
+        document.getElementById("alle artikelen").disabled = false;
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
-        currentButton = FilterPressed.id;
-
-        if (currentButton !== previousButton) {
-            hideArticles();
-            assignListToButton();
-            updateArticles();
-            startTimer(current_list[current_art]);
-            previousButton = currentButton;
-            if (current_list.length > 1) {
-                document.getElementById("nextButton").classList.remove("hidden");
-                document.getElementById("nextButton").onclick = nextArticle;
-            } else {
-                document.getElementById("nextButton").classList.add("hidden");
-                document.getElementById("nextButton").onclick = null;
-            }
-            if (sidepanelState != 1) { //if closed
-                openSidepanel();
-            }
-        } else if (currentButton == previousButton) {
-            if (sidepanelState != 1) { //if closed
-                openSidepanel();
-            }
-            if (sidepanelState == 1) {
-                if (current_art == 0) {
-                    document.getElementById("prevButton").classList.add("hidden");
-                } else {
-                    document.getElementById("prevButton").classList.remove("hidden");
-                    document.getElementById("prevButton").onclick = previousArticle;
-                }
-            }
+        hideArticles();
+        assignListToButton();
+        updateArticles();
+        startTimer(current_list[current_art]);
+        previousButton = currentButton;
+        showNavigationButton();
+        if (sidepanelState != 1) { //if closed
+            openSidepanel();
         }
     }
 
     function clearFilter(FilterPressed) {
+        saveArticleHistory();
+        stopTimer();
         j = getArticleNumberFromDivID(current_list[current_art]);
         updateFilter(FilterPressed);
-        stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
-        current_art = j - 1
+        hideArticles();
+        current_art = j - 1;
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
-        document.getElementById("alle artikelen").classList.add("hidden");
+        document.getElementById("alle artikelen").style.opacity = "20%";
+        document.getElementById("alle artikelen").style.cursor = "default";
+        document.getElementById("alle artikelen").disabled = true;
     }
+
+    function showNavigationButton() {
+        if (current_list.length > 1) {
+            document.getElementById("nextButton").classList.remove("hidden");
+            document.getElementById("nextButton").onclick = nextArticle;
+        } else {
+            document.getElementById("nextButton").classList.add("hidden");
+            document.getElementById("nextButton").onclick = null;
+        }
+        if (sidepanelState == 1) {
+            if (current_art == 0) {
+                document.getElementById("prevButton").classList.add("hidden");
+            } else {
+                document.getElementById("prevButton").classList.remove("hidden");
+                document.getElementById("prevButton").onclick = previousArticle;
+            }
+        }
+    }
+
 
     //show and hide sideview elements
     function openSidepanel() {
@@ -6410,6 +6423,13 @@
         sidepanelState = 0;
     }
 
+    function saveArticleHistory() {
+        const save_state = {"list": current_list, "art": current_art};
+        art_history.push(save_state);
+        console.log("history size: " + art_history.length);
+        checkHistory();
+    }
+
     //Hide article, if there is something to hide
     function hideArticles() {
         if (current_list != null) {
@@ -6418,10 +6438,8 @@
     }
 
     function updateArticles() {
-        current_art = 0;
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
-        document.getElementById("current_filter").innerHTML = currentButton;
         document.getElementById("articles_shown").innerHTML = (current_art + 1) + " / " + current_list.length;
         checkFilters(current_list[current_art]);
         calculateArticlesContainerHeight();
@@ -6429,7 +6447,7 @@
 
     function nextArticle() {
         stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById("prevButton").classList.remove("hidden");
         document.getElementById("prevButton").onclick = previousArticle;
         document.getElementById("articles_shown").innerHTML = (current_art + 2) + " / " + current_list.length;
@@ -6448,7 +6466,7 @@
 
     function previousArticle() {
         stopTimer();
-        document.getElementById(current_list[current_art]).style.display = "none";
+        hideArticles();
         document.getElementById("nextButton").classList.remove("hidden");
         document.getElementById("nextButton").onclick = nextArticle;
         document.getElementById("articles_shown").innerHTML = current_art + " / " + current_list.length;
@@ -6467,51 +6485,128 @@
 
     //connects each button to its own list by updating current_list
     function assignListToButton() {
-        //overige lijsten
+        document.getElementById("current_filter").innerHTML = currentButton;
         if (currentButton == 'alle artikelen') {
             current_list = artList;
         } else if (currentButton == 'highlights') {
             current_list = higList;
+            current_art = 0;
         } else if (currentButton == 'checkList') {
             current_list = checkList;
+            current_art = 0;
         }
         //let op
         else if (currentButton == 'tarieven en betalingen') {
             current_list = tarList;
+            current_art = 0;
         } else if (currentButton == 'persoonlijke gegevens') {
             current_list = perList;
+            current_art = 0;
         } else if (currentButton == 'conflicten') {
             current_list = conList;
+            current_art = 0;
         }
         //vaste gebeurtenissen
         else if (currentButton == 'aansluiting') {
             current_list = aanList;
+            current_art = 0;
         } else if (currentButton == 'start overeenkomst') {
             current_list = staList;
+            current_art = 0;
         } else if (currentButton == 'bedenktijd') {
             current_list = bedList;
+            current_art = 0;
         } else if (currentButton == 'jaarnota') {
             current_list = jaaList;
+            current_art = 0;
         } else if (currentButton == 'storing en schade') {
             current_list = stoList;
+            current_art = 0;
         } else if (currentButton == 'wijzigingen') {
             current_list = wijList;
+            current_art = 0;
         } else if (currentButton == 'einde overeenkomst') {
             current_list = einList;
+            current_art = 0;
         }
         //wat als
         else if (currentButton == 'rekeningen') {
             current_list = rekList;
+            current_art = 0;
         } else if (currentButton == 'klachten') {
             current_list = klaList;
+            current_art = 0;
         } else if (currentButton == 'meter en onderzoek') {
             current_list = metList;
+            current_art = 0;
         } else if (currentButton == 'schade') {
             current_list = schList;
+            current_art = 0;
         } else if (currentButton == 'verhuizen') {
             current_list = verList;
+            current_art = 0;
         } else if (currentButton == 'elektriciteit opwekken') {
             current_list = eleList;
+            current_art = 0;
+        }
+        //other
+        if (currentButton == 'vorige categorie') {
+            const previous_view = art_history.pop();
+            previous_view.list.length
+            checkHistory();
+            current_list = previous_view.list;
+            current_art = previous_view.art;
+            let reference_list =  previous_view.list[0].slice(0,3);
+            console.log(reference_list);
+            if(reference_list == 'art'){
+                document.getElementById("current_filter").innerHTML = 'alle artikelen';
+            } else if(reference_list == 'hig'){
+                document.getElementById("current_filter").innerHTML = 'highlights';
+            } else if(reference_list == 'tar'){
+                document.getElementById("current_filter").innerHTML = 'tarieven en betalingen';
+            } else if(reference_list == 'per'){
+                document.getElementById("current_filter").innerHTML = 'persoonlijke gegevens';
+            } else if(reference_list == 'con'){
+                document.getElementById("current_filter").innerHTML = 'conflicten';
+            } else if(reference_list == 'aan'){
+                document.getElementById("current_filter").innerHTML = 'aansluiting';
+            } else if(reference_list == 'sta'){
+                document.getElementById("current_filter").innerHTML = 'start overeenkomst';
+            } else if(reference_list == 'bed'){
+                document.getElementById("current_filter").innerHTML = 'bedenktijd';
+            } else if(reference_list == 'jaa'){
+                document.getElementById("current_filter").innerHTML = 'jaarnota';
+            } else if(reference_list == 'sto'){
+                document.getElementById("current_filter").innerHTML = 'storing en schade';
+            } else if(reference_list == 'wij'){
+                document.getElementById("current_filter").innerHTML = 'wijzigingen';
+            }else if(reference_list == 'ein'){
+                document.getElementById("current_filter").innerHTML = 'einde overeenkomst';
+            }else if(reference_list == 'rek'){
+                document.getElementById("current_filter").innerHTML = 'rekeningen';
+            }else if(reference_list == 'kla'){
+                document.getElementById("current_filter").innerHTML = 'klachten';
+            }else if(reference_list == 'met'){
+                document.getElementById("current_filter").innerHTML = 'meter en onderzoek';
+            }else if(reference_list == 'sch'){
+                document.getElementById("current_filter").innerHTML = 'schade';
+            }else if(reference_list == 'ver'){
+                document.getElementById("current_filter").innerHTML = 'verhuizen';
+            }else if(reference_list == 'ele'){
+                document.getElementById("current_filter").innerHTML = 'elektriciteit opwekken';
+            }
+        }
+    }
+
+    function checkHistory() {
+        if (art_history.length <= 1) {
+            document.getElementById("vorige categorie").style.opacity = "20%";
+            document.getElementById("vorige categorie").style.cursor = "default";
+            document.getElementById("vorige categorie").disabled = true;
+        } else {
+            document.getElementById("vorige categorie").style.opacity = "100%";
+            document.getElementById("vorige categorie").style.cursor = "pointer";
+            document.getElementById("vorige categorie").disabled = false;
         }
     }
 
