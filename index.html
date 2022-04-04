@@ -61,7 +61,7 @@
             <div id="current_filter" class="filterbox2 flex-item"></div>
         </div>
         <div class="p-2">
-            <button id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> alle artikelen </button>
+            <button id="alle_artikelen" class="btn btn-primary" onclick="clearFilter(this);"> alle artikelen </button>
             <button id="vorige_categorie" class="btn btn-primary no-click" onclick="go_Back()">
                 vorige categorie
             </button>
@@ -4728,7 +4728,7 @@
                             <li class="no-line-before">
                             <span>
                             </span>
-                                <div class="showhover" id="tarieven en betalingen" onclick="updateFilter(this);">
+                                <div class="showhover" id="tarieven_en_betalingen" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4740,7 +4740,7 @@
 
                             <span>
                             </span>
-                                <div class="showhover" id="persoonlijke gegevens" onclick="updateFilter(this);">
+                                <div class="showhover" id="persoonlijke_gegevens" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4785,7 +4785,7 @@
                                 </div>
                                 <span>
                             </span>
-                                <div class="showhover" id="start overeenkomst" onclick="updateFilter(this);">
+                                <div class="showhover" id="start_overeenkomst" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4824,7 +4824,7 @@
                             <li class="second-block">
                             <span>
                             </span>
-                                <div class="showhover" id="storing en schade" onclick="updateFilter(this);">
+                                <div class="showhover" id="storing_en_schade" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4850,7 +4850,7 @@
                             <li class="second-block no-line-after">
                             <span>
                             </span>
-                                <div class="showhover" id="einde overeenkomst" onclick="updateFilter(this);">
+                                <div class="showhover" id="einde_overeenkomst" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4898,7 +4898,7 @@
 
                             <span>
                             </span>
-                                <div class="showhover" id="meter en onderzoek" onclick="updateFilter(this);">
+                                <div class="showhover" id="meter_en_onderzoek" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -4931,7 +4931,7 @@
                             <li class="no-line-after">
                             <span>
                             </span>
-                                <div class="showhover" id="elektriciteit opwekken" onclick="updateFilter(this);">
+                                <div class="showhover" id="elektriciteit_opwekken" onclick="updateFilter(this);">
                                     <div style="float: right; bottom: 0;">
                                         <div class="btn-panel"><a><img
                                                 src="assets/button%20tijdlijn.png" width=25px height=25px></a></div>
@@ -5120,7 +5120,7 @@
                 </div>
                 <br>
                 <a id="checkList" class="btn btn-primary"
-                   onclick="updateFilter(document.getElementById('alle artikelen'));checklistUnchecked();updateFilter(this)">Ongelezen
+                   onclick="updateFilter(document.getElementById('alle_artikelen'));checklistUnchecked();updateFilter(this)">Ongelezen
                     artikelen openen</a>
                 <!--                <a id="highlights" class="btn btn-primary" onclick="updateFilter(this)"> open highlights </a>-->
             </div>
@@ -5225,9 +5225,9 @@
     //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
         stopTimer();
-        document.getElementById("alle artikelen").style.opacity = "100%";
-        document.getElementById("alle artikelen").style.cursor = "pointer";
-        document.getElementById("alle artikelen").disabled = false;
+        document.getElementById("alle_artikelen").style.opacity = "100%";
+        document.getElementById("alle_artikelen").style.cursor = "pointer";
+        document.getElementById("alle_artikelen").disabled = false;
         document.getElementById("nextButton").classList.add("hidden");
         document.getElementById("prevButton").classList.add("hidden");
         if (current_list == null) {
@@ -5329,9 +5329,9 @@
         if (currentButton !== 'vorige categorie') {
         }
         stopTimer();
-        document.getElementById("alle artikelen").style.opacity = "100%";
-        document.getElementById("alle artikelen").style.cursor = "pointer";
-        document.getElementById("alle artikelen").disabled = false;
+        document.getElementById("alle_artikelen").style.opacity = "100%";
+        document.getElementById("alle_artikelen").style.cursor = "pointer";
+        document.getElementById("alle_artikelen").disabled = false;
         document.getElementById("prevButton").classList.add("hidden");
         document.getElementById("prevButton").onclick = null;
         hideArticles();
@@ -5343,7 +5343,7 @@
         if (sidepanelState != 1) { //if closed
             openSidepanel();
         }
-        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
+        window.history.pushState("object or string", "Title", "/" + currentButton + "_Artikel_" +  + getArticleNumberFromDivID(current_list[current_art]));
         art_history.push(FilterPressed);
         console.log(art_history);
         if( art_history.length > 1 ) {
@@ -5412,10 +5412,10 @@
         document.getElementById(current_list[current_art]).style.display = "block";
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
-        document.getElementById("alle artikelen").style.opacity = "20%";
-        document.getElementById("alle artikelen").style.cursor = "default";
-        document.getElementById("alle artikelen").disabled = true;
-        window.history.pushState("object or string", "Title", "");
+        document.getElementById("alle_artikelen").style.opacity = "20%";
+        document.getElementById("alle_artikelen").style.cursor = "default";
+        document.getElementById("alle_artikelen").disabled = true;
+        window.history.pushState("object or string", "Title", "/" + currentButton + "_Artikel_" +  + getArticleNumberFromDivID(current_list[current_art]));
     }
 
     function showNavigationButton() {
@@ -5451,6 +5451,7 @@
         document.getElementById("mainContent").style.width = "70%";
         document.getElementById("sideview").style.display = "none";
         sidepanelState = 0;
+        window.history.pushState("object or string", "Title", "/");
     }
 
     function go_Back () {
@@ -5510,7 +5511,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
         checkFilters(current_list[current_art]);
-        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
+        window.history.pushState("object or string", "Title", "/" + currentButton + "_Artikel_" +  + getArticleNumberFromDivID(current_list[current_art]));
     }
 
     function previousArticle() {
@@ -5530,13 +5531,13 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
         checkFilters(current_list[current_art]);
-        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
+        window.history.pushState("object or string", "Title", "/" + currentButton + "_Artikel_" +  + getArticleNumberFromDivID(current_list[current_art]));
     }
 
     //connects each button to its own list by updating current_list
     function assignListToButton() {
         document.getElementById("current_filter").innerHTML = currentButton;
-        if (currentButton == 'alle artikelen') {
+        if (currentButton == 'alle_artikelen') {
             current_list = artList;
         } else if (currentButton == 'highlights') {
             current_list = higList;
@@ -5546,10 +5547,10 @@
             current_art = 0;
         }
         //let op
-        else if (currentButton == 'tarieven en betalingen') {
+        else if (currentButton == 'tarieven_en_betalingen') {
             current_list = tarList;
             current_art = 0;
-        } else if (currentButton == 'persoonlijke gegevens') {
+        } else if (currentButton == 'persoonlijke_gegevens') {
             current_list = perList;
             current_art = 0;
         } else if (currentButton == 'conflicten') {
@@ -5560,7 +5561,7 @@
         else if (currentButton == 'aansluiting') {
             current_list = aanList;
             current_art = 0;
-        } else if (currentButton == 'start overeenkomst') {
+        } else if (currentButton == 'start_overeenkomst') {
             current_list = staList;
             current_art = 0;
         } else if (currentButton == 'bedenktijd') {
@@ -5569,13 +5570,13 @@
         } else if (currentButton == 'jaarnota') {
             current_list = jaaList;
             current_art = 0;
-        } else if (currentButton == 'storing en schade') {
+        } else if (currentButton == 'storing_en_schade') {
             current_list = stoList;
             current_art = 0;
         } else if (currentButton == 'wijzigingen') {
             current_list = wijList;
             current_art = 0;
-        } else if (currentButton == 'einde overeenkomst') {
+        } else if (currentButton == 'einde_overeenkomst') {
             current_list = einList;
             current_art = 0;
         }
@@ -5586,7 +5587,7 @@
         } else if (currentButton == 'klachten') {
             current_list = klaList;
             current_art = 0;
-        } else if (currentButton == 'meter en onderzoek') {
+        } else if (currentButton == 'meter_en_onderzoek') {
             current_list = metList;
             current_art = 0;
         } else if (currentButton == 'schade') {
@@ -5595,7 +5596,7 @@
         } else if (currentButton == 'verhuizen') {
             current_list = verList;
             current_art = 0;
-        } else if (currentButton == 'elektriciteit opwekken') {
+        } else if (currentButton == 'elektriciteit_opwekken') {
             current_list = eleList;
             current_art = 0;
         }
