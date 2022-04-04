@@ -62,7 +62,7 @@
         </div>
         <div class="p-2">
             <button id="alle artikelen" class="btn btn-primary" onclick="clearFilter(this);"> alle artikelen </button>
-            <button id="vorige categorie" class="btn btn-primary" onclick="updateFilter(this)">
+            <button id="vorige_categorie" class="btn btn-primary no-click" onclick="go_Back()">
                 vorige categorie
             </button>
         </div>
@@ -241,7 +241,7 @@
                         <highlight>Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een
                             overeenkomst niet weigeren. Wel mogen wij uw betalingsgedrag onderzoeken. Ook mogen wij u
                             zekerheden vragen, lees hiervoor
-                            <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                            <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                             van deze voorwaarden. Beiden mogen wij doen tot
                             het moment dat wij elektriciteit en/of gas gaan leveren. Wij mogen in deze periode besluiten
                             dat wij u geen andere overeenkomst aanbieden.
@@ -449,7 +449,7 @@
                                 <li>
                                     <highlight>Dan mogen we extra voorwaarden stellen. Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen, lees hiervoor
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                                        <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                                         van deze voorwaarden.
                                     </highlight>
                                 </li>
@@ -473,7 +473,7 @@
                                     <highlight>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien kalenderdagen na de afwijzing van een betalingsregeling
                                         of van een bezwaar over een nota als bedoeld in
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(12);>artikel 13 </a>
+                                        <a class="hyperlink-style" onclick=showArt(12);>artikel 13 </a>
                                         heeft gevraagd een beslissing te nemen over ons verschil van mening.
                                     </highlight>
                                 </li>
@@ -528,7 +528,7 @@
                                 <li>
                                     <highlight>U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
                                         afspraken uit
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(3);>artikel 4 </a>
+                                        <a class="hyperlink-style" onclick=showArt(3);>artikel 4 </a>
                                         gelden dan ook.
                                     </highlight>
                                 </li>
@@ -694,7 +694,7 @@
                         <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
                             belastingen, die wij met u hebben afgesproken bevestigen wij u schriftelijk of digitaal
                             in de overeenkomst (zie ook
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2.1 </a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2.1 </a>
                             ). Tevens melden wij u de netbeheerkosten.
                         </highlight>
                     </li>
@@ -855,7 +855,7 @@
                     <li>
                         <highlight>Wij mogen zekerheden aan u vragen, zoals een waarborgsom. Ook mogen we bijvoorbeeld
                             aan u een bankgarantie vragen. Dit mogen we vragen als het in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2</a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2</a>
                             genoemde onderzoek naar uw betalingsgedrag daartoe aanleiding geeft of u bij ons eerder
                             betalingsachterstanden hebt gehad. Wij hebben dan de zekerheid dat u betaalt voor de
                             elektriciteit die en/of het gas dat u van ons geleverd krijgt.
@@ -949,7 +949,7 @@
                         <highlight>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
                             wij ons daardoor niet aan de overeenkomst houden, dan betalen wij die schade niet. Dit staat
                             in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(5);>artikel 6</a>
+                            <a class="hyperlink-style" onclick=showArt(5);>artikel 6</a>
                             .
                         </highlight>
                     </li>
@@ -1171,7 +1171,7 @@
                             of een andere leverancier geen nieuwe overeenkomst aangegaan, dan zetten wij uw
                             overeenkomst om naar een overeenkomst zonder vaste einddatum met tarieven die horen
                             bij een overeenkomst zonder vaste einddatum. Hierbij is
-                            <a class="hyperlink-style" onclick=HyperlinkArt(18);>artikel 19 </a>
+                            <a class="hyperlink-style" onclick=showArt(18);>artikel 19 </a>
                             ook van toepassing.
                         </highlight>
                     </li>
@@ -1324,7 +1324,7 @@
                         <highlight1>Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een
                             overeenkomst niet weigeren. Wel mogen wij uw betalingsgedrag onderzoeken. Ook mogen wij u
                             zekerheden vragen, lees hiervoor
-                            <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                            <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                             van deze voorwaarden. Beiden mogen wij doen tot
                             het moment dat wij elektriciteit en/of gas gaan leveren. Wij mogen in deze periode besluiten
                             dat wij u geen andere overeenkomst aanbieden.
@@ -1530,7 +1530,7 @@
                                 <li>
                                     <highlight2>Dan mogen we extra voorwaarden stellen.</highlight2> Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen, lees hiervoor
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                                        <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                                         van deze voorwaarden.
                                 </li>
                                 <li>
@@ -1552,7 +1552,7 @@
                                     <highlight2>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien kalenderdagen na de afwijzing van een betalingsregeling
                                         of van een bezwaar over een nota als bedoeld in
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(12);>artikel 13 </a>
+                                        <a class="hyperlink-style" onclick=showArt(12);>artikel 13 </a>
                                         heeft gevraagd een beslissing te nemen over ons verschil van mening.
                                     </highlight2>
                                 </li>
@@ -1608,7 +1608,7 @@
                                 <li>
                                     <highlight>U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
                                         afspraken uit
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(3);>artikel 4 </a>
+                                        <a class="hyperlink-style" onclick=showArt(3);>artikel 4 </a>
                                         gelden dan ook.
                                     </highlight>
                                 </li>
@@ -1770,7 +1770,7 @@
                         <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
                             belastingen, die wij met u hebben afgesproken bevestigen wij u schriftelijk of digitaal
                             in de overeenkomst (zie ook
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2.1 </a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2.1 </a>
                             ). Tevens melden wij u de netbeheerkosten.
                         </highlight>
                     </li>
@@ -1929,7 +1929,7 @@
                     <li>
                         <highlight1>Wij mogen zekerheden aan u vragen, zoals een waarborgsom. Ook mogen we bijvoorbeeld
                             aan u een bankgarantie vragen.</highlight1> <highlight2>Dit mogen we vragen als het in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2</a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2</a>
                             genoemde onderzoek naar uw betalingsgedrag daartoe aanleiding geeft of u bij ons eerder
                             betalingsachterstanden hebt gehad.</highlight2> Wij hebben dan de zekerheid dat u betaalt voor de
                             elektriciteit die en/of het gas dat u van ons geleverd krijgt.
@@ -2017,7 +2017,7 @@
                         <highlight1>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
                             wij ons daardoor niet aan de overeenkomst houden, dan betalen wij die schade niet.</highlight1> Dit staat
                             in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(5);>artikel 6</a>.
+                            <a class="hyperlink-style" onclick=showArt(5);>artikel 6</a>.
                     </li>
                 </ol>
             </div>
@@ -2229,7 +2229,7 @@
                             of een andere leverancier geen nieuwe overeenkomst aangegaan, dan zetten wij uw
                             overeenkomst om naar een overeenkomst zonder vaste einddatum</highlight1> <highlight2>met tarieven die horen
                             bij een overeenkomst zonder vaste einddatum.</highlight2> Hierbij is
-                            <a class="hyperlink-style" onclick=HyperlinkArt(18);>artikel 19 </a>
+                            <a class="hyperlink-style" onclick=showArt(18);>artikel 19 </a>
                             ook van toepassing.
                     </li>
                 </ol>
@@ -2276,7 +2276,7 @@
                         <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
                             belastingen, die wij met u hebben afgesproken bevestigen wij u schriftelijk of digitaal
                             in de overeenkomst (zie ook
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2.1 </a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2.1 </a>
                             ). Tevens melden wij u de netbeheerkosten.
                         </highlight>
                     </li>
@@ -2376,7 +2376,7 @@
                     <li>
                         <highlight1>Wij mogen zekerheden aan u vragen, zoals een waarborgsom. Ook mogen we bijvoorbeeld
                             aan u een bankgarantie vragen.</highlight1> <highlight2>Dit mogen we vragen als het in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2</a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2</a>
                             genoemde onderzoek naar uw betalingsgedrag daartoe aanleiding geeft of u bij ons eerder
                             betalingsachterstanden hebt gehad.</highlight2> Wij hebben dan de zekerheid dat u betaalt voor de
                             elektriciteit die en/of het gas dat u van ons geleverd krijgt.
@@ -2480,7 +2480,7 @@
                                 <li>
                                     <highlight>U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
                                         afspraken uit
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(3);>artikel 4 </a>
+                                        <a class="hyperlink-style" onclick=showArt(3);>artikel 4 </a>
                                         gelden dan ook.
                                     </highlight>
                                 </li>
@@ -2609,7 +2609,7 @@
                                 <li>
                                     <highlight2>Dan mogen we extra voorwaarden stellen.</highlight2> Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen, lees hiervoor
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                                        <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                                         van deze voorwaarden.
                                 </li>
                                 <li>
@@ -2631,7 +2631,7 @@
                                     <highlight2>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien kalenderdagen na de afwijzing van een betalingsregeling
                                         of van een bezwaar over een nota als bedoeld in
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(12);>artikel 13 </a>
+                                        <a class="hyperlink-style" onclick=showArt(12);>artikel 13 </a>
                                         heeft gevraagd een beslissing te nemen over ons verschil van mening.
                                     </highlight2>
                                 </li>
@@ -2774,7 +2774,7 @@
                         <highlight1>Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een
                             overeenkomst niet weigeren. Wel mogen wij uw betalingsgedrag onderzoeken. Ook mogen wij u
                             zekerheden vragen,</highlight1> lees hiervoor
-                            <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                            <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                             van deze voorwaarden. Beiden mogen wij doen tot
                             het moment dat wij elektriciteit en/of gas gaan leveren. Wij mogen in deze periode besluiten
                             dat wij u geen andere overeenkomst aanbieden.
@@ -2933,7 +2933,7 @@
                                 <li>
                                     <highlight>U gaat zelf elektriciteit opwekken, bijvoorbeeld met zonnepanelen. De
                                         afspraken uit
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(3);>artikel 4 </a>
+                                        <a class="hyperlink-style" onclick=showArt(3);>artikel 4 </a>
                                         gelden dan ook.
                                     </highlight>
                                 </li>
@@ -2997,7 +2997,7 @@
                     <li>
                         <highlight1>Wij mogen zekerheden aan u vragen, zoals een waarborgsom. Ook mogen we bijvoorbeeld
                             aan u een bankgarantie vragen.</highlight1> <highlight2>Dit mogen we vragen als het in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2</a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2</a>
                             genoemde onderzoek naar uw betalingsgedrag daartoe aanleiding geeft of u bij ons eerder
                             betalingsachterstanden hebt gehad.</highlight2> Wij hebben dan de zekerheid dat u betaalt voor de
                             elektriciteit die en/of het gas dat u van ons geleverd krijgt.
@@ -3152,7 +3152,7 @@
                         <highlight1>Vraagt u ons elektriciteit en/of gas te leveren? Wij mogen u normaal gesproken een
                             overeenkomst niet weigeren. Wel mogen wij uw betalingsgedrag onderzoeken. Ook mogen wij u
                             zekerheden vragen, lees hiervoor
-                            <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                            <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                             van deze voorwaarden. Beiden mogen wij doen tot
                             het moment dat wij elektriciteit en/of gas gaan leveren. Wij mogen in deze periode besluiten
                             dat wij u geen andere overeenkomst aanbieden.
@@ -3243,7 +3243,7 @@
                         <highlight>De leveringstarieven voor elektriciteit en/of gas, inclusief overheidsheffingen en
                             belastingen, die wij met u hebben afgesproken bevestigen wij u schriftelijk of digitaal
                             in de overeenkomst (zie ook
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2.1 </a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2.1 </a>
                             ). Tevens melden wij u de netbeheerkosten.
                         </highlight>
                     </li>
@@ -3576,7 +3576,7 @@
                         <highlight1>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
                             wij ons daardoor niet aan de overeenkomst houden, dan betalen wij die schade niet.</highlight1> Dit staat
                             in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(5);>artikel 6</a>.
+                            <a class="hyperlink-style" onclick=showArt(5);>artikel 6</a>.
                     </li>
                 </ol>
             </div>
@@ -3594,7 +3594,7 @@
                                 <li>
                                     <highlight2>Dan mogen we extra voorwaarden stellen.</highlight2> Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen, lees hiervoor
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                                        <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                                         van deze voorwaarden.
                                 </li>
                                 <li>
@@ -3616,7 +3616,7 @@
                                     <highlight2>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien kalenderdagen na de afwijzing van een betalingsregeling
                                         of van een bezwaar over een nota als bedoeld in
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(12);>artikel 13 </a>
+                                        <a class="hyperlink-style" onclick=showArt(12);>artikel 13 </a>
                                         heeft gevraagd een beslissing te nemen over ons verschil van mening.
                                     </highlight2>
                                 </li>
@@ -3849,7 +3849,7 @@
                             of een andere leverancier geen nieuwe overeenkomst aangegaan, dan zetten wij uw
                             overeenkomst om naar een overeenkomst zonder vaste einddatum</highlight1> <highlight2>met tarieven die horen
                             bij een overeenkomst zonder vaste einddatum.</highlight2> Hierbij is
-                            <a class="hyperlink-style" onclick=HyperlinkArt(18);>artikel 19 </a>
+                            <a class="hyperlink-style" onclick=showArt(18);>artikel 19 </a>
                             ook van toepassing.
                     </li>
                 </ol>
@@ -3875,7 +3875,7 @@
                     <li>
                         <highlight1>Wij mogen zekerheden aan u vragen, zoals een waarborgsom. Ook mogen we bijvoorbeeld
                             aan u een bankgarantie vragen.</highlight1> <highlight2>Dit mogen we vragen als het in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(1);>artikel 2</a>
+                            <a class="hyperlink-style" onclick=showArt(1);>artikel 2</a>
                             genoemde onderzoek naar uw betalingsgedrag daartoe aanleiding geeft of u bij ons eerder
                             betalingsachterstanden hebt gehad.</highlight2> Wij hebben dan de zekerheid dat u betaalt voor de
                             elektriciteit die en/of het gas dat u van ons geleverd krijgt.
@@ -3941,7 +3941,7 @@
                                 <li>
                                     <highlight2>Dan mogen we extra voorwaarden stellen.</highlight2> Wij mogen u dan bijvoorbeeld
                                         zekerheden vragen, lees hiervoor
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(14);>artikel 15 </a>
+                                        <a class="hyperlink-style" onclick=showArt(14);>artikel 15 </a>
                                         van deze voorwaarden.
                                 </li>
                                 <li>
@@ -3963,7 +3963,7 @@
                                     <highlight2>u en wij het niet met elkaar eens zijn en u de Geschillencommissie
                                         Energie binnen tien kalenderdagen na de afwijzing van een betalingsregeling
                                         of van een bezwaar over een nota als bedoeld in
-                                        <a class="hyperlink-style" onclick=HyperlinkArt(12);>artikel 13 </a>
+                                        <a class="hyperlink-style" onclick=showArt(12);>artikel 13 </a>
                                         heeft gevraagd een beslissing te nemen over ons verschil van mening.
                                     </highlight2>
                                 </li>
@@ -4453,7 +4453,7 @@
                         <highlight1>Is er sprake van een storing waarvoor de netbeheerder verantwoordelijk is? En kunnen
                             wij ons daardoor niet aan de overeenkomst houden, dan betalen wij die schade niet.</highlight1> Dit staat
                             in
-                            <a class="hyperlink-style" onclick=HyperlinkArt(5);>artikel 6</a>.
+                            <a class="hyperlink-style" onclick=showArt(5);>artikel 6</a>.
                     </li>
                 </ol>
             </div>
@@ -5195,6 +5195,9 @@
     //timer
     var timer;
 
+    //Vorige knop
+    const filter_history = new Array();
+
     //important switches
     var first_filter = document.getElementById("first_switch");
     var second_filter = document.getElementById("second_switch");
@@ -5221,7 +5224,6 @@
 
     //show one particular item from all articles (art_nr = article number minus 1!)
     function showArt(art_nr) {
-        console.log(current_list);
         stopTimer();
         document.getElementById("alle artikelen").style.opacity = "100%";
         document.getElementById("alle artikelen").style.cursor = "pointer";
@@ -5242,14 +5244,13 @@
         document.getElementById("articles_shown").innerHTML = "1" + " / " + "1";
         startTimer(current_list[current_art]);
         checkFilters(current_list[current_art]);
-        console.log(current_list);
-    }
-
-    function HyperlinkArt(art_nr) {
-        hideArticles();
-        previousButton = null;
-        current_list = null;
-        showArt(art_nr);
+        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
+        art_history.push(art_nr);
+        console.log(art_history);
+        if( art_history.length > 1 ) {
+            document.getElementById('vorige_categorie').style.opacity = "100%";
+            document.getElementById('vorige_categorie').style.pointerEvents = "auto";
+        }
     }
 
     //change filter color for new
@@ -5326,7 +5327,6 @@
     function updateFilter(FilterPressed) {
         currentButton = FilterPressed.id;
         if (currentButton !== 'vorige categorie') {
-            saveArticleHistory();
         }
         stopTimer();
         document.getElementById("alle artikelen").style.opacity = "100%";
@@ -5343,10 +5343,64 @@
         if (sidepanelState != 1) { //if closed
             openSidepanel();
         }
+        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
+        art_history.push(FilterPressed);
+        console.log(art_history);
+        if( art_history.length > 1 ) {
+            document.getElementById('vorige_categorie').style.opacity = "100%";
+            document.getElementById('vorige_categorie').style.pointerEvents = "auto";
+        }
+
+        /**other
+        if (currentButton == 'vorige categorie') {
+            const previous_view = art_history.pop();
+            previous_view.list.length
+            checkHistory();
+            current_list = previous_view.list;
+            current_art = previous_view.art;
+            let reference_list =  previous_view.list[0].slice(0,3);
+            console.log(reference_list);
+            if(reference_list == 'art'){
+                document.getElementById("current_filter").innerHTML = 'alle artikelen';
+            } else if(reference_list == 'hig'){
+                document.getElementById("current_filter").innerHTML = 'highlights';
+            } else if(reference_list == 'tar'){
+                document.getElementById("current_filter").innerHTML = 'tarieven en betalingen';
+            } else if(reference_list == 'per'){
+                document.getElementById("current_filter").innerHTML = 'persoonlijke gegevens';
+            } else if(reference_list == 'con'){
+                document.getElementById("current_filter").innerHTML = 'conflicten';
+            } else if(reference_list == 'aan'){
+                document.getElementById("current_filter").innerHTML = 'aansluiting';
+            } else if(reference_list == 'sta'){
+                document.getElementById("current_filter").innerHTML = 'start overeenkomst';
+            } else if(reference_list == 'bed'){
+                document.getElementById("current_filter").innerHTML = 'bedenktijd';
+            } else if(reference_list == 'jaa'){
+                document.getElementById("current_filter").innerHTML = 'jaarnota';
+            } else if(reference_list == 'sto'){
+                document.getElementById("current_filter").innerHTML = 'storing en schade';
+            } else if(reference_list == 'wij'){
+                document.getElementById("current_filter").innerHTML = 'wijzigingen';
+            }else if(reference_list == 'ein'){
+                document.getElementById("current_filter").innerHTML = 'einde overeenkomst';
+            }else if(reference_list == 'rek'){
+                document.getElementById("current_filter").innerHTML = 'rekeningen';
+            }else if(reference_list == 'kla'){
+                document.getElementById("current_filter").innerHTML = 'klachten';
+            }else if(reference_list == 'met'){
+                document.getElementById("current_filter").innerHTML = 'meter en onderzoek';
+            }else if(reference_list == 'sch'){
+                document.getElementById("current_filter").innerHTML = 'schade';
+            }else if(reference_list == 'ver'){
+                document.getElementById("current_filter").innerHTML = 'verhuizen';
+            }else if(reference_list == 'ele'){
+                document.getElementById("current_filter").innerHTML = 'elektriciteit opwekken';
+            }
+        }   **/
     }
 
     function clearFilter(FilterPressed) {
-        saveArticleHistory();
         stopTimer();
         j = getArticleNumberFromDivID(current_list[current_art]);
         updateFilter(FilterPressed);
@@ -5361,6 +5415,7 @@
         document.getElementById("alle artikelen").style.opacity = "20%";
         document.getElementById("alle artikelen").style.cursor = "default";
         document.getElementById("alle artikelen").disabled = true;
+        window.history.pushState("object or string", "Title", "");
     }
 
     function showNavigationButton() {
@@ -5398,12 +5453,30 @@
         sidepanelState = 0;
     }
 
-    function saveArticleHistory() {
-        const save_state = {"list": current_list, "art": current_art};
-        art_history.push(save_state);
-        console.log("history size: " + art_history.length);
-        checkHistory();
+    function go_Back () {
+        art_history.pop();
+        const last_item = art_history[art_history.length - 1];
+        if (isNaN(last_item)) {
+            updateFilter(last_item);
+        } else {
+            showArt(last_item);
+        }
+        art_history.pop();
+        console.log(art_history);
+        if( art_history.length < 2 ) {
+            document.getElementById('vorige_categorie').style.opacity = "20%";
+            document.getElementById('vorige_categorie').style.pointerEvents = "none";
+        }
     }
+
+    /**
+        function saveArticleHistory() {
+            const save_state = {"list": current_list, "art": current_art};
+            art_history.push(save_state);
+            console.log("history size: " + art_history.length);
+            checkHistory();
+        }
+    **/
 
     //Hide article, if there is something to hide
     function hideArticles() {
@@ -5437,6 +5510,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
         checkFilters(current_list[current_art]);
+        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
     }
 
     function previousArticle() {
@@ -5456,6 +5530,7 @@
         document.documentElement.style.setProperty('--counterart', getArticleNumberFromDivID(current_list[current_art]));
         startTimer(current_list[current_art]);
         checkFilters(current_list[current_art]);
+        window.history.pushState("object or string", "Title", "/Artikel_" + getArticleNumberFromDivID(current_list[current_art]));
     }
 
     //connects each button to its own list by updating current_list
@@ -5524,56 +5599,10 @@
             current_list = eleList;
             current_art = 0;
         }
-        //other
-        if (currentButton == 'vorige categorie') {
-            const previous_view = art_history.pop();
-            previous_view.list.length
-            checkHistory();
-            current_list = previous_view.list;
-            current_art = previous_view.art;
-            let reference_list =  previous_view.list[0].slice(0,3);
-            console.log(reference_list);
-            if(reference_list == 'art'){
-                document.getElementById("current_filter").innerHTML = 'alle artikelen';
-            } else if(reference_list == 'hig'){
-                document.getElementById("current_filter").innerHTML = 'highlights';
-            } else if(reference_list == 'tar'){
-                document.getElementById("current_filter").innerHTML = 'tarieven en betalingen';
-            } else if(reference_list == 'per'){
-                document.getElementById("current_filter").innerHTML = 'persoonlijke gegevens';
-            } else if(reference_list == 'con'){
-                document.getElementById("current_filter").innerHTML = 'conflicten';
-            } else if(reference_list == 'aan'){
-                document.getElementById("current_filter").innerHTML = 'aansluiting';
-            } else if(reference_list == 'sta'){
-                document.getElementById("current_filter").innerHTML = 'start overeenkomst';
-            } else if(reference_list == 'bed'){
-                document.getElementById("current_filter").innerHTML = 'bedenktijd';
-            } else if(reference_list == 'jaa'){
-                document.getElementById("current_filter").innerHTML = 'jaarnota';
-            } else if(reference_list == 'sto'){
-                document.getElementById("current_filter").innerHTML = 'storing en schade';
-            } else if(reference_list == 'wij'){
-                document.getElementById("current_filter").innerHTML = 'wijzigingen';
-            }else if(reference_list == 'ein'){
-                document.getElementById("current_filter").innerHTML = 'einde overeenkomst';
-            }else if(reference_list == 'rek'){
-                document.getElementById("current_filter").innerHTML = 'rekeningen';
-            }else if(reference_list == 'kla'){
-                document.getElementById("current_filter").innerHTML = 'klachten';
-            }else if(reference_list == 'met'){
-                document.getElementById("current_filter").innerHTML = 'meter en onderzoek';
-            }else if(reference_list == 'sch'){
-                document.getElementById("current_filter").innerHTML = 'schade';
-            }else if(reference_list == 'ver'){
-                document.getElementById("current_filter").innerHTML = 'verhuizen';
-            }else if(reference_list == 'ele'){
-                document.getElementById("current_filter").innerHTML = 'elektriciteit opwekken';
-            }
-        }
     }
 
-    function checkHistory() {
+
+   /** function checkHistory() {
         if (art_history.length <= 1) {
             document.getElementById("vorige categorie").style.opacity = "20%";
             document.getElementById("vorige categorie").style.cursor = "default";
@@ -5583,7 +5612,7 @@
             document.getElementById("vorige categorie").style.cursor = "pointer";
             document.getElementById("vorige categorie").disabled = false;
         }
-    }
+    } **/
 
     //for each filter an array is filled with the available content automatically
     function assignContentToList() {

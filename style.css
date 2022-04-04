@@ -711,6 +711,11 @@ card-header-title {
     border-radius: 25px;
 }
 
+.no-click {
+    opacity: 20%;
+    pointer-events: none;
+}
+
 .navbar {
     padding: 0px 30px 0px 30px;
     align-items: baseline;
@@ -790,6 +795,7 @@ a.hyperlink-style {
     text-decoration: none;
     font-weight: bold;
     padding: 2px;
+    cursor: pointer;
 }
 
 a.hyperlink-style:link {
