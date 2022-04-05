@@ -5251,6 +5251,13 @@
             document.getElementById('vorige_categorie').style.opacity = "100%";
             document.getElementById('vorige_categorie').style.pointerEvents = "auto";
         }
+        
+        window.onbeforeunload = function() { 
+        window.setTimeout(function () { 
+            window.location = 'index.html';
+            }, 0); 
+        window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser
+        }
     }
 
     //change filter color for new
